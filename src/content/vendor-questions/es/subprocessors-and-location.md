@@ -1,11 +1,11 @@
 ---
-title: Subprocessors and data location
+title: Subprocesadores y ubicación de los datos
 locale: es
 number: 5
 order: 5
 lastUpdated: '2026-09-10'
-question: "Who are your subprocessors, and where is children's data stored and processed?"
-whyItMatters: "You cannot honor a custody promise to a family if you do not know where the record went. Head Start's 45 CFR 1303.24 already requires a disclosure log, and §1303.23(e) gives parents an unqualified right to review any written agreement the program has with a third party — the text is not limited to agreements naming their child, which makes it the strongest existing hook for a parent asking to see an AI vendor contract. A subprocessor list is what lets you answer that request instead of forwarding it."
+question: "¿Quiénes son sus subprocesadores, y dónde se guardan y se procesan los datos de los niños?"
+whyItMatters: "Usted no le puede cumplir a una familia la promesa de custodia si no sabe a dónde fue el expediente. El 45 CFR 1303.24 de Head Start (el programa federal de educación temprana) ya exige un registro de divulgaciones, y el §1303.23(e) les da a los padres un derecho sin condiciones a revisar cualquier acuerdo por escrito que el programa tenga con un tercero. El texto no se limita a los acuerdos que nombran a su hijo, y por eso es hoy el gancho más fuerte que tiene un padre que pide ver el contrato con un proveedor de IA. Una lista de subprocesadores es lo que le permite contestar esa petición en vez de reenviarla."
 authorities:
   - "45 CFR 1303.24 — disclosure logs"
   - "45 CFR 1303.23(e) — parents may review any written agreement the program has with a third party"
@@ -14,13 +14,15 @@ governs: ['custody', 'currency']
 translationPending: true
 ---
 
-A real answer is a published list with names, what each one does and where it runs,
-plus a commitment to notify you before the list changes. If a model provider sits
-behind the product, that provider is on the list.
+Una respuesta real es una lista publicada con nombres, qué hace cada uno y dónde opera,
+más el compromiso de avisarle antes de que la lista cambie. Si detrás del producto hay un
+proveedor de modelos, ese proveedor va en la lista.
 
-A dodge says "industry-leading cloud providers" or "our trusted partners." So does a
-list that covers hosting but omits the AI model provider, the transcription service
-or the translation engine — often the three that matter most here.
+Una evasiva dice «proveedores de nube líderes en la industria» o «nuestros socios de
+confianza». También lo es una lista que cubre el alojamiento pero deja fuera al proveedor
+del modelo de IA, al servicio de transcripción o al motor de traducción, que aquí suelen
+ser los tres que más importan.
 
-Ask for the list in writing and keep it with your Approved Tools Register. It is the
-document a licensing visit or a monitoring review is most likely to ask for.
+Pida la lista por escrito y guárdela con su Registro de Herramientas Aprobadas. Es el
+documento que una visita de licencias o una revisión de monitoreo le va a pedir con más
+probabilidad.

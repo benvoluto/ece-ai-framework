@@ -1,42 +1,46 @@
 ---
-title: 'Failure mode one: the reflexive no'
+title: 'Modo de falla uno: el no por reflejo'
 locale: es
 kind: failure-mode
 order: 1
 lastUpdated: '2026-09-10'
-summary: A blanket prohibition feels like the safe choice and is documented as a policy, so everyone moves on. What it actually produces is the same exposure, minus the ability to see it, plus a written record proving the organization knew better.
+summary: Una prohibición total parece la opción segura y queda documentada como política, así que todos siguen adelante. Lo que produce en realidad es la misma exposición, menos la capacidad de verla, más un documento escrito que prueba que la organización lo sabía.
 relatedArtifacts: ['shadow-ai-amnesty-kit', 'governance-charter']
 translationPending: true
 ---
 
-Risk-averse counsel or a cautious board issues a blanket prohibition on
-artificial intelligence (AI). It feels like the safe choice. It is documented as
-a policy, it can be produced on request, and everyone moves on.
+Una asesoría legal prudente o una junta directiva cautelosa emite una prohibición
+total sobre la inteligencia artificial (IA). Parece la opción segura. Queda
+documentada como política, se puede presentar cuando la pidan, y todos siguen
+adelante.
 
-What actually happens is that staff use AI anyway. They use it on personal
-phones, in free consumer accounts, with child names in the prompt, outside any
-register, any written agreement and any disclosure log. Nothing about the work
-changed; only the visibility did.
+Lo que pasa en realidad es que el personal usa IA de todas formas. La usa en
+teléfonos personales, en cuentas gratuitas de consumo, con nombres de niños en el
+prompt, fuera de todo registro, de todo acuerdo por escrito y de todo registro de
+divulgaciones. El trabajo no cambió en nada; lo único que cambió fue la
+visibilidad.
 
-So the organization now holds the same exposure it had before, minus the ability
-to see it, plus a written policy proving it knew better. Both halves of that
-sentence matter. The first is an operational problem: you cannot review an
-agreement you do not know exists, you cannot log a disclosure you never learned
-about, and you cannot answer a licensing visit or a monitoring review with a
-register that describes a fiction. The second is a legal problem, and it is the
-one a board should hear plainly. A prohibition on the books and a practice in
-the classroom is a worse posture than either one alone.
+Así que la organización ahora carga con la misma exposición que tenía antes,
+menos la capacidad de verla, más una política escrita que prueba que lo sabía.
+Las dos mitades de esa frase importan. La primera es un problema operativo: no se
+puede revisar un acuerdo que uno no sabe que existe, no se puede anotar una
+divulgación de la que nunca se enteró, y no se puede responder a una visita de
+licenciamiento o a una revisión de monitoreo con un registro que describe una
+ficción. La segunda es un problema legal, y es el que una junta directiva debería
+oír sin rodeos. Una prohibición en el papel y una práctica en el salón es una
+postura peor que cualquiera de las dos por separado.
 
-**A blanket ban is not a safety posture. It is an unmonitored one.** This is
-worth saying in exactly those words, because the people who most need to hear it
-are the ones who believe they have already solved the problem.
+**Una prohibición total no es una postura de seguridad. Es una postura sin
+supervisión.** Vale la pena decirlo con esas palabras exactas, porque quienes más
+necesitan oírlo son los que creen que ya resolvieron el problema.
 
-The corollary matters too. A program that forbids AI outright is choosing to
-leave the savings on the table — the billing recovery, the translated closure
-notices, the grant it never applied for — while its staff take the risks anyway.
-That is the worst available trade: none of the return, all of the exposure, and
-no line of sight into either.
+El corolario también importa. Un programa que prohíbe la IA de plano está
+eligiendo dejar los ahorros sobre la mesa —la facturación que recupera, los
+avisos de cierre traducidos, la subvención que nunca solicitó— mientras su
+personal corre los riesgos de todas maneras. Ese es el peor intercambio
+disponible: nada del beneficio, toda la exposición y ninguna visibilidad sobre
+ninguno de los dos.
 
-The alternative is not permissiveness. It is a governed yes with a short list of
-absolute prohibitions, which is what the rest of this site describes, and what
-the nine additions below make workable across many sites at once.
+La alternativa no es la permisividad. Es un sí gobernado con una lista corta de
+prohibiciones absolutas, que es lo que describe el resto de este sitio y lo que
+las nueve adiciones de abajo hacen viable en muchas sedes a la vez.

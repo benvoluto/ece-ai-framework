@@ -1,5 +1,5 @@
 ---
-title: "The CDA portfolio that stalled two years ago"
+title: "El portafolio del CDA que se quedó parado hace dos años"
 locale: es
 lastUpdated: '2026-09-10'
 order: 8
@@ -7,44 +7,49 @@ tier: 1
 audience: provider
 phase: 2
 featuredOnHome: false
+translationPending: true
 governs:
   - relationship
   - custody
 scenario: >-
-  A teacher earning fourteen dollars an hour is working toward her Child
-  Development Associate (CDA) credential. The competency statements and the
-  professional portfolio are the part that stalls people — not the knowledge,
-  the writing.
+  Una maestra que gana catorce dólares por hora está trabajando para sacar su
+  credencial Child Development Associate (CDA). Las declaraciones de competencia
+  y el portafolio profesional son la parte donde la gente se queda parada: no
+  por el conocimiento, sino por la escritura.
 returns: >-
-  A study partner that quizzes her, helps her turn what she already does every
-  day into the reflective statements the portfolio asks for, and is available at
-  nine at night after her shift. Credential attainment raises wages and reduces
-  turnover, which is the sector's most expensive unsolved problem.
+  Una compañera de estudio que le hace preguntas, que la ayuda a convertir lo
+  que ya hace todos los días en las declaraciones reflexivas que pide el
+  portafolio, y que está disponible a las nueve de la noche, después de su
+  turno. Sacar la credencial sube el salario y baja la rotación de personal, que
+  es el problema sin resolver más caro que tiene el sector.
 guardrail: >-
-  The reflections have to be hers — a portfolio assesses her practice, and
-  submitting generated text is both dishonest and useless to her. The tool asks
-  the questions; she answers them. No child names in the examples.
-translationPending: true
+  Las reflexiones tienen que ser de ella: el portafolio evalúa su práctica, y
+  entregar texto generado es deshonesto y además no le sirve de nada. La
+  herramienta hace las preguntas; ella las responde. Ningún nombre de niño en
+  los ejemplos.
 ---
 
-She started the Child Development Associate (CDA) credential two years ago. She
-knows the content — she has been doing this work for six years, and she can tell
-you exactly how she settles a child who arrives crying on a Monday. What stopped
-her was the professional portfolio: six competency statements, each asking her to
-describe her practice in a reflective register nobody has ever taught her, on
-paper, in her second language, after a shift that ended at six.
+Empezó la credencial Child Development Associate (CDA) hace dos años. El
+contenido lo sabe: lleva seis años haciendo este trabajo y le puede contar
+exactamente cómo calma a un niño que llega llorando un lunes. Lo que la detuvo
+fue el portafolio profesional: seis declaraciones de competencia, cada una
+pidiéndole que describa su práctica en un registro reflexivo que nadie le ha
+enseñado nunca, por escrito, en su segundo idioma, después de un turno que
+terminó a las seis.
 
-The credential is not a formality. It raises her wage and it makes her more
-likely to still be in the field in three years, and turnover is the most
-expensive unsolved problem the sector has. The portfolio is the gate, and the
-gate is a writing task rather than a teaching one.
+La credencial no es un trámite. Le sube el salario y hace más probable que
+siga en el campo dentro de tres años, y la rotación de personal es el problema
+sin resolver más caro que tiene el sector. El portafolio es la puerta, y la
+puerta es una tarea de escritura, no de enseñanza.
 
-What helps is a study partner that is awake at nine at night: it quizzes her on
-the competency areas, and it asks the questions that turn what she already does
-into what the portfolio is asking for. *Tell me about a time a child struggled
-with a transition. What did you do first? Why that and not something else?*
+Lo que ayuda es una compañera de estudio despierta a las nueve de la noche: le
+hace preguntas sobre las áreas de competencia, y le hace las preguntas que
+convierten lo que ya hace en lo que el portafolio está pidiendo. *Cuénteme de
+una vez en que a un niño le costó una transición. ¿Qué hizo primero? ¿Por qué
+eso y no otra cosa?*
 
-The line is bright and it is hers to hold. The reflections must be her own
-words, because the portfolio is an assessment of her practice — generated text
-is dishonest and, more to the point, useless to her. The tool asks the
-questions; she answers them. And no child's name goes into the examples.
+El límite es claro y le toca a ella sostenerlo. Las reflexiones tienen que ser
+sus propias palabras, porque el portafolio es una evaluación de su práctica: el
+texto generado es deshonesto y, sobre todo, no le sirve de nada. La herramienta
+hace las preguntas; ella las responde. Y ningún nombre de niño entra en los
+ejemplos.

@@ -1,5 +1,5 @@
 ---
-title: "The empty slot"
+title: "El cupo vacío"
 locale: es
 lastUpdated: '2026-09-10'
 order: 4
@@ -7,55 +7,58 @@ tier: 2
 audience: provider
 phase: 1
 featuredOnHome: true
+translationPending: true
 homeSummary: >-
-  Two infant slots open five weeks, nine families on a waitlist nobody has had
-  time to call: answering inquiries within minutes turns the sector's largest
-  revenue leak into filled seats.
+  Dos cupos de bebés abiertos cinco semanas, nueve familias en una lista de
+  espera que nadie ha tenido tiempo de llamar: contestar las consultas en
+  minutos convierte la mayor fuga de ingresos del sector en cupos ocupados.
 governs:
   - relationship
   - standing
   - consequence
 scenario: >-
-  A center runs at 87% enrollment. Two infant spots have been open five weeks.
-  Nine families sit on the waitlist, but nobody has called them, because the
-  person who would make the calls is covering ratio in the toddler room at three
-  o'clock.
+  Un centro está al 87% de inscripción. Dos cupos de bebés llevan cinco semanas
+  abiertos. Hay nueve familias en la lista de espera, pero nadie las ha llamado,
+  porque la persona que haría las llamadas está cubriendo la proporción en el
+  salón de niños pequeños a las tres de la tarde.
 returns: >-
-  Unfilled slots are the largest single revenue leak in the sector, and how fast
-  an inquiry gets answered largely determines whether it becomes a tour. An
-  assistant that responds within minutes, works the waitlist and books tours
-  converts a structural leak into filled seats — two infant slots at typical
-  rates is meaningful annual revenue against a razor-thin margin.
+  Los cupos sin llenar son la mayor fuga de ingresos del sector, y la rapidez
+  con que se contesta una consulta decide en buena medida si se convierte en una
+  visita. Un asistente que contesta en minutos, trabaja la lista de espera y
+  agenda visitas convierte una fuga estructural en cupos ocupados: dos cupos de
+  bebés a tarifas normales son un ingreso anual importante frente a un margen
+  finísimo.
 guardrail: >-
-  Families must know they are talking to an AI, and a person takes over the
-  moment the conversation touches a child's needs, a disability or a subsidy
-  question. California SB 243-style chatbot duties may attach. It never makes an
-  enrollment decision — that is a Consequence-principle line.
-translationPending: true
+  Las familias tienen que saber que están hablando con una IA, y una persona
+  toma el relevo en el momento en que la conversación toca las necesidades de un
+  niño, una discapacidad o una pregunta sobre subsidios. Pueden aplicar
+  obligaciones para chatbots del tipo de la SB 243 de California. Nunca toma una
+  decisión de inscripción: esa es una línea del principio de Consecuencia.
 ---
 
-Eighty-seven percent enrollment sounds like a good year until you price the
-other thirteen. Two infant spots have sat open five weeks. There are nine
-families on the waitlist and not one of them has been called, because the person
-who would make the calls is standing in the toddler room at three o'clock
-holding ratio while a teacher takes her break.
+Ochenta y siete por ciento de inscripción suena a buen año hasta que se le pone
+precio al otro trece. Dos cupos de bebés llevan cinco semanas vacíos. Hay nueve
+familias en la lista de espera y a ninguna la han llamado, porque la persona que
+haría las llamadas está parada en el salón de niños pequeños a las tres de la
+tarde sosteniendo la proporción mientras una maestra toma su descanso.
 
-The inquiries are worse. A parent fills in the web form at nine at night,
-because that is when a parent with a newborn is awake. Nobody sees it until
-Thursday. By Thursday she has toured somewhere that answered her on Tuesday.
-Speed of response, more than price and more than proximity, is what decides
-whether an inquiry becomes a tour.
+Las consultas son peor. Una madre llena el formulario de la página web a las
+nueve de la noche, porque esa es la hora en que una madre con un recién nacido
+está despierta. Nadie lo ve hasta el jueves. Para el jueves ya visitó un lugar
+que le contestó el martes. La rapidez de la respuesta, más que el precio y más
+que la cercanía, es lo que decide si una consulta se convierte en una visita.
 
-An assistant that answers within minutes, sends the tour times, works the
-waitlist in order and puts the appointment on the calendar addresses a
-structural leak rather than a staffing failure. Two infant slots at typical
-rates is meaningful annual revenue for a business running on one to three per
-cent margins.
+Un asistente que contesta en minutos, manda los horarios de las visitas, trabaja
+la lista de espera en orden y pone la cita en el calendario está atacando una
+fuga estructural, no una falla del personal. Dos cupos de bebés a tarifas
+normales son un ingreso anual importante para un negocio que opera con márgenes
+de uno a tres por ciento.
 
-The guardrails are what make it safe to do. The family is told plainly that they
-are talking to an AI assistant — and chatbot-disclosure duties of the kind
-California's SB 243 created may attach, so check what your state currently
-requires before you turn this on. The handoff to a person is immediate the
-moment the conversation touches a child's needs, a disability or a subsidy
-question. And the assistant never decides who is admitted. Admission is a
-decision about a child, and decisions about children are made by people.
+Las salvaguardas son lo que hace que se pueda hacer con seguridad. A la familia
+se le dice claramente que está hablando con un asistente de IA, y pueden aplicar
+obligaciones de aviso para chatbots como las que creó la SB 243 de California,
+así que revise qué exige hoy su estado antes de encender esto. El paso a una
+persona es inmediato en cuanto la conversación toca las necesidades de un niño,
+una discapacidad o una pregunta sobre subsidios. Y el asistente nunca decide a
+quién se admite. La admisión es una decisión sobre un niño, y las decisiones
+sobre los niños las toman personas.

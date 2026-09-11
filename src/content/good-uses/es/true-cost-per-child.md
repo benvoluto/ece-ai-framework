@@ -1,5 +1,5 @@
 ---
-title: "Knowing what a child actually costs you"
+title: "Saber cuánto le cuesta de verdad cada niño"
 locale: es
 lastUpdated: '2026-09-10'
 order: 6
@@ -7,50 +7,53 @@ tier: 1
 audience: provider
 phase: 2
 featuredOnHome: false
+translationPending: true
 governs:
   - relationship
   - currency
 scenario: >-
-  A provider sets her rates by looking at what the center down the street
-  charges. She has never calculated true cost per child by age group, so she
-  does not know that her infant room loses money on every enrollment and her
-  preschool room quietly subsidises it. When she considers expanding, she is
-  guessing.
+  Una proveedora fija sus tarifas mirando lo que cobra el centro de la otra
+  cuadra. Nunca ha sacado el costo real por niño según el grupo de edad, así que
+  no sabe que su salón de bebés pierde dinero con cada inscripción y que su
+  salón de preescolar lo está subsidiando calladamente. Cuando piensa en crecer,
+  está adivinando.
 returns: >-
-  A working cost model built from her own numbers through a conversation, rather
-  than a spreadsheet she would never finish: break-even by classroom, the real
-  cost of a staffing change, what a rate increase does to enrollment risk. This
-  is a business-health intervention — and it is precisely what an intermediary's
-  business coaching is trying to accomplish, arriving between coaching visits
-  instead of once a year.
+  Un modelo de costos que sirve, armado con sus propios números a través de una
+  conversación en vez de una hoja de cálculo que nunca iba a terminar: el punto
+  de equilibrio por salón, el costo real de un cambio de personal, y qué le hace
+  a su riesgo de inscripción un aumento de tarifas. Esto es una intervención de
+  salud del negocio, y es exactamente lo que trata de lograr el asesoramiento de
+  negocios de un intermediario, pero llegando entre visitas de coaching en lugar
+  de una vez al año.
 guardrail: >-
-  No child or family data, so Tier 1 — but it is her own financials, which means
-  a tool with a real agreement rather than a free consumer account. Treat the
-  output as a draft for her coach to check, not an answer.
-translationPending: true
+  No hay datos de niños ni de familias, así que es Nivel 1; pero son sus propias
+  finanzas, y eso pide una herramienta con un acuerdo de verdad y no una cuenta
+  gratuita de consumo. Trate el resultado como un borrador para que lo revise su
+  coach, no como una respuesta.
 ---
 
-Ask most providers how they set their rates and the answer is the same: they
-looked at the center down the street. It is a reasonable heuristic and it hides
-a specific, expensive fact. Infant care costs far more to deliver than preschool
-care, because the ratio is what it is. A program that prices both by
-neighbourhood comparison is usually running the infant room at a loss and
-covering it with the preschool room, without ever having seen that on paper.
+Pregúntele a la mayoría de los proveedores cómo fijan sus tarifas y la respuesta
+es la misma: miraron el centro de la otra cuadra. Es una regla razonable y
+esconde un hecho concreto y caro. El cuidado de bebés cuesta mucho más de dar
+que el de preescolar, porque la proporción es la que es. Un programa que le pone
+precio a los dos comparando con el vecindario casi siempre está operando el
+salón de bebés con pérdida y tapándola con el salón de preescolar, sin haberlo
+visto nunca en papel.
 
-The consequence is not just a thin year. It is that every big decision — adding
-a classroom, raising rates, taking on more subsidy slots, replacing a departing
-teacher with a more experienced one — gets made on instinct. Expansion is where
-this gets expensive, because the expansion that feels affordable is often the
-one that deepens the loss.
+La consecuencia no es solo un año flaco. Es que cada decisión grande —abrir un
+salón, subir las tarifas, tomar más cupos de subsidio, reemplazar a una maestra
+que se va por otra con más experiencia— se toma por instinto. Crecer es donde
+esto sale caro, porque la expansión que se siente costeable muchas veces es la
+que hace más honda la pérdida.
 
-The model that would answer this is not complicated. It is a spreadsheet, and
-the reason it does not exist is that it takes an evening she does not have and
-an accounting vocabulary nobody taught her. Built through a conversation
-instead — what do you pay, what do you charge, how many hours is each room
-staffed — it produces break-even by classroom, the cost of a staffing change and
-the enrollment risk of a rate increase.
+El modelo que contestaría esto no es complicado. Es una hoja de cálculo, y la
+razón por la que no existe es que se lleva una noche que ella no tiene y un
+vocabulario de contabilidad que nadie le enseñó. Armado en cambio a través de
+una conversación —cuánto paga, cuánto cobra, cuántas horas está cubierto cada
+salón— produce el punto de equilibrio por salón, el costo de un cambio de
+personal y el riesgo de inscripción de un aumento de tarifas.
 
-There is no child or family data here, which is what makes it Tier 1. It is
-still her own financials, so it belongs in a tool with a real agreement rather
-than a free consumer account. And the output is a draft to take to her business
-coach, not an answer to act on alone.
+Aquí no hay datos de niños ni de familias, que es lo que lo hace Nivel 1. Aun
+así son sus propias finanzas, así que esto va en una herramienta con un acuerdo
+de verdad y no en una cuenta gratuita de consumo. Y lo que sale es un borrador
+para llevarle a su coach de negocios, no una respuesta para actuar sola.

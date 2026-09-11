@@ -1,8 +1,8 @@
 ---
-title: Intermediary AI Practice Standard
+title: Estándar de práctica de IA para intermediarios
 locale: es
 audience: CDFI · R&R · T&TA
-summary: The standard an intermediary adopts for its own AI — in lending and underwriting, in portfolio monitoring and coaching triage, and in analysis of coaching notes — plus what it may and may not change when it delivers the provider artifacts under its own name.
+summary: "El estándar que un intermediario (un CDFI, una agencia de R&R o un proveedor de T&TA) adopta para su propia IA: en el préstamo y la evaluación crediticia, en el monitoreo del portafolio y la priorización del acompañamiento, y en el análisis de las notas de acompañamiento, más lo que puede y lo que no puede cambiar cuando entrega bajo su propio nombre los documentos dirigidos a los proveedores."
 lastUpdated: '2026-09-10'
 order: 16
 length: long
@@ -13,262 +13,308 @@ phase: 2
 translationPending: true
 ---
 
-**This is an unreviewed working draft. It has not been reviewed by counsel. It is
-not legal advice, and it is not a compliance opinion about fair lending. It is
-adoptable language: sign it, date it, publish it, and change what your counsel
-tells you to change.**
+**Este es un borrador de trabajo sin revisar. No lo ha revisado ningún abogado.
+No constituye asesoría legal ni una opinión de cumplimiento sobre préstamos
+justos (fair lending). Es texto listo para adoptarse: fírmelo, féchelo,
+publíquelo y cambie lo que su abogado le diga que cambie.**
 
-Adopted by [ORGANIZATION NAME] on [DATE]. Published at [WEB ADDRESS]. Reviewed
-every [12 MONTHS].
+Adoptado por [NOMBRE DE LA ORGANIZACIÓN] el [FECHA]. Publicado en
+[DIRECCIÓN WEB]. Se revisa cada [12 MESES].
 
-## 1. Scope, and why we need our own standard
+## 1. Alcance, y por qué necesitamos nuestro propio estándar
 
-[ORGANIZATION NAME] sits on both sides of this. We are a user of AI in our own
-lending, portfolio management, and coaching, and we are a channel through which
-guidance about AI reaches the providers we serve. This standard covers the first.
-Section 7 covers the second.
+[NOMBRE DE LA ORGANIZACIÓN] está de los dos lados de esto. Somos usuarios de IA
+en nuestros propios préstamos, en la administración de nuestro portafolio y en
+nuestro acompañamiento, y somos un canal por el que la orientación sobre IA
+llega a los proveedores a los que servimos. Este estándar cubre lo primero. La
+Sección 7 cubre lo segundo.
 
-The distinction that makes a separate standard necessary is this: a provider's AI
-makes decisions about children. Our AI makes decisions about providers. Those are
-different risks and they do not share a remedy. A framework written to keep an
-observation app from scoring a three-year-old says nothing useful about an
-underwriting model scoring a family child care business — and we are the ones
-holding the underwriting model.
+La diferencia que hace necesario un estándar aparte es esta: la IA de un
+proveedor toma decisiones sobre niños. Nuestra IA toma decisiones sobre
+proveedores. Esos son riesgos distintos y no comparten remedio. Un marco escrito
+para evitar que una aplicación de observación le ponga una puntuación a un niño
+de tres años no dice nada útil sobre un modelo de evaluación crediticia que le
+pone una puntuación a un negocio de cuidado infantil en el hogar, y quienes
+tenemos ese modelo de evaluación crediticia somos nosotros.
 
-This standard applies to every use of AI, machine learning, or automated
-decision support by [ORGANIZATION NAME], its staff, and its contractors, in:
+Este estándar aplica a todo uso de IA, de aprendizaje automático o de apoyo
+automatizado a la toma de decisiones por parte de [NOMBRE DE LA ORGANIZACIÓN],
+su personal y sus contratistas, en:
 
-- lending, underwriting, credit scoring, pricing, and servicing;
-- portfolio monitoring, risk rating, and coaching or technical assistance triage;
-- analysis of coaching notes, assessment reports, and other narrative records;
-- grantmaking, subaward decisions, and applicant screening; and
-- routine business operations — drafting, translation, scheduling, research.
+- préstamos, evaluación y aprobación de crédito (underwriting), calificación
+  crediticia, fijación de precios y administración de la cartera;
+- monitoreo del portafolio, calificación de riesgo y priorización del
+  acompañamiento o de la asistencia técnica;
+- análisis de notas de acompañamiento, informes de evaluación y otros registros
+  narrativos;
+- otorgamiento de subvenciones, decisiones de subadjudicación y revisión de
+  solicitantes; y
+- operaciones de negocio de rutina: redacción, traducción, horarios,
+  investigación.
 
-We apply the same three-tier classification we ask providers to use. Tier 1 is
-work touching no provider-identifying or family-identifying data. Tier 2 touches
-identified provider business data. Tier 3 is anything that informs a decision
-affecting a provider's money, standing, or participation. Tier 3 requires
-written approval by [NAMED ROLE] before adoption and again before any change to
-the model behind it.
+Usamos la misma clasificación de tres niveles que les pedimos usar a los
+proveedores. El Nivel 1 es trabajo que no toca datos que identifiquen a un
+proveedor ni a una familia. El Nivel 2 toca datos de negocio de un proveedor
+identificado. El Nivel 3 es cualquier cosa que alimente una decisión que afecte
+el dinero, la posición o la participación de un proveedor. El Nivel 3 requiere
+la aprobación por escrito de [PUESTO DESIGNADO] antes de adoptarlo, y otra vez
+antes de cualquier cambio en el modelo que está detrás.
 
-## 2. What we will not do
+## 2. Lo que no vamos a hacer
 
-These hold across every use, and they are not waivable by a pilot, a vendor
-agreement, or a funder request.
+Esto vale para todos los usos, y no se puede dispensar por un piloto, por un
+acuerdo con un proveedor ni por una petición de un financiador.
 
-- **No automated denial.** No model, score, or ranking is the sole or presumptive
-  basis for denying credit, denying a grant, exiting a provider from our
-  portfolio, or imposing any sanction. See Section 3.
-- **No inference about children.** We do not adopt, fund, or resell any tool that
-  infers emotion, affect, or engagement about children, and we do not analyze
-  children's images, video, voice, or assessment records in any AI system.
-- **No hidden scoring of providers.** We do not maintain a model-generated rating
-  of a provider that the provider cannot see. See Section 4.
-- **No child or family identifiers in general-purpose tools.** Narrative records
-  that name a child or family do not go into a consumer AI account, ever.
-- **No machine translation for high-stakes conversations.** Loan closings,
-  adverse action explanations, workout and default conversations, and any
-  conversation about a provider's continued participation use a qualified
-  interpreter. Machine translation is for routine operational communication —
-  newsletters, deadline reminders, opportunity alerts — and we say on the face of
-  those communications that they were machine-translated and name a person to
-  call.
+- **Ninguna negativa automatizada.** Ningún modelo, puntuación ni clasificación
+  es la base única ni la base presunta para negar un crédito, negar una
+  subvención, sacar a un proveedor de nuestro portafolio o imponer cualquier
+  sanción. Vea la Sección 3.
+- **Ninguna inferencia sobre niños.** No adoptamos, no financiamos ni revendemos
+  ninguna herramienta que infiera emociones, afecto o nivel de participación de
+  los niños, y no analizamos imágenes, video, voz ni expedientes de evaluación
+  de niños en ningún sistema de IA.
+- **Ninguna puntuación oculta de los proveedores.** No mantenemos una
+  calificación generada por un modelo sobre un proveedor que ese proveedor no
+  pueda ver. Vea la Sección 4.
+- **Ningún identificador de niños o de familias en herramientas de uso
+  general.** Los registros narrativos que nombran a un niño o a una familia no
+  entran nunca a una cuenta de IA de consumo.
+- **Nada de traducción automática en conversaciones de alto riesgo.** Los cierres
+  de préstamo, las explicaciones de acción adversa, las conversaciones de
+  reestructuración y de incumplimiento, y cualquier conversación sobre la
+  continuidad de un proveedor con nosotros, se hacen con un intérprete
+  calificado. La traducción automática es para la comunicación operativa de
+  rutina —boletines, recordatorios de fechas límite, avisos de oportunidades— y
+  en esas comunicaciones decimos de frente que se tradujeron a máquina y damos
+  el nombre de una persona a quien llamar.
 
-## 3. Lending and underwriting
+## 3. Préstamos y evaluación crediticia
 
-**The risk, stated plainly.** Our borrowers are disproportionately women of
-color running micro-businesses. The data available to score them encodes the
-sector's existing inequities: home-based providers, newer providers, and
-providers in child care deserts have thin files, irregular documentation, and
-histories that look like risk to a model and look like the sector to anyone who
-knows it. A model trained on who we have lent to before will reproduce who we
-have lent to before. This is the most consequential AI decision in our building
-and we treat it that way.
+**El riesgo, dicho sin rodeos.** Nuestras prestatarias son de manera
+desproporcionada mujeres de color que llevan micronegocios. Los datos
+disponibles para calificarlas llevan dentro las desigualdades que el sector ya
+tiene: las proveedoras que trabajan en su casa, las proveedoras nuevas y las
+proveedoras que están en desiertos de cuidado infantil tienen historiales
+crediticios escasos, documentación irregular e historias que a un modelo le
+parecen riesgo y que a cualquiera que conozca el sector le parecen el sector. Un
+modelo entrenado con a quién le hemos prestado antes va a reproducir a quién le
+hemos prestado antes. Esta es la decisión de IA de mayor consecuencia dentro de
+nuestro edificio y la tratamos como tal.
 
-**What we commit to.**
+**A qué nos comprometemos.**
 
-1. **Fair lending review before any pilot.** Before an AI or machine-learning
-   model touches a live credit decision — including in shadow mode alongside
-   human underwriting — we complete a written fair lending review covering the
-   input variables, the proxies among them, the training population, and the
-   expected effect on protected classes. The review is dated, signed by
-   [NAMED ROLE], and retained. No pilot begins without it.
+1. **Revisión de préstamos justos antes de cualquier piloto.** Antes de que un
+   modelo de IA o de aprendizaje automático toque una decisión de crédito real
+   —incluso en modo sombra, corriendo en paralelo a la evaluación humana—
+   completamos por escrito una revisión de préstamos justos que cubre las
+   variables de entrada, cuáles de ellas funcionan como sustitutos indirectos,
+   la población con la que se entrenó y el efecto esperado sobre las clases
+   protegidas. La revisión lleva fecha, la firma [PUESTO DESIGNADO] y se
+   conserva. Ningún piloto empieza sin ella.
 
-2. **A human decision on every denial.** Every declination is made by a named
-   underwriter who has reviewed the underlying file, not by a model and not by an
-   underwriter confirming a model. The underwriter's reasons are recorded in her
-   own words. A model output may inform that decision; it may never be the
-   decision, and "the system declined it" is not an acceptable answer to anyone —
-   a borrower, a funder, an examiner, or us.
+2. **Una decisión humana en cada negativa.** Cada rechazo lo toma una persona
+   evaluadora con nombre que ha revisado el expediente de fondo, no un modelo y
+   tampoco una evaluadora que confirma lo que dijo un modelo. Las razones de la
+   evaluadora quedan anotadas con sus propias palabras. El resultado de un modelo
+   puede alimentar esa decisión; nunca puede ser la decisión, y "el sistema lo
+   rechazó" no es una respuesta aceptable para nadie: ni para una prestataria, ni
+   para un financiador, ni para un examinador, ni para nosotros.
 
-3. **Adverse action explainability.** We do not use a model whose contribution to
-   a decision we cannot explain. Every adverse action notice states the specific
-   principal reasons for the decision in plain language a borrower can act on,
-   and those reasons are the actual reasons, not a generic list. If we cannot
-   state why a model treated an applicant as it did, we do not use that model in
-   credit decisions.
+3. **La acción adversa se tiene que poder explicar.** No usamos un modelo cuya
+   contribución a una decisión no podamos explicar. Cada aviso de acción adversa
+   declara las razones principales y específicas de la decisión, en lenguaje
+   sencillo con el que la prestataria pueda hacer algo, y esas razones son las
+   razones reales, no una lista genérica. Si no podemos decir por qué un modelo
+   trató a una solicitante como la trató, no usamos ese modelo en decisiones de
+   crédito.
 
-4. **Disparate impact testing on our actual portfolio.** Before deployment and at
-   least every [12 MONTHS] after, we test outcomes — approval rate, pricing,
-   amount approved against amount requested, and time to decision — disaggregated
-   by race and ethnicity, gender, and language where lawfully available to us,
-   and by provider characteristics that carry disparate impact in this sector:
-   home-based versus center-based, years in operation, and location in a child
-   care desert. Testing is on our own portfolio and our own applicants, not on the
-   vendor's benchmark. A vendor's fairness audit is not a substitute and we do not
-   accept one as such.
+4. **Pruebas de impacto dispar sobre nuestro portafolio real.** Antes de ponerlo
+   en marcha, y por lo menos cada [12 MESES] después, probamos los resultados
+   —tasa de aprobación, precio, monto aprobado frente al monto solicitado y
+   tiempo hasta la decisión— desglosados por raza y etnia, por género y por
+   idioma donde la ley nos permita tenerlos, y por características del proveedor
+   que en este sector cargan impacto dispar: en el hogar frente a en un centro,
+   años de operación y ubicación en un desierto de cuidado infantil. Las pruebas
+   se hacen sobre nuestro propio portafolio y nuestros propios solicitantes, no
+   sobre el punto de comparación del proveedor de la herramienta. La auditoría
+   de equidad de un proveedor no sustituye esto y no la aceptamos como
+   sustituto.
 
-5. **A stop condition, written before we start.** Every model pilot names in
-   advance the disparity threshold, error rate, or unexplainable-outcome pattern
-   at which we stop. [NAMED ROLE] may stop it without convening anyone. We write
-   the stop condition down before the pilot begins, because nobody has ever
-   written one during.
+5. **Una condición de alto, escrita antes de empezar.** Cada piloto de un modelo
+   declara por adelantado el umbral de disparidad, la tasa de error o el patrón
+   de resultados inexplicables con el que paramos. [PUESTO DESIGNADO] lo puede
+   parar sin convocar a nadie. La condición de alto la escribimos antes de que
+   empiece el piloto, porque nadie en la historia la ha escrito durante.
 
-6. **The applicant knows.** Our application materials say, in plain language,
-   whether automated tools are used in evaluating an application, what they look
-   at, and that a person decides. An applicant may ask for the reasons behind a
-   decision and receive them.
+6. **La solicitante lo sabe.** Nuestros materiales de solicitud dicen, en
+   lenguaje sencillo, si se usan herramientas automatizadas para evaluar una
+   solicitud, qué miran, y que una persona decide. Una solicitante puede pedir
+   las razones detrás de una decisión y las recibe.
 
-## 4. Portfolio monitoring and coaching triage
+## 4. Monitoreo del portafolio y priorización del acompañamiento
 
-Ranking where to send eight coaches across four hundred providers is a defensible
-use of the data we already hold — enrollment trends, subsidy billing patterns,
-licensing history, time since last contact. It is also the closest thing in our
-operation to a decision about who deserves help, so it carries our strongest
-guardrail.
+Decidir en qué orden mandar ocho asesores entre cuatrocientos proveedores es un
+uso defendible de los datos que ya tenemos: tendencias de inscripción, patrones
+de facturación de subsidios, historial de licencias, tiempo desde el último
+contacto. También es lo más parecido en toda nuestra operación a una decisión
+sobre quién merece ayuda, así que lleva nuestra protección más fuerte.
 
-1. **It may route support. It may never route consequences.** A triage model's
-   output may be used to prioritize outreach, offer coaching, or target a
-   resource. It may not be used, directly or indirectly, as a basis for a
-   sanction, a funding denial, a rate change, a covenant call, a portfolio exit,
-   a referral to a licensor or funder, or any adverse report about a provider. A
-   provider's position in a triage ranking does not enter her credit file, and
-   the ranking is not visible to underwriting.
+1. **Puede dirigir apoyo. Nunca puede dirigir consecuencias.** El resultado de un
+   modelo de priorización se puede usar para darle prioridad a un contacto,
+   ofrecer acompañamiento o dirigir un recurso. No se puede usar, ni directa ni
+   indirectamente, como base para una sanción, una negativa de financiamiento,
+   un cambio de tasa, la exigencia de un convenio del contrato de préstamo, una
+   salida del portafolio, una referencia a una agencia de licencias o a un
+   financiador, ni ningún reporte desfavorable sobre un proveedor. El lugar que
+   una proveedora ocupa en una lista de priorización no entra a su expediente
+   crediticio, y la lista no es visible para quienes evalúan el crédito.
 
-2. **Every provider can see what the system says about her, and contest it.** On
-   request, we tell a provider her current risk rating or triage position, the
-   main factors producing it, and when it was last updated. She may submit a
-   correction or an explanation; a person reviews it within [15 BUSINESS DAYS],
-   records the outcome, and tells her what changed. Corrections are applied to the
-   underlying data, not only to the narrative about it.
+2. **Cada proveedora puede ver lo que el sistema dice sobre ella y refutarlo.**
+   Cuando lo pida, le decimos a una proveedora cuál es su calificación de riesgo
+   o su lugar de priorización en ese momento, los factores principales que lo
+   producen, y cuándo se actualizó por última vez. Ella puede mandar una
+   corrección o una explicación; una persona la revisa dentro de
+   [15 DÍAS HÁBILES], anota el resultado y le dice qué cambió. Las correcciones
+   se aplican a los datos de fondo, no solo al relato que se hace sobre ellos.
 
-3. **We test the model for the bias it is most likely to have.** At least every
-   [12 MONTHS] we test whether the model systematically ranks home-based
-   providers, newer providers, or providers in child care deserts as less worth
-   helping, and we publish the result of that test in our annual report under
-   Section 6. The thin-file problem is real here and it points the wrong way: the
-   providers with the least documentation are frequently the ones most in need of
-   a coach. Where we find the pattern, we correct the model or we stop using it —
-   we do not annotate around it.
+3. **Probamos el modelo buscando el sesgo que es más probable que tenga.** Por
+   lo menos cada [12 MESES] probamos si el modelo coloca de manera sistemática a
+   las proveedoras que trabajan en su casa, a las proveedoras nuevas o a las
+   proveedoras en desiertos de cuidado infantil como menos dignas de ayuda, y
+   publicamos el resultado de esa prueba en nuestro informe anual bajo la
+   Sección 6. El problema del historial crediticio escaso es real aquí y apunta
+   al lado equivocado: las proveedoras con menos documentación con frecuencia
+   son las que más necesitan una asesora. Donde encontremos ese patrón,
+   corregimos el modelo o dejamos de usarlo; no le ponemos una nota al margen
+   para rodearlo.
 
-4. **Coaches are told what the ranking is and what it is not.** A triage output
-   arrives to a coach labeled as a suggestion with its main factors attached and
-   with the date of the data behind it. A coach may disregard it and does not have
-   to justify doing so. We track how often coaches override the model, because a
-   model nobody overrides is a model nobody is checking.
+4. **A los asesores se les dice qué es la lista y qué no es.** El resultado de la
+   priorización le llega a un asesor con la etiqueta de sugerencia, con sus
+   factores principales anexos y con la fecha de los datos que hay detrás. Un
+   asesor puede ignorarlo y no tiene que justificar por qué. Llevamos la cuenta
+   de qué tan seguido los asesores contradicen al modelo, porque un modelo que
+   nadie contradice es un modelo que nadie está revisando.
 
-## 5. Analysis of coaching and technical assistance notes
+## 5. Análisis de las notas de acompañamiento y de asistencia técnica
 
-Years of coaching notes across hundreds of providers are the richest program
-design input we hold, and reading them as a set is work that was never affordable
-before. It is also free text containing provider identities, business
-difficulties, and sometimes family and child information disclosed in confidence.
+Años de notas de acompañamiento sobre cientos de proveedores son el insumo más
+rico que tenemos para diseñar programas, y leerlas como conjunto es un trabajo
+que antes nunca fue costeable. También son texto libre que contiene identidades
+de proveedores, dificultades de negocio y, a veces, información de familias y de
+niños dicha en confianza.
 
-1. **De-identify before analysis, or work inside an agreement.** Either strip
-   provider names, business names, addresses, and any child or family identifiers
-   before the text reaches an AI tool, or perform the analysis in an approved
-   environment covered by a written agreement that forbids training on our data —
-   including the vendor's own internal training — and that provides deletion
-   reaching embeddings, caches, and backups. There is no third option, and a free
-   consumer account is not either of the two.
+1. **Desidentifique antes de analizar, o trabaje dentro de un acuerdo.** O se
+   quitan los nombres de las proveedoras, los nombres de los negocios, las
+   direcciones y cualquier identificador de niños o de familias antes de que el
+   texto llegue a una herramienta de IA, o el análisis se hace en un entorno
+   aprobado, cubierto por un acuerdo por escrito que prohíbe entrenar con
+   nuestros datos —incluido el entrenamiento interno del propio proveedor de la
+   herramienta— y que da un borrado que alcanza a los embeddings, a los cachés y
+   a los respaldos. No hay una tercera opción, y una cuenta gratuita de consumo
+   no es ninguna de las dos.
 
-2. **Findings describe patterns, never people.** Output from this work describes
-   what recurs across a portfolio: which topics cluster, where the coaching model
-   repeats itself, what providers keep asking for that we do not offer. A finding
-   never quietly becomes a score attached to an individual provider, is never
-   joined back to a provider record, and is never used in a credit or portfolio
-   decision about anyone whose notes were in the corpus.
+2. **Los hallazgos describen patrones, nunca personas.** Lo que sale de este
+   trabajo describe lo que se repite a lo largo de un portafolio: qué temas se
+   agrupan, dónde nuestro modelo de acompañamiento se repite a sí mismo, qué
+   siguen pidiendo las proveedoras que nosotros no ofrecemos. Un hallazgo nunca
+   se convierte calladamente en una puntuación pegada a una proveedora en
+   particular, nunca se vuelve a unir a su expediente, y nunca se usa en una
+   decisión de crédito o de portafolio sobre nadie cuyas notas estuvieran en el
+   conjunto de textos.
 
-3. **The people who wrote the notes are told.** Coaches know their notes are
-   analyzed, for what purposes, and what the findings were. Providers are told, in
-   the engagement materials they already receive, that notes from our work
-   together are used in aggregate to improve our programs.
+3. **A quienes escribieron las notas se les dice.** Los asesores saben que sus
+   notas se analizan, para qué, y cuáles fueron los hallazgos. A las proveedoras
+   se les dice, en los materiales del acuerdo de trabajo que ya reciben, que las
+   notas de nuestro trabajo conjunto se usan de manera agregada para mejorar
+   nuestros programas.
 
-4. **A person verifies before anything is published or funded.** A qualitative
-   finding produced by a model is a hypothesis. Before it appears in a report, a
-   funding proposal, or a program redesign, a staff member reads enough of the
-   underlying text to confirm the finding is there.
+4. **Una persona verifica antes de que algo se publique o se financie.** Un
+   hallazgo cualitativo producido por un modelo es una hipótesis. Antes de que
+   aparezca en un informe, en una propuesta de financiamiento o en el rediseño
+   de un programa, una persona del personal lee suficiente del texto de fondo
+   para confirmar que el hallazgo ahí está.
 
-## 6. We publish this standard
+## 6. Publicamos este estándar
 
-We publish this standard in full, at a stable web address, in English and in
-Spanish, and we tell providers where to find it in our loan application
-materials, our engagement letters, and our coaching agreements.
+Publicamos este estándar completo, en una dirección web estable, en inglés y en
+español, y les decimos a las proveedoras dónde encontrarlo en nuestros
+materiales de solicitud de préstamo, en nuestras cartas de acuerdo y en nuestros
+acuerdos de acompañamiento.
 
-We publish annually: the AI tools we use by tier, the results of the disparate
-impact testing required by Section 3.4, the results of the triage bias testing
-required by Section 4.3, the number of provider contests received under Section
-4.2 and how they were resolved, and any incident in which a tool produced
-something materially wrong about a provider.
+Publicamos cada año: las herramientas de IA que usamos, por nivel; los
+resultados de las pruebas de impacto dispar que exige la Sección 3.4; los
+resultados de las pruebas de sesgo en la priorización que exige la Sección 4.3;
+cuántas refutaciones de proveedores recibimos bajo la Sección 4.2 y cómo se
+resolvieron; y cualquier incidente en el que una herramienta produjo algo
+materialmente equivocado sobre un proveedor.
 
-The reason is simple and we state it plainly: we ask providers to be transparent
-with families about AI that affects their children. We cannot ask for that while
-being opaque about the AI that affects their businesses. A provider being
-underwritten is entitled to read the standard she is being underwritten against.
+La razón es sencilla y la decimos de frente: les pedimos a las proveedoras que
+sean transparentes con las familias sobre la IA que afecta a sus niños. No
+podemos pedir eso mientras somos opacos sobre la IA que afecta a sus negocios.
+Una proveedora a la que estamos evaluando para un crédito tiene derecho a leer
+el estándar con el que se la está evaluando.
 
-Questions about this standard go to [NAME], [ROLE], at [EMAIL] or [PHONE]. A
-provider who believes a tool of ours produced a wrong result about her may say so
-to that contact and will receive a written answer within [15 BUSINESS DAYS].
+Las preguntas sobre este estándar van a [NOMBRE], [PUESTO], al
+[CORREO ELECTRÓNICO] o al [TELÉFONO]. Una proveedora que crea que una
+herramienta nuestra produjo un resultado equivocado sobre ella se lo puede decir
+a ese contacto y va a recibir una respuesta por escrito dentro de
+[15 DÍAS HÁBILES].
 
-## 7. Co-branding the provider artifacts
+## 7. Poner nuestra marca en los documentos para proveedores
 
-When we deliver the provider-facing artifacts from this framework under our own
-name — in a training, a toolkit, a coaching packet, or on our website — the
-following holds.
+Cuando entregamos bajo nuestro propio nombre los documentos de este marco
+dirigidos a proveedores —en una capacitación, en un paquete de herramientas, en
+un paquete de acompañamiento o en nuestro sitio web— vale lo siguiente.
 
-**What we may change.**
+**Lo que sí podemos cambiar.**
 
-- Add our logo, our organization name, and our contact information.
-- Add a cover page or a short introduction explaining why we are distributing it.
-- Insert local specifics: our state's licensing contact, our state's interpreter
-  line, our state's child care resource and referral numbers, the state privacy
-  statutes that apply in our footprint.
-- Adjust formatting, typography, and file format for our house style, and combine
-  artifacts into a packet.
-- Translate into languages our providers speak, provided a qualified human
-  reviews the translation and the document says who reviewed it.
-- Delete a whole artifact that does not apply to our providers.
+- Agregar nuestro logo, el nombre de nuestra organización y nuestros datos de
+  contacto.
+- Agregar una portada o una introducción corta que explique por qué lo estamos
+  distribuyendo.
+- Insertar datos locales: el contacto de licencias de nuestro estado, la línea
+  de intérpretes de nuestro estado, los números de la agencia de recursos y
+  referencias de cuidado infantil (R&R) de nuestro estado, y las leyes estatales
+  de privacidad que aplican en nuestra zona.
+- Ajustar el formato, la tipografía y el tipo de archivo a nuestro estilo de
+  casa, y juntar varios documentos en un solo paquete.
+- Traducir a los idiomas que hablan nuestras proveedoras, siempre que una
+  persona calificada revise la traducción y el documento diga quién la revisó.
+- Borrar un documento completo que no le aplique a nuestras proveedoras.
 
-**What we may not change.**
+**Lo que no podemos cambiar.**
 
-- The seven principles and the eight bright lines. These do not change across
-  provider size, across tier, or across intermediary. They are the part that
-  makes the rest coherent, and an intermediary that softens one has produced a
-  different document that should not carry this framework's name.
-- The legal basis stated for any prohibition. If we cannot verify a citation, we
-  remove the passage rather than restate it in our own words.
-- The working-draft and not-reviewed-by-counsel notice. Co-branding does not
-  convert a draft into reviewed guidance, and putting our logo on it does not
-  either.
-- Each artifact's own date and version stamp. These stay on the document we
-  distribute, unchanged, alongside our own branding. A provider needs to know
-  which version she adopted, and we need to be able to tell her when it has moved.
+- Los siete principios y las ocho líneas rojas. No cambian según el tamaño del
+  proveedor, ni según el nivel, ni según el intermediario. Son la parte que hace
+  que todo lo demás tenga coherencia, y un intermediario que suaviza una de
+  ellas ha producido un documento distinto que no debería llevar el nombre de
+  este marco.
+- La base legal que se declara para cada prohibición. Si no podemos verificar
+  una cita, quitamos el pasaje en lugar de decirlo con nuestras propias
+  palabras.
+- El aviso de que es un borrador de trabajo y de que no lo ha revisado ningún
+  abogado. Poner nuestra marca no convierte un borrador en orientación revisada,
+  y ponerle nuestro logo tampoco.
+- La fecha y la versión propias de cada documento. Se quedan en el documento que
+  distribuimos, sin cambios, junto a nuestra propia marca. Una proveedora
+  necesita saber qué versión adoptó, y nosotros necesitamos poder avisarle
+  cuando esa versión cambie.
 
-**What we add rather than remove.** Where we disagree with something in an
-artifact, we say so in our own voice, in our own introduction, signed — rather
-than editing the artifact until it agrees with us. Providers can tell the
-difference and the field is better served by a visible disagreement than an
-invisible edit.
+**Lo que agregamos en lugar de quitar.** Cuando no estemos de acuerdo con algo
+de un documento, lo decimos con nuestra propia voz, en nuestra propia
+introducción, firmado, en lugar de editar el documento hasta que esté de acuerdo
+con nosotros. Las proveedoras notan la diferencia, y al campo le sirve más un
+desacuerdo visible que una edición invisible.
 
-**We do not name products.** We do not add a recommended tool, a preferred
-vendor, or a partner product to any artifact we distribute. Our providers treat a
-recommendation from us as an endorsement, because it is one, and we do not have
-the evidence to give one.
+**No nombramos productos.** No le agregamos una herramienta recomendada, un
+proveedor preferido ni el producto de un socio a ningún documento que
+distribuimos. Nuestras proveedoras toman una recomendación nuestra como un
+respaldo, porque lo es, y no tenemos la evidencia para dar uno.
 
 ---
 
-Adopted by: [NAME], [TITLE], [ORGANIZATION NAME]
+Adoptado por: [NOMBRE], [CARGO], [NOMBRE DE LA ORGANIZACIÓN]
 
-Date: [DATE]
+Fecha: [FECHA]
 
-Approved by the board of directors on [DATE]. Next review: [DATE].
+Aprobado por la junta directiva el [FECHA]. Próxima revisión: [FECHA].

@@ -22,43 +22,96 @@ const toDraft = sorted
   .filter((entry) => entry.data.status === 'to-draft')
   .map((entry) => ({ entry, slug: slugOf(entry) }));
 
-const SETTINGS = {
-  fcc: 'Family child care',
-  center: 'Center',
-  'multi-site': 'Multi-site operator',
-  intermediary: 'Intermediary',
+const copy = {
+  en: {
+    pageTitle: 'Cases',
+    caption: 'Worked examples',
+    lede: 'Nine situations a director actually meets, each one worked through to a decision she can make this week.',
+    description:
+      'Short worked vignettes: the situation, what is at stake, what to do, and which principle governs.',
+    introGovernance:
+      'Almost every comparable framework is governance: who approves, what gets disclosed, how data is stored. Very little of it addresses the actual moment of use — the feature that switched itself on, the teacher at 6pm with an incident to write up, the family waiting for a screening result in a language nobody in the building speaks.',
+    introMoments:
+      'These are those moments. Every case has the same four parts: the situation, what is at stake, what to do, and which principle governs. They are written to be forwarded, so take any one of them on its own.',
+    comingHeading: 'Three more cases, coming',
+    comingIntro:
+      'These three are named and are not written. Each one is here rather than quietly missing, because a director who meets one of these situations should know the site has not yet answered it.',
+    growth:
+      'The library is meant to launch at eight or nine vignettes and then grow by roughly one a month. That growth is second-phase work: it depends on a convened body to stand behind the additions, and on the pilots and questions that body would bring with it. Until then the honest position is the one on this page — six worked through, three named and waiting.',
+    elsewhereLead:
+      'If your situation is not here, the four pages behind these cases will usually get you to an answer:',
+    linkBrightLines: 'the bright lines',
+    linkPrinciples: 'the principles',
+    linkVendors: 'the vendor questions',
+    elsewhereAnd: 'and',
+    linkIntake: 'the four-question intake',
+    elsewhereTail: ', which returns a tier.',
+    settings: {
+      fcc: 'Family child care',
+      center: 'Center',
+      'multi-site': 'Multi-site operator',
+      intermediary: 'Intermediary',
+    },
+  },
+  es: {
+    pageTitle: 'Casos',
+    caption: 'Ejemplos resueltos',
+    lede: 'Nueve situaciones que una directora de verdad se encuentra, cada una trabajada hasta llegar a una decisión que puede tomar esta semana.',
+    description:
+      'Viñetas breves y resueltas: la situación, qué está en juego, qué hacer y qué principio rige.',
+    introGovernance:
+      'Casi todos los marcos parecidos tratan de gobernanza: quién aprueba, qué se informa, cómo se guardan los datos. Muy poco de eso habla del momento real del uso — la función que se encendió sola, la maestra a las 6 de la tarde con un incidente que redactar, la familia esperando el resultado de una evaluación en un idioma que nadie en el edificio habla.',
+    introMoments:
+      'Estos son esos momentos. Cada caso tiene las mismas cuatro partes: la situación, qué está en juego, qué hacer y qué principio rige. Están escritos para reenviarse, así que puede tomar cualquiera de ellos por separado.',
+    comingHeading: 'Tres casos más, en camino',
+    comingIntro:
+      'Estos tres están nombrados y no están escritos. Cada uno aparece aquí en lugar de faltar en silencio, porque una directora que se encuentre con una de estas situaciones debe saber que el sitio todavía no la ha respondido.',
+    growth:
+      'La biblioteca está pensada para salir con ocho o nueve viñetas y después crecer más o menos una por mes. Ese crecimiento es trabajo de la segunda fase: depende de que se convoque un organismo que respalde lo que se agregue, y de los pilotos y las preguntas que ese organismo traería consigo. Mientras tanto, la posición honesta es la de esta página — seis trabajados a fondo, tres nombrados y esperando.',
+    elsewhereLead:
+      'Si su situación no está aquí, las cuatro páginas detrás de estos casos casi siempre lo llevan a una respuesta:',
+    linkBrightLines: 'los límites infranqueables',
+    linkPrinciples: 'los principios',
+    linkVendors: 'las preguntas para proveedores',
+    elsewhereAnd: 'y',
+    linkIntake: 'la herramienta de cuatro preguntas',
+    elsewhereTail: ', que devuelve un nivel.',
+    settings: {
+      fcc: 'Cuidado infantil familiar',
+      center: 'Centro',
+      'multi-site': 'Operador con varias sedes',
+      intermediary: 'Intermediario',
+    },
+  },
 };
+
+const c = copy[locale] ?? copy.en;
+
+const SETTINGS = c.settings;
 
 const lastUpdated = sorted
   .map((entry) => entry.data.lastUpdated)
   .sort()
   .at(-1);
 
-const description =
-  'Short worked vignettes: the situation, what is at stake, what to do, and which principle governs.';
+const description = c.description;
 ---
 
-<BaseLayout title="Cases" description={description} locale={locale}>
+<BaseLayout title={c.pageTitle} description={description} locale={locale}>
   <PageHeader
-    caption="Worked examples"
-    title="Cases"
-    lede="Nine situations a director actually meets, each one worked through to a decision she can make this week."
+    caption={c.caption}
+    title={c.pageTitle}
+    lede={c.lede}
     locale={locale}
     lastUpdated={lastUpdated}
   />
 
   <p class="govuk-body">
-    Almost every comparable framework is governance: who approves, what gets
-    disclosed, how data is stored. Very little of it addresses the actual moment
-    of use — the feature that switched itself on, the teacher at 6pm with an
-    incident to write up, the family waiting for a screening result in a
-    language nobody in the building speaks.
+    {c.introGovernance}
   </p>
 
   <p class="govuk-body">
-    These are those moments. Every case has the same four parts: the situation,
-    what is at stake, what to do, and which principle governs. They are written
-    to be forwarded, so take any one of them on its own.
+    {c.introMoments}
   </p>
 
   <nav class="govuk-!-margin-bottom-8" aria-labelledby="contents">
@@ -69,7 +122,7 @@ const description =
           <a class="govuk-link" href={`#${slug}`}>{entry.data.title}</a>
         </li>
       ))}
-      <li><a class="govuk-link" href="#coming">Three more cases, coming</a></li>
+      <li><a class="govuk-link" href="#coming">{c.comingHeading}</a></li>
     </ol>
   </nav>
 
@@ -116,12 +169,10 @@ const description =
   ))}
 
   <section id="coming">
-    <h2 class="govuk-heading-m">Three more cases, coming</h2>
+    <h2 class="govuk-heading-m">{c.comingHeading}</h2>
 
     <p class="govuk-body">
-      These three are named and are not written. Each one is here rather than
-      quietly missing, because a director who meets one of these situations
-      should know the site has not yet answered it.
+      {c.comingIntro}
     </p>
 
     <div class="govuk-inset-text">
@@ -140,21 +191,15 @@ const description =
     </div>
 
     <p class="govuk-body">
-      The library is meant to launch at eight or nine vignettes and then grow by
-      roughly one a month. That growth is second-phase work: it depends on a
-      convened body to stand behind the additions, and on the pilots and
-      questions that body would bring with it. Until then the honest position is
-      the one on this page — six worked through, three named and waiting.
+      {c.growth}
     </p>
 
     <p class="govuk-body">
-      If your situation is not here, the four pages behind these cases will
-      usually get you to an answer:{' '}
-      <a class="govuk-link" href={localePath(locale, '/bright-lines')}>the bright lines</a>,{' '}
-      <a class="govuk-link" href={localePath(locale, '/principles')}>the principles</a>,{' '}
-      <a class="govuk-link" href={localePath(locale, '/vendors')}>the vendor questions</a>{' '}
-      and <a class="govuk-link" href={localePath(locale, '/start')}>the four-question intake</a>,
-      which returns a tier.
+      {c.elsewhereLead}{' '}
+      <a class="govuk-link" href={localePath(locale, '/bright-lines')}>{c.linkBrightLines}</a>,{' '}
+      <a class="govuk-link" href={localePath(locale, '/principles')}>{c.linkPrinciples}</a>,{' '}
+      <a class="govuk-link" href={localePath(locale, '/vendors')}>{c.linkVendors}</a>{' '}
+      {c.elsewhereAnd} <a class="govuk-link" href={localePath(locale, '/start')}>{c.linkIntake}</a>{c.elsewhereTail}
     </p>
   </section>
 </BaseLayout>

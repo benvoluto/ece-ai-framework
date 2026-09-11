@@ -1,8 +1,8 @@
 ---
-title: The One-Page AI Policy
+title: La política de IA de una página
 locale: es
-audience: Family child care · Single site
-summary: Printable, plain language, sign and date. What we use AI for, what we never use it for, what happens to your child's information, and who to ask.
+audience: Cuidado infantil en el hogar · Una sola sede
+summary: 'Para imprimir, en lenguaje sencillo, para firmar y fechar. Para qué usamos la IA, para qué nunca la usamos, qué pasa con la información de su hijo o hija y a quién preguntar.'
 lastUpdated: '2026-09-10'
 order: 1
 length: one-page
@@ -15,44 +15,49 @@ phase: 1
 translationPending: true
 ---
 
-## What we use AI for
+## Para qué usamos la IA
 
-[PROGRAM NAME] uses AI tools to do paperwork faster, so that the adults here
-spend more time with children. We use them to draft routine writing, to
-translate routine notices into the languages our families speak, and to help
-with scheduling and business paperwork.
+[NOMBRE DEL PROGRAMA] usa herramientas de IA para hacer el papeleo más rápido,
+para que los adultos de aquí pasen más tiempo con los niños. Las usamos para
+redactar textos de rutina, para traducir avisos de rutina a los idiomas que
+hablan nuestras familias y para ayudar con los horarios y el papeleo del
+negocio.
 
-## What we never use AI for
+## Para qué nunca usamos la IA
 
-- **We never let AI decide anything about your child.** No AI tool decides
-  enrollment, removal from our program, discipline, or a referral for special
-  services. A person decides, using evidence a person has looked at.
-- **We never use AI that reads children's faces, voices, or bodies** to guess
-  how they feel or how engaged they are.
-- **We never use AI for child protection reports.**
-- **We never use AI in place of a qualified interpreter** for an important
-  conversation, such as a screening result or a meeting about services.
-- **We never put your child's name or information into a free public chatbot.**
+- **Nunca dejamos que la IA decida nada sobre su hijo o hija.** Ninguna
+  herramienta de IA decide la inscripción, la salida de nuestro programa, la
+  disciplina ni una referencia a servicios especiales. Decide una persona, con
+  evidencia que una persona ha revisado.
+- **Nunca usamos IA que lea la cara, la voz o el cuerpo de los niños** para
+  adivinar cómo se sienten o qué tan interesados están.
+- **Nunca usamos IA para los reportes de protección infantil.**
+- **Nunca usamos IA en lugar de un intérprete calificado** para una conversación
+  importante, como el resultado de una evaluación o una reunión sobre servicios.
+- **Nunca ponemos el nombre ni la información de su hijo o hija en un chatbot
+  público y gratuito.**
 
-## What happens to your child's information
+## Qué pasa con la información de su hijo o hija
 
-The tools we use are listed in our Approved Tools Register, which you may ask to
-see at any time. [PROGRAM NAME] has a written agreement with every tool that
-touches information about your child. You may ask to see that agreement.
+Las herramientas que usamos están en nuestro Registro de Herramientas Aprobadas,
+que usted puede pedir ver en cualquier momento. [NOMBRE DEL PROGRAMA] tiene un
+acuerdo por escrito con cada herramienta que toca información sobre su hijo o
+hija. Usted puede pedir ver ese acuerdo.
 
-We do not allow any company to use your child's images, voice, work, or records
-to train their AI. If that ever changes, we will ask you first, separately, in
-writing, and you can say no without it affecting your child's care.
+No permitimos que ninguna empresa use las imágenes, la voz, los trabajos ni los
+registros de su hijo o hija para entrenar su IA. Si eso llegara a cambiar, se lo
+pediríamos primero, por separado y por escrito, y usted puede decir que no sin
+que afecte el cuidado de su hijo o hija.
 
-## Who to ask
+## A quién preguntar
 
-Questions about anything on this page go to [NAME], [ROLE], at [PHONE] or
-[EMAIL].
+Las preguntas sobre cualquier cosa de esta página van a [NOMBRE], [PUESTO], al
+[TELÉFONO] o [CORREO ELECTRÓNICO].
 
 ---
 
-Signed: [DIRECTOR NAME]
+Firma: [NOMBRE DEL DIRECTOR O DIRECTORA]
 
-Date: [DATE]
+Fecha: [FECHA]
 
-This policy is reviewed every [12 MONTHS] and was last reviewed on [DATE].
+Esta política se revisa cada [12 MESES] y se revisó por última vez el [FECHA].

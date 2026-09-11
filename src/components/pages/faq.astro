@@ -22,15 +22,45 @@ const lastUpdated = entries
   .sort()
   .at(-1);
 
-const description =
-  'The objections people raise in the first meeting, answered: what states have and have not legislated, why K-12 guidance does not transfer, and what this site is not.';
+const copy = {
+  en: {
+    description:
+      'The objections people raise in the first meeting, answered: what states have and have not legislated, why K-12 guidance does not transfer, and what this site is not.',
+    caption: 'Questions and objections',
+    lede: 'Thirteen questions, each one a real objection. If you are being asked to justify spending twenty minutes on this, the answer is probably here.',
+    stillDeciding: 'Still deciding where to start',
+    stillBody1: 'If the answer you needed is not here, the three pages that do the most work are',
+    startLink: 'Start here',
+    stillBody2: ', which tiers a tool from four questions;',
+    brightLinesLink: 'the bright lines',
+    stillBody3: ', which is the short list of things not to do at all; and',
+    lawLink: 'What the law says',
+    stillBody4: ', which answers which law actually governs the data in your program.',
+  },
+  es: {
+    description:
+      'Las objeciones que la gente pone en la primera reunión, contestadas: qué han legislado los estados y qué no, por qué la orientación de K-12 no sirve aquí, y qué no es este sitio.',
+    caption: 'Preguntas y objeciones',
+    lede: 'Trece preguntas, cada una es una objeción real. Si le están pidiendo que justifique dedicarle veinte minutos a esto, la respuesta probablemente está aquí.',
+    stillDeciding: 'Si todavía no sabe por dónde empezar',
+    stillBody1: 'Si la respuesta que necesitaba no está aquí, las tres páginas que más trabajo hacen son',
+    startLink: 'Empiece aquí',
+    stillBody2: ', que le asigna un nivel a una herramienta con cuatro preguntas;',
+    brightLinesLink: 'los límites infranqueables',
+    stillBody3: ', que es la lista corta de lo que no se hace nunca; y',
+    lawLink: 'Lo que dice la ley',
+    stillBody4: ', que contesta cuál ley rige de verdad los datos de su programa.',
+  },
+};
+
+const c = copy[locale] ?? copy.en;
 ---
 
-<BaseLayout title={t(locale, 'nav.faq')} description={description} locale={locale}>
+<BaseLayout title={t(locale, 'nav.faq')} description={c.description} locale={locale}>
   <PageHeader
-    caption="Questions and objections"
+    caption={c.caption}
     title={t(locale, 'nav.faq')}
-    lede="Thirteen questions, each one a real objection. If you are being asked to justify spending twenty minutes on this, the answer is probably here."
+    lede={c.lede}
     locale={locale}
     lastUpdated={lastUpdated}
   />
@@ -64,15 +94,12 @@ const description =
     ))}
   </div>
 
-  <h2 class="govuk-heading-m govuk-!-margin-top-8">Still deciding where to start</h2>
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">{c.stillDeciding}</h2>
   <p class="govuk-body">
-    If the answer you needed is not here, the three pages that do the most work are
-    <a class="govuk-link" href={localePath(locale, '/start')}>Start here</a>, which tiers a tool
-    from four questions;
-    <a class="govuk-link" href={localePath(locale, '/bright-lines')}>the bright lines</a>, which is
-    the short list of things not to do at all; and
-    <a class="govuk-link" href={localePath(locale, '/law')}>What the law says</a>, which answers
-    which law actually governs the data in your program.
+    {c.stillBody1}
+    <a class="govuk-link" href={localePath(locale, '/start')}>{c.startLink}</a>{c.stillBody2}
+    <a class="govuk-link" href={localePath(locale, '/bright-lines')}>{c.brightLinesLink}</a>{c.stillBody3}
+    <a class="govuk-link" href={localePath(locale, '/law')}>{c.lawLink}</a>{c.stillBody4}
   </p>
 
   <script is:inline>

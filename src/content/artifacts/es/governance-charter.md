@@ -1,8 +1,8 @@
 ---
-title: "Governance Charter & Authority Matrix"
+title: "Carta de gobernanza y matriz de autoridad"
 locale: es
-audience: Multi-site · Chain · Grantee
-summary: Who approves what, at which tier, without asking whom. Delegated authority, one register, a named escalation path, board reporting on a cadence, and a delegate-agency section — adopted as written and signed.
+audience: Multisede · Cadena · Concesionario
+summary: Quién aprueba qué, en qué nivel y sin pedirle permiso a quién. Autoridad delegada, un solo registro, una ruta de escalamiento con nombre, informes a la junta directiva con una frecuencia fija y una sección para las agencias delegadas; se adopta tal como está escrita y se firma.
 lastUpdated: '2026-09-11'
 length: long
 forWhom: ['multi-site']
@@ -13,275 +13,310 @@ order: 12
 translationPending: true
 ---
 
-## 1. Purpose and adoption
+## 1. Propósito y adopción
 
-This charter states who at [ORGANIZATION NAME] may approve the use of an
-artificial intelligence (AI) tool, at what level of risk, and what has to be
-written down before anyone uses it. It is adopted by [BOARD OR OWNER] and
-applies to every site, every central office function, and every delegate agency
-listed in Section 10.
+Esta carta establece quién en [NOMBRE DE LA ORGANIZACIÓN] puede aprobar el uso
+de una herramienta de inteligencia artificial (IA), en qué nivel de riesgo, y
+qué hay que dejar por escrito antes de que alguien la use. La adopta
+[JUNTA DIRECTIVA O DUEÑO] y aplica a cada sede, a cada función de la oficina
+central y a cada agencia delegada que aparezca en la Sección 10.
 
-It is a governance document, not a policy for staff. The staff-facing rules sit
-in the Program AI Use Policy and the Staff Acceptable-Use One-Pager, which are
-adopted under the authority this charter delegates.
+Es un documento de gobernanza, no una política para el personal. Las reglas
+dirigidas al personal están en la Política de uso de IA del programa y en la
+Hoja de Una Página de Uso Aceptable para el Personal, que se adoptan bajo la
+autoridad que esta carta delega.
 
-## 2. Why this charter exists
+## 2. Por qué existe esta carta
 
-Two opposite failures are common at our size and this charter is written to
-prevent both. Stating them in the adopting document is deliberate.
+Dos fallas opuestas son comunes en organizaciones de nuestro tamaño, y esta
+carta está escrita para evitar las dos. Decirlo en el documento que se adopta es
+a propósito.
 
-**A blanket prohibition is not a safety posture. It is an unmonitored one.**
-When an organization forbids AI outright, staff use it anyway — on personal
-phones, in free consumer accounts, with children's names in the prompt, outside
-any register, any written agreement, and any disclosure log. The organization
-keeps every exposure it had and loses the ability to see it, and now holds a
-written policy proving it knew better.
+**Una prohibición total no es una postura de seguridad. Es una postura sin
+vigilancia.** Cuando una organización prohíbe la IA por completo, el personal la
+usa de todos modos: en teléfonos personales, en cuentas gratuitas de consumo,
+con los nombres de los niños en la instrucción, fuera de todo registro, de todo
+acuerdo por escrito y de todo registro de divulgaciones. La organización
+conserva cada exposición que ya tenía y pierde la capacidad de verla, y ahora
+tiene por escrito una política que prueba que sabía que no debía hacerse.
 
-**The unmanaged yes is the same failure at the other end.** One site pilots a
-camera vendor. Another leaves an observation app's AI feature switched on
-because it shipped that way. The central office licenses a chatbot. Nobody holds
-an inventory, no two sites operate to the same standard, and the debt compounds
-faster than at a single site because more people can say yes.
+**El sí sin control es la misma falla en el otro extremo.** Una sede hace un
+piloto con un proveedor de cámaras. Otra deja activada la función de IA de una
+aplicación de observación porque así vino. La oficina central compra una
+licencia de chatbot. Nadie lleva un inventario, no hay dos sedes que operen con
+la misma norma, y la deuda se acumula más rápido que en una sola sede porque hay
+más gente que puede decir que sí.
 
-The answer to both is the same: delegate real authority downward so that nothing
-queues behind one person, and require one register so that nothing accumulates
-unseen.
+La respuesta a ambas es la misma: delegar autoridad real hacia abajo para que
+nada se forme detrás de una sola persona, y exigir un solo registro para que
+nada se acumule sin que se vea.
 
-## 3. Definitions
+## 3. Definiciones
 
-- **AI tool** — any software feature that generates or infers text, images,
-  audio, translations, summaries, scores, rankings, or flags. It does not matter
-  whether the vendor calls it AI, whether it is free, or whether it arrived
-  inside a system we already use.
-- **Adoption event** — the first use of an AI tool at a site, **and** a vendor
-  switching on a new AI feature in a product we already license. A vendor feature
-  release is an adoption event and is approved exactly the way a purchase is.
-  This is the most likely route by which AI enters our programs.
-- **Site** — any licensed location, plus the central office, plus any
-  home-based network operated under our license.
-- **Delegate agency** — an agency operating a program under an agreement with
-  [ORGANIZATION NAME] as grantee.
-- **The Register** — the Approved Tools Register described in Section 6. There
-  is exactly one.
-- **Tiers** — the risk levels below. Tier is set by what the tool touches, never
-  by what department bought it. Back office is not automatically Tier 1: subsidy
-  billing holds family income, immigration-adjacent documentation and custody
-  information, and grant narratives routinely contain child vignettes.
+- **Herramienta de IA**: cualquier función de software que genera o infiere
+  texto, imágenes, audio, traducciones, resúmenes, puntuaciones, clasificaciones
+  o alertas. No importa si el proveedor la llama IA, si es gratuita, ni si llegó
+  dentro de un sistema que ya usamos.
+- **Evento de adopción**: el primer uso de una herramienta de IA en una sede,
+  **y** que un proveedor active una función nueva de IA en un producto del que
+  ya tenemos licencia. El lanzamiento de una función por parte de un proveedor
+  es un evento de adopción y se aprueba exactamente igual que una compra. Esta
+  es la vía más probable por la que la IA entra a nuestros programas.
+- **Sede**: cualquier local con licencia, más la oficina central, más cualquier
+  red de cuidado en el hogar que opere bajo nuestra licencia.
+- **Agencia delegada**: una agencia que opera un programa bajo un acuerdo con
+  [NOMBRE DE LA ORGANIZACIÓN] como concesionario.
+- **El Registro**: el Registro de Herramientas Aprobadas que describe la Sección
+  6. Hay exactamente uno.
+- **Niveles**: los niveles de riesgo de abajo. El nivel lo define lo que la
+  herramienta toca, nunca qué departamento la compró. La oficina administrativa
+  no es automáticamente Nivel 1: la facturación de subsidios guarda ingresos de
+  la familia, documentación relacionada con la situación migratoria e
+  información de custodia, y las narrativas de subvenciones suelen contener
+  historias de niños.
 
-| Tier | What it means | Examples |
+| Nivel | Qué significa | Ejemplos |
 | --- | --- | --- |
-| 1 | Back office. No child or family data. | Marketing copy, menus, newsletters naming no child, professional development, general grant boilerplate, staff scheduling against ratio requirements. |
-| 2 | Operations touching child or family data. | Subsidy billing, enrollment records, licensing documentation, CACFP reconciliation, grant narratives containing child vignettes, family communication and translation. |
-| 3 | About an individual child, or used by a child. | Screening and assessment support, observation narratives, photo and video portfolios, behavior tracking, referral routing, classroom cameras, anything a child interacts with. |
-| 0 | Do not adopt. | The eight standing prohibitions in Section 5. |
+| 1 | Oficina administrativa. Sin datos de niños ni de familias. | Textos de promoción, menús, boletines que no nombran a ningún niño, desarrollo profesional, texto general y repetitivo de subvenciones, horarios del personal según los requisitos de proporción adulto-niño. |
+| 2 | Operaciones que tocan datos de niños o de familias. | Facturación de subsidios, expedientes de inscripción, documentación de licencias, conciliación del CACFP, narrativas de subvenciones que contienen historias de niños, comunicación y traducción con las familias. |
+| 3 | Sobre un niño en particular, o usado por un niño. | Apoyo a evaluaciones iniciales y evaluaciones, narrativas de observación, portafolios de fotos y videos, seguimiento de comportamiento, canalización de referencias, cámaras en el salón, cualquier cosa con la que un niño interactúe. |
+| 0 | No adoptar. | Las ocho prohibiciones permanentes de la Sección 5. |
 
-## 4. The authority matrix
+## 4. La matriz de autoridad
 
-The approver named in column three approves without asking anyone above them.
-That is the point of this table. No decision in it requires a second signature
-unless the table says so.
+La persona nombrada en la tercera columna aprueba sin pedirle permiso a nadie
+por encima de ella. De eso se trata esta tabla. Ninguna decisión aquí requiere
+una segunda firma, salvo donde la tabla lo diga.
 
-| Decision | Tier | Who approves | What must be documented before use |
+| Decisión | Nivel | Quién aprueba | Qué hay que documentar antes de usarla |
 | --- | --- | --- | --- |
-| Adopt a tool that touches no child or family data | 1 | Site director, alone | Register entry: tool, purpose, date, who at the site may use it |
-| A vendor switches on a new AI feature in a Tier 1 tool | 1 | Site director, alone | Register entry updated with the feature and the date it appeared |
-| Adopt a tool that receives child or family data | 2 | [AI GOVERNANCE LEAD — NAME, ROLE] | Signed written agreement on file; Register entry; retention and deletion terms; disclosure log entry where Head Start applies |
-| A vendor switches on a new AI feature in a Tier 2 tool | 2 | [AI GOVERNANCE LEAD] | Same as a Tier 2 adoption. If the agreement does not already cover the feature, the feature stays off until it does |
-| Adopt anything about an individual child, or used by a child | 3 | AI Review Group, in writing, at a meeting, with the crosswalk in front of them | Full vendor due diligence; separate parental consent; request for validation evidence disaggregated by home language and disability status, and the vendor's answer; the written human-determination rule; a written exit plan |
-| Any use listed in Section 5 | 0 | Nobody. Not delegable to any role or group | Record the request and the refusal in the Register, so that a repeated ask is visible |
-| Begin a pilot | any | The approver for that tier, plus a signed Pilot Protocol & Stop Condition | Pilot registration entry; success criteria and stop condition, both dated before the first day |
-| Continue past a pilot window | any | The approver for that tier | Closing decision record: adopt, stop, or extend once, with reasons |
-| **Stop** a tool immediately | any | Any site director, any Review Group member, or the [AI GOVERNANCE LEAD], acting alone | Incident record within [ONE BUSINESS DAY], then the Incident & Discontinuation Protocol |
+| Adoptar una herramienta que no toca datos de niños ni de familias | 1 | El director de la sede, solo | Entrada en el Registro: herramienta, propósito, fecha, quién en la sede puede usarla |
+| Un proveedor activa una función nueva de IA en una herramienta de Nivel 1 | 1 | El director de la sede, solo | Entrada del Registro actualizada con la función y la fecha en que apareció |
+| Adoptar una herramienta que recibe datos de niños o de familias | 2 | [RESPONSABLE DE GOBERNANZA DE IA — NOMBRE, PUESTO] | Acuerdo por escrito firmado en el archivo; entrada en el Registro; términos de retención y borrado; entrada en el registro de divulgaciones donde aplique Head Start |
+| Un proveedor activa una función nueva de IA en una herramienta de Nivel 2 | 2 | [RESPONSABLE DE GOBERNANZA DE IA] | Lo mismo que una adopción de Nivel 2. Si el acuerdo todavía no cubre la función, la función se queda apagada hasta que la cubra |
+| Adoptar cualquier cosa sobre un niño en particular, o usada por un niño | 3 | El Grupo de Revisión de IA, por escrito, en una reunión, con el mapa regulatorio a la vista | Diligencia debida completa sobre el proveedor; consentimiento de los padres por separado; solicitud de evidencia de validación desglosada por idioma del hogar y por condición de discapacidad, y la respuesta del proveedor; la regla escrita de determinación humana; un plan de salida por escrito |
+| Cualquier uso de los que enumera la Sección 5 | 0 | Nadie. No se delega a ningún puesto ni a ningún grupo | Anotar la solicitud y la negativa en el Registro, para que una petición repetida se vea |
+| Empezar un piloto | cualquiera | La persona que aprueba ese nivel, más un Protocolo de piloto y condición de alto firmado | Entrada de registro del piloto; criterios de éxito y condición de alto, ambos con fecha anterior al primer día |
+| Seguir después de que termine la ventana del piloto | cualquiera | La persona que aprueba ese nivel | Expediente de la decisión de cierre: adoptar, parar, o extender una sola vez, con razones |
+| **Parar** una herramienta de inmediato | cualquiera | Cualquier director de sede, cualquier integrante del Grupo de Revisión, o el [RESPONSABLE DE GOBERNANZA DE IA], actuando solo | Expediente del incidente dentro de [UN DÍA HÁBIL], y luego el Protocolo de incidentes y descontinuación |
 
-Four standing rules attach to this table.
+A esta tabla se le pegan cuatro reglas permanentes.
 
-1. **Stopping is always easier than starting.** One person can stop a tool
-   anywhere in the organization. Restarting it takes the approver for its tier.
-2. **Nobody approves their own purchase.** If the person who selected the tool
-   is the approver for its tier, approval moves up one row.
-3. **Free is not exempt.** A free consumer account is an adoption event with no
-   agreement behind it, which usually makes it a Tier 2 or Tier 0 problem rather
-   than a small one.
-4. **Tier up when unsure.** A tool that might touch child data is Tier 2 until
-   someone establishes otherwise in writing.
+1. **Parar siempre es más fácil que empezar.** Una sola persona puede parar una
+   herramienta en cualquier parte de la organización. Volver a encenderla
+   requiere a quien aprueba ese nivel.
+2. **Nadie aprueba su propia compra.** Si la persona que escogió la herramienta
+   es quien aprueba ese nivel, la aprobación sube un renglón.
+3. **Gratis no significa exento.** Una cuenta gratuita de consumo es un evento
+   de adopción sin ningún acuerdo detrás, lo cual normalmente lo convierte en un
+   problema de Nivel 2 o de Nivel 0, y no en uno pequeño.
+4. **Ante la duda, suba de nivel.** Una herramienta que podría tocar datos de
+   niños es de Nivel 2 hasta que alguien demuestre lo contrario por escrito.
 
-**The AI Review Group** is [NUMBER, SUGGESTED THREE TO FIVE] people, named by
-[BOARD OR OWNER]: the [AI GOVERNANCE LEAD], [ROLE — e.g. EDUCATION DIRECTOR],
-[ROLE — e.g. HR DIRECTOR], and [ROLE]. It meets [MONTHLY] and can meet on
-[FIVE BUSINESS DAYS'] notice. It records a written decision for every Tier 3
-item, including the ones it declines.
+**El Grupo de Revisión de IA** son [NÚMERO, SE SUGIERE DE TRES A CINCO]
+personas, nombradas por [JUNTA DIRECTIVA O DUEÑO]: el
+[RESPONSABLE DE GOBERNANZA DE IA], [PUESTO — p. ej. DIRECTOR DE EDUCACIÓN],
+[PUESTO — p. ej. DIRECTOR DE RECURSOS HUMANOS] y [PUESTO]. Se reúne
+[MENSUALMENTE] y puede reunirse con [CINCO DÍAS HÁBILES] de aviso. Anota una
+decisión por escrito para cada asunto de Nivel 3, incluidos los que rechaza.
 
-## 5. Standing prohibitions (Tier 0)
+## 5. Prohibiciones permanentes (Nivel 0)
 
-No role in this organization may approve these. They are not risk judgments to
-be balanced; they are the floor.
+Ningún puesto de esta organización puede aprobar estas cosas. No son juicios de
+riesgo que haya que sopesar; son el piso.
 
-1. AI that infers emotion, affect, or engagement from a child's face, voice, or
-   body.
-2. AI as the basis for expelling, suspending, disenrolling, or denying
-   enrollment to a child. For Head Start programs this is already law:
-   §1302.17 prohibits expulsion for behavior, and §1302.33 prohibits using
-   screening or assessment to exclude a child from enrollment or to rank,
-   compare, or evaluate individual children for rewards or sanctions.
-3. AI as the basis for a special education or early intervention referral
-   without an independent human determination on the underlying evidence.
-4. AI anywhere in mandated-reporter documentation.
-5. Child or family personal information in a consumer chatbot with no written
-   agreement. Under §1303.22 a Head Start grantee whose staff paste child
-   observations into a consumer tool has arguably made an undisclosed
-   third-party disclosure — no consent, no reviewable agreement, and no entry in
-   the §1303.24 disclosure log. The violation is complete whether or not
-   anything leaks.
-6. Machine translation in IFSP or IEP meetings, screening-result conversations,
-   child-protection conversations, or eligibility determinations. §1302.33
-   already requires qualified bilingual staff or interpreters for exactly these
-   conversations. Routine notices, reminders, and menus are fine.
-7. Face or voice biometric identification of children — check-in and check-out,
-   photo auto-tagging — without express, separate, revocable parental consent.
-8. Vendor training of models on children's images, voices, work, or records
-   without separate verifiable parental consent.
+1. IA que infiera emociones, afecto o nivel de participación a partir de la
+   cara, la voz o el cuerpo de un niño.
+2. IA como base para expulsar, suspender, dar de baja o negarle la inscripción a
+   un niño. Para los programas de Head Start (el programa federal de educación
+   temprana) esto ya es ley: §1302.17 prohíbe la expulsión por comportamiento, y
+   §1302.33 prohíbe usar una evaluación inicial o una evaluación para excluir a
+   un niño de la inscripción o para clasificar, comparar o evaluar a niños en
+   particular con premios o castigos.
+3. IA como base para una referencia a educación especial o a intervención
+   temprana sin una determinación humana independiente sobre la evidencia de
+   fondo.
+4. IA en cualquier parte de la documentación de un reporte obligatorio de
+   sospecha de maltrato.
+5. Información personal de un niño o de una familia en un chatbot de consumo sin
+   acuerdo por escrito. Bajo §1303.22, un concesionario de Head Start cuyo
+   personal pega observaciones de niños en una herramienta de consumo, con
+   buenos argumentos, ha hecho una divulgación a un tercero sin informar: sin
+   consentimiento, sin un acuerdo que se pueda revisar y sin entrada en el
+   registro de divulgaciones de §1303.24. La violación está completa, se filtre
+   algo o no.
+6. Traducción automática en reuniones de IFSP (el plan individualizado de
+   servicios para la familia) o de IEP (el programa educativo individualizado),
+   en conversaciones sobre resultados de evaluaciones, en conversaciones de
+   protección infantil o en determinaciones de elegibilidad. §1302.33 ya exige
+   personal bilingüe calificado o intérpretes exactamente para estas
+   conversaciones. Los avisos de rutina, los recordatorios y los menús están
+   bien.
+7. Identificación biométrica de la cara o la voz de los niños —para entrada y
+   salida, para etiquetar fotos automáticamente— sin un consentimiento de los
+   padres expreso, por separado y revocable.
+8. Que un proveedor entrene modelos con las imágenes, las voces, los trabajos o
+   los expedientes de los niños sin un consentimiento de los padres verificable
+   y por separado.
 
-## 6. One register, many sites
+## 6. Un solo registro, muchas sedes
 
-There is one Approved Tools Register for the whole organization, held by the
-[AI GOVERNANCE LEAD] at [LOCATION OR SYSTEM], with per-site adoption status on
-every row: which sites use the tool, since when, and who approved it there.
+Hay un solo Registro de Herramientas Aprobadas para toda la organización, a
+cargo del [RESPONSABLE DE GOBERNANZA DE IA] en [UBICACIÓN O SISTEMA], con el
+estado de adopción por sede en cada renglón: qué sedes usan la herramienta,
+desde cuándo, y quién la aprobó ahí.
 
-**The standing rule: no site adopts a Tier 2 or Tier 3 tool that is not on the
-Register.** A site director may add a Tier 1 tool to the Register on their own
-authority. Tier 2 and Tier 3 rows are added only by the approver for that tier.
+**La regla permanente: ninguna sede adopta una herramienta de Nivel 2 o Nivel 3
+que no esté en el Registro.** Un director de sede puede agregar al Registro una
+herramienta de Nivel 1 por su propia autoridad. Los renglones de Nivel 2 y de
+Nivel 3 los agrega solamente quien aprueba ese nivel.
 
-Every row carries: tool, vendor, purpose, tier, who approved it, date approved,
-sites in use, agreement on file (yes or no, and where), what data it touches,
-retention and deletion terms, and the next review date. The Register is the
-document most likely to be asked for in a licensing visit or a monitoring
-review, and under §1303.23(e) a parent in a Head Start program has an
-unqualified right to review any written agreement the program holds with a third
-party — not only agreements naming their own child. Keep the agreements where
-someone can produce them the same day.
+Cada renglón trae: herramienta, proveedor, propósito, nivel, quién la aprobó,
+fecha de aprobación, sedes donde está en uso, acuerdo en el archivo (sí o no, y
+dónde), qué datos toca, términos de retención y borrado, y la próxima fecha de
+revisión. El Registro es el documento que con más probabilidad le van a pedir en
+una visita de licencias o en una revisión de monitoreo, y bajo §1303.23(e) un
+padre o una madre de un programa de Head Start tiene el derecho sin condiciones
+de revisar cualquier acuerdo por escrito que el programa tenga con un tercero, y
+no solo los acuerdos que nombran a su propio hijo o hija. Guarde los acuerdos
+donde alguien los pueda sacar el mismo día.
 
-The [AI GOVERNANCE LEAD] reconciles the Register against actual use at
-[SIX-MONTH] intervals, and the reconciliation is reported under Section 8.
+El [RESPONSABLE DE GOBERNANZA DE IA] concilia el Registro contra el uso real
+cada [SEIS MESES], y esa conciliación se informa bajo la Sección 8.
 
-## 7. Escalation: who a teacher calls at four in the afternoon
+## 7. Escalamiento: a quién llama una maestra a las cuatro de la tarde
 
-At a single site this is the director. At [NUMBER] sites it has to be a named
-role, or it defaults to nobody.
+En una sola sede esto es la directora. En [NÚMERO] sedes tiene que ser un puesto
+con nombre, o por defecto no es nadie.
 
-| Situation | Who to contact | How | When |
+| Situación | A quién contactar | Cómo | Cuándo |
 | --- | --- | --- | --- |
-| A tool did something strange, wrong, or unexpected | [ESCALATION ROLE — NAME] | [PHONE] / [EMAIL] | [7:00 a.m. – 6:00 p.m., MONDAY–FRIDAY] |
-| Same, outside those hours | [BACKUP ROLE — NAME] | [PHONE] | Any time |
-| Child or family information may have gone somewhere it should not have | [AI GOVERNANCE LEAD — NAME] | [PHONE] — call, do not email | Immediately, any time |
-| A tool produced something that would affect a specific child | Stop using the output. [ESCALATION ROLE — NAME] | [PHONE] | Before the output is acted on |
+| Una herramienta hizo algo raro, equivocado o inesperado | [PUESTO DE ESCALAMIENTO — NOMBRE] | [TELÉFONO] / [CORREO ELECTRÓNICO] | [7:00 a. m. – 6:00 p. m., DE LUNES A VIERNES] |
+| Lo mismo, fuera de ese horario | [PUESTO SUPLENTE — NOMBRE] | [TELÉFONO] | A cualquier hora |
+| Información de un niño o de una familia pudo haber ido a donde no debía | [RESPONSABLE DE GOBERNANZA DE IA — NOMBRE] | [TELÉFONO] — llame, no mande correo | De inmediato, a cualquier hora |
+| Una herramienta produjo algo que afectaría a un niño en particular | Deje de usar el resultado. [PUESTO DE ESCALAMIENTO — NOMBRE] | [TELÉFONO] | Antes de actuar sobre ese resultado |
 
-This table is posted in every staff room and printed on the back of every
-badge. No staff member is ever disciplined for making one of these calls,
-including when it turns out to be nothing. The calls that do not come are the
-expensive ones.
+Esta tabla se pone en la pared de cada sala de personal y se imprime al reverso
+de cada gafete. A ninguna persona del personal se le sanciona nunca por hacer
+una de estas llamadas, ni siquiera cuando resulta que no era nada. Las llamadas
+caras son las que no se hacen.
 
-The [ESCALATION ROLE] logs every call, and the log is reported under Section 8
-whether or not anything came of it.
+El [PUESTO DE ESCALAMIENTO] anota cada llamada, y ese registro se informa bajo
+la Sección 8, haya salido algo de la llamada o no.
 
-## 8. Board and owner reporting
+## 8. Informes a la junta directiva y a la dueña
 
-AI governance is a standing quarterly item on the [BOARD OR OWNER] agenda —
-not a special presentation, not an annual review. Four things, every quarter,
-in writing, from the [AI GOVERNANCE LEAD]:
+La gobernanza de la IA es un punto fijo trimestral en la agenda de
+[JUNTA DIRECTIVA O DUEÑO], no una presentación especial ni una revisión anual.
+Cuatro cosas, cada trimestre, por escrito, de parte del
+[RESPONSABLE DE GOBERNANZA DE IA]:
 
-1. **Tools in use, by tier and by site.** Counts, plus anything added or removed
-   since the last report.
-2. **Incidents.** Every escalation call, what happened, what was done, and
-   whether families were notified.
-3. **What changed.** Vendor feature releases, contract renewals, changes in
-   terms, and any tool whose tier moved.
-4. **What is pending approval.** Anything waiting, and how long it has waited.
-   A queue that is growing is the early signal of the unmanaged yes, because
-   staff route around a queue.
+1. **Herramientas en uso, por nivel y por sede.** Cuántas hay, más lo que se
+   agregó o se quitó desde el informe anterior.
+2. **Incidentes.** Cada llamada de escalamiento, qué pasó, qué se hizo, y si se
+   les avisó a las familias.
+3. **Qué cambió.** Lanzamientos de funciones por parte de proveedores,
+   renovaciones de contratos, cambios en los términos, y cualquier herramienta
+   que haya cambiado de nivel.
+4. **Qué está pendiente de aprobación.** Todo lo que esté esperando, y cuánto
+   lleva esperando. Una fila que crece es la señal temprana del sí sin control,
+   porque el personal le da la vuelta a las filas.
 
-For Head Start programs this maps onto existing Policy Council and governing
-body reporting rather than adding a new obligation. Report it inside the
-regular information you already provide to those bodies, under a named heading
-so that it is visible in the minutes.
+Para los programas de Head Start esto encaja en los informes que ya se dan al
+Policy Council (el consejo de políticas) y al cuerpo de gobierno, en lugar de
+agregar una obligación nueva. Inclúyalo dentro de la información regular que ya
+les entrega a esos organismos, bajo un encabezado con nombre para que se vea en
+las actas.
 
-## 9. Role-differentiated training
+## 9. Capacitación diferenciada por puesto
 
-A teacher, a family services worker, and a billing clerk face completely
-different risks from the same tool. Training them identically trains none of
-them. This is one of the few places where our size is an advantage.
+Una maestra, una trabajadora de servicios a las familias y una persona de
+facturación enfrentan riesgos completamente distintos con la misma herramienta.
+Capacitarlas igual no capacita a ninguna. Este es uno de los pocos lugares donde
+nuestro tamaño es una ventaja.
 
-| Role | The risk that actually applies | Required before access | Refresher |
+| Puesto | El riesgo que de verdad aplica | Requisito antes de tener acceso | Repaso |
 | --- | --- | --- | --- |
-| Teachers and assistant teachers | Observation narratives and photographs are Tier 3 data about a named child; an AI-drafted narrative is not an observation | [90 MINUTES]: tiers, the eight prohibitions, what goes in an observation, disclosure when AI drafted family-facing text | [ANNUAL] |
-| Family services and enrollment staff | Eligibility, income, immigration-adjacent and custody information; high-stakes conversations where machine translation is prohibited | [90 MINUTES]: Tier 2 rules, interpreter requirements, consumer-chatbot prohibition | [ANNUAL] |
-| Billing, CACFP and business staff | The back office is where the child data lives; subsidy files are not low-risk because they are paperwork | [60 MINUTES]: why billing is Tier 2, approved tools only, no consumer accounts | [ANNUAL] |
-| Site directors | They are approvers under Section 4 | [HALF DAY]: the authority matrix, Register entry, when to tier up, how to stop a tool | [SEMI-ANNUAL] |
-| Central office and procurement | A purchase and a feature release are the same event | [HALF DAY]: adoption events, contract rider terms, vendor due diligence | [ANNUAL] |
+| Maestras y maestras asistentes | Las narrativas de observación y las fotografías son datos de Nivel 3 sobre un niño con nombre; una narrativa redactada por IA no es una observación | [90 MINUTOS]: niveles, las ocho prohibiciones, qué va en una observación, avisar cuando la IA redactó un texto dirigido a las familias | [ANUAL] |
+| Personal de servicios a las familias y de inscripción | Elegibilidad, ingresos, información relacionada con la situación migratoria y con la custodia; conversaciones de alto riesgo donde la traducción automática está prohibida | [90 MINUTOS]: reglas de Nivel 2, requisitos de intérprete, prohibición de chatbots de consumo | [ANUAL] |
+| Personal de facturación, de CACFP y de administración | La oficina administrativa es donde viven los datos de los niños; los expedientes de subsidios no son de bajo riesgo por ser papeleo | [60 MINUTOS]: por qué la facturación es de Nivel 2, solo herramientas aprobadas, nada de cuentas de consumo | [ANUAL] |
+| Directores de sede | Ellos aprueban bajo la Sección 4 | [MEDIO DÍA]: la matriz de autoridad, la entrada en el Registro, cuándo subir de nivel, cómo parar una herramienta | [SEMESTRAL] |
+| Oficina central y compras | Una compra y el lanzamiento de una función son el mismo evento | [MEDIO DÍA]: eventos de adopción, términos del anexo de contrato, diligencia debida sobre proveedores | [ANUAL] |
 
-Training completion is tracked in [SYSTEM] and reported under Section 8.
+El cumplimiento de la capacitación se lleva en [SISTEMA] y se informa bajo la
+Sección 8.
 
-## 10. Delegate agencies
+## 10. Agencias delegadas
 
-[ORGANIZATION NAME] is accountable for delegate compliance under 45 CFR Part
-1303, but delegates make their own operating decisions and may adopt tools we
-never reviewed. The Register, the contract rider, and the escalation path all
-have to reach across that boundary, and the following terms are incorporated
-into every delegate agreement at its next execution or renewal:
+[NOMBRE DE LA ORGANIZACIÓN] responde por el cumplimiento de sus agencias
+delegadas bajo 45 CFR Part 1303, pero las delegadas toman sus propias decisiones
+de operación y pueden adoptar herramientas que nosotros nunca revisamos. El
+Registro, el anexo de contrato y la ruta de escalamiento tienen que cruzar esa
+frontera, y los siguientes términos se incorporan a cada acuerdo con una agencia
+delegada en su próxima firma o renovación:
 
-1. The delegate adopts this charter, or a governance document the
-   [AI GOVERNANCE LEAD] has reviewed and found at least equivalent in writing.
-2. The delegate enters every Tier 2 and Tier 3 tool on the grantee's Register
-   within [TEN BUSINESS DAYS] of approval, and no delegate adopts a Tier 2 or
-   Tier 3 tool that is not on it.
-3. The delegate uses the grantee's model contract rider in every agreement with
-   a vendor whose product includes an AI feature.
-4. Delegate staff use the escalation path in Section 7, which is published to
-   them by name and number, and the grantee's [AI GOVERNANCE LEAD] answers those
-   calls.
-5. The delegate reports to the grantee quarterly on the four items in Section 8,
-   on the grantee's cycle.
-6. The grantee's monitoring instrument asks about AI tools the way it asks about
-   everything else the grantee answers for. A delegate's undisclosed Tier 2 or
-   Tier 3 adoption is a monitoring finding.
+1. La agencia delegada adopta esta carta, o un documento de gobernanza que el
+   [RESPONSABLE DE GOBERNANZA DE IA] haya revisado y declarado por escrito al
+   menos equivalente.
+2. La agencia delegada anota cada herramienta de Nivel 2 y de Nivel 3 en el
+   Registro del concesionario dentro de [DIEZ DÍAS HÁBILES] de aprobarla, y
+   ninguna agencia delegada adopta una herramienta de Nivel 2 o de Nivel 3 que
+   no esté en él.
+3. La agencia delegada usa el anexo de contrato modelo del concesionario en cada
+   acuerdo con un proveedor cuyo producto incluya una función de IA.
+4. El personal de la agencia delegada usa la ruta de escalamiento de la Sección
+   7, que se les publica con nombre y número, y el
+   [RESPONSABLE DE GOBERNANZA DE IA] del concesionario contesta esas llamadas.
+5. La agencia delegada le informa al concesionario cada trimestre sobre los
+   cuatro puntos de la Sección 8, en el ciclo del concesionario.
+6. El instrumento de monitoreo del concesionario pregunta por las herramientas
+   de IA igual que pregunta por todo lo demás de lo que el concesionario
+   responde. Una adopción de Nivel 2 o de Nivel 3 que una agencia delegada no
+   haya declarado es un hallazgo de monitoreo.
 
-Delegates keep their operating decisions. What they do not keep is the ability
-to make one invisible to the entity accountable for it.
+Las agencias delegadas conservan sus decisiones de operación. Lo que no
+conservan es la capacidad de hacer que una de ellas sea invisible para quien
+responde por ella.
 
-## 11. One standard, not fifty
+## 11. Una sola norma, no cincuenta
 
-[ORGANIZATION NAME] operates in [STATES]. Running a different practice in each
-state is possible and is almost always more expensive than it looks. This
-organization therefore operates a single standard set at the level of the
-strictest state in which it operates, currently [STATE].
+[NOMBRE DE LA ORGANIZACIÓN] opera en [ESTADOS]. Llevar una práctica distinta en
+cada estado es posible y casi siempre sale más caro de lo que parece. Por eso
+esta organización opera con una sola norma, fijada al nivel del estado más
+estricto en el que opera, que hoy es [ESTADO].
 
-Where our states include Illinois, California, or New York, the specific laws
-in view are the Illinois Biometric Information Privacy Act (BIPA), which applies
-to private entities and expressly excludes state and local government agencies —
-so a private center or a nonprofit grantee carries more exposure here than a
-public school district does — California's ELPIPA, and New York Education Law
-2-d. The [AI GOVERNANCE LEAD] reviews the state layer of the crosswalk at
-[ANNUAL] intervals and whenever we open a site in a new state.
+Donde nuestros estados incluyan Illinois, California o Nueva York, las leyes
+específicas que están a la vista son la Illinois Biometric Information Privacy
+Act (BIPA, la ley de privacidad de información biométrica de Illinois), que
+aplica a entidades privadas y excluye expresamente a las agencias de gobierno
+estatal y local —así que un centro privado o una organización sin fines de lucro
+que recibe una subvención tiene más exposición aquí que un distrito escolar
+público—, la ELPIPA de California, y la New York Education Law 2-d (la ley de
+educación de Nueva York). El [RESPONSABLE DE GOBERNANZA DE IA] revisa la
+capa estatal del mapa regulatorio cada [ANUAL] y cada vez que abrimos una sede
+en un estado nuevo.
 
-## 12. Review, currency, and adoption
+## 12. Revisión, vigencia y adopción
 
-This charter is reviewed by the AI Review Group every [12 MONTHS] and on any
-occasion when a bright line, a federal rule, or a state law changes. The review
-date and the version are printed on every copy. A governance document with no
-date on it is not a governance document.
+El Grupo de Revisión de IA revisa esta carta cada [12 MESES] y cada vez que
+cambia una línea roja, una regla federal o una ley estatal. La fecha de revisión
+y la versión van impresas en cada copia. Un documento de gobernanza sin fecha no
+es un documento de gobernanza.
 
-**This charter is an unreviewed working draft until [ORGANIZATION NAME]'s own
-counsel has read it.** The language is complete and ready to adopt, and it is
-written so that a review is a review rather than a drafting exercise.
+**Esta carta es un borrador de trabajo sin revisar hasta que el propio abogado
+de [NOMBRE DE LA ORGANIZACIÓN] la haya leído.** El texto está completo y listo
+para adoptarse, y está escrito para que una revisión sea una revisión y no un
+ejercicio de redacción.
 
 ---
 
-Adopted by [BOARD OR OWNER] on [DATE].
+Adoptada por [JUNTA DIRECTIVA O DUEÑO] el [FECHA].
 
-Signed: [NAME], [CHAIR OR OWNER TITLE]
+Firma: [NOMBRE], [PRESIDENTE DE LA JUNTA O TÍTULO DEL DUEÑO]
 
-Signed: [NAME], [EXECUTIVE DIRECTOR OR CEO]
+Firma: [NOMBRE], [DIRECTOR EJECUTIVO O CEO]
 
-AI Governance Lead designated under Section 4: [NAME], [ROLE], [PHONE],
-[EMAIL].
+Responsable de Gobernanza de IA designado bajo la Sección 4: [NOMBRE],
+[PUESTO], [TELÉFONO], [CORREO ELECTRÓNICO].
 
-Next review: [DATE].
+Próxima revisión: [FECHA].

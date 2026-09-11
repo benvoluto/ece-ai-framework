@@ -1,11 +1,11 @@
 ---
-title: The data system ships an agentic feature that flags children
+title: El sistema de datos lanza una función agéntica que marca a ciertos niños
 locale: es
 lastUpdated: '2026-09-10'
 order: 5
-situation: Your Head Start data system ships an agentic feature that drafts family engagement notes and flags children for follow-up.
-atStake: Flagging children for follow-up is a decision about a specific child, arriving through a compliance system nobody thinks of as an AI tool. This is the most likely real-world path by which AI enters Head Start programs, and it will arrive as a product update rather than a purchase decision.
-whatToDo: Treat a vendor feature release as an adoption event — register it, tier it, and require the human determination before any flag informs a referral or a service decision. Ask what the flagging model was validated on, and whether performance was analyzed by home language and disability status.
+situation: Su sistema de datos de Head Start (el programa federal de educación temprana) lanza una función agéntica que redacta notas de participación familiar y marca a ciertos niños para darles seguimiento.
+atStake: Marcar a un niño para darle seguimiento es una decisión sobre un niño en particular, y llega a través de un sistema de cumplimiento que nadie considera una herramienta de IA. Esta es la vía más probable por la que la IA entra de verdad a los programas de Head Start, y llegará como una actualización del producto y no como una decisión de compra.
+whatToDo: Trate el lanzamiento de una función del proveedor como un acto de adopción — regístrela, asígnele un nivel y exija la determinación humana antes de que cualquier marca influya en una referencia o en una decisión de servicio. Pregunte con qué se validó el modelo que marca a los niños, y si se analizó su desempeño según el idioma del hogar y la condición de discapacidad.
 governs: ['consequence', 'language', 'currency']
 brightLines: []
 tier: 3
@@ -14,49 +14,53 @@ status: drafted
 translationPending: true
 ---
 
-If you are waiting for the meeting where your program decides whether to
-adopt AI, this is the meeting, and nobody called it. The system in question is a
-compliance and reporting platform. It has been in the building for years,
-nobody thinks of it as an AI tool, and the feature arrived in a release note.
-This is the most likely path by which AI actually enters Head Start programs.
+Si usted está esperando la reunión en la que su programa decide si adopta la
+IA, esta es esa reunión, y nadie la convocó. El sistema del que hablamos es una
+plataforma de cumplimiento y reportes. Lleva años en el programa, nadie la
+considera una herramienta de IA, y la función llegó en una nota de
+actualización. Esta es la vía más probable por la que la IA entra de verdad a
+los programas de Head Start.
 
-Two things shipped together and they are not equivalent.
+Llegaron dos cosas juntas, y no son lo mismo.
 
-**Drafting family engagement notes** is writing assistance. A family service
-worker still met the family, and the tool is shortening the write-up. That is
-worth having, with the ordinary conditions: the worker reads and corrects every
-draft before it is saved, and the note records what happened rather than what
-the model expected to happen.
+**Redactar notas de participación familiar** es ayuda para escribir. Una
+trabajadora de servicios familiares sí se reunió con la familia, y la
+herramienta solo acorta el trabajo de redactar. Eso vale la pena tenerlo, con
+las condiciones de siempre: la trabajadora lee y corrige cada borrador antes de
+guardarlo, y la nota registra lo que pasó y no lo que el modelo esperaba que
+pasara.
 
-**Flagging children for follow-up** is a decision about a specific child. It is
-a judgment that this child, and not the one next to her, warrants attention —
-and once a flag exists, it is very hard for a person to decide it was wrong.
-The failure mode is documented in adjacent child-serving systems: Oregon
-discontinued its child-welfare screening tool after it flagged a
-disproportionate number of Black children, and the Allegheny Family Screening
-Tool drew a civil-rights inquiry from the Department of Justice over disability
-bias.
+**Marcar a un niño para darle seguimiento** es una decisión sobre un niño en
+particular. Es un juicio de que este niño, y no el de al lado, merece atención;
+y una vez que la marca existe, a una persona le cuesta muchísimo decidir que
+estaba equivocada. Esta falla ya está documentada en otros sistemas que
+atienden a niños: Oregon descontinuó su herramienta de tamizaje de bienestar
+infantil después de que marcara a un número desproporcionado de niños negros, y
+el Allegheny Family Screening Tool provocó una investigación de derechos
+civiles del Departamento de Justicia por sesgo contra la discapacidad.
 
-So treat the release note as an adoption event, exactly as if you had bought
-something:
+Así que trate la nota de actualización como un acto de adopción, exactamente
+como si hubiera comprado algo:
 
-- **Register it.** The date the feature appeared, what it does, and who at your
-  program decided it could stay on.
-- **Tier it.** Anything producing a judgment about an individual child is Tier
-  3, whatever the rest of the platform is tiered as.
-- **Require the human determination.** No flag informs a referral or a service
-  decision until a person has looked at the underlying evidence and reached
-  their own conclusion. That is bright line 3, and it is the strongest
-  human-decision requirement in this framework.
-- **Ask what it was validated on** — vendor question 8 — and specifically
-  whether performance was analyzed separately for dual language learners and
-  for children with disabilities. A flagging model trained mostly on
-  English-speaking families will read a quiet dual language learner and a child
-  with a disability differently from how you would.
-- **Put a date on the answer and revisit it.** The model will change, the
-  feature set will change, and an answer from the release before last is not an
-  answer about what is running now.
+- **Regístrela.** La fecha en que apareció la función, qué hace y quién en su
+  programa decidió que podía quedarse encendida.
+- **Asígnele un nivel.** Todo lo que produzca un juicio sobre un niño en
+  particular es Nivel 3, sin importar en qué nivel esté el resto de la
+  plataforma.
+- **Exija la determinación humana.** Ninguna marca influye en una referencia ni
+  en una decisión de servicio hasta que una persona haya mirado la evidencia de
+  fondo y llegado a su propia conclusión. Ese es el límite infranqueable 3, y es
+  la exigencia de decisión humana más fuerte de todo este marco.
+- **Pregunte con qué se validó** —la pregunta 8 para proveedores— y en
+  particular si se analizó el desempeño por separado para los estudiantes de dos
+  idiomas (DLL) y para los niños con discapacidades. Un modelo que marca niños y
+  fue entrenado sobre todo con familias de habla inglesa va a leer a un
+  estudiante de dos idiomas callado, y a un niño con una discapacidad, de manera
+  distinta a como usted los leería.
+- **Póngale fecha a la respuesta y vuelva a revisarla.** El modelo va a cambiar,
+  las funciones van a cambiar, y una respuesta de hace dos actualizaciones no es
+  una respuesta sobre lo que está corriendo hoy.
 
-The one sentence to take to your governing body: a product update is not an
-exemption from your policy, and the fact that nobody signed a purchase order
-does not mean nobody adopted anything.
+La frase que hay que llevarle a su cuerpo directivo: una actualización del
+producto no exime a nadie de su política, y que nadie haya firmado una orden de
+compra no significa que nadie haya adoptado nada.

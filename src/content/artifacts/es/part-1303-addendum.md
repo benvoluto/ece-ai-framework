@@ -1,8 +1,8 @@
 ---
-title: Part 1303 Addendum
+title: Anexo de la Parte 1303
 locale: es
-audience: Head Start grantee
-summary: Maps AI use onto the obligations a grantee already carries — third-party disclosure under 45 CFR 1303.22, the disclosure log under 1303.24, parent review of written agreements under 1303.23, and the screening constraints of 1302.33. A compliance document, not an ethics document.
+audience: Concesionario de Head Start
+summary: "Coloca el uso de IA dentro de las obligaciones que un concesionario ya tiene: divulgación a terceros bajo 45 CFR 1303.22, el registro de divulgaciones de 1303.24, la revisión de los acuerdos por escrito por parte de los padres bajo 1303.23, y los límites de las evaluaciones de 1302.33. Es un documento de cumplimiento, no un documento de ética."
 lastUpdated: '2026-09-10'
 order: 3
 length: short
@@ -14,130 +14,146 @@ phase: 2
 translationPending: true
 ---
 
-Adopted by [GRANTEE NAME] on [DATE] as an addendum to [PROGRAM NAME]'s AI use
-policy. It states how AI tools are handled under obligations this program
-already carries. It adds no new principles.
+Adoptado por [NOMBRE DEL CONCESIONARIO] el [FECHA] como anexo a la política de
+uso de IA de [NOMBRE DEL PROGRAMA]. Establece cómo se manejan las herramientas
+de IA bajo obligaciones que este programa ya tiene. No agrega ningún principio
+nuevo.
 
-## 1. Which rules apply to this program
+## 1. Qué reglas le aplican a este programa
 
-Determine this first. It changes which of the sections below bind you.
+Determine esto primero. Cambia cuáles de las secciones de abajo lo obligan.
 
-- **45 CFR 1303.21(a).** A program receiving funds under a Department of
-  Education program, and therefore subject to the Family Educational Rights and
-  Privacy Act (FERPA), complies with FERPA instead of this Head Start subpart.
-  If that is [GRANTEE NAME], Sections 2 through 5 of this addendum do not apply
-  and the program's FERPA obligations govern the same conduct.
-- **45 CFR 1303.21(b).** For any child referred to or found eligible under the
-  Individuals with Disabilities Education Act (IDEA), Part B or Part C
-  confidentiality requirements displace Subpart C. This applies **in any
-  grantee**, including one otherwise operating entirely under Subpart C. Any AI
-  tool that touches an Individualized Family Service Plan (IFSP), an
-  Individualized Education Program (IEP), referral material, or evaluation
-  records for such a child is handled under IDEA confidentiality, including the
-  parental right to have records destroyed when no longer needed.
-- Otherwise: **45 CFR 1303 Subpart C** governs, and Sections 2 through 5 apply
-  in full.
+- **45 CFR 1303.21(a).** Un programa que recibe fondos bajo un programa del
+  Department of Education (el Departamento de Educación federal), y que por lo
+  tanto está sujeto a la Family Educational Rights and Privacy Act (FERPA, la
+  ley federal de privacidad de los expedientes educativos), cumple con FERPA en
+  lugar de esta subparte de Head Start (el programa federal de educación
+  temprana). Si ese es el caso de [NOMBRE DEL CONCESIONARIO], las Secciones 2 a
+  5 de este anexo no aplican y las obligaciones del programa bajo FERPA rigen la
+  misma conducta.
+- **45 CFR 1303.21(b).** Para cualquier niño referido o declarado elegible bajo
+  la Individuals with Disabilities Education Act (IDEA, la ley federal de
+  educación para personas con discapacidades), los requisitos de
+  confidencialidad de Part B o Part C desplazan a la Subparte C. Esto aplica
+  **en cualquier concesionario**, incluso en uno que por lo demás opera
+  enteramente bajo la Subparte C. Cualquier herramienta de IA que toque un IFSP
+  (el plan individualizado de servicios para la familia), un IEP (el programa
+  educativo individualizado), material de referencia o expedientes de evaluación
+  de un niño así se maneja bajo la confidencialidad de IDEA, incluido el derecho
+  de los padres a que los expedientes se destruyan cuando ya no se necesiten.
+- De lo contrario: rige la **Subparte C de 45 CFR 1303**, y las Secciones 2 a 5
+  aplican por completo.
 
-[GRANTEE NAME]'s determination: [SUBPART C / FERPA]. Recorded by [NAME], [ROLE],
-on [DATE].
+La determinación de [NOMBRE DEL CONCESIONARIO]: [SUBPARTE C / FERPA]. Anotada
+por [NOMBRE], [PUESTO], el [FECHA].
 
-## 2. Third-party disclosure — 45 CFR 1303.22
+## 2. Divulgación a terceros — 45 CFR 1303.22
 
-Sending child records to an AI vendor is a disclosure to a third party.
-[GRANTEE NAME] therefore:
+Mandarle expedientes de niños a un proveedor de IA es una divulgación a un
+tercero. Por eso [NOMBRE DEL CONCESIONARIO]:
 
-- Treats any AI tool that receives child records as a third party under
-  1303.22, whether it is purchased, free, bundled into an existing product, or
-  switched on by a vendor as a default feature.
-- Obtains the consent 1303.22 requires **before** first use, not after.
-- Prohibits entry of child or family information into any consumer chatbot with
-  no written agreement behind it. A staff member who pastes a child observation
-  into such a tool has arguably made an undisclosed third-party disclosure: no
-  consent, no reviewable agreement, no log entry. **The violation is complete
-  whether or not anything leaks.**
+- Trata como tercero bajo 1303.22 a cualquier herramienta de IA que reciba
+  expedientes de niños, ya sea comprada, gratuita, incluida dentro de un
+  producto existente, o activada por un proveedor como función de fábrica.
+- Obtiene el consentimiento que exige 1303.22 **antes** del primer uso, no
+  después.
+- Prohíbe meter información de niños o de familias en cualquier chatbot de
+  consumo que no tenga un acuerdo por escrito detrás. Una persona del personal
+  que pega la observación de un niño en una herramienta así, con buenos
+  argumentos, ha hecho una divulgación a un tercero sin informar: sin
+  consentimiento, sin un acuerdo que se pueda revisar y sin entrada en el
+  registro. **La violación está completa, se filtre algo o no.**
 
-## 3. Written agreements and parent review — 45 CFR 1303.23
+## 3. Acuerdos por escrito y revisión por los padres — 45 CFR 1303.23
 
-- Every AI tool that receives child records has a written agreement on file
-  before first use.
-- 1303.23(e) gives parents the right to review **any** written agreement the
-  program has with a third party. That text is not limited to agreements
-  naming their child. [GRANTEE NAME] therefore keeps AI vendor agreements in a
-  form it can hand to a parent on request, and provides them within
-  [10 BUSINESS DAYS] of a request.
-- [NAME], [ROLE] holds these agreements at [LOCATION] and responds to parent
-  requests.
+- Cada herramienta de IA que recibe expedientes de niños tiene un acuerdo por
+  escrito en el archivo antes del primer uso.
+- 1303.23(e) les da a los padres el derecho de revisar **cualquier** acuerdo por
+  escrito que el programa tenga con un tercero. Ese texto no se limita a los
+  acuerdos que nombran a su hijo o hija. Por eso [NOMBRE DEL CONCESIONARIO]
+  guarda los acuerdos con proveedores de IA en un formato que le puede entregar
+  a un padre o una madre cuando lo pida, y los entrega dentro de
+  [10 DÍAS HÁBILES] de la solicitud.
+- [NOMBRE], [PUESTO] guarda estos acuerdos en [UBICACIÓN] y responde a las
+  solicitudes de los padres.
 
-## 4. The disclosure log — 45 CFR 1303.24
+## 4. El registro de divulgaciones — 45 CFR 1303.24
 
-[GRANTEE NAME] records every disclosure of child records to an AI vendor in the
-disclosure log required by 1303.24. The log is held by [NAME], [ROLE], at
-[LOCATION], and each entry records:
+[NOMBRE DEL CONCESIONARIO] anota cada divulgación de expedientes de niños a un
+proveedor de IA en el registro de divulgaciones que exige 1303.24. El registro
+está a cargo de [NOMBRE], [PUESTO], en [UBICACIÓN], y cada entrada anota:
 
-| Field | Entered by | When |
+| Campo | Anotado por | Cuándo |
 | --- | --- | --- |
-| Child or children whose records were disclosed | | |
-| Tool receiving the records | | |
-| What was disclosed | | |
-| Purpose | | |
-| Date of disclosure | | |
-| Consent on file (yes / no / exception relied on) | | |
+| Niño o niños cuyos expedientes se divulgaron | | |
+| Herramienta que recibe los expedientes | | |
+| Qué se divulgó | | |
+| Propósito | | |
+| Fecha de la divulgación | | |
+| Consentimiento en el archivo (sí / no / excepción invocada) | | |
 
-Recurring disclosures to an approved tool are logged as a standing entry with a
-review date no more than [12 MONTHS] out, rather than per transaction.
+Las divulgaciones que se repiten hacia una herramienta aprobada se anotan como
+una entrada permanente con una fecha de revisión que no pase de [12 MESES], en
+lugar de anotarse una por una.
 
-## 5. Screening and assessment — 45 CFR 1302.33
+## 5. Evaluación inicial y evaluación — 45 CFR 1302.33
 
-1302.33 prohibits using screening or assessment to exclude children from
-enrollment, or to rank, compare, or evaluate individual children for rewards or
-sanctions. Applied to AI at [GRANTEE NAME]:
+1302.33 prohíbe usar una evaluación inicial o una evaluación para excluir a
+niños de la inscripción, o para clasificar, comparar o evaluar a niños en
+particular con premios o castigos. Aplicado a la IA en
+[NOMBRE DEL CONCESIONARIO]:
 
-- No AI output is used to exclude a child from enrollment, or to rank, compare,
-  or evaluate individual children.
-- No AI output is the basis for a special education or early intervention
-  referral. A qualified person makes an independent determination on the
-  underlying evidence and records it: their name, the evidence reviewed, the
-  determination, and the date.
-- 1302.33 requires qualified bilingual staff or an interpreter for screening
-  and assessment communication with families. Machine translation does not
-  satisfy that requirement and is not used in screening-result conversations,
-  IFSP or IEP meetings, child-protection conversations, or eligibility
-  determinations.
+- Ningún resultado de IA se usa para excluir a un niño de la inscripción, ni
+  para clasificar, comparar o evaluar a niños en particular.
+- Ningún resultado de IA es la base de una referencia a educación especial o a
+  intervención temprana. Una persona calificada hace una determinación
+  independiente sobre la evidencia de fondo y la anota: su nombre, la evidencia
+  que revisó, la determinación y la fecha.
+- 1302.33 exige personal bilingüe calificado o un intérprete para la
+  comunicación con las familias sobre la evaluación inicial y la evaluación. La
+  traducción automática no cumple ese requisito y no se usa en conversaciones
+  sobre resultados de evaluaciones, ni en reuniones de IFSP o de IEP, ni en
+  conversaciones de protección infantil, ni en determinaciones de elegibilidad.
 
-## 6. Suspension and expulsion — 45 CFR 1302.17
+## 6. Suspensión y expulsión — 45 CFR 1302.17
 
-1302.17 prohibits expulsion for behavior. No AI output — a behavior-tracking
-score, a risk flag, an engagement metric, a summarized incident history — is
-used as a basis for expelling, suspending, or disenrolling a child, or cited in
-any record supporting such an action.
+1302.17 prohíbe la expulsión por comportamiento. Ningún resultado de IA —una
+puntuación de seguimiento de comportamiento, una marca de riesgo, una medida de
+participación, un historial de incidentes resumido— se usa como base para
+expulsar, suspender o dar de baja a un niño, ni se cita en ningún expediente que
+respalde una acción así.
 
-## 7. Dual language learners — 45 CFR 1302.102(c)(2)
+## 7. Niños que aprenden dos idiomas — 45 CFR 1302.102(c)(2)
 
-1302.102(c)(2) requires analysis disaggregated for dual language learners.
-[GRANTEE NAME] extends that existing duty to AI tools:
+1302.102(c)(2) exige un análisis desglosado para los niños que aprenden dos
+idiomas (dual language learners, DLL). [NOMBRE DEL CONCESIONARIO] extiende ese
+deber que ya existe a las herramientas de IA:
 
-- Any tool whose output concerns an individual child must supply performance
-  evidence disaggregated for dual language learners, on request, before
-  approval.
-- Where a vendor cannot supply it, that is recorded in the Approved Tools
-  Register as a known gap with the date it was requested, and the tool is not
-  used for any determination about an individual child.
+- Cualquier herramienta cuyo resultado se refiera a un niño en particular tiene
+  que entregar evidencia de desempeño desglosada para los niños que aprenden dos
+  idiomas, cuando se le pida, antes de la aprobación.
+- Cuando un proveedor no la pueda entregar, eso se anota en el Registro de
+  Herramientas Aprobadas como un vacío conocido, con la fecha en que se pidió, y
+  la herramienta no se usa para ninguna determinación sobre un niño en
+  particular.
 
-## 8. Delegate agencies
+## 8. Agencias delegadas
 
-**Delete this section if [GRANTEE NAME] has no delegates.** [GRANTEE NAME]
-remains accountable under Part 1303 for delegate compliance. Each delegate
-agency: adopts this addendum, adds its tools to [GRANTEE NAME]'s register, logs
-disclosures into the grantee's 1303.24 log, and reports incidents to [NAME],
-[ROLE]. [GRANTEE NAME]'s monitoring instrument asks about AI tools in use at
-each monitoring visit.
+**Borre esta sección si [NOMBRE DEL CONCESIONARIO] no tiene agencias
+delegadas.** [NOMBRE DEL CONCESIONARIO] sigue siendo responsable bajo la Parte
+1303 del cumplimiento de sus agencias delegadas. Cada agencia delegada: adopta
+este anexo, agrega sus herramientas al registro de
+[NOMBRE DEL CONCESIONARIO], anota sus divulgaciones en el registro 1303.24 del
+concesionario, y reporta incidentes a [NOMBRE], [PUESTO]. El instrumento de
+monitoreo de [NOMBRE DEL CONCESIONARIO] pregunta por las herramientas de IA en
+uso en cada visita de monitoreo.
 
 | | |
 | --- | --- |
-| Signed | |
-| Name and role | |
-| Date adopted | |
-| Next review due | |
+| Firma | |
+| Nombre y puesto | |
+| Fecha de adopción | |
+| Próxima revisión | |
 
-This is a working draft. It has not been reviewed by counsel and it is not
-legal advice.
+Este es un borrador de trabajo. No ha sido revisado por un abogado y no
+constituye asesoría legal.

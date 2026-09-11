@@ -1,11 +1,11 @@
 ---
-title: Controller and processor roles
+title: Quién responde por los datos y quién solo los procesa
 locale: es
 number: 6
 order: 6
 lastUpdated: '2026-09-10'
-question: "Will you sign an agreement naming us as the data controller, with your role limited to processing on our instructions?"
-whyItMatters: "COPPA is the law that actually reaches every early childhood setting, because it regulates operators of services directed to children under 13 and does not care whether the program is a school — but it binds the vendor, not the provider. That means a program's leverage runs through its contract. Naming the program as controller and the vendor as a processor acting on instructions is what converts everything else on this sheet from a promise into a term you can enforce."
+question: "¿Firmarán un acuerdo que nos nombre a nosotros como los responsables de los datos, con el papel de ustedes limitado a procesarlos siguiendo nuestras instrucciones?"
+whyItMatters: "COPPA (la ley federal de privacidad en línea de los niños) es la ley que de verdad alcanza a todos los entornos de educación temprana, porque regula a los operadores de servicios dirigidos a menores de 13 años y no le importa si el programa es una escuela. Pero obliga al proveedor, no al programa. Eso quiere decir que la fuerza que tiene un programa pasa por su contrato. Nombrar al programa como el responsable de los datos y al proveedor como quien solo los procesa siguiendo instrucciones es lo que convierte todo lo demás de esta hoja, de una promesa, en una cláusula que usted puede hacer cumplir."
 authorities:
   - "COPPA Final Rule 2025 — binds the operator, so provider leverage runs through the contract"
   - "45 CFR 1303.23(e) — parents may review the written agreement, so the agreement has to exist"
@@ -13,15 +13,16 @@ governs: ['custody', 'standing']
 translationPending: true
 ---
 
-A real answer is yes, with a named document — a data processing agreement, an
-addendum or a rider — that you can read before you sign the main contract. The clause
-to look for says the vendor processes children's personal information only on your
-documented instructions and for no purpose of its own.
+Una respuesta real es sí, con un documento que tiene nombre —un acuerdo de tratamiento
+de datos, un anexo o una cláusula adicional— que usted pueda leer antes de firmar el
+contrato principal. La cláusula que hay que buscar dice que el proveedor procesa la
+información personal de los niños solo siguiendo las instrucciones documentadas de usted,
+y para ningún fin propio.
 
-A dodge points at the privacy policy. A privacy policy is written by the vendor, can
-be changed by the vendor, and describes the vendor's own purposes; it is not an
-agreement with you. "Our terms already cover this" is an invitation to ask which
-clause, by number.
+Una evasiva apunta a la política de privacidad. Una política de privacidad la escribe el
+proveedor, la puede cambiar el proveedor y describe los fines del proveedor; no es un
+acuerdo con usted. «Nuestros términos ya cubren esto» es una invitación a preguntar cuál
+cláusula, por número.
 
-If the answer is no, that is a finding, not a dead end: write it down with the date
-and put it next to the competitor's answer.
+Si la respuesta es no, eso es un hallazgo, no un callejón sin salida: anótelo con la
+fecha y póngalo al lado de la respuesta del competidor.

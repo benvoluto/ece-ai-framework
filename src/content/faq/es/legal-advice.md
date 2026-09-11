@@ -1,6 +1,6 @@
 ---
-title: Is this legal advice?
-question: "Is this legal advice?"
+title: ¿Esto es asesoría legal?
+question: "¿Esto es asesoría legal?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 13
@@ -8,25 +8,28 @@ onHome: false
 translationPending: true
 ---
 
-No. This is not legal advice, it does not create a lawyer-client relationship,
-and no part of it has been reviewed by counsel. It is an unreviewed working
-draft.
+No. Esto no es asesoría legal, no crea una relación de abogado y cliente, y
+ninguna parte ha sido revisada por un abogado. Es un borrador de trabajo sin
+revisar.
 
-The crosswalk at [What the law says](/law) is the most useful page here and the
-one to read most carefully, because it is built on reading statutes and
-regulations rather than on an opinion. Two state readings in particular need a
-lawyer before anyone relies on them:
+La tabla comparativa de [Lo que dice la ley](/es/law) es la página más útil de
+aquí y la que hay que leer con más cuidado, porque está construida leyendo leyes
+y reglamentos y no sobre la opinión de nadie. Hay dos lecturas estatales que
+necesitan un abogado antes de que alguien se apoye en ellas:
 
-- **New York.** Education Law 2-d defines "school" to include publicly funded
-  pre-K, which on its face pulls community-based organizations delivering
-  publicly funded pre-K inside the statute. That would matter enormously to New
-  York City providers. It is an inference from the text, not an opinion.
-- **Illinois.** Whether SOPPA reaches preschool at all could not be confirmed.
+- **Nueva York.** La Education Law 2-d define «escuela» de manera que incluye el
+  pre-K con fondos públicos, lo que a primera vista mete dentro de la ley a las
+  organizaciones comunitarias que ofrecen pre-K con fondos públicos. Eso le
+  importaría muchísimo a los proveedores de la ciudad de Nueva York. Es una
+  inferencia sacada del texto, no una opinión legal.
+- **Illinois.** No se pudo confirmar si SOPPA (la ley estatal de privacidad de la
+  información estudiantil en línea) alcanza siquiera al preescolar.
 
-Both are flagged on the page itself. Several other items — the boundary of the
-COPPA separate-consent requirement, the current state of Colorado's AI statute,
-and the vintage of the expulsion data — are marked as needing re-verification
-against primary sources before publication.
+Las dos están señaladas en esa misma página. Varios puntos más —hasta dónde llega
+el requisito de consentimiento separado de COPPA (la ley federal de privacidad en
+línea de los niños), el estado actual de la ley de IA de Colorado y la antigüedad
+de los datos sobre expulsiones— están marcados como pendientes de volver a
+verificar contra las fuentes primarias antes de publicar.
 
-Use this to know what questions to ask and what language to start from. If a
-decision turns on one of the flagged readings, get an opinion.
+Use esto para saber qué preguntas hacer y con qué texto empezar. Si una decisión
+depende de una de las lecturas señaladas, consiga una opinión legal.

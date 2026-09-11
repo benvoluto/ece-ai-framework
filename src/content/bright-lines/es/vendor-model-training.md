@@ -1,39 +1,43 @@
 ---
-title: Vendor training on children's data
+title: Entrenamiento de los modelos del proveedor con datos de niños
 locale: es
 number: 8
 order: 8
 lastUpdated: '2026-09-10'
-rule: Do not allow vendor training of models on children's images, voices, work, or records without separate verifiable parental consent.
-shortRule: No vendor trains its models on children's images, voices, work, or records without separate verifiable parental consent.
+rule: No permita que un proveedor entrene sus modelos con imágenes, voces, trabajos o registros de niños sin un consentimiento parental verificable y separado.
+shortRule: Ningún proveedor entrena sus modelos con imágenes, voces, trabajos o registros de niños sin un consentimiento parental verificable y separado.
 governs: ['custody', 'standing']
 authorities:
   - "COPPA Final Rule, effective June 2025, full compliance April 2026 — separate verifiable parental consent for disclosing children's personal information to third parties for AI development"
   - 'Federal Trade Commission — such disclosures are not "integral" to a service and so cannot ride on general consent'
-verifyBeforePublishing: 'The separate-consent requirement carries an express carve-out for disclosures "integral to the nature of the service," and the FTC statement addresses disclosures to third parties. Do not write that AI training "always" requires separate consent — the internal-training gap is real and a vendor''s counsel will catch it.'
+verifyBeforePublishing: 'El requisito de consentimiento separado trae una excepción expresa para las divulgaciones «integral to the nature of the service» (esenciales para la naturaleza del servicio), y la declaración de la FTC se refiere a divulgaciones a terceros. No escriba que el entrenamiento de IA exige «siempre» un consentimiento separado: el vacío sobre el entrenamiento interno es real y el abogado de un proveedor lo va a notar.'
 translationPending: true
 ---
 
-This is not aspiration. It is current federal law, with one boundary that has to
-be stated precisely. The Children's Online Privacy Protection Act (COPPA) Final
-Rule — effective June 2025, with full compliance required by April 2026 —
-requires separate verifiable parental consent for disclosing children's personal
-information to third parties for AI development. The Federal Trade Commission
-treats such disclosures as not "integral" to a service, which means they cannot
-ride on the general consent a family signed at enrollment.
+Esto no es una aspiración. Es ley federal vigente, con un límite que hay que
+decir con precisión. El reglamento final de COPPA (la ley federal que protege la
+privacidad de los niños en internet) —en vigor desde junio de 2025, con
+cumplimiento total exigido para abril de 2026— exige un consentimiento parental
+verificable y separado para divulgar información personal de niños a terceros
+con fines de desarrollo de IA. La Federal Trade Commission (FTC), la comisión
+federal de comercio, considera que esas divulgaciones no son «esenciales» para
+el servicio, lo que significa que no pueden ampararse en el consentimiento
+general que una familia firmó al inscribirse.
 
-The boundary is this. The Rule says considerably less about an operator training
-its own models on data it already holds than it says about disclosures to third
-parties, and it carries an express carve-out for disclosures integral to the
-nature of the service. So do not claim that AI training always requires separate
-consent; that overstatement is the kind a vendor's counsel will catch in a
-meeting. What it means in practice is that this line is enforced by contract as
-well as by statute. The prohibition on internal training belongs in the written
-agreement, because the statute may not reach it.
+El límite es este. El reglamento dice bastante menos sobre un operador que
+entrena sus propios modelos con datos que ya tiene que sobre las divulgaciones a
+terceros, y trae una excepción expresa para las divulgaciones esenciales para la
+naturaleza del servicio. Así que no afirme que el entrenamiento de IA siempre
+exige un consentimiento separado; esa exageración es justo la que el abogado de
+un proveedor va a atrapar en una reunión. Lo que esto significa en la práctica
+es que este límite se hace cumplir por contrato además de por ley. La
+prohibición del entrenamiento interno va en el acuerdo por escrito, porque puede
+que la ley no llegue hasta ahí.
 
-Where this bites hardest is photo and video portfolio apps, which are the
-highest-volume collectors of children's images, video, and voice in the sector. A
-program running one of these is handing over more biometric-adjacent material
-about more children than any other category of tool it uses. Ask what the
-agreement says about model training, get the answer in writing, and treat silence
-as a no rather than a yes.
+Donde esto pega más fuerte es en las aplicaciones de portafolios de fotos y
+videos, que son las que más imágenes, video y voz de niños recogen en todo el
+sector. Un programa que usa una de estas está entregando más material cercano a
+lo biométrico, y sobre más niños, que con cualquier otra categoría de
+herramienta que tenga. Pregunte qué dice el acuerdo sobre el entrenamiento de
+modelos, consiga la respuesta por escrito y trate el silencio como un no, no
+como un sí.

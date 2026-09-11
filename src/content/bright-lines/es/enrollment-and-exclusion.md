@@ -1,43 +1,48 @@
 ---
-title: Enrollment and exclusion decisions
+title: Decisiones de inscripción y exclusión
 locale: es
 number: 2
 order: 2
 lastUpdated: '2026-09-10'
-rule: Do not use AI as the basis for expelling, suspending, disenrolling, or denying enrollment to a child.
-shortRule: No AI output may be the basis for expelling, suspending, disenrolling, or denying enrollment to a child.
+rule: No use la IA como base para expulsar, suspender, dar de baja o negar la inscripción de un niño.
+shortRule: Ningún resultado de IA puede ser la base para expulsar, suspender, dar de baja o negar la inscripción de un niño.
 governs: ['consequence', 'standing']
 authorities:
   - '45 CFR 1302.17 — Head Start suspension and expulsion'
   - '45 CFR 1302.33 — screening and assessment may not be used to exclude, rank, compare, or evaluate individual children'
   - 'Preschool expulsion data — Gilliam (2005); Civil Rights Data Collection, 2013–14'
-verifyBeforePublishing: 'Expulsion multipliers trace to Gilliam (2005) and the suspension disparity to the 2013–14 CRDC. Pull the newest CRDC cycle and update both figures before this page goes public.'
+verifyBeforePublishing: 'Los multiplicadores de expulsión vienen de Gilliam (2005) y la disparidad en las suspensiones, de la CRDC de 2013–14. Busque el ciclo más reciente de la CRDC y actualice ambas cifras antes de que esta página se publique.'
 translationPending: true
 ---
 
-For Head Start programs this is already law. Section 1302.17 prohibits
-expulsion for behavior, and section 1302.33 prohibits using screening or
-assessment to exclude a child from enrollment, or to rank, compare, or evaluate
-individual children for rewards or sanctions. Generalising those two rules to
-every setting, and to every AI tool, costs a program nothing it was entitled
-to do anyway.
+Para los programas de Head Start (el programa federal de educación temprana)
+esto ya es ley. La sección 1302.17 prohíbe la expulsión por conducta, y la
+sección 1302.33 prohíbe usar un tamizaje o una evaluación para excluir a un niño
+de la inscripción, o para clasificar, comparar o evaluar a niños en particular
+con premios o castigos. Extender esas dos reglas a todos los entornos, y a toda
+herramienta de IA, no le quita a un programa nada que tuviera derecho a hacer de
+todos modos.
 
-It matters enormously, because exclusion in this age group is not rare and it is
-not evenly distributed. Three- and four-year-olds are expelled from state-funded
-preschool at roughly three times the K-12 rate, and from private and community
-programs at more than thirteen times. Black children account for nearly half of
-public preschool suspensions while representing under a fifth of enrollment. A
-scoring tool dropped into that pattern does not correct it. It gives it a number
-and a paper trail.
+Importa muchísimo, porque la exclusión en este grupo de edad no es rara ni está
+repartida por igual. A los niños de tres y cuatro años se les expulsa del
+preescolar financiado por el estado a una tasa de aproximadamente tres veces la
+de K-12, y de los programas privados y comunitarios a más de trece veces. Los
+niños negros son casi la mitad de las suspensiones en el preescolar público,
+aunque son menos de una quinta parte de la inscripción. Una herramienta de
+puntajes metida en ese patrón no lo corrige. Le pone un número y un rastro en
+papel.
 
-Note what the rule does and does not say. It does not stop you using software to
-schedule, to track attendance, or to keep waiting-list records. It says that when
-a child is removed, refused, or sent home, the reason on file must be a person's
-determination from evidence a person looked at — not a flag, a score, or a risk
-band. If a tool's output is in the file at all, a reader should be able to see
-which human read it and what they decided independently of it.
+Fíjese en lo que la regla dice y en lo que no dice. No le impide usar programas
+de computadora para hacer horarios, llevar la asistencia o manejar la lista de
+espera. Dice que cuando a un niño se le da de baja, se le niega un lugar o se le
+manda a casa, la razón que queda en el expediente tiene que ser la determinación
+de una persona a partir de evidencia que una persona miró: no una alerta, ni un
+puntaje, ni una banda de riesgo. Si el resultado de una herramienta aparece en
+el expediente, quien lo lea debe poder ver qué persona lo leyó y qué decidió esa
+persona de forma independiente.
 
-A caution about the numbers above: the multipliers trace to Gilliam's 2005 work
-and the suspension disparity to the 2013–14 Civil Rights Data Collection. Both
-are the figures the field still cites, and both are old. The most recent CRDC
-cycle should be pulled and these lines updated before this page is published.
+Una advertencia sobre las cifras de arriba: los multiplicadores vienen del
+trabajo de Gilliam de 2005 y la disparidad en las suspensiones, de la Civil
+Rights Data Collection de 2013–14. Son las cifras que el campo sigue citando, y
+las dos son viejas. Antes de publicar esta página hay que sacar el ciclo más
+reciente de la CRDC y actualizar estas líneas.

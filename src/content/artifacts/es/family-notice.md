@@ -1,8 +1,8 @@
 ---
-title: Family Notice
+title: Aviso para las familias
 locale: es
-audience: Families
-summary: Plain-language notice of what AI the program uses, in what part of the work, and what information it touches. A notice, not a consent form.
+audience: Familias
+summary: 'Aviso en lenguaje sencillo sobre qué IA usa el programa, en qué parte del trabajo la usa y qué información toca. Es un aviso, no un formulario de consentimiento.'
 lastUpdated: '2026-09-11'
 length: one-page
 onShelf: true
@@ -14,67 +14,75 @@ order: 5
 translationPending: true
 ---
 
-## What this is
+## Qué es esto
 
-This tells you how [PROGRAM NAME] uses artificial intelligence, called AI. AI is
-software that can write, translate, and sort information. It is not a person.
+Esto le explica cómo [NOMBRE DEL PROGRAMA] usa la inteligencia artificial,
+llamada IA. La IA es un programa de computadora que puede escribir, traducir y
+ordenar información. No es una persona.
 
-**This is a notice, not a permission form.** You do not sign here to agree to
-anything. Some uses of AI need your permission first. Those are on a separate
-form, and they are listed near the bottom of this page.
+**Esto es un aviso, no un formulario de permiso.** Usted no firma aquí para
+aceptar nada. Algunos usos de la IA necesitan su permiso primero. Esos están en
+un formulario aparte y aparecen casi al final de esta página.
 
-## Where we use AI
+## Dónde usamos la IA
 
-- **Writing.** We use AI to help draft newsletters, menus, reminders and
-  notices. A staff member reads and fixes every one before you get it.
-- **Translation of everyday messages.** Short messages like a reminder or a
-  closing day may be translated by software. For anything important — a
-  screening result, a meeting about services, a conversation about your child's
-  safety — we use a trained person who speaks your language. Never an app.
-- **Office paperwork.** Billing, enrollment records, licensing files and food
-  program records.
+- **Para escribir.** Usamos la IA para redactar boletines, menús,
+  recordatorios y avisos. Una persona del personal lee y corrige cada uno antes
+  de que usted lo reciba.
+- **Para traducir mensajes del día a día.** Un programa puede traducir mensajes
+  cortos, como un recordatorio o un día de cierre. Para algo importante —el resultado de una evaluación, una
+  reunión sobre servicios, una conversación sobre la seguridad de su hijo o
+  hija— usamos a una persona capacitada que habla su idioma. Nunca una
+  aplicación.
+- **Para el papeleo de la oficina.** Facturación, registros de inscripción,
+  archivos de licencia y registros del programa de alimentos.
 
-## Where we never use AI
+## Dónde nunca usamos la IA
 
-- We never let AI decide anything about your child: who enrolls, who leaves,
-  discipline, or a referral for special services. A person decides.
-- We never use AI to write or change a report about a child's safety.
-- We never use AI that reads children's faces, voices or bodies to guess how
-  they feel or how interested they are.
-- We never type your child's name or information into a free public chatbot.
+- Nunca dejamos que la IA decida nada sobre su hijo o hija: quién se inscribe,
+  quién se va, la disciplina o una referencia a servicios especiales. Decide una
+  persona.
+- Nunca usamos la IA para escribir ni cambiar un informe sobre la seguridad de
+  un niño.
+- Nunca usamos IA que lea la cara, la voz o el cuerpo de los niños para adivinar
+  cómo se sienten o qué tan interesados están.
+- Nunca escribimos el nombre ni la información de su hijo o hija en un chatbot
+  público y gratuito.
 
-## What information these tools touch
+## Qué información tocan estas herramientas
 
-Your child's name and birth date, attendance, billing and subsidy records, and
-notes our staff write about learning. Photos, video and voice recordings are
-different. Those are covered only by the separate form below.
+El nombre y la fecha de nacimiento de su hijo o hija, la asistencia, los
+registros de facturación y de subsidio, y las notas que nuestro personal escribe
+sobre el aprendizaje. Las fotos, los videos y las grabaciones de voz son
+distintos. Esos solo están cubiertos por el formulario aparte de abajo.
 
-## What needs your permission, on a separate form
+## Qué necesita su permiso, en un formulario aparte
 
-Three things need your written permission first, and you give it on the
-[CONSENT FORM NAME], not here:
+Tres cosas necesitan su permiso por escrito primero, y usted lo da en el
+[NOMBRE DEL FORMULARIO DE CONSENTIMIENTO], no aquí:
 
-1. Photos and video of your child.
-2. Recordings of your child's voice, and any tool that scans a face or voice to
-   identify your child.
-3. Any company using your child's images, voice, work or records to train its
-   AI.
+1. Fotos y videos de su hijo o hija.
+2. Grabaciones de la voz de su hijo o hija, y cualquier herramienta que escanee
+   una cara o una voz para identificarlo o identificarla.
+3. Que una empresa use las imágenes, la voz, los trabajos o los registros de su
+   hijo o hija para entrenar su IA.
 
-You may say no to any of these. You may change your mind later. Your child's
-care will not change either way.
+Usted puede decir que no a cualquiera de estas y puede cambiar de opinión
+después. El cuidado de su hijo o hija no cambiará de ninguna manera.
 
-## Questions
+## Preguntas
 
-Ask [NAME], [ROLE], at [PHONE] or [EMAIL]. You may ask to see the full list of
-tools we use, and our written agreement with each one, at any time.
+Pregúntele a [NOMBRE], [PUESTO], al [TELÉFONO] o [CORREO ELECTRÓNICO]. Usted
+puede pedir ver, en cualquier momento, la lista completa de las herramientas que
+usamos y nuestro acuerdo por escrito con cada una.
 
-## Receipt
+## Acuse de recibo
 
-Signing here only shows you received this page. **It is not permission and it
-agrees to nothing.**
+Firmar aquí solo deja constancia de que usted recibió esta página. **No es
+permiso y no acepta nada.**
 
-| Family member | Child | Date |
+| Familiar | Niño o niña | Fecha |
 | --- | --- | --- |
 |  |  |  |
 
-Last updated [DATE].
+Última actualización: [FECHA].

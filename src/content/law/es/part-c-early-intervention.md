@@ -1,13 +1,13 @@
 ---
-title: Community-based Part C early intervention
+title: Intervención temprana comunitaria bajo Part C
 locale: es
 kind: setting
 ferpa: 'not-directly'
 governsInstead:
-  - 'IDEA Part C confidentiality, standing alone'
-  - 'A broader "participating agency" definition than most people expect'
-  - 'Indirect identifiers are covered, not only names'
-  - 'A parental right to destruction'
+  - 'La confidencialidad de IDEA Part C, por sí sola'
+  - 'Una definición de «agencia participante» más amplia de lo que la mayoría espera'
+  - 'Los identificadores indirectos están cubiertos, no solo los nombres'
+  - 'Un derecho de los padres a la destrucción de los expedientes'
 authorities:
   - 'IDEA Part C confidentiality'
   - 'IDEA confidentiality FAQ'
@@ -16,18 +16,22 @@ order: 6
 translationPending: true
 ---
 
-For community-based early intervention under Part C of IDEA — the Individuals
-with Disabilities Education Act — FERPA is not directly the governing law. IDEA
-Part C confidentiality stands on its own, and in three respects it is broader
-than the instincts a provider brings from elsewhere.
+Para la intervención temprana comunitaria bajo Part C de IDEA — la ley federal
+de educación para personas con discapacidades —, FERPA (la ley federal de
+privacidad de los expedientes educativos) no es directamente la ley que rige. La
+confidencialidad de IDEA Part C se sostiene sola, y en tres aspectos es más
+amplia que la intuición que un proveedor de cuidado trae de otros lados.
 
-- **"Participating agency" is defined broadly.** More organizations in the
-  service picture are inside the obligation than a reader expects, which is the
-  provision most likely to catch a contractor or a partner off guard.
-- **Indirect identifiers are covered.** The obligation is not limited to a
-  child's name. Information that would allow someone to work out which child is
-  meant is inside it too — a point that matters a great deal the moment a
-  program starts putting session notes through a general-purpose tool.
-- **Parents have a right to destruction.** That right has to survive contact
-  with any system that holds a copy, which means it is a question to ask a
-  vendor before signing, not after a parent asks.
+- **«Agencia participante» está definida de forma amplia.** Hay más
+  organizaciones del cuadro de servicios dentro de la obligación de las que un
+  lector espera, y es la disposición que con más probabilidad agarra
+  desprevenido a un contratista o a un socio.
+- **Los identificadores indirectos están cubiertos.** La obligación no se limita
+  al nombre de un niño. La información que le permitiría a alguien deducir de
+  qué niño se habla también está adentro — un punto que importa muchísimo en
+  cuanto un programa empieza a pasar las notas de sesión por una herramienta de
+  uso general.
+- **Los padres tienen derecho a la destrucción de los expedientes.** Ese derecho
+  tiene que sobrevivir el contacto con cualquier sistema que guarde una copia,
+  lo que quiere decir que es una pregunta para hacerle al proveedor antes de
+  firmar, no después de que un padre o una madre la pida.

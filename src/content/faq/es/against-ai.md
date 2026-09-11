@@ -1,6 +1,6 @@
 ---
-title: Are you against AI?
-question: "Are you against AI in early childhood?"
+title: ¿Están en contra de la IA?
+question: "¿Están en contra de la IA en la primera infancia?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 11
@@ -8,21 +8,23 @@ onHome: false
 translationPending: true
 ---
 
-No. The first principle of this framework is that AI should be used to return
-adult attention to children.
+No. El primer principio de este marco es que la IA debe usarse para devolverles a
+los niños la atención de los adultos.
 
-Development from birth to five is built through serve-and-return interaction with
-a consistent, attuned adult. That is the mechanism, and it is why the strongest
-case for AI on paperwork is not efficiency — it is that paperwork is time stolen
-from children. A director writing a corrective action plan on a Sunday is a
-director who is not in a classroom on Monday with anything left.
+El desarrollo desde el nacimiento hasta los cinco años se construye con la
+interacción de ida y vuelta con un adulto constante y atento. Ese es el
+mecanismo, y por eso el argumento más fuerte para usar IA en el papeleo no es la
+eficiencia: es que el papeleo es tiempo robado a los niños. Una directora que
+escribe un plan de acción correctiva un domingo es una directora que el lunes
+llega al salón sin nada que dar.
 
-Most of what AI can do in early childhood is unglamorous, low-risk and worth real
-money to a business running on 1–3% margins. Subsidy billing that finally
-reconciles is not efficiency; it is revenue, and on margins that thin it is the
-difference between a raise for a teacher and no raise.
+Casi todo lo que la IA puede hacer en la primera infancia es poco vistoso, de
+bajo riesgo y vale dinero de verdad para un negocio que vive de márgenes del 1 %
+al 3 %. Una facturación de subsidios que por fin cuadra no es eficiencia; es
+ingreso, y con márgenes así de delgados es la diferencia entre un aumento para
+una maestra y ningún aumento.
 
-The same logic produces the bright lines. Anything that occupies the adult's
-attention, or substitutes for the interaction, hits the mechanism of development
-directly. That is a short list, and it is short because the rest of the ground is
-genuinely useful. See [where AI earns its place](/good-uses).
+La misma lógica produce los límites infranqueables. Todo lo que ocupa la atención
+del adulto, o sustituye la interacción, golpea el mecanismo del desarrollo de
+lleno. Esa lista es corta, y es corta porque el resto del terreno sí es
+genuinamente útil. Vea [dónde la IA se gana su lugar](/es/good-uses).

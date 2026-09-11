@@ -1,5 +1,5 @@
 ---
-title: "Where to send the coach next"
+title: "A dónde mandar al coach"
 locale: es
 lastUpdated: '2026-09-10'
 order: 12
@@ -7,51 +7,59 @@ tier: 3
 audience: intermediary
 phase: 1
 featuredOnHome: false
+translationPending: true
 governs:
   - consequence
   - custody
 scenario: >-
-  A network supports 400 providers with eight coaches. Triage today is whoever
-  called, whoever a coach happened to visit, and whoever a funder asked about.
+  Una red apoya a 400 proveedores con ocho coaches. Hoy el orden de atención lo
+  decide quién llamó, a quién le tocó que un coach pasara por ahí y por quién
+  preguntó un financiador.
 returns: >-
-  A ranked view of where technical assistance would do the most good, built from
-  signals the organization already holds — enrollment trends, subsidy billing
-  patterns, licensing history, time since last contact. Eight coaches deployed
-  against need rather than against the phone.
+  Una vista ordenada por prioridad de dónde haría más bien la asistencia
+  técnica, armada con señales que la organización ya tiene: tendencias de
+  inscripción, patrones de facturación de subsidios, historial de licenciamiento,
+  cuánto hace que no hay contacto. Ocho coaches puestos donde está la necesidad
+  y no donde suena el teléfono.
 guardrail: >-
-  This is the closest thing on the page to a bright line and it needs the
-  strongest one. It may route support — never sanctions, funding denials or
-  portfolio exits. Every provider can see what the system says about them and
-  contest it. And the model must be tested for whether it systematically ranks
-  home-based providers, newer providers, or providers in child care deserts as
-  less worth helping. The thin-file problem is real here, and it points the
-  wrong way.
-translationPending: true
+  Esto es lo más cerca de un límite infranqueable que hay en esta página y
+  necesita la salvaguarda más fuerte. Puede encaminar apoyo; nunca sanciones,
+  negaciones de fondos ni salidas de la cartera. Cada proveedor puede ver lo que
+  el sistema dice de él y objetarlo. Y hay que probar el modelo para ver si pone
+  sistemáticamente a los proveedores que trabajan en su casa, a los proveedores
+  nuevos o a los proveedores en desiertos de cuidado infantil como menos dignos
+  de ayuda. El problema del expediente delgado es real aquí, y apunta en la
+  dirección equivocada.
 ---
 
-Eight coaches, 400 providers. The arithmetic means most providers see a coach
-rarely, and which ones see one often is decided by a triage process nobody
-designed: whoever called this week, whoever a coach was already driving past,
-whoever a funder asked about by name. The provider quietly closest to closing is
-frequently the one who does not call.
+Ocho coaches, 400 proveedores. La aritmética significa que la mayoría de los
+proveedores ve un coach rara vez, y cuáles lo ven seguido lo decide un proceso
+de selección que nadie diseñó: quién llamó esta semana, junto a quién ya iba
+pasando un coach, por quién preguntó un financiador por su nombre. El proveedor
+que está calladamente más cerca de cerrar es muchas veces el que no llama.
 
-The organization already holds the signals that would change this — enrollment
-trends, subsidy billing patterns, licensing history, how long it has been since
-anyone made contact. Ranking against those signals puts eight coaches where the
-help does the most good rather than where the phone rings.
+La organización ya tiene las señales que cambiarían esto: tendencias de
+inscripción, patrones de facturación de subsidios, historial de licenciamiento,
+cuánto hace que alguien hizo contacto. Ordenar por prioridad con esas señales
+pone a los ocho coaches donde la ayuda hace más bien, y no donde suena el
+teléfono.
 
-This is the closest thing on this page to a bright line, and it earns the
-strongest guardrail on the page.
+Esto es lo más cerca de un límite infranqueable que hay en esta página, y se
+gana la salvaguarda más fuerte de la página.
 
-It may route support. It may never route a sanction, a funding denial or a
-portfolio exit. The output decides who gets a visit sooner, and nothing else.
+Puede encaminar apoyo. Nunca puede encaminar una sanción, una negación de fondos
+ni una salida de la cartera. Lo que sale decide quién recibe una visita antes, y
+nada más.
 
-Every provider can see what the system says about them and contest it. A ranking
-a provider cannot see is a rating being kept from the person it describes.
+Cada proveedor puede ver lo que el sistema dice de él y objetarlo. Una
+clasificación que el proveedor no puede ver es una calificación que se le
+esconde a la persona que describe.
 
-And the model has to be tested for the failure that is most likely here. Ranking
-on held data rewards providers who generate data. Home-based providers, newer
-providers and providers in child care deserts have thinner files — not because
-they need less help, but because less has been written down about them. A model
-that reads a thin file as low need has inverted the whole purpose of the
-exercise. Test for it before deployment, and keep testing after.
+Y hay que probar el modelo contra la falla más probable aquí. Clasificar con los
+datos que uno ya tiene premia a los proveedores que generan datos. Los
+proveedores que trabajan en su casa, los proveedores nuevos y los proveedores en
+desiertos de cuidado infantil tienen expedientes más delgados: no porque
+necesiten menos ayuda, sino porque se ha escrito menos sobre ellos. Un modelo
+que lee un expediente delgado como poca necesidad le dio la vuelta a todo el
+propósito del ejercicio. Pruébelo antes de ponerlo a funcionar, y siga
+probándolo después.

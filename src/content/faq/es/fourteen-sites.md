@@ -1,6 +1,6 @@
 ---
-title: Larger operators
-question: "We run fourteen sites and have a compliance team. Isn't this written for someone smaller?"
+title: Operadores más grandes
+question: "Tenemos catorce sedes y un equipo de cumplimiento. ¿Esto no está escrito para alguien más pequeño?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 10
@@ -8,27 +8,30 @@ onHome: false
 translationPending: true
 ---
 
-Most of it is, and we say so plainly. The design constraint that governs the rest
-of this site — no lawyer, no IT department, twenty minutes — is right for the
-modal provider and wrong for a fourteen-site organization with an HR director and
-outside counsel.
+Casi todo sí, y lo decimos sin rodeos. La restricción de diseño que rige el resto
+de este sitio —sin abogado, sin departamento de tecnología, veinte minutos— es la
+correcta para el proveedor típico y la equivocada para una organización de
+catorce sedes con una directora de recursos humanos y abogados externos.
 
-Larger operators are not a smaller problem. They are a different one, and the
-field has no guidance for them at all. You have something the single site does
-not: the capacity to actually govern this. What you do not have is anyone telling
-you how.
+Los operadores grandes no son un problema más pequeño. Son un problema distinto,
+y el campo no tiene ninguna orientación para ellos. Ustedes tienen algo que el
+sitio único no tiene: la capacidad de gobernar esto de verdad. Lo que no tienen es
+a nadie que les diga cómo.
 
-So there is a separate track. Nine additions that only make sense above a certain
-size: a governance charter with real delegated authority, one tool register
-across many sites, a pilot protocol with a stop condition, multi-state compliance
-mapping, shadow-AI discovery, board and owner reporting on a cadence,
-role-differentiated training, a named escalation path — and contract riders.
+Por eso hay una vía aparte. Nueve elementos adicionales que solo tienen sentido
+por encima de cierto tamaño: una carta de gobernanza con autoridad delegada de
+verdad, un solo registro de herramientas para todas las sedes, un protocolo de
+piloto con una condición de parada, un mapeo de cumplimiento en varios estados, la
+búsqueda de IA en la sombra, reportes periódicos a la junta y a los dueños,
+capacitación diferenciada por puesto, una ruta de escalamiento con un responsable
+con nombre, y cláusulas contractuales.
 
-The riders are the point. A single center can only ask the ten questions. A
-fourteen-site organization, or a grantee with delegate agencies, can require
-terms. If the field's larger buyers converge on the same terms, vendor defaults
-shift for everyone, including for the family child care provider with no leverage
-at all. That is a public good only you can supply.
+Las cláusulas son el punto. Un centro solo puede hacer las diez preguntas. Una
+organización de catorce sedes, o un concesionario con agencias delegadas, puede
+exigir condiciones. Si los compradores grandes del campo coinciden en las mismas
+condiciones, lo que los proveedores ofrecen de fábrica cambia para todos,
+incluida la proveedora de cuidado infantil familiar que no tiene ninguna fuerza
+para negociar. Ese es un bien público que solo ustedes pueden aportar.
 
-The principles and the bright lines are the same ones. Everything else is
-different. See [For larger operators](/multi-site).
+Los principios y los límites infranqueables son los mismos. Todo lo demás es
+distinto. Vea [Para operadores grandes](/es/multi-site).

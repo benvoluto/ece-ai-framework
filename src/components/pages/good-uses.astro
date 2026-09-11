@@ -9,6 +9,69 @@ import { t, localePath } from '../../lib/i18n.js';
 
 const { locale = 'en' } = Astro.props;
 
+const copy = {
+  en: {
+    title: 'Where AI helps',
+    caption: 'Where AI earns its place',
+    lede: 'Most of what AI can do in early childhood is unglamorous, low-risk and worth real money to a business running on 1–3% margins — and every hour it returns is an hour an adult spends with children.',
+    description:
+      'Twelve constructive uses of AI in early childhood, each with its risk tier and its guardrail: the unglamorous, low-risk work that returns hours to a program running on thin margins.',
+    introA: 'A site that is only a list of prohibitions will be read once and never returned to. This page is the ',
+    introRelationshipLink: 'Relationship principle',
+    introB: ' made concrete, and it is also the page that makes the ',
+    introBrightLinesLink: 'bright lines',
+    introC: ' credible. A framework that only says no reads as hostile to a director who is drowning. A framework that says ',
+    introEm: "here is where this genuinely helps, and here is the short list where it doesn't",
+    introD: ' reads as useful.',
+    tierNote:
+      'Every entry below carries its risk tier and its guardrail, because the point is not that these uses are unregulated — it is that they are worth doing carefully.',
+    providersHeading: 'For providers',
+    providersIntro:
+      'Eight places where the work is real, the risk is manageable and the time comes back to the floor.',
+    intermediariesHeading: 'For the nonprofits and intermediaries that support them',
+    intermediariesIntro:
+      'Four places where a resource and referral agency, a coaching network or a lender can reach more providers with the staff it already has.',
+    honestHeading: 'The rule that keeps this page honest',
+    honestBody:
+      'Every entry on this page is missing its last line. On the live page, each one ends with what the program actually did with the time it got back — hired a floater, gave a teacher a paid planning hour, opened an infant slot, stopped working Sundays. Without that, this is an efficiency brochure, and the field has plenty of those. With it, it is the Relationship principle with receipts.',
+    honestGap:
+      'Those outcomes are not here yet. They have to be collected from real pilots rather than borrowed from vendor case studies, and that collection has not happened. This is a gap in the page, not a feature of it — and until it is filled, every claim above about returned hours is an argument rather than a result.',
+    honestThree:
+      'Three things hold for every entry regardless: no product is named, the tier is stated, and the guardrail travels with the use.',
+  },
+  es: {
+    title: 'Dónde ayuda la IA',
+    caption: 'Dónde la IA se gana su lugar',
+    lede: 'Casi todo lo que la IA puede hacer en la educación temprana es poco vistoso, de bajo riesgo y vale dinero de verdad para un negocio que opera con márgenes de 1–3% — y cada hora que devuelve es una hora que un adulto pasa con los niños.',
+    description:
+      'Doce usos constructivos de la IA en la educación temprana, cada uno con su nivel de riesgo y su salvaguarda: el trabajo poco vistoso y de bajo riesgo que le devuelve horas a un programa que opera con márgenes delgados.',
+    introA: 'Un sitio que sea solo una lista de prohibiciones se lee una vez y nunca se vuelve a abrir. Esta página es el ',
+    introRelationshipLink: 'principio de Relación',
+    introB: ' hecho concreto, y es también la página que hace creíbles los ',
+    introBrightLinesLink: 'límites infranqueables',
+    introC: '. Un marco que solo dice que no le suena hostil a una directora que se está ahogando. Un marco que dice ',
+    introEm: 'aquí es donde esto de verdad ayuda, y esta es la lista corta de donde no',
+    introD: ' le suena útil.',
+    tierNote:
+      'Cada entrada de abajo lleva su nivel de riesgo y su salvaguarda, porque lo que se dice aquí no es que estos usos no estén regulados, sino que vale la pena hacerlos con cuidado.',
+    providersHeading: 'Para proveedores',
+    providersIntro:
+      'Ocho lugares donde el trabajo es real, el riesgo es manejable y el tiempo vuelve al salón.',
+    intermediariesHeading: 'Para las organizaciones sin fines de lucro y los intermediarios que los apoyan',
+    intermediariesIntro:
+      'Cuatro lugares donde una agencia de recursos y referencias, una red de coaching o un prestamista puede llegar a más proveedores con el personal que ya tiene.',
+    honestHeading: 'La regla que mantiene honesta esta página',
+    honestBody:
+      'A cada entrada de esta página le falta su última línea. En la página terminada, cada una cierra con lo que el programa hizo de verdad con el tiempo que recuperó: contrató a una maestra de apoyo, le dio a una maestra una hora pagada de planeación, abrió un cupo de bebé, dejó de trabajar los domingos. Sin eso, esto es un folleto de eficiencia, y de esos el campo ya tiene de sobra. Con eso, es el principio de Relación con comprobantes.',
+    honestGap:
+      'Esos resultados todavía no están aquí. Hay que recogerlos de pilotos reales, no tomarlos prestados de los casos de éxito que publican los proveedores, y esa recolección no se ha hecho. Esto es un hueco en la página, no una virtud de ella; y hasta que se llene, cada afirmación de arriba sobre horas recuperadas es un argumento, no un resultado.',
+    honestThree:
+      'De todos modos, tres cosas se cumplen en cada entrada: no se nombra ningún producto, se dice el nivel y la salvaguarda viaja junto con el uso.',
+  },
+};
+
+const c = copy[locale] ?? copy.en;
+
 const all = await getCollection('goodUses', (entry) => entry.id.startsWith(`${locale}/`));
 
 const entries = await Promise.all(
@@ -26,46 +89,35 @@ const intermediaries = entries.filter((e) => e.data.audience === 'intermediary')
 const groups = [
   {
     id: 'for-providers',
-    heading: 'For providers',
-    intro:
-      'Eight places where the work is real, the risk is manageable and the time comes back to the floor.',
+    heading: c.providersHeading,
+    intro: c.providersIntro,
     items: providers,
   },
   {
     id: 'for-intermediaries',
-    heading: 'For the nonprofits and intermediaries that support them',
-    intro:
-      'Four places where a resource and referral agency, a coaching network or a lender can reach more providers with the staff it already has.',
+    heading: c.intermediariesHeading,
+    intro: c.intermediariesIntro,
     items: intermediaries,
   },
 ];
 
-const description =
-  'Twelve constructive uses of AI in early childhood, each with its risk tier and its guardrail: the unglamorous, low-risk work that returns hours to a program running on thin margins.';
+const description = c.description;
 ---
 
-<BaseLayout title="Where AI helps" description={description} locale={locale}>
+<BaseLayout title={c.title} description={description} locale={locale}>
   <PageHeader
-    caption="Where AI earns its place"
-    title="Where AI helps"
-    lede="Most of what AI can do in early childhood is unglamorous, low-risk and worth real money to a business running on 1–3% margins — and every hour it returns is an hour an adult spends with children."
+    caption={c.caption}
+    title={c.title}
+    lede={c.lede}
     locale={locale}
   />
 
   <p class="govuk-body">
-    A site that is only a list of prohibitions will be read once and never
-    returned to. This page is the <a class="govuk-link" href={`${localePath(locale, '/principles')}#relationship`}>Relationship
-    principle</a> made concrete, and it is also the page that makes the <a class="govuk-link" href={localePath(locale, '/bright-lines')}>bright
-    lines</a> credible. A framework that only says no reads as hostile to a
-    director who is drowning. A framework that says <em>here is where this
-    genuinely helps, and here is the short list where it doesn't</em> reads as
-    useful.
+    {c.introA}<a class="govuk-link" href={`${localePath(locale, '/principles')}#relationship`}>{c.introRelationshipLink}</a>{c.introB}<a class="govuk-link" href={localePath(locale, '/bright-lines')}>{c.introBrightLinesLink}</a>{c.introC}<em>{c.introEm}</em>{c.introD}
   </p>
 
   <p class="govuk-body">
-    Every entry below carries its risk tier and its guardrail, because the point
-    is not that these uses are unregulated — it is that they are worth doing
-    carefully.
+    {c.tierNote}
   </p>
 
   <nav class="govuk-!-margin-bottom-8" aria-labelledby="contents-heading">
@@ -123,30 +175,20 @@ const description =
   <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6" />
 
   <section id="the-rule-that-keeps-this-page-honest">
-    <h2 class="govuk-heading-m">The rule that keeps this page honest</h2>
+    <h2 class="govuk-heading-m">{c.honestHeading}</h2>
 
     <p class="govuk-body">
-      Every entry on this page is missing its last line. On the live page, each
-      one ends with what the program actually did with the time it got back —
-      hired a floater, gave a teacher a paid planning hour, opened an infant
-      slot, stopped working Sundays. Without that, this is an efficiency
-      brochure, and the field has plenty of those. With it, it is the
-      Relationship principle with receipts.
+      {c.honestBody}
     </p>
 
     <div class="govuk-inset-text">
       <p class="govuk-body govuk-!-margin-bottom-0">
-        Those outcomes are not here yet. They have to be collected from real
-        pilots rather than borrowed from vendor case studies, and that
-        collection has not happened. This is a gap in the page, not a feature of
-        it — and until it is filled, every claim above about returned hours is
-        an argument rather than a result.
+        {c.honestGap}
       </p>
     </div>
 
     <p class="govuk-body">
-      Three things hold for every entry regardless: no product is named, the
-      tier is stated, and the guardrail travels with the use.
+      {c.honestThree}
     </p>
   </section>
 </BaseLayout>

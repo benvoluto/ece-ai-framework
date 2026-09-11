@@ -1,34 +1,37 @@
 ---
-title: Shadow-AI discovery, without punishing anyone
+title: Descubrir la IA en la sombra, sin castigar a nadie
 locale: es
 kind: addition
 number: 6
 order: 8
 lastUpdated: '2026-09-10'
-summary: Before writing policy, find out what is already in use — a two-week amnesty window where anyone can add a tool to the register with no consequence. Skip this and the policy governs a fiction.
+summary: 'Antes de escribir la política, averigüe qué se está usando ya: una ventana de amnistía de dos semanas en la que cualquiera puede agregar una herramienta al registro sin ninguna consecuencia. Sáltese este paso y la política gobernará una ficción.'
 relatedArtifacts: ['shadow-ai-amnesty-kit']
 translationPending: true
 ---
 
-Before writing policy, find out what is already in use.
+Antes de escribir la política, averigüe qué se está usando ya.
 
-Run a two-week amnesty window. During it, anyone at any site can add a tool to
-the register — what it is, what they use it for, whether child or family
-information has gone into it — with no consequence of any kind. Not a reduced
-consequence. None.
+Abra una ventana de amnistía de dos semanas. Durante ella, cualquier persona en
+cualquier sede puede agregar una herramienta al registro —qué es, para qué la
+usa, si ha entrado en ella información de niños o de familias— sin consecuencia
+de ningún tipo. No una consecuencia reducida. Ninguna.
 
-The amnesty has to be genuine and it has to be said out loud by someone senior
-enough that people believe it, because the whole exercise depends on the answers
-being true. Staff who suspect the amnesty is a trap will report the harmless
-tools and keep quiet about the ones that matter, which produces a register that
-is worse than no register because it looks complete.
+La amnistía tiene que ser genuina y tiene que decirla en voz alta alguien con
+suficiente rango como para que la gente le crea, porque todo el ejercicio depende
+de que las respuestas sean ciertas. El personal que sospeche que la amnistía es
+una trampa va a reportar las herramientas inofensivas y va a callarse sobre las
+que importan, lo que produce un registro peor que no tener ninguno, porque parece
+completo.
 
-What the window gives you is the actual starting position: which tools are in
-use, at which sites, touching what. Some of it will be entirely fine and can be
-approved on the spot. Some of it will be a bright-line problem that has to stop,
-and the amnesty covers what already happened while making clear that it stops
-now. Either way you are now writing policy about the organization you have.
+Lo que la ventana le da es la posición de partida real: qué herramientas están en
+uso, en qué sedes y tocando qué. Parte de eso estará perfectamente bien y se
+puede aprobar en el acto. Parte será un problema de límite infranqueable que
+tiene que parar, y la amnistía cubre lo que ya pasó a la vez que deja claro que
+se acaba ahora. En cualquiera de los dos casos, usted ya está escribiendo
+política sobre la organización que de verdad tiene.
 
-**Skip this step and the policy governs a fiction.** A policy written against an
-imagined blank slate regulates nothing that is actually happening, and its first
-contact with reality is an incident, a licensing visit, or a monitoring review.
+**Sáltese este paso y la política gobernará una ficción.** Una política escrita
+sobre una hoja en blanco imaginaria no regula nada de lo que está pasando de
+verdad, y su primer contacto con la realidad es un incidente, una visita de
+licenciamiento o una revisión de monitoreo.

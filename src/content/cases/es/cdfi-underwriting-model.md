@@ -1,11 +1,11 @@
 ---
-title: The lender is offered an AI underwriting model
+title: Al prestamista le ofrecen un modelo de IA para evaluar créditos
 locale: es
 lastUpdated: '2026-09-10'
 order: 6
-situation: A community development financial institution (CDFI) is offered an AI underwriting model to speed up child care facility lending.
-atStake: Credit decisions about providers who are disproportionately women of color running micro-businesses, using data that encodes the sector's existing inequities. Home-based providers, newer providers and providers in child care deserts are exactly the thin-file borrowers a model will treat worst.
-whatToDo: Fair lending review before the pilot, adverse-action explainability, disparate-impact testing on the actual portfolio, and a human decision on every denial. Publish the practice standard so the providers being underwritten can see it.
+situation: A una institución financiera de desarrollo comunitario (CDFI) le ofrecen un modelo de IA para evaluar créditos y acelerar los préstamos para instalaciones de cuidado infantil.
+atStake: Decisiones de crédito sobre proveedoras que, de manera desproporcionada, son mujeres de color al frente de microempresas, tomadas con datos que llevan dentro las desigualdades que ya tiene el sector. Las proveedoras que trabajan en su casa, las que llevan poco tiempo abiertas y las que están en desiertos de cuidado infantil son precisamente las solicitantes de poco historial a las que un modelo va a tratar peor.
+whatToDo: Revisión de préstamo justo antes del piloto, explicación de la acción adversa, pruebas de impacto dispar sobre la cartera real y una decisión humana en cada negación. Publique el estándar de práctica para que las proveedoras a las que se evalúa puedan verlo.
 governs: ['consequence']
 brightLines: []
 settings: ['intermediary']
@@ -13,36 +13,42 @@ status: drafted
 translationPending: true
 ---
 
-This is the intermediary track's own case, and it belongs in the same library as
-the classroom ones for a reason. An organization that asks providers to adopt AI
-carefully is going to be asked, sooner or later, what it did when AI reached its
-own consequential decisions. Lending is where that happens first.
+Este es el caso propio del camino de los intermediarios, y está en la misma
+biblioteca que los casos del salón por una razón. A una organización que les
+pide a las proveedoras adoptar la IA con cuidado, tarde o temprano le van a
+preguntar qué hizo cuando la IA llegó a sus propias decisiones de peso. En los
+préstamos es donde eso pasa primero.
 
-The appeal is real: facility lending in this sector is slow, the deals are
-small, and faster underwriting means more providers financed with the same
-staff. The problem is what the model learns from. Historic child care lending
-data encodes the sector's existing inequities — who got financed before, at what
-size, in what neighbourhood. Home-based providers, providers who have been open
-two years rather than twenty, and providers in child care deserts are exactly
-the thin-file borrowers that a model trained on that history will treat worst.
-They are also the providers the mission exists to reach.
+El atractivo es real: los préstamos para instalaciones en este sector son
+lentos, los montos son chicos, y evaluar más rápido significa financiar a más
+proveedoras con el mismo personal. El problema es de qué aprende el modelo. Los
+datos históricos de préstamos de cuidado infantil llevan dentro las
+desigualdades que ya tiene el sector — quién obtuvo financiamiento antes, por
+cuánto y en qué vecindario. Las proveedoras que trabajan en su casa, las que
+llevan dos años abiertas y no veinte, y las que están en desiertos de cuidado
+infantil son precisamente las solicitantes de poco historial a las que un modelo
+entrenado con esa historia va a tratar peor. Y son también las proveedoras a las
+que la misión existe para llegar.
 
-None of that makes the model unusable. It makes four things non-negotiable
-before a pilot begins:
+Nada de eso hace que el modelo sea inservible. Lo que hace es volver cuatro
+cosas no negociables antes de que empiece un piloto:
 
-- **Fair lending review first.** Before the pilot, not after it — the point of
-  reviewing beforehand is that you can still change the design.
-- **Adverse-action explainability.** If the model contributes to a denial, the
-  applicant is entitled to a reason that is a reason, in language a provider
-  running a micro-business can act on.
-- **Disparate-impact testing on the actual portfolio.** Not on the vendor's
-  benchmark, on your own book, segmented by the borrower types above.
-- **A human decision on every denial.** Approvals can be accelerated. A denial
-  ends a provider's expansion, and a person makes that call and signs it.
+- **Primero, la revisión de préstamo justo.** Antes del piloto, no después — la
+  razón de revisar antes es que todavía se puede cambiar el diseño.
+- **Explicación de la acción adversa.** Si el modelo contribuye a una negación,
+  la solicitante tiene derecho a una razón que de verdad sea una razón, en un
+  lenguaje con el que una proveedora que maneja una microempresa pueda hacer
+  algo.
+- **Pruebas de impacto dispar sobre la cartera real.** No sobre el punto de
+  referencia del proveedor, sino sobre su propia cartera, separada por los tipos
+  de solicitante de arriba.
+- **Una decisión humana en cada negación.** Las aprobaciones se pueden acelerar.
+  Una negación termina con la expansión de una proveedora, y esa decisión la
+  toma y la firma una persona.
 
-Then publish the standard. A practice standard the providers being underwritten
-can read does two things at once: it lets an applicant know what was and was not
-automated in a decision about her business, and it gives every other
-intermediary in the field a text to copy. An intermediary that holds itself to
-a published standard is in a much stronger position to ask the programs it
-funds to do the same.
+Después publique el estándar. Un estándar de práctica que las proveedoras
+evaluadas puedan leer hace dos cosas a la vez: le permite a una solicitante
+saber qué parte de la decisión sobre su negocio fue automatizada y qué parte no,
+y le da a cualquier otro intermediario del campo un texto que puede copiar. Un
+intermediario que se somete a un estándar publicado está en una posición mucho
+más fuerte para pedirles lo mismo a los programas que financia.

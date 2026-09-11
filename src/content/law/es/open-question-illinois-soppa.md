@@ -1,5 +1,5 @@
 ---
-title: Does Illinois SOPPA reach preschool at all?
+title: ¿SOPPA de Illinois alcanza siquiera al preescolar?
 locale: es
 kind: open-question
 needsLegalReview: true
@@ -8,22 +8,25 @@ order: 31
 translationPending: true
 ---
 
-Whether the Illinois student online personal protection act, SOPPA, reaches
-preschool at all could not be confirmed for this draft.
+Si SOPPA, la ley de Illinois sobre la protección de la información personal de
+los estudiantes en línea, alcanza siquiera al preescolar, es algo que no se pudo
+confirmar para este borrador.
 
-That is an uncomfortable gap to leave in a lookup table, because Illinois is one
-of the states where the question is asked most often. It is left open rather
-than guessed because a wrong answer in either direction does damage: telling
-Illinois preschools they are covered would have them demanding contract terms a
-vendor is not obliged to give, and telling them they are not would have them
-skip protections they are entitled to.
+Es un hueco incómodo de dejar en una tabla de consulta, porque Illinois es uno
+de los estados donde más se hace esta pregunta. Se deja abierto en vez de
+adivinar porque una respuesta equivocada hace daño en cualquiera de las dos
+direcciones: decirles a los preescolares de Illinois que están cubiertos los
+llevaría a exigir cláusulas de contrato que un proveedor no está obligado a dar,
+y decirles que no lo están los llevaría a saltarse protecciones a las que tienen
+derecho.
 
-Like the New York question above, this one needs an attorney to own it. The site
-does not yet have a pro bono legal partner, and until it does, this row stays
-marked rather than filled.
+Igual que la pregunta de Nueva York de arriba, esta necesita un abogado que se
+haga cargo. El sitio todavía no tiene un socio legal pro bono, y hasta que lo
+tenga, esta fila queda marcada y no rellenada.
 
-**What to do in the meantime.** Treat the federal answer for your setting in the
-crosswalk above as your floor, and get what you need from the vendor in the
-contract. Note separately that Illinois does have a biometric statute, BIPA, so
-any tool that would identify a child by face, voice, or fingerprint deserves a
-hard look on that ground regardless of how the SOPPA question comes out.
+**Qué hacer mientras tanto.** Tome como piso la respuesta federal para su
+entorno en el cuadro comparativo de arriba, y consiga en el contrato lo que
+necesite del proveedor. Tenga en cuenta además que Illinois sí tiene una ley de
+biometría, BIPA (la ley de privacidad de la información biométrica), así que
+cualquier herramienta que identifique a un niño por su cara, su voz o su huella
+merece una mirada dura por ese lado, salga como salga la pregunta sobre SOPPA.

@@ -12,288 +12,786 @@ const entry = await getEntry('pages', `${locale}/about`);
 const { Content } = await render(entry);
 const { description, lede, lastUpdated } = entry.data;
 
-/** Spec Section 14. The constituency table, as a body would have to be composed. */
-const constituencies = [
-  {
-    who: 'Family child care providers and center directors',
-    why: "Seat the people the technology is applied through, as members. Without them the artifacts will be written at the wrong length and the wrong reading level, and the field will know.",
-  },
-  {
-    who: 'Head Start grantee leadership',
-    why: "The only early childhood setting with a real existing privacy regime, and the one where vendor AI is arriving fastest.",
-  },
-  {
-    who: 'The Child Care Resource and Referral (CCR&R) network',
-    why: "The delivery channel. They already run business and compliance technical assistance, and they touch thousands of providers.",
-  },
-  {
-    who: 'State child care administrators',
-    why: "The path from framework to requirement runs through Child Care and Development Fund (CCDF) plans, provider agreements, licensing and Quality Rating and Improvement Systems (QRIS) — not through legislation.",
-  },
-  {
-    who: 'The National Association for the Education of Young Children (NAEYC), Zero to Three, and the Institute for Child Success',
-    why: "The field's existing authority. NAEYC especially: its 2012 statement is the gap, and a framework it endorses becomes the field's answer overnight.",
-  },
-  {
-    who: 'A privacy and civil rights lawyer',
-    why: "The regulatory crosswalk cannot ship without one. Two state readings in it need an opinion, not an inference.",
-  },
-  {
-    who: 'Parents and family voice',
-    why: "Children ages 0–5 cannot participate, which is exactly why the family-facing artifacts need families to have written them.",
-  },
-  {
-    who: 'Vendors',
-    why: "The hard call. Vendors at the table give reach and make a disclosure card viable; they also give critics the easiest available attack. Whatever is chosen has to be disclosed prominently.",
-  },
-  {
-    who: 'Researchers',
-    why: "The evidence base has real holes. A research partner turns “we don't know” from a weakness into an agenda.",
-  },
-];
+/**
+ * All of this page's prose, in both locales.
+ *
+ * The ids on the verify sections and the `n` numbers on the open questions and
+ * phases are deep-linked from other pages, so they are identical in both
+ * tables and must stay that way.
+ */
+const copy = {
+  en: {
+    headerCaption: 'About',
+    headerTitle: 'About this working draft',
 
-/** Spec Section 16. Six decisions, stated as open. */
-const openQuestions = [
-  {
-    n: 1,
-    q: 'Who convenes?',
-    paras: [
-      "Nobody has been asked, and nobody has agreed. The question is not only who is willing but what kind of organization it should be: a group with deep provider relationships and a delivery network is strong on reach and a question mark on neutrality, and a body with standing as a standards-setter may have no way to reach a family child care home.",
-      "The same organization could be the convener, a founding member or the delivery partner, and those are three different institutions with three different claims to make. Until this is answered, nothing in phase 2 of the build sequence can begin.",
+    contents: [
+      { href: '#what-this-is', label: 'What this is, and what it is not' },
+      { href: '#the-table', label: 'Who would have to be at the table' },
+      { href: '#credibility', label: 'Two moves that cost almost nothing' },
+      { href: '#open-questions', label: 'Open questions' },
+      { href: '#ai-use', label: "How this site's own AI use worked" },
+      { href: '#what-we-do-not-know', label: "What we don't know yet" },
+      { href: '#verify', label: 'Verify before publishing' },
+      { href: '#build-sequence', label: 'Where the build stands' },
+      { href: '#sources', label: 'Core sources' },
+      { href: '#changelog', label: 'Changelog' },
     ],
-  },
-  {
-    n: 2,
-    q: 'Do vendors sit on the body?',
-    paras: [
-      "It determines whether a vendor disclosure card is viable at all, and whether the framework reaches providers through the products they already use. It also determines the first line of every critique written about it.",
-      "There is no neutral answer to this one. There is only a disclosed one.",
-    ],
-  },
-  {
-    n: 3,
-    q: 'Are the bright lines prohibitions, or do they mean “requires board-level approval”?',
-    paras: [
-      "Prohibitions are usable and quotable. Some partners will want softer language, especially on cameras, where programs have liability reasons for wanting them.",
-    ],
-    read: "The spec author's own read: hold the prohibitions and lose the partners who need them softened. A framework that permits everything with paperwork is what the field already has.",
-  },
-  {
-    n: 4,
-    q: 'Does the site take a position on specific products?',
-    paras: [
-      "A public register of vendor disclosures implies that eventually it will, at least by omission. That is a meaningfully different institution, and a different legal posture, from one that publishes the questions and lets directors ask them.",
-      "This draft does the latter: it names no product, good or bad.",
-    ],
-  },
-  {
-    n: 5,
-    q: 'What is the Spanish-language commitment, exactly?',
-    paras: [
-      "Simultaneous release, or translated later? Given the Language principle, “later” undercuts the whole thing. It is a resourcing question disguised as a production question, and it has not been resourced.",
-    ],
-  },
-  {
-    n: 6,
-    q: 'Who owns legal review, and can it be pro bono?',
-    paras: [
-      "The crosswalk is the site's crown jewel and it cannot ship on inference. A law school clinic or a firm's pro bono practice is the natural fit, and having one named on the page would itself be a legitimacy asset. No one is named, because no one has been engaged.",
-    ],
-  },
-];
 
-/** Spec Section 17. Evidence gaps to state rather than fill. */
-const gaps = [
-  "There is no national data on broadband, devices or IT support among early childhood providers, and least of all among home-based providers. Every assumption this site makes about what a provider can run is an assumption.",
-  "There is no current verified national turnover figure for the workforce.",
-  "There is no meta-analysis quantifying how much screening-instrument accuracy differs by a child's race or language. What is missing is the quantification, not the question.",
-  "There is no verified United States emotion-recognition product in an early childhood setting. The category is arriving through general school-security AI rather than through early childhood tools.",
-  "There is no survey of AI use among Head Start grantees outside districts, private centers or family child care homes. The RAND figures cover public-school pre-kindergarten only.",
-];
+    whatThisIsHeading: 'What this is, and what it is not',
 
-/** Spec Section 17. The short-shelf-life list, as a checklist not yet worked through. */
-const verifyItems = [
-  {
-    id: 'verify-coppa',
-    heading: 'The COPPA AI-consent boundary',
-    body: "The separate-consent requirement in the Children's Online Privacy Protection Act (COPPA) carries an express carve-out for disclosures “integral to the nature of the service,” and the Federal Trade Commission's AI statement addresses disclosures to third parties. Do not write that using children's data to train AI “always” requires separate consent. A vendor's counsel will catch it, and the internal-training gap is real.",
-  },
-  {
-    id: 'verify-colorado',
-    heading: 'Colorado',
-    body: "SB 24-205 was delayed to June 2026, then enforcement was blocked in federal court in April 2026, then it was replaced by SB 26-189 in May 2026 with a notice-based regime effective January 2027. The source for that sequence is a single law-firm alert. Check the enrolled bill and the docket before repeating it.",
-  },
-  {
-    id: 'verify-aap',
-    heading: 'Screen-time guidance',
-    body: "The American Academy of Pediatrics' 2026 “5 C's” framework replaced the prescriptive hour limits, but this rests on secondary coverage. Confirm specifically what replaced the under-24-month recommendation before writing anything about infants.",
-  },
-  {
-    id: 'verify-head-start',
-    heading: 'Head Start rulemaking',
-    body: "A notice of proposed rulemaking (NPRM) published in May 2026 proposes removing wage-comparability and benefits requirements. Records and confidentiality provisions were not proposed for change. Whether a final rule has issued is unconfirmed.",
-  },
-  {
-    id: 'verify-expulsion',
-    heading: 'Expulsion data vintage',
-    body: "The expulsion multipliers rest on Gilliam's 2005 work, and the suspension disparity on the 2013–14 Civil Rights Data Collection (CRDC). Pull the newest CRDC cycle before publishing either number.",
-  },
-  {
-    id: 'verify-product-claims',
-    heading: 'Product claims',
-    body: "Several AI feature descriptions in the source spec come from vendor marketing rather than from the vendor. One widely cited product's own public materials described no AI features at all at the time of the research. Confirm directly with a vendor before naming them on a public page — which is one reason this site names no vendor anywhere.",
-  },
-  {
-    id: 'verify-yale',
-    heading: 'The 2016 eye-tracking study',
-    body: "It is routinely mischaracterised. It found that teachers gazed more at Black children, especially boys. On the vignette task there was no racial disparity in suspension or expulsion recommendations. Cite the CRDC and Gilliam's 2005 and 2014 work for disparities; cite the 2016 study only for the attention finding. Overclaiming here is the easiest way to be discredited in front of an audience that knows this literature.",
-  },
-];
+    tableHeading: 'Who would have to be at the table',
+    tableIntro:
+      'In a neutral field resource, legitimacy is the product. There is a pattern that works for this kind of body: a named chair with standing outside the technology conversation, a cross-constituency membership, a research partner, open funders, and a published sequence — consensus principles first, then operationalised standards, then research.',
+    tableIntro2Strong: 'None of that exists.',
+    tableIntro2Rest:
+      ' There is no chair, no membership, no research partner and no funder. What follows is the composition such a body would need, and why each seat is load-bearing. It is a specification for a table, not a list of people at one.',
+    tableHeadWho: 'Constituency',
+    tableHeadWhy: 'Why the seat is indispensable',
 
-/** Spec Section 15. Three phases, ordered so phase 1 needs no convening. */
-const phases = [
-  {
-    n: 1,
-    name: 'The operational layer',
-    requires: 'No convening required',
-    status: 'What this draft attempts',
-    blurb:
-      "Research plus drafting plus one legal review. It is also the part nobody else has built, so it stands alone even if nothing follows it.",
-    items: [
-      "The regulatory crosswalk, federal layer, with a lawyer's sign-off",
-      'The bright lines, published as a working draft with their bases cited',
-      'The one-page policy and the staff one-pager, in English and Spanish',
-      'The vendor question sheet and the answer-recording form',
-      'Six of the twelve constructive uses, with guardrails — this is what keeps a launch from reading as anti-AI, and it costs nothing but writing',
-      'The model contract rider, which large operators can start using before anything else on the site exists',
-      'The FAQ — cheap, mostly already written, and what turns a thin site into an argument',
-      "An honest “what we don't know” page",
+    /** Spec Section 14. The constituency table, as a body would have to be composed. */
+    constituencies: [
+      {
+        who: 'Family child care providers and center directors',
+        why: "Seat the people the technology is applied through, as members. Without them the artifacts will be written at the wrong length and the wrong reading level, and the field will know.",
+      },
+      {
+        who: 'Head Start grantee leadership',
+        why: "The only early childhood setting with a real existing privacy regime, and the one where vendor AI is arriving fastest.",
+      },
+      {
+        who: 'The Child Care Resource and Referral (CCR&R) network',
+        why: "The delivery channel. They already run business and compliance technical assistance, and they touch thousands of providers.",
+      },
+      {
+        who: 'State child care administrators',
+        why: "The path from framework to requirement runs through Child Care and Development Fund (CCDF) plans, provider agreements, licensing and Quality Rating and Improvement Systems (QRIS) — not through legislation.",
+      },
+      {
+        who: 'The National Association for the Education of Young Children (NAEYC), Zero to Three, and the Institute for Child Success',
+        why: "The field's existing authority. NAEYC especially: its 2012 statement is the gap, and a framework it endorses becomes the field's answer overnight.",
+      },
+      {
+        who: 'A privacy and civil rights lawyer',
+        why: "The regulatory crosswalk cannot ship without one. Two state readings in it need an opinion, not an inference.",
+      },
+      {
+        who: 'Parents and family voice',
+        why: "Children ages 0–5 cannot participate, which is exactly why the family-facing artifacts need families to have written them.",
+      },
+      {
+        who: 'Vendors',
+        why: "The hard call. Vendors at the table give reach and make a disclosure card viable; they also give critics the easiest available attack. Whatever is chosen has to be disclosed prominently.",
+      },
+      {
+        who: 'Researchers',
+        why: "The evidence base has real holes. A research partner turns “we don't know” from a weakness into an agenda.",
+      },
     ],
-  },
-  {
-    n: 2,
-    name: 'Standing and practice',
-    requires: 'Requires a named body',
-    status: 'Not started: there is no body',
-    blurb:
-      "Everything here depends on someone being able to say who ratified it. None of it can be faked with a better draft.",
-    items: [
-      'The principles ratified and signed, with members and funders named',
-      'The four-question intake, returning a tier plus the right template',
-      'The full policy family, including the Head Start addendum and handbook language',
-      'The multi-site track — governance charter, pilot protocol, shadow-AI kit, delegate-agency module',
-      'The remaining constructive uses, with outcomes collected from real pilots rather than vendor case studies',
-      'The case library — launch with eight or nine vignettes, then add monthly',
-      'The state layer for the six priority states',
-      'The policy-recommendations track, aimed at states, the Office of Head Start, licensing and QRIS',
-    ],
-  },
-  {
-    n: 3,
-    name: 'Infrastructure',
-    requires: 'Requires adoption',
-    status: 'Not started: nothing has been adopted',
-    blurb:
-      "This phase only makes sense once programs are actually using the framework and vendors have a reason to answer it.",
-    items: [
-      'The vendor disclosure card and the public register',
-      'Generation: the intake produces an editable, program-specific policy plus a matching family notice',
-      'The intermediary curriculum, co-brandable and coach-deliverable',
-      "The returned-policy corpus, and the first analysis of what the field's policies actually say",
-      'Changelog discipline and an annual review commitment, honoured visibly',
-    ],
-  },
-];
 
-/** Spec Section 17. Source names, grouped as the spec groups them. No links invented. */
-const sourceGroups = [
-  {
-    group: 'Federal law',
-    items: [
-      '45 CFR Part 1303 (Head Start privacy)',
-      '45 CFR §1302.33 (screenings)',
-      '45 CFR §1302.17 (suspension and expulsion)',
-      'COPPA Final Rule 2025',
-      'IDEA confidentiality FAQ',
-      '45 CFR Part 98 (CCDF)',
+    credibilityHeading: 'Two moves that cost almost nothing',
+    credibilityIntro:
+      'A body in this position has two cheap ways to earn the credibility it has not otherwise accumulated, and this page does both of them rather than describing them.',
+    moves: [
+      {
+        strong: "Publish what you don't know.",
+        rest: ' A visible list of open questions and evidence gaps reads as rigour, not weakness. It is the difference between an unfinished site and a process.',
+      },
+      {
+        strong: 'Disclose your own AI use.',
+        rest: ' For anyone telling programs to disclose, doing it first is nearly free credibility — and refusing to would be noticed.',
+      },
     ],
-  },
-  {
-    group: 'State law',
-    items: [
-      'California AB 2799 / ELPIPA',
-      'New York Education Law 2-d',
-      'Illinois Biometric Information Privacy Act (BIPA)',
-      'Future of Privacy Forum state tracker',
-      'State AI legislation, mid-2026',
-      'EU AI Act Article 5',
-    ],
-  },
-  {
-    group: 'Early childhood education and AI',
-    items: [
-      'Brookings, Generation AI Starts Early',
-      'National Center for Youth Law, child-centred AI',
-      'Zero to Three, Screen Sense AI',
-      'Institute for Child Success',
-      'NAEYC position statements',
-    ],
-  },
-  {
-    group: 'Models to borrow',
-    items: [
-      'Council on Criminal Justice',
-      'TeachAI toolkit',
-      'Project Evident equitable AI framework',
-      'McGovern Learning Hub',
-      'Fast Forward policy builder',
-      'NTEN AI hub',
-      'CHAI applied model card',
-      'Center for Democracy and Technology, K-12 policy priorities',
-    ],
-  },
-  {
-    group: 'Evidence base',
-    items: [
-      'RAND, pre-kindergarten teachers and AI',
-      'CSCCE Workforce Index 2024',
-      'Preschool expulsion data',
-      'Migration Policy Institute, dual language learners',
-      'PIRG, Trouble in Toyland 2025',
-      'Canvas Dx real-world performance',
-      'Halberstadt et al., anger perception bias',
-      'Correction on the 2016 eye-tracking study',
-    ],
-  },
-];
 
-const changelog = [
-  {
-    date: '2026-09-10',
-    display: '10 September 2026',
-    version: SITE.version,
-    what: "Initial working draft, built from site plan v2. First publication of the principles, the bright lines, the tiering, the federal layer of the regulatory crosswalk, the vendor questions, the constructive uses and the artifacts. Nothing in this release has been reviewed by counsel and nothing has been adopted.",
-  },
-];
+    openQuestionsHeading: 'Open questions',
+    openQuestionsIntro:
+      'Six decisions are unresolved. They are listed here as open, because they are open: none of them has been made, and several of them change what this site would become.',
+    openQuestionCaption: 'Open question',
+    drafterRead: "The drafter's read",
 
-const contents = [
-  { href: '#what-this-is', label: 'What this is, and what it is not' },
-  { href: '#the-table', label: 'Who would have to be at the table' },
-  { href: '#credibility', label: 'Two moves that cost almost nothing' },
-  { href: '#open-questions', label: 'Open questions' },
-  { href: '#ai-use', label: "How this site's own AI use worked" },
-  { href: '#what-we-do-not-know', label: "What we don't know yet" },
-  { href: '#verify', label: 'Verify before publishing' },
-  { href: '#build-sequence', label: 'Where the build stands' },
-  { href: '#sources', label: 'Core sources' },
-  { href: '#changelog', label: 'Changelog' },
-];
+    /** Spec Section 16. Six decisions, stated as open. */
+    openQuestions: [
+      {
+        n: 1,
+        q: 'Who convenes?',
+        paras: [
+          "Nobody has been asked, and nobody has agreed. The question is not only who is willing but what kind of organization it should be: a group with deep provider relationships and a delivery network is strong on reach and a question mark on neutrality, and a body with standing as a standards-setter may have no way to reach a family child care home.",
+          "The same organization could be the convener, a founding member or the delivery partner, and those are three different institutions with three different claims to make. Until this is answered, nothing in phase 2 of the build sequence can begin.",
+        ],
+      },
+      {
+        n: 2,
+        q: 'Do vendors sit on the body?',
+        paras: [
+          "It determines whether a vendor disclosure card is viable at all, and whether the framework reaches providers through the products they already use. It also determines the first line of every critique written about it.",
+          "There is no neutral answer to this one. There is only a disclosed one.",
+        ],
+      },
+      {
+        n: 3,
+        q: 'Are the bright lines prohibitions, or do they mean “requires board-level approval”?',
+        paras: [
+          "Prohibitions are usable and quotable. Some partners will want softer language, especially on cameras, where programs have liability reasons for wanting them.",
+        ],
+        read: "The spec author's own read: hold the prohibitions and lose the partners who need them softened. A framework that permits everything with paperwork is what the field already has.",
+      },
+      {
+        n: 4,
+        q: 'Does the site take a position on specific products?',
+        paras: [
+          "A public register of vendor disclosures implies that eventually it will, at least by omission. That is a meaningfully different institution, and a different legal posture, from one that publishes the questions and lets directors ask them.",
+          "This draft does the latter: it names no product, good or bad.",
+        ],
+      },
+      {
+        n: 5,
+        q: 'What is the Spanish-language commitment, exactly?',
+        paras: [
+          "Simultaneous release, or translated later? Given the Language principle, “later” undercuts the whole thing. It is a resourcing question disguised as a production question, and it has not been resourced.",
+        ],
+      },
+      {
+        n: 6,
+        q: 'Who owns legal review, and can it be pro bono?',
+        paras: [
+          "The crosswalk is the site's crown jewel and it cannot ship on inference. A law school clinic or a firm's pro bono practice is the natural fit, and having one named on the page would itself be a legitimacy asset. No one is named, because no one has been engaged.",
+        ],
+      },
+    ],
+
+    aiUseHeading: "How this site's own AI use worked",
+    aiUseIntro:
+      'This site asks early childhood programs to tell families when AI touched a record about their child. It would be indefensible not to say the same thing about itself, in the same detail.',
+    aiUse: [
+      {
+        pre: 'The underlying site plan was drafted as a working specification: a human-authored document setting out the argument, the statutes, the numbers and the structure.',
+      },
+      {
+        pre: 'This website was built from that specification ',
+        strong: 'with substantial AI assistance',
+        post: ", including the drafting of the page copy you are reading from the specification's substance.",
+      },
+      {
+        pre: 'The Spanish pages are AI-drafted translations. Every one of them is marked as pending review by a native speaker, and none has yet had that review.',
+      },
+      {
+        strong: 'No content on this site has been reviewed by counsel.',
+        post: ' Not the crosswalk, not the bright lines, not the artifacts a program would sign.',
+      },
+      {
+        pre: 'Every factual claim on this site traces back to the site plan rather than to independent research carried out during the build. Where the plan supplied a statute, a figure or a date, it was carried across unchanged; where it did not, nothing was invented to fill the gap.',
+      },
+      {
+        pre: 'The items on the verification list below have ',
+        strong: 'not',
+        post: ' been re-checked against primary sources. They are flagged, not resolved.',
+      },
+    ],
+
+    gapsHeading: "What we don't know yet",
+    gapsIntro:
+      'These are gaps in the evidence base, not gaps in the drafting. Each one is stated here rather than papered over with a number that would look better than it is.',
+
+    /** Spec Section 17. Evidence gaps to state rather than fill. */
+    gaps: [
+      "There is no national data on broadband, devices or IT support among early childhood providers, and least of all among home-based providers. Every assumption this site makes about what a provider can run is an assumption.",
+      "There is no current verified national turnover figure for the workforce.",
+      "There is no meta-analysis quantifying how much screening-instrument accuracy differs by a child's race or language. What is missing is the quantification, not the question.",
+      "There is no verified United States emotion-recognition product in an early childhood setting. The category is arriving through general school-security AI rather than through early childhood tools.",
+      "There is no survey of AI use among Head Start grantees outside districts, private centers or family child care homes. The RAND figures cover public-school pre-kindergarten only.",
+    ],
+
+    verifyHeading: 'Verify before publishing',
+    verifyIntroPre:
+      "Some of what this site rests on has a short shelf life: live rulemaking, litigation, guidance that was replaced this year, and claims that came from a vendor's marketing rather than from the vendor. The list below is the checklist, and ",
+    verifyIntroStrong: 'the site has not yet worked through it',
+    verifyIntroPost: '. Every item is outstanding.',
+    notYetChecked: 'Not yet checked',
+
+    /** Spec Section 17. The short-shelf-life list, as a checklist not yet worked through. */
+    verifyItems: [
+      {
+        id: 'verify-coppa',
+        heading: 'The COPPA AI-consent boundary',
+        body: "The separate-consent requirement in the Children's Online Privacy Protection Act (COPPA) carries an express carve-out for disclosures “integral to the nature of the service,” and the Federal Trade Commission's AI statement addresses disclosures to third parties. Do not write that using children's data to train AI “always” requires separate consent. A vendor's counsel will catch it, and the internal-training gap is real.",
+      },
+      {
+        id: 'verify-colorado',
+        heading: 'Colorado',
+        body: "SB 24-205 was delayed to June 2026, then enforcement was blocked in federal court in April 2026, then it was replaced by SB 26-189 in May 2026 with a notice-based regime effective January 2027. The source for that sequence is a single law-firm alert. Check the enrolled bill and the docket before repeating it.",
+      },
+      {
+        id: 'verify-aap',
+        heading: 'Screen-time guidance',
+        body: "The American Academy of Pediatrics' 2026 “5 C's” framework replaced the prescriptive hour limits, but this rests on secondary coverage. Confirm specifically what replaced the under-24-month recommendation before writing anything about infants.",
+      },
+      {
+        id: 'verify-head-start',
+        heading: 'Head Start rulemaking',
+        body: "A notice of proposed rulemaking (NPRM) published in May 2026 proposes removing wage-comparability and benefits requirements. Records and confidentiality provisions were not proposed for change. Whether a final rule has issued is unconfirmed.",
+      },
+      {
+        id: 'verify-expulsion',
+        heading: 'Expulsion data vintage',
+        body: "The expulsion multipliers rest on Gilliam's 2005 work, and the suspension disparity on the 2013–14 Civil Rights Data Collection (CRDC). Pull the newest CRDC cycle before publishing either number.",
+      },
+      {
+        id: 'verify-product-claims',
+        heading: 'Product claims',
+        body: "Several AI feature descriptions in the source spec come from vendor marketing rather than from the vendor. One widely cited product's own public materials described no AI features at all at the time of the research. Confirm directly with a vendor before naming them on a public page — which is one reason this site names no vendor anywhere.",
+      },
+      {
+        id: 'verify-yale',
+        heading: 'The 2016 eye-tracking study',
+        body: "It is routinely mischaracterised. It found that teachers gazed more at Black children, especially boys. On the vignette task there was no racial disparity in suspension or expulsion recommendations. Cite the CRDC and Gilliam's 2005 and 2014 work for disparities; cite the 2016 study only for the attention finding. Overclaiming here is the easiest way to be discredited in front of an audience that knows this literature.",
+      },
+    ],
+
+    buildHeading: 'Where the build stands',
+    buildIntro:
+      'The build sequence is deliberately ordered so that the first release requires no convening at all. A convening is what would make the second phase citable; it should not be what blocks the first.',
+    phaseCaption: 'Phase',
+
+    /** Spec Section 15. Three phases, ordered so phase 1 needs no convening. */
+    phases: [
+      {
+        n: 1,
+        name: 'The operational layer',
+        requires: 'No convening required',
+        status: 'What this draft attempts',
+        blurb:
+          "Research plus drafting plus one legal review. It is also the part nobody else has built, so it stands alone even if nothing follows it.",
+        items: [
+          "The regulatory crosswalk, federal layer, with a lawyer's sign-off",
+          'The bright lines, published as a working draft with their bases cited',
+          'The one-page policy and the staff one-pager, in English and Spanish',
+          'The vendor question sheet and the answer-recording form',
+          'Six of the twelve constructive uses, with guardrails — this is what keeps a launch from reading as anti-AI, and it costs nothing but writing',
+          'The model contract rider, which large operators can start using before anything else on the site exists',
+          'The FAQ — cheap, mostly already written, and what turns a thin site into an argument',
+          "An honest “what we don't know” page",
+        ],
+      },
+      {
+        n: 2,
+        name: 'Standing and practice',
+        requires: 'Requires a named body',
+        status: 'Not started: there is no body',
+        blurb:
+          "Everything here depends on someone being able to say who ratified it. None of it can be faked with a better draft.",
+        items: [
+          'The principles ratified and signed, with members and funders named',
+          'The four-question intake, returning a tier plus the right template',
+          'The full policy family, including the Head Start addendum and handbook language',
+          'The multi-site track — governance charter, pilot protocol, shadow-AI kit, delegate-agency module',
+          'The remaining constructive uses, with outcomes collected from real pilots rather than vendor case studies',
+          'The case library — launch with eight or nine vignettes, then add monthly',
+          'The state layer for the six priority states',
+          'The policy-recommendations track, aimed at states, the Office of Head Start, licensing and QRIS',
+        ],
+      },
+      {
+        n: 3,
+        name: 'Infrastructure',
+        requires: 'Requires adoption',
+        status: 'Not started: nothing has been adopted',
+        blurb:
+          "This phase only makes sense once programs are actually using the framework and vendors have a reason to answer it.",
+        items: [
+          'The vendor disclosure card and the public register',
+          'Generation: the intake produces an editable, program-specific policy plus a matching family notice',
+          'The intermediary curriculum, co-brandable and coach-deliverable',
+          "The returned-policy corpus, and the first analysis of what the field's policies actually say",
+          'Changelog discipline and an annual review commitment, honoured visibly',
+        ],
+      },
+    ],
+
+    phasesInset:
+      "Phase 1 is what this draft attempts, and it is not finished even so: the crosswalk's legal sign-off has not happened, and the Spanish pages are awaiting a native speaker. Phases 2 and 3 have not begun, and cannot begin, until open question 1 is answered.",
+
+    sequencingLabel: 'Sequencing judgment',
+    seqIntro:
+      'If you can only build one thing to take into partner conversations, build the',
+    seqLaw: 'regulatory crosswalk',
+    seqMid1: 'plus the',
+    seqBrightLines: 'bright lines',
+    seqMid2: 'plus the',
+    seqFaq: 'FAQ',
+    seqTail:
+      '. They demonstrate the field-specific expertise nobody else has, they are what an association or the Office of Head Start would actually react to, and together they make the case for the convening better than a deck about the convening would.',
+
+    sourcesHeading: 'Core sources',
+    sourcesIntro:
+      'Everything asserted on this site traces to a source. These are the source names the site plan worked from, grouped as it grouped them. They are names, not citations with locators: check each one at its primary source before relying on it.',
+
+    /** Spec Section 17. Source names, grouped as the spec groups them. No links invented. */
+    sourceGroups: [
+      {
+        group: 'Federal law',
+        items: [
+          '45 CFR Part 1303 (Head Start privacy)',
+          '45 CFR §1302.33 (screenings)',
+          '45 CFR §1302.17 (suspension and expulsion)',
+          'COPPA Final Rule 2025',
+          'IDEA confidentiality FAQ',
+          '45 CFR Part 98 (CCDF)',
+        ],
+      },
+      {
+        group: 'State law',
+        items: [
+          'California AB 2799 / ELPIPA',
+          'New York Education Law 2-d',
+          'Illinois Biometric Information Privacy Act (BIPA)',
+          'Future of Privacy Forum state tracker',
+          'State AI legislation, mid-2026',
+          'EU AI Act Article 5',
+        ],
+      },
+      {
+        group: 'Early childhood education and AI',
+        items: [
+          'Brookings, Generation AI Starts Early',
+          'National Center for Youth Law, child-centred AI',
+          'Zero to Three, Screen Sense AI',
+          'Institute for Child Success',
+          'NAEYC position statements',
+        ],
+      },
+      {
+        group: 'Models to borrow',
+        items: [
+          'Council on Criminal Justice',
+          'TeachAI toolkit',
+          'Project Evident equitable AI framework',
+          'McGovern Learning Hub',
+          'Fast Forward policy builder',
+          'NTEN AI hub',
+          'CHAI applied model card',
+          'Center for Democracy and Technology, K-12 policy priorities',
+        ],
+      },
+      {
+        group: 'Evidence base',
+        items: [
+          'RAND, pre-kindergarten teachers and AI',
+          'CSCCE Workforce Index 2024',
+          'Preschool expulsion data',
+          'Migration Policy Institute, dual language learners',
+          'PIRG, Trouble in Toyland 2025',
+          'Canvas Dx real-world performance',
+          'Halberstadt et al., anger perception bias',
+          'Correction on the 2016 eye-tracking study',
+        ],
+      },
+    ],
+
+    changelogHeading: 'Changelog',
+    changelogIntro:
+      'Changelog discipline and an annual review commitment, honoured visibly, are a phase 3 commitment on the list above. This is where that record starts. There are no entries before the first one, because there were no releases before it.',
+    changelogHeadDate: 'Date',
+    changelogHeadVersion: 'Version',
+    changelogHeadWhat: 'What changed',
+    changelog: [
+      {
+        date: '2026-09-10',
+        display: '10 September 2026',
+        version: SITE.version,
+        what: "Initial working draft, built from site plan v2. First publication of the principles, the bright lines, the tiering, the federal layer of the regulatory crosswalk, the vendor questions, the constructive uses and the artifacts. Nothing in this release has been reviewed by counsel and nothing has been adopted.",
+      },
+    ],
+  },
+
+  es: {
+    headerCaption: 'Acerca de',
+    headerTitle: 'Acerca de este borrador de trabajo',
+
+    contents: [
+      { href: '#what-this-is', label: 'Qué es esto y qué no es' },
+      { href: '#the-table', label: 'Quiénes tendrían que estar en la mesa' },
+      { href: '#credibility', label: 'Dos cosas que casi no cuestan nada' },
+      { href: '#open-questions', label: 'Preguntas abiertas' },
+      { href: '#ai-use', label: 'Cómo fue el uso de IA de este mismo sitio' },
+      { href: '#what-we-do-not-know', label: 'Lo que todavía no sabemos' },
+      { href: '#verify', label: 'Verificar antes de publicar' },
+      { href: '#build-sequence', label: 'En qué punto está la construcción' },
+      { href: '#sources', label: 'Fuentes principales' },
+      { href: '#changelog', label: 'Registro de cambios' },
+    ],
+
+    whatThisIsHeading: 'Qué es esto y qué no es',
+
+    tableHeading: 'Quiénes tendrían que estar en la mesa',
+    tableIntro:
+      'En un recurso neutral para el campo, la legitimidad es el producto. Hay un patrón que funciona para este tipo de organismo: alguien a la cabeza, con nombre y con prestigio fuera de la conversación sobre tecnología; miembros de todos los sectores; un socio de investigación; financiadores declarados; y una secuencia publicada: primero principios de consenso, después estándares llevados a la práctica, y después investigación.',
+    tableIntro2Strong: 'Nada de eso existe.',
+    tableIntro2Rest:
+      ' No hay presidente, ni miembros, ni socio de investigación, ni financiador. Lo que sigue es la composición que ese organismo necesitaría, y por qué cada asiento carga peso. Es la especificación de una mesa, no una lista de quienes se sientan a ella.',
+    tableHeadWho: 'Grupo representado',
+    tableHeadWhy: 'Por qué ese asiento es indispensable',
+
+    /** Spec Section 14. The constituency table, as a body would have to be composed. */
+    constituencies: [
+      {
+        who: 'Proveedores de cuidado infantil familiar y directores de centros',
+        why: 'Siente como miembros a las personas a través de quienes se aplica la tecnología. Sin ellas, los documentos van a salir con la extensión equivocada y al nivel de lectura equivocado, y el campo se va a dar cuenta.',
+      },
+      {
+        who: 'Liderazgo de concesionarios de Head Start',
+        why: 'Head Start (el programa federal de educación temprana) es el único entorno de primera infancia con un régimen de privacidad real ya establecido, y al que la IA de los proveedores está llegando más rápido.',
+      },
+      {
+        who: 'La red de recursos y referencias de cuidado infantil (Child Care Resource and Referral, CCR&R)',
+        why: 'Es el canal de entrega. Ya dan asistencia técnica de negocio y de cumplimiento, y llegan a miles de programas.',
+      },
+      {
+        who: 'Administradores estatales de cuidado infantil',
+        why: 'El camino que va de marco a requisito pasa por los planes del Child Care and Development Fund (CCDF, el fondo federal de cuidado infantil), los acuerdos con los proveedores de cuidado, las licencias y los sistemas estatales de calificación y mejora de la calidad (QRIS), no por la legislatura.',
+      },
+      {
+        who: 'La National Association for the Education of Young Children (NAEYC), Zero to Three y el Institute for Child Success',
+        why: 'La autoridad que el campo ya tiene. NAEYC sobre todo: su declaración de 2012 es el vacío, y un marco que ella respalde se convierte en la respuesta del campo de la noche a la mañana.',
+      },
+      {
+        who: 'Un abogado de privacidad y derechos civiles',
+        why: 'El mapa regulatorio no puede publicarse sin uno. Dos lecturas estatales que contiene necesitan una opinión legal, no una inferencia.',
+      },
+      {
+        who: 'Padres y voz de las familias',
+        why: 'Los niños de 0 a 5 años no pueden participar, y por eso mismo los documentos dirigidos a las familias necesitan que las familias los hayan escrito.',
+      },
+      {
+        who: 'Proveedores de tecnología',
+        why: 'La decisión difícil. Tener proveedores en la mesa da alcance y hace viable una ficha de divulgación; también le da a los críticos el ataque más fácil que hay. Se decida lo que se decida, hay que decirlo de manera visible.',
+      },
+      {
+        who: 'Investigadores',
+        why: 'La base de evidencia tiene huecos reales. Un socio de investigación convierte el «no sabemos» de una debilidad en una agenda.',
+      },
+    ],
+
+    credibilityHeading: 'Dos cosas que casi no cuestan nada',
+    credibilityIntro:
+      'Un organismo en esta posición tiene dos maneras baratas de ganarse la credibilidad que no ha acumulado de otro modo, y esta página hace las dos en vez de describirlas.',
+    moves: [
+      {
+        strong: 'Publique lo que no sabe.',
+        rest: ' Una lista visible de preguntas abiertas y de vacíos en la evidencia se lee como rigor, no como debilidad. Es la diferencia entre un sitio sin terminar y un proceso.',
+      },
+      {
+        strong: 'Diga cómo usa usted la IA.',
+        rest: ' Para quien les pide a los programas que lo digan, hacerlo primero es credibilidad casi gratis, y negarse se notaría.',
+      },
+    ],
+
+    openQuestionsHeading: 'Preguntas abiertas',
+    openQuestionsIntro:
+      'Hay seis decisiones sin resolver. Aquí aparecen como abiertas porque están abiertas: ninguna se ha tomado, y varias cambian en qué se convertiría este sitio.',
+    openQuestionCaption: 'Pregunta abierta',
+    drafterRead: 'La lectura de quien lo redactó',
+
+    /** Spec Section 16. Six decisions, stated as open. */
+    openQuestions: [
+      {
+        n: 1,
+        q: '¿Quién convoca?',
+        paras: [
+          'A nadie se le ha preguntado y nadie ha aceptado. La pregunta no es solo quién está dispuesto, sino qué tipo de organización debería ser: un grupo con relaciones profundas con los programas y una red de entrega es fuerte en alcance y una incógnita en neutralidad, y un organismo con prestigio para fijar estándares puede no tener manera de llegar a un hogar de cuidado infantil familiar.',
+          'La misma organización podría ser la convocante, un miembro fundador o el socio de entrega, y esas son tres instituciones distintas con tres cosas distintas que reclamar. Hasta que esto se responda, nada de la fase 2 de la secuencia de construcción puede empezar.',
+        ],
+      },
+      {
+        n: 2,
+        q: '¿Los proveedores de tecnología tienen asiento en el organismo?',
+        paras: [
+          'Determina si una ficha de divulgación del proveedor es viable siquiera, y si el marco llega a los programas a través de los productos que ya usan. También determina la primera línea de cada crítica que se escriba sobre él.',
+          'Aquí no hay una respuesta neutral. Solo hay una respuesta dicha abiertamente.',
+        ],
+      },
+      {
+        n: 3,
+        q: '¿Los límites infranqueables son prohibiciones, o quieren decir «requiere aprobación de la junta directiva»?',
+        paras: [
+          'Las prohibiciones se pueden usar y se pueden citar. Algunos socios van a querer un lenguaje más suave, sobre todo con las cámaras, donde los programas tienen razones de responsabilidad legal para quererlas.',
+        ],
+        read: 'La lectura de quien escribió la especificación: sostener las prohibiciones y perder a los socios que necesitan que se suavicen. Un marco que permite todo con papeleo es lo que el campo ya tiene.',
+      },
+      {
+        n: 4,
+        q: '¿El sitio toma una posición sobre productos específicos?',
+        paras: [
+          'Un registro público de divulgaciones de proveedores da a entender que con el tiempo lo hará, aunque sea por omisión. Esa es una institución bastante distinta, con una postura legal distinta, de una que publica las preguntas y deja que los directores las hagan.',
+          'Este borrador hace lo segundo: no nombra ningún producto, ni bueno ni malo.',
+        ],
+      },
+      {
+        n: 5,
+        q: '¿Cuál es exactamente el compromiso con el español?',
+        paras: [
+          '¿Publicación simultánea, o traducción después? Dado el principio de Idioma, «después» le quita el piso a todo el asunto. Es una pregunta de recursos disfrazada de pregunta de producción, y no se le han asignado recursos.',
+        ],
+      },
+      {
+        n: 6,
+        q: '¿Quién se hace cargo de la revisión legal, y puede ser pro bono?',
+        paras: [
+          'El mapa regulatorio es la joya de la corona del sitio y no puede publicarse apoyado en inferencias. Una clínica de una facultad de derecho o la práctica pro bono de un bufete es lo natural, y tener a alguien nombrado en la página sería en sí mismo un activo de legitimidad. No hay nadie nombrado, porque no se ha contratado a nadie.',
+        ],
+      },
+    ],
+
+    aiUseHeading: 'Cómo fue el uso de IA de este mismo sitio',
+    aiUseIntro:
+      'Este sitio les pide a los programas de primera infancia que les digan a las familias cuándo la IA tocó un registro sobre su hijo. Sería indefendible no decir lo mismo sobre sí mismo, con el mismo detalle.',
+    aiUse: [
+      {
+        pre: 'El plan del sitio se redactó como una especificación de trabajo: un documento escrito por personas que expone el argumento, las leyes, las cifras y la estructura.',
+      },
+      {
+        pre: 'Este sitio web se construyó a partir de esa especificación ',
+        strong: 'con ayuda sustancial de la IA',
+        post: ', incluida la redacción, a partir del contenido de la especificación, del texto que usted está leyendo.',
+      },
+      {
+        pre: 'Las páginas en español son traducciones redactadas con IA. Todas están marcadas como pendientes de revisión por un hablante nativo, y ninguna ha tenido todavía esa revisión.',
+      },
+      {
+        strong: 'Ningún abogado ha revisado nada del contenido de este sitio.',
+        post: ' Ni el mapa regulatorio, ni los límites infranqueables, ni los documentos que un programa firmaría.',
+      },
+      {
+        pre: 'Cada afirmación de hecho en este sitio viene del plan del sitio, no de una investigación independiente hecha durante la construcción. Donde el plan daba una ley, una cifra o una fecha, se pasó sin cambios; donde no la daba, no se inventó nada para llenar el vacío.',
+      },
+      {
+        pre: 'Los puntos de la lista de verificación de abajo ',
+        strong: 'no',
+        post: ' se han vuelto a revisar contra las fuentes primarias. Están señalados, no resueltos.',
+      },
+    ],
+
+    gapsHeading: 'Lo que todavía no sabemos',
+    gapsIntro:
+      'Estos son vacíos en la base de evidencia, no vacíos en la redacción. Cada uno se dice aquí en vez de taparse con un número que se vería mejor de lo que es.',
+
+    /** Spec Section 17. Evidence gaps to state rather than fill. */
+    gaps: [
+      'No hay datos nacionales sobre banda ancha, dispositivos ni apoyo técnico entre los proveedores de primera infancia, y menos todavía entre quienes trabajan desde su casa. Cada suposición que hace este sitio sobre lo que un programa puede usar es exactamente eso: una suposición.',
+      'No hay una cifra nacional actual y verificada de rotación de personal en este campo de trabajo.',
+      'No hay un metaanálisis que cuantifique cuánto cambia la precisión de los instrumentos de tamizaje según la raza o el idioma de un niño. Lo que falta es la cuantificación, no la pregunta.',
+      'No hay ningún producto de reconocimiento de emociones verificado en un entorno de primera infancia en Estados Unidos. La categoría está llegando por la vía de la IA general de seguridad escolar, no por la de las herramientas de primera infancia.',
+      'No hay una encuesta sobre el uso de IA entre concesionarios de Head Start fuera de distritos escolares, centros privados u hogares de cuidado infantil familiar. Las cifras de RAND cubren solo el prekínder de escuelas públicas.',
+    ],
+
+    verifyHeading: 'Verificar antes de publicar',
+    verifyIntroPre:
+      'Parte de lo que sostiene este sitio caduca rápido: reglamentación en curso, litigios, guías que fueron reemplazadas este año y afirmaciones que salieron del mercadeo de un proveedor y no del proveedor mismo. La lista de abajo es la lista de verificación, y ',
+    verifyIntroStrong: 'el sitio todavía no la ha trabajado',
+    verifyIntroPost: '. Cada punto sigue pendiente.',
+    notYetChecked: 'Todavía sin verificar',
+
+    /** Spec Section 17. The short-shelf-life list, as a checklist not yet worked through. */
+    verifyItems: [
+      {
+        id: 'verify-coppa',
+        heading: 'El límite de COPPA sobre el consentimiento para la IA',
+        body: 'El requisito de consentimiento separado de la Children’s Online Privacy Protection Act (COPPA, la ley federal de privacidad en línea de los niños) trae una excepción expresa para las divulgaciones «integrales a la naturaleza del servicio», y la declaración sobre IA de la Federal Trade Commission (FTC) trata de divulgaciones a terceros. No escriba que usar datos de niños para entrenar IA «siempre» requiere consentimiento separado. El abogado de un proveedor lo va a notar, y el vacío sobre el entrenamiento interno es real.',
+      },
+      {
+        id: 'verify-colorado',
+        heading: 'Colorado',
+        body: 'La SB 24-205 se aplazó a junio de 2026, después su aplicación fue bloqueada en una corte federal en abril de 2026, y luego fue reemplazada por la SB 26-189 en mayo de 2026, con un régimen basado en avisos que entra en vigor en enero de 2027. La fuente de esa secuencia es una sola alerta de un bufete de abogados. Revise el proyecto de ley aprobado y el expediente judicial antes de repetirlo.',
+      },
+      {
+        id: 'verify-aap',
+        heading: 'La guía sobre tiempo de pantalla',
+        body: 'El marco de las «5 C» de 2026 de la American Academy of Pediatrics reemplazó los límites de horas que había antes, pero esto se apoya en cobertura de segunda mano. Confirme exactamente qué reemplazó a la recomendación para menores de 24 meses antes de escribir nada sobre bebés.',
+      },
+      {
+        id: 'verify-head-start',
+        heading: 'La reglamentación de Head Start',
+        body: 'Un aviso de propuesta de reglamentación (NPRM, por sus siglas en inglés) publicado en mayo de 2026 propone eliminar los requisitos de comparabilidad de sueldos y de prestaciones. No se propuso cambiar las disposiciones sobre expedientes y confidencialidad. No está confirmado si ya se emitió una regla final.',
+      },
+      {
+        id: 'verify-expulsion',
+        heading: 'La antigüedad de los datos de expulsión',
+        body: 'Los multiplicadores de expulsión se apoyan en el trabajo de Gilliam de 2005, y la disparidad en suspensiones, en la Civil Rights Data Collection (CRDC) de 2013–14. Saque el ciclo más reciente de la CRDC antes de publicar cualquiera de esas dos cifras.',
+      },
+      {
+        id: 'verify-product-claims',
+        heading: 'Las afirmaciones sobre productos',
+        body: 'Varias descripciones de funciones de IA en la especificación original vienen del mercadeo del proveedor y no del proveedor mismo. Los materiales públicos de un producto muy citado no describían ninguna función de IA en el momento de la investigación. Confirme directamente con el proveedor antes de nombrarlo en una página pública, que es una de las razones por las que este sitio no nombra a ningún proveedor en ninguna parte.',
+      },
+      {
+        id: 'verify-yale',
+        heading: 'El estudio de seguimiento ocular de 2016',
+        body: 'Se describe mal todo el tiempo. Lo que encontró es que los maestros miraban más a los niños negros, sobre todo a los varones. En la tarea de viñetas no hubo disparidad racial en las recomendaciones de suspensión o expulsión. Cite la CRDC y los trabajos de Gilliam de 2005 y 2014 para las disparidades; cite el estudio de 2016 solo para el hallazgo sobre la atención. Exagerar aquí es la manera más fácil de quedar desacreditado frente a un público que conoce esta literatura.',
+      },
+    ],
+
+    buildHeading: 'En qué punto está la construcción',
+    buildIntro:
+      'La secuencia de construcción está ordenada a propósito para que la primera versión no requiera convocar a nadie. Convocar es lo que haría que la segunda fase se pudiera citar; no debería ser lo que bloquee la primera.',
+    phaseCaption: 'Fase',
+
+    /** Spec Section 15. Three phases, ordered so phase 1 needs no convening. */
+    phases: [
+      {
+        n: 1,
+        name: 'La capa operativa',
+        requires: 'No requiere convocar a nadie',
+        status: 'Lo que este borrador intenta',
+        blurb:
+          'Investigación, más redacción, más una revisión legal. Es además la parte que nadie más ha construido, así que se sostiene sola aunque no le siga nada.',
+        items: [
+          'El mapa regulatorio, capa federal, con el visto bueno de un abogado',
+          'Los límites infranqueables, publicados como borrador de trabajo y con su fundamento citado',
+          'La política de una página y la hoja para el personal, en inglés y en español',
+          'La hoja de preguntas para proveedores y el formulario para anotar las respuestas',
+          'Seis de los doce usos constructivos, con sus salvaguardas: esto es lo que evita que un lanzamiento se lea como anti-IA, y no cuesta más que escribirlo',
+          'La cláusula contractual modelo, que los operadores grandes pueden empezar a usar antes de que exista cualquier otra cosa del sitio',
+          'Las preguntas frecuentes: baratas, casi todas ya escritas, y lo que convierte un sitio flaco en un argumento',
+          'Una página honesta de «lo que no sabemos»',
+        ],
+      },
+      {
+        n: 2,
+        name: 'Legitimidad y práctica',
+        requires: 'Requiere un organismo con nombre',
+        status: 'Sin empezar: no hay organismo',
+        blurb:
+          'Todo lo de aquí depende de que alguien pueda decir quién lo ratificó. Nada de esto se puede fingir con un borrador mejor.',
+        items: [
+          'Los principios ratificados y firmados, con los miembros y los financiadores nombrados',
+          'El cuestionario de cuatro preguntas, que devuelve un nivel más la plantilla correcta',
+          'La familia completa de políticas, incluido el anexo de Head Start y el texto para el manual',
+          'La ruta para organizaciones con varias sedes: carta de gobernanza, protocolo de piloto, kit de IA en la sombra, módulo para agencias delegadas',
+          'Los demás usos constructivos, con resultados recogidos de pilotos reales y no de estudios de caso de proveedores',
+          'La biblioteca de casos: lanzar con ocho o nueve viñetas y después agregar cada mes',
+          'La capa estatal para los seis estados prioritarios',
+          'La ruta de recomendaciones de política, dirigida a los estados, la Oficina de Head Start, las licencias y los QRIS',
+        ],
+      },
+      {
+        n: 3,
+        name: 'Infraestructura',
+        requires: 'Requiere que alguien lo adopte',
+        status: 'Sin empezar: nada se ha adoptado',
+        blurb:
+          'Esta fase solo tiene sentido cuando los programas ya estén usando el marco y los proveedores tengan una razón para responderle.',
+        items: [
+          'La ficha de divulgación del proveedor y el registro público',
+          'Generación: el cuestionario produce una política editable y específica del programa, más un aviso para las familias que la acompaña',
+          'El currículo para intermediarios, con marca compartida y que un coach pueda impartir',
+          'El corpus de políticas devueltas, y el primer análisis de lo que de verdad dicen las políticas del campo',
+          'Disciplina de registro de cambios y un compromiso de revisión anual, cumplidos a la vista de todos',
+        ],
+      },
+    ],
+
+    phasesInset:
+      'La fase 1 es lo que este borrador intenta, y aun así no está terminada: el visto bueno legal del mapa regulatorio no ha ocurrido, y las páginas en español están esperando a un hablante nativo. Las fases 2 y 3 no han empezado, y no pueden empezar, hasta que se responda la pregunta abierta 1.',
+
+    sequencingLabel: 'Criterio de secuencia',
+    seqIntro:
+      'Si solo puede construir una cosa para llevarla a las conversaciones con socios, construya el',
+    seqLaw: 'mapa regulatorio',
+    seqMid1: 'más los',
+    seqBrightLines: 'límites infranqueables',
+    seqMid2: 'más las',
+    seqFaq: 'preguntas frecuentes',
+    seqTail:
+      '. Demuestran la experiencia propia del campo que nadie más tiene, son lo que de verdad haría reaccionar a una asociación o a la Oficina de Head Start, y juntos defienden la convocatoria mejor de lo que lo haría una presentación sobre la convocatoria.',
+
+    sourcesHeading: 'Fuentes principales',
+    sourcesIntro:
+      'Todo lo que se afirma en este sitio se remonta a una fuente. Estos son los nombres de las fuentes con las que trabajó el plan del sitio, agrupados como él los agrupó. Son nombres, no citas con localizador: revise cada uno en su fuente primaria antes de apoyarse en él.',
+
+    /** Spec Section 17. Source names, grouped as the spec groups them. No links invented. */
+    sourceGroups: [
+      {
+        group: 'Leyes federales',
+        items: [
+          '45 CFR Part 1303 (privacidad en Head Start)',
+          '45 CFR §1302.33 (tamizajes)',
+          '45 CFR §1302.17 (suspensión y expulsión)',
+          'COPPA Final Rule 2025',
+          'Preguntas frecuentes de IDEA sobre confidencialidad',
+          '45 CFR Part 98 (CCDF)',
+        ],
+      },
+      {
+        group: 'Leyes estatales',
+        items: [
+          'California AB 2799 / ELPIPA',
+          'New York Education Law 2-d',
+          'Illinois Biometric Information Privacy Act (BIPA)',
+          'Rastreador estatal del Future of Privacy Forum',
+          'Legislación estatal sobre IA, mediados de 2026',
+          'EU AI Act, artículo 5',
+        ],
+      },
+      {
+        group: 'Educación de la primera infancia e IA',
+        items: [
+          'Brookings, Generation AI Starts Early',
+          'National Center for Youth Law, IA centrada en la niñez',
+          'Zero to Three, Screen Sense AI',
+          'Institute for Child Success',
+          'Declaraciones de posición de NAEYC',
+        ],
+      },
+      {
+        group: 'Modelos de los que tomar prestado',
+        items: [
+          'Council on Criminal Justice',
+          'Kit de herramientas de TeachAI',
+          'Marco de IA equitativa de Project Evident',
+          'McGovern Learning Hub',
+          'Constructor de políticas de Fast Forward',
+          'Centro de IA de NTEN',
+          'Ficha de modelo aplicada de CHAI',
+          'Center for Democracy and Technology, prioridades de política para K-12',
+        ],
+      },
+      {
+        group: 'Base de evidencia',
+        items: [
+          'RAND, maestros de prekínder e IA',
+          'CSCCE Workforce Index 2024',
+          'Datos de expulsión en preescolar',
+          'Migration Policy Institute, estudiantes de dos idiomas',
+          'PIRG, Trouble in Toyland 2025',
+          'Canvas Dx, desempeño en el mundo real',
+          'Halberstadt et al., sesgo en la percepción del enojo',
+          'Corrección sobre el estudio de seguimiento ocular de 2016',
+        ],
+      },
+    ],
+
+    changelogHeading: 'Registro de cambios',
+    changelogIntro:
+      'La disciplina de registro de cambios y un compromiso de revisión anual, cumplidos a la vista de todos, son un compromiso de la fase 3 en la lista de arriba. Aquí empieza ese registro. No hay entradas antes de la primera, porque no hubo versiones antes de ella.',
+    changelogHeadDate: 'Fecha',
+    changelogHeadVersion: 'Versión',
+    changelogHeadWhat: 'Qué cambió',
+    changelog: [
+      {
+        date: '2026-09-10',
+        display: '10 de septiembre de 2026',
+        version: SITE.version,
+        what: 'Borrador de trabajo inicial, construido a partir del plan del sitio v2. Primera publicación de los principios, los límites infranqueables, los niveles, la capa federal del mapa regulatorio, las preguntas para proveedores, los usos constructivos y los documentos. Ningún abogado ha revisado nada de esta versión y nada ha sido adoptado.',
+      },
+    ],
+  },
+};
+
+const c = copy[locale] ?? copy.en;
 ---
 
 <BaseLayout title={t(locale, 'nav.about')} description={description} locale={locale}>
   <PageHeader
-    caption="About"
-    title="About this working draft"
+    caption={c.headerCaption}
+    title={c.headerTitle}
     lede={lede}
     locale={locale}
     lastUpdated={lastUpdated}
@@ -302,7 +800,7 @@ const contents = [
   <nav class="govuk-!-margin-bottom-6 app-no-print" aria-label={t(locale, 'label.onThisPage')}>
     <h2 class="govuk-heading-s">{t(locale, 'label.onThisPage')}</h2>
     <ul class="govuk-list govuk-body-s">
-      {contents.map((item) => (
+      {c.contents.map((item) => (
         <li>
           <a class="govuk-link govuk-link--no-visited-state" href={item.href}>{item.label}</a>
         </li>
@@ -310,36 +808,29 @@ const contents = [
     </ul>
   </nav>
 
-  <h2 class="govuk-heading-m" id="what-this-is">What this is, and what it is not</h2>
+  <h2 class="govuk-heading-m" id="what-this-is">{c.whatThisIsHeading}</h2>
 
   <div class="app-prose">
     <Content />
   </div>
 
-  <h2 class="govuk-heading-m" id="the-table">Who would have to be at the table</h2>
+  <h2 class="govuk-heading-m" id="the-table">{c.tableHeading}</h2>
+
+  <p class="govuk-body">{c.tableIntro}</p>
 
   <p class="govuk-body">
-    In a neutral field resource, legitimacy is the product. There is a pattern that works for
-    this kind of body: a named chair with standing outside the technology conversation, a
-    cross-constituency membership, a research partner, open funders, and a published sequence —
-    consensus principles first, then operationalised standards, then research.
-  </p>
-
-  <p class="govuk-body">
-    <strong>None of that exists.</strong> There is no chair, no membership, no research partner
-    and no funder. What follows is the composition such a body would need, and why each seat is
-    load-bearing. It is a specification for a table, not a list of people at one.
+    <strong>{c.tableIntro2Strong}</strong>{c.tableIntro2Rest}
   </p>
 
   <table class="govuk-table">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Constituency</th>
-        <th scope="col" class="govuk-table__header">Why the seat is indispensable</th>
+        <th scope="col" class="govuk-table__header">{c.tableHeadWho}</th>
+        <th scope="col" class="govuk-table__header">{c.tableHeadWhy}</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
-      {constituencies.map((row) => (
+      {c.constituencies.map((row) => (
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">{row.who}</th>
           <td class="govuk-table__cell">{row.why}</td>
@@ -348,126 +839,81 @@ const contents = [
     </tbody>
   </table>
 
-  <h2 class="govuk-heading-m" id="credibility">Two moves that cost almost nothing</h2>
+  <h2 class="govuk-heading-m" id="credibility">{c.credibilityHeading}</h2>
 
-  <p class="govuk-body">
-    A body in this position has two cheap ways to earn the credibility it has not otherwise
-    accumulated, and this page does both of them rather than describing them.
-  </p>
+  <p class="govuk-body">{c.credibilityIntro}</p>
 
   <ol class="govuk-list govuk-list--number">
-    <li>
-      <strong>Publish what you don't know.</strong> A visible list of open questions and evidence
-      gaps reads as rigour, not weakness. It is the difference between an unfinished site and a
-      process.
-    </li>
-    <li>
-      <strong>Disclose your own AI use.</strong> For anyone telling programs to disclose, doing
-      it first is nearly free credibility — and refusing to would be noticed.
-    </li>
+    {c.moves.map((move) => (
+      <li>
+        <strong>{move.strong}</strong>{move.rest}
+      </li>
+    ))}
   </ol>
 
-  <h2 class="govuk-heading-m" id="open-questions">Open questions</h2>
+  <h2 class="govuk-heading-m" id="open-questions">{c.openQuestionsHeading}</h2>
 
-  <p class="govuk-body">
-    Six decisions are unresolved. They are listed here as open, because they are open: none of
-    them has been made, and several of them change what this site would become.
-  </p>
+  <p class="govuk-body">{c.openQuestionsIntro}</p>
 
-  {openQuestions.map((item) => (
+  {c.openQuestions.map((item) => (
     <section id={`q${item.n}`} class="govuk-!-margin-bottom-6">
       <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
-        <span class="govuk-caption-m">Open question {item.n}</span>
+        <span class="govuk-caption-m">{c.openQuestionCaption} {item.n}</span>
         {item.q}
       </h3>
       {item.paras.map((para) => <p class="govuk-body">{para}</p>)}
       {item.read && (
-        <Annotation label="The drafter's read">
+        <Annotation label={c.drafterRead}>
           <p class="govuk-body govuk-!-margin-bottom-0">{item.read}</p>
         </Annotation>
       )}
     </section>
   ))}
 
-  <h2 class="govuk-heading-m" id="ai-use">How this site's own AI use worked</h2>
+  <h2 class="govuk-heading-m" id="ai-use">{c.aiUseHeading}</h2>
 
-  <p class="govuk-body">
-    This site asks early childhood programs to tell families when AI touched a record about
-    their child. It would be indefensible not to say the same thing about itself, in the same
-    detail.
-  </p>
+  <p class="govuk-body">{c.aiUseIntro}</p>
 
   <ul class="govuk-list govuk-list--bullet">
-    <li>
-      The underlying site plan was drafted as a working specification: a human-authored document
-      setting out the argument, the statutes, the numbers and the structure.
-    </li>
-    <li>
-      This website was built from that specification <strong>with substantial AI assistance</strong>,
-      including the drafting of the page copy you are reading from the specification's substance.
-    </li>
-    <li>
-      The Spanish pages are AI-drafted translations. Every one of them is marked as pending review
-      by a native speaker, and none has yet had that review.
-    </li>
-    <li>
-      <strong>No content on this site has been reviewed by counsel.</strong> Not the crosswalk, not
-      the bright lines, not the artifacts a program would sign.
-    </li>
-    <li>
-      Every factual claim on this site traces back to the site plan rather than to independent
-      research carried out during the build. Where the plan supplied a statute, a figure or a
-      date, it was carried across unchanged; where it did not, nothing was invented to fill
-      the gap.
-    </li>
-    <li>
-      The items on the verification list below have <strong>not</strong> been re-checked against
-      primary sources. They are flagged, not resolved.
-    </li>
+    {c.aiUse.map((item) => (
+      <li>
+        {item.pre}{item.strong && <strong>{item.strong}</strong>}{item.post}
+      </li>
+    ))}
   </ul>
 
-  <h2 class="govuk-heading-m" id="what-we-do-not-know">What we don't know yet</h2>
+  <h2 class="govuk-heading-m" id="what-we-do-not-know">{c.gapsHeading}</h2>
 
-  <p class="govuk-body">
-    These are gaps in the evidence base, not gaps in the drafting. Each one is stated here rather
-    than papered over with a number that would look better than it is.
-  </p>
+  <p class="govuk-body">{c.gapsIntro}</p>
 
   <ul class="govuk-list govuk-list--bullet">
-    {gaps.map((gap) => <li>{gap}</li>)}
+    {c.gaps.map((gap) => <li>{gap}</li>)}
   </ul>
 
-  <h2 class="govuk-heading-m" id="verify">Verify before publishing</h2>
+  <h2 class="govuk-heading-m" id="verify">{c.verifyHeading}</h2>
 
   <p class="govuk-body">
-    Some of what this site rests on has a short shelf life: live rulemaking, litigation, guidance
-    that was replaced this year, and claims that came from a vendor's marketing rather than from
-    the vendor. The list below is the checklist, and
-    <strong>the site has not yet worked through it</strong>. Every item is outstanding.
+    {c.verifyIntroPre}<strong>{c.verifyIntroStrong}</strong>{c.verifyIntroPost}
   </p>
 
-  {verifyItems.map((item) => (
+  {c.verifyItems.map((item) => (
     <section id={item.id} class="govuk-!-margin-bottom-5">
       <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{item.heading}</h3>
       <p class="govuk-body-s govuk-!-margin-bottom-2">
-        <strong class="govuk-tag govuk-tag--grey">Not yet checked</strong>
+        <strong class="govuk-tag govuk-tag--grey">{c.notYetChecked}</strong>
       </p>
       <p class="govuk-body">{item.body}</p>
     </section>
   ))}
 
-  <h2 class="govuk-heading-m" id="build-sequence">Where the build stands</h2>
+  <h2 class="govuk-heading-m" id="build-sequence">{c.buildHeading}</h2>
 
-  <p class="govuk-body">
-    The build sequence is deliberately ordered so that the first release requires no convening at
-    all. A convening is what would make the second phase citable; it should not be what blocks the
-    first.
-  </p>
+  <p class="govuk-body">{c.buildIntro}</p>
 
-  {phases.map((phase) => (
+  {c.phases.map((phase) => (
     <section id={`phase-${phase.n}`} class="govuk-!-margin-bottom-6">
       <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
-        <span class="govuk-caption-m">Phase {phase.n} · {phase.requires}</span>
+        <span class="govuk-caption-m">{c.phaseCaption} {phase.n} · {phase.requires}</span>
         {phase.name}
       </h3>
       <p class="govuk-body-s">
@@ -481,35 +927,24 @@ const contents = [
   ))}
 
   <div class="govuk-inset-text">
-    <p class="govuk-body">
-      Phase 1 is what this draft attempts, and it is not finished even so: the crosswalk's legal
-      sign-off has not happened, and the Spanish pages are awaiting a native speaker. Phases 2 and
-      3 have not begun, and cannot begin, until open question 1 is answered.
-    </p>
+    <p class="govuk-body">{c.phasesInset}</p>
   </div>
 
-  <Annotation label="Sequencing judgment">
+  <Annotation label={c.sequencingLabel}>
     <p class="govuk-body govuk-!-margin-bottom-0">
-      If you can only build one thing to take into partner conversations, build the
-      <a class="govuk-link" href={localePath(locale, '/law')}>regulatory crosswalk</a> plus the
-      <a class="govuk-link" href={localePath(locale, '/bright-lines')}>bright lines</a> plus the
-      <a class="govuk-link" href={localePath(locale, '/faq')}>FAQ</a>. They demonstrate the
-      field-specific expertise nobody else has, they are what an association or the Office of Head
-      Start would actually react to, and together they make the case for the convening better than
-      a deck about the convening would.
+      {c.seqIntro}
+      <a class="govuk-link" href={localePath(locale, '/law')}>{c.seqLaw}</a> {c.seqMid1}
+      <a class="govuk-link" href={localePath(locale, '/bright-lines')}>{c.seqBrightLines}</a> {c.seqMid2}
+      <a class="govuk-link" href={localePath(locale, '/faq')}>{c.seqFaq}</a>{c.seqTail}
     </p>
   </Annotation>
 
-  <h2 class="govuk-heading-m" id="sources">Core sources</h2>
+  <h2 class="govuk-heading-m" id="sources">{c.sourcesHeading}</h2>
 
-  <p class="govuk-body">
-    Everything asserted on this site traces to a source. These are the source names the site plan
-    worked from, grouped as it grouped them. They are names, not citations with locators: check
-    each one at its primary source before relying on it.
-  </p>
+  <p class="govuk-body">{c.sourcesIntro}</p>
 
   <dl class="govuk-summary-list">
-    {sourceGroups.map((group) => (
+    {c.sourceGroups.map((group) => (
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">{group.group}</dt>
         <dd class="govuk-summary-list__value">
@@ -521,24 +956,20 @@ const contents = [
     ))}
   </dl>
 
-  <h2 class="govuk-heading-m" id="changelog">Changelog</h2>
+  <h2 class="govuk-heading-m" id="changelog">{c.changelogHeading}</h2>
 
-  <p class="govuk-body">
-    Changelog discipline and an annual review commitment, honoured visibly, are a phase 3
-    commitment on the list above. This is where that record starts. There are no entries before
-    the first one, because there were no releases before it.
-  </p>
+  <p class="govuk-body">{c.changelogIntro}</p>
 
   <table class="govuk-table">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Date</th>
-        <th scope="col" class="govuk-table__header">Version</th>
-        <th scope="col" class="govuk-table__header">What changed</th>
+        <th scope="col" class="govuk-table__header">{c.changelogHeadDate}</th>
+        <th scope="col" class="govuk-table__header">{c.changelogHeadVersion}</th>
+        <th scope="col" class="govuk-table__header">{c.changelogHeadWhat}</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
-      {changelog.map((row) => (
+      {c.changelog.map((row) => (
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">
             <time datetime={row.date}>{row.display}</time>

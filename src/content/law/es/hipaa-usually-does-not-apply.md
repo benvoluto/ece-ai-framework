@@ -1,5 +1,5 @@
 ---
-title: HIPAA usually does not apply, and people get this backwards
+title: HIPAA casi nunca aplica, y la gente lo entiende al revés
 locale: es
 kind: finding
 authorities:
@@ -11,31 +11,35 @@ order: 12
 translationPending: true
 ---
 
-HIPAA comes up in almost every early childhood conversation about health
-information, and it is almost always invoked the wrong way round.
+HIPAA (la ley federal de privacidad de la información de salud) sale en casi
+toda conversación de educación temprana sobre información de salud, y casi
+siempre se invoca al revés.
 
-**Your program is probably not a covered entity.** A program that does not bill
-electronically for health services is not covered by HIPAA. Immunization records
-and developmental screening results sitting in a child's file are not protected
-health information in that provider's hands. Saying "we can't share that, it's
-HIPAA" about your own records is, in most centers and homes, simply not true —
-and staff who believe it will apply it inconsistently, which is worse than not
-believing it at all.
+**Lo más probable es que su programa no sea una entidad cubierta.** Un programa
+que no factura electrónicamente por servicios de salud no está cubierto por
+HIPAA. Los registros de vacunas y los resultados de una evaluación del
+desarrollo que están en el expediente de un niño no son información de salud
+protegida en manos de ese proveedor de cuidado. Decir «no puedo compartir eso,
+es HIPAA» sobre sus propios expedientes, en la mayoría de los centros y de los
+hogares, simplemente no es cierto — y el personal que se lo cree lo va a aplicar
+de manera inconsistente, que es peor que no creérselo.
 
-**The constraint runs on the inbound side.** The real limit is on what you may
-re-disclose about information that came to you from somewhere else. That is
-governed by the authorization the family signed when the information was
-released to you, plus Head Start's records rules or IDEA confidentiality where
-those apply to your setting. When a pediatric practice sends you a form, what
-you may do with it afterwards is set by that release — not by whether you are a
-covered entity.
+**El límite corre del lado de lo que entra.** El límite real está en lo que
+usted puede volver a divulgar de una información que le llegó de otra parte. Eso
+lo rige la autorización que firmó la familia cuando esa información se le
+entregó a usted, más las reglas de expedientes de Head Start (el programa
+federal de educación temprana) o la confidencialidad de IDEA (la ley federal de
+educación para personas con discapacidades) donde apliquen a su entorno. Cuando
+un consultorio pediátrico le manda un formulario, lo que usted puede hacer con
+él después lo fija esa autorización, no si usted es o no una entidad cubierta.
 
-So the question to ask before putting health information into any tool is not
-"does HIPAA apply to us?" It is "what did the authorization that got us this
-information permit us to do with it?"
+Así que la pregunta que hay que hacerse antes de meter información de salud en
+cualquier herramienta no es «¿nos aplica HIPAA?». Es «¿qué nos permitía hacer
+con esta información la autorización que nos la trajo?».
 
-**Edge cases worth flagging.** Two arrangements do change the answer and should
-be looked at specifically: an Early Head Start program embedded in a federally
-qualified health center, and a program that bills Medicaid for screening. If
-either describes you, the covered-entity analysis is a real one for your
-organization and the general rule above is not the end of it.
+**Casos límite que vale la pena señalar.** Hay dos arreglos que sí cambian la
+respuesta y que habría que mirar uno por uno: un programa de Early Head Start
+dentro de un centro de salud calificado federalmente, y un programa que factura
+a Medicaid por evaluaciones. Si alguno de los dos lo describe a usted, el
+análisis de entidad cubierta es real para su organización y la regla general de
+arriba no es el final del asunto.

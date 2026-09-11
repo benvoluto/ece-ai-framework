@@ -1,8 +1,8 @@
 ---
-title: Vendor Question Sheet
+title: Hoja de Preguntas para Proveedores
 locale: es
-audience: Director · Intermediary
-summary: The ten questions to ask any vendor selling you an AI feature, with a place to record the answer, the date, and who gave it — plus what a dodge sounds like on each one.
+audience: Directora o director · Intermediario
+summary: Las diez preguntas que hay que hacerle a cualquier proveedor que le venda una función de IA, con un lugar para anotar la respuesta, la fecha y quién la dio, además de cómo suena una evasiva en cada una.
 lastUpdated: '2026-09-10'
 order: 8
 length: fillable
@@ -16,182 +16,195 @@ phase: 1
 translationPending: true
 ---
 
-## Why this sheet exists
+## Para qué sirve esta hoja
 
-A single program has roughly zero negotiating leverage with a major vendor. You
-will not get a large company to rewrite its contract for one center. What you
-can do is **ask, write down the answer with a date, and choose** — and a field
-where five thousand directors ask the same ten questions creates leverage no
-individual director has.
+Un solo programa tiene casi cero poder de negociación frente a un proveedor
+grande. Usted no va a lograr que una empresa grande reescriba su contrato para un
+solo centro. Lo que sí puede hacer es **preguntar, anotar la respuesta con la
+fecha y decidir**, y un campo donde cinco mil directoras y directores hacen las
+mismas diez preguntas crea un poder que ninguna persona tiene por su cuenta.
 
-So ask them as questions, not as a scorecard. Send them by email if you can, so
-the answer arrives in writing. If the answer comes on a call, write it in the
-box below and send the vendor a one-line email the same day: *"Confirming what
-you told me today about [TOPIC]: [WHAT THEY SAID]. Let me know if that is not
-right."* A vendor who will not put an answer in writing has given you an answer.
+Por eso hágalas como preguntas, no como una calificación. Mándelas por correo
+electrónico si puede, para que la respuesta llegue por escrito. Si la respuesta
+llega en una llamada, escríbala en el recuadro de abajo y mándele al proveedor un
+correo de una línea ese mismo día: *«Le confirmo lo que me dijo hoy sobre [TEMA]:
+[LO QUE DIJERON]. Avíseme si no es correcto.»* Un proveedor que no quiere poner
+una respuesta por escrito ya le dio una respuesta.
 
-**Tool being considered:** [TOOL NAME AND VERSION]
+**Herramienta que se está considerando:** [NOMBRE Y VERSIÓN DE LA HERRAMIENTA]
 
-**What it would be used for:** [PURPOSE]
+**Para qué se usaría:** [PROPÓSITO]
 
-**Vendor contact:** [NAME], [TITLE], [EMAIL], [PHONE]
+**Contacto del proveedor:** [NOMBRE], [CARGO], [CORREO ELECTRÓNICO], [TELÉFONO]
 
-**Asked by:** [YOUR NAME], [ROLE]
+**Preguntó:** [SU NOMBRE], [PUESTO]
 
-Keep this sheet with your Approved Tools Register entry. If a licensing visitor
-or a monitoring reviewer asks how you evaluated a tool, this is the answer.
-
----
-
-## 1. Training
-
-**Is any information we enter, or that your product collects about children,
-used to train or improve your models — or anyone else's? If yes, under what
-consent?**
-
-*A dodge sounds like:* "We never sell your data," or "your data is yours." That
-answers a different question. Ask again about training, including training their
-own models on data they already hold, and including anonymized or aggregated
-data.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 2. Biometrics
-
-**Does your product compute face geometry, voiceprints, or any other biometric
-identifier from children? Including for photo tagging, check-in, or search.**
-
-*A dodge sounds like:* "We don't do facial recognition." Photo auto-tagging and
-face-based search are usually built on face geometry even when the product never
-uses the words. Ask whether any face or voice measurement is computed and stored.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 3. Inference about a child
-
-**Does your product infer emotion, affect, engagement, or behavioral risk about
-a child?**
-
-*A dodge sounds like:* anything filed under "insights," "engagement score,"
-"wellbeing signals," or "flags for follow-up." Ask directly, name the words, and
-ask them to say no in writing.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 4. Deletion
-
-**If a family asks us to delete their child's records, what exactly gets deleted
-— and does that include anything derived from those records?**
-
-*A dodge sounds like:* "Deletion happens within 30 days." That describes a
-timeline, not a scope. Ask specifically about backups, search indexes,
-embeddings, and anything the system built from the record. Under IDEA, parents
-of a child referred to or found eligible have a right to have records destroyed
-once they are no longer needed — a right most model architectures cannot honor.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 5. Subprocessors and location
-
-**Who are your subprocessors, and where is children's data stored and
-processed?**
-
-*A dodge sounds like:* "We use industry-leading cloud infrastructure." Ask for
-the list, by company name, and ask how you will be told when it changes.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 6. Who controls the data
-
-**Will you sign an agreement naming us as the data controller, with your role
-limited to processing on our instructions?**
-
-*A dodge sounds like:* "That's all covered in our standard Terms of Service." A
-terms-of-service page you cannot negotiate and they can change is not an
-agreement naming you as the controller. Ask for a signable document.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 7. Retention
-
-**What is your written retention policy for children's personal information, and
-where is it published?**
-
-*A dodge sounds like:* "We keep data as long as necessary to provide the
-service." A published written retention policy is now a COPPA requirement for
-operators of services directed to children under 13. Ask for the link.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 8. Validation
-
-**For anything producing a judgment about a child: what was it validated on, and
-was performance analyzed separately for dual language learners and children with
-disabilities?**
-
-*A dodge sounds like:* "It's been used with over a million children," or an
-accuracy number with no population behind it. Ask what the study population was
-and whether subgroup performance was analyzed at all. "We didn't collect that"
-is a real answer, and a useful one.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 9. Leaving
-
-**What happens to our data if we leave, and can we export it in a usable
-format?**
-
-*A dodge sounds like:* "You can always download your reports." Ask for the file
-format, whether it includes attachments and photos, how long after cancellation
-the export stays available, and whether there is a fee.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
-
-## 10. When something goes wrong
-
-**Who do we call when it produces something wrong about a child, and what is
-your notification commitment if something goes wrong on your end?**
-
-*A dodge sounds like:* "Support is available 24/7," or "we'll notify affected
-customers as required by law." Ask for a named role, a direct contact, and a
-number of hours. Write the number of hours in the box.
-
-| Answer | Date asked | Who answered |
-| --- | --- | --- |
-|  |  |  |
+Guarde esta hoja junto con la entrada de su Registro de Herramientas Aprobadas.
+Si un inspector de licencias o un revisor de monitoreo le pregunta cómo evaluó
+una herramienta, esta es la respuesta.
 
 ---
 
-## Decision
+## 1. Entrenamiento
+
+**¿Alguna información que nosotros ingresamos, o que su producto recoge sobre los
+niños, se usa para entrenar o mejorar sus modelos, o los de alguien más? Si es
+así, ¿con qué consentimiento?**
+
+*Una evasiva suena así:* «Nunca vendemos sus datos», o «sus datos son suyos». Eso
+responde otra pregunta. Vuelva a preguntar sobre el entrenamiento, incluido el
+entrenamiento de sus propios modelos con datos que ya tienen, e incluidos los
+datos anonimizados o agregados.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 2. Datos biométricos
+
+**¿Su producto calcula la geometría de la cara, huellas de voz o cualquier otro
+identificador biométrico de los niños? Incluyendo para etiquetar fotos, para la
+entrada y salida, o para búsquedas.**
+
+*Una evasiva suena así:* «Nosotros no hacemos reconocimiento facial». El
+etiquetado automático de fotos y la búsqueda por cara casi siempre se construyen
+sobre la geometría de la cara, aunque el producto nunca use esas palabras.
+Pregunte si se calcula y se guarda alguna medición de la cara o de la voz.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 3. Inferencias sobre un niño
+
+**¿Su producto infiere emociones, afecto, nivel de participación o riesgo de
+conducta sobre un niño?**
+
+*Una evasiva suena así:* cualquier cosa guardada bajo «insights», «puntaje de
+participación», «señales de bienestar» o «alertas para dar seguimiento».
+Pregunte directamente, diga las palabras y pídales que digan que no por escrito.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 4. Eliminación
+
+**Si una familia nos pide que borremos los registros de su hijo o hija, ¿qué se
+borra exactamente, y eso incluye todo lo que se haya derivado de esos
+registros?**
+
+*Una evasiva suena así:* «La eliminación ocurre dentro de 30 días». Eso describe
+un plazo, no un alcance. Pregunte específicamente por los respaldos, los índices
+de búsqueda, los embeddings (las representaciones numéricas que el sistema crea a
+partir de los datos) y todo lo que el sistema haya construido a partir del
+registro. Bajo IDEA (la ley federal de educación para personas con
+discapacidades), los padres de un niño referido o declarado elegible tienen
+derecho a que se destruyan los registros cuando ya no se necesiten, un derecho
+que la mayoría de las arquitecturas de modelos no puede cumplir.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 5. Subprocesadores y ubicación
+
+**¿Quiénes son sus subprocesadores, y dónde se guardan y se procesan los datos de
+los niños?**
+
+*Una evasiva suena así:* «Usamos infraestructura de nube líder en la industria».
+Pida la lista, con el nombre de cada empresa, y pregunte cómo le van a avisar
+cuando cambie.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 6. Quién controla los datos
+
+**¿Firmarán un acuerdo que nos nombre a nosotros como controladores de los datos,
+con su papel limitado a procesarlos siguiendo nuestras instrucciones?**
+
+*Una evasiva suena así:* «Todo eso ya está cubierto en nuestros Términos de
+Servicio estándar». Una página de términos de servicio que usted no puede
+negociar y que ellos pueden cambiar no es un acuerdo que lo nombre a usted como
+controlador. Pida un documento que se pueda firmar.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 7. Retención
+
+**¿Cuál es su política escrita de retención de la información personal de los
+niños, y dónde está publicada?**
+
+*Una evasiva suena así:* «Guardamos los datos el tiempo que sea necesario para
+prestar el servicio». Una política de retención escrita y publicada ya es un
+requisito de COPPA (la ley federal de privacidad en línea de los niños menores de
+13 años) para los operadores de servicios dirigidos a niños menores de 13 años.
+Pida el enlace.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 8. Validación
+
+**Para cualquier cosa que produzca un juicio sobre un niño: ¿con qué se validó, y
+se analizó el desempeño por separado para los estudiantes de dos idiomas (DLL) y
+para los niños con discapacidades?**
+
+*Una evasiva suena así:* «Se ha usado con más de un millón de niños», o un número
+de precisión sin ninguna población detrás. Pregunte cuál fue la población del
+estudio y si se analizó el desempeño por subgrupos. «No recogimos eso» es una
+respuesta real, y útil.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 9. Salida
+
+**¿Qué pasa con nuestros datos si nos vamos, y podemos exportarlos en un formato
+que se pueda usar?**
+
+*Una evasiva suena así:* «Siempre puede descargar sus reportes». Pregunte por el
+formato del archivo, si incluye los adjuntos y las fotos, por cuánto tiempo
+después de cancelar sigue disponible la exportación, y si hay algún cobro.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+## 10. Cuando algo sale mal
+
+**¿A quién llamamos cuando produzca algo equivocado sobre un niño, y cuál es su
+compromiso de notificación si algo sale mal de su lado?**
+
+*Una evasiva suena así:* «Tenemos soporte 24/7», o «notificaremos a los clientes
+afectados según lo exija la ley». Pida un puesto con nombre, un contacto directo
+y un número de horas. Escriba el número de horas en el recuadro.
+
+| Respuesta | Fecha en que se preguntó | Quién respondió |
+| --- | --- | --- |
+|  |  |  |
+
+---
+
+## Decisión
 
 | | |
 | --- | --- |
-| Tier assigned (1, 2 or 3) |  |
-| Decision (adopt / do not adopt / ask again) |  |
-| Reason, in one line |  |
-| Written agreement on file? |  |
-| Added to Approved Tools Register on |  |
-| Decided by |  |
-| Date |  |
+| Nivel asignado (1, 2 o 3) |  |
+| Decisión (adoptar / no adoptar / volver a preguntar) |  |
+| Razón, en una línea |  |
+| ¿Acuerdo escrito en archivo? |  |
+| Agregada al Registro de Herramientas Aprobadas el |  |
+| Decidió |  |
+| Fecha |  |
 
-If any of questions 1, 2, 3 or 4 came back unanswered, evasive, or answered yes
-without a separate written consent from families, do not adopt the tool yet.
-That is not a technicality. Those four are where the bright lines live.
+Si alguna de las preguntas 1, 2, 3 o 4 quedó sin respuesta, con una respuesta
+evasiva, o con un sí sin un consentimiento escrito y separado de las familias, no
+adopte todavía la herramienta. Eso no es un tecnicismo. Esas cuatro son donde
+viven los límites infranqueables.

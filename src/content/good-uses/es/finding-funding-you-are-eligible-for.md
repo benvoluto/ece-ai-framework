@@ -1,5 +1,5 @@
 ---
-title: "Finding the money you were always eligible for"
+title: "Encontrar el dinero para el que siempre fue elegible"
 locale: es
 lastUpdated: '2026-09-10'
 order: 3
@@ -7,51 +7,56 @@ tier: 1
 audience: provider
 phase: 2
 featuredOnHome: false
+translationPending: true
 governs:
   - relationship
   - currency
 scenario: >-
-  A family child care provider has been in business eleven years. In that time
-  she has learned about exactly two funding sources: the Child and Adult Care
-  Food Program (CACFP), because a peer mentioned it, and a state stabilisation
-  grant, because it arrived in the mail. She has never heard of the facility
-  improvement fund her county runs, and she has never completed an application
-  with a narrative section.
+  Una proveedora de cuidado infantil familiar lleva once años en el negocio. En
+  todo ese tiempo se ha enterado de exactamente dos fuentes de fondos: CACFP
+  (Child and Adult Care Food Program, el programa federal de alimentos), porque
+  una colega lo mencionó, y una subvención estatal de estabilización, porque le
+  llegó por correo. Nunca ha oído del fondo de mejoras de instalaciones que
+  maneja su condado, y nunca ha llenado una solicitud con sección narrativa.
 returns: >-
-  A profile-matched list of what she is actually eligible for — Quality Rating
-  and Improvement System (QRIS) quality incentives, CACFP, county and First 5
-  funds, Small Business Administration (SBA) microloans, United States
-  Department of Agriculture (USDA) rural facility programs — with deadlines
-  and required documents. Then a first draft of the narrative in her own words,
-  from a ten-minute conversation instead of a blank page. The application she
-  would never have started gets submitted.
+  Una lista hecha a la medida de su perfil con lo que de verdad le toca:
+  incentivos de calidad del QRIS (Quality Rating and Improvement System, el
+  sistema estatal de calificación de calidad), CACFP, fondos del condado y de
+  First 5, microcréditos de la SBA (Small Business Administration, la agencia
+  federal de pequeños negocios) y programas de instalaciones rurales del USDA
+  (United States Department of Agriculture, el Departamento de Agricultura), con
+  fechas límite y documentos requeridos. Después, un primer borrador de la
+  narrativa en sus propias palabras, a partir de una conversación de diez
+  minutos en lugar de una página en blanco. La solicitud que nunca habría
+  empezado se entrega.
 guardrail: >-
-  Verify every opportunity, amount and deadline against the source before
-  applying — a hallucinated deadline costs a provider real money. And the moment
-  a narrative describes an individual child, the work moves to Tier 2.
-translationPending: true
+  Compruebe cada oportunidad, monto y fecha límite contra la fuente antes de
+  solicitar: una fecha límite inventada le cuesta dinero de verdad a una
+  proveedora. Y en el momento en que una narrativa describa a un niño en
+  particular, el trabajo pasa a Nivel 2.
 ---
 
-Eleven years in business, and the map of available money is whatever happened to
-reach her: one program a peer mentioned at a training, one grant that arrived
-in an envelope. Nobody sent her the county facility improvement fund. Nobody
-told her that the quality incentive she keeps hearing about has an application
-window twice a year.
+Once años en el negocio, y el mapa del dinero disponible es lo que le llegó por
+casualidad: un programa que una colega mencionó en una capacitación, una
+subvención que llegó en un sobre. Nadie le avisó del fondo de mejoras de
+instalaciones del condado. Nadie le dijo que el incentivo de calidad del que
+tanto oye hablar abre una ventana de solicitud dos veces al año.
 
-The gap is not ambition. It is that finding funding is itself a skill — knowing
-which lists to read, which acronyms mean money for a home-based provider, what a
-narrative section is asking for. A provider who has never written one looks at
-the blank box and closes the tab. That is the moment the application dies, and
-it dies silently.
+La brecha no es de ganas. Es que encontrar financiamiento es en sí mismo una
+destreza: saber qué listas leer, qué siglas significan dinero para una
+proveedora que trabaja en su casa, qué está pidiendo una sección narrativa. Una
+proveedora que nunca ha escrito una mira la casilla en blanco y cierra la
+pestaña. Ese es el momento en que la solicitud se muere, y se muere en silencio.
 
-Two things help here, and neither of them touches a child's record. The first is
-a matched list: given her setting, her license type, her county and her size,
-here is what she is eligible for, when it closes and what she has to attach. The
-second is a first draft — she talks for ten minutes about what the money would
-buy and why it matters, and gets back prose she can correct rather than a blank
-page.
+Aquí ayudan dos cosas, y ninguna de las dos toca el expediente de un niño. La
+primera es una lista hecha a la medida: con su entorno, su tipo de licencia, su
+condado y su tamaño, esto es para lo que es elegible, cuándo cierra y qué tiene
+que adjuntar. La segunda es un primer borrador: habla diez minutos sobre qué
+compraría ese dinero y por qué importa, y recibe de vuelta un texto que puede
+corregir, en lugar de una página en blanco.
 
-Everything on that list has to be checked against the source before she relies
-on it. A confident, wrong deadline is worse than no list at all, because she
-will plan around it. And if the narrative starts describing a particular child
-in her care, this stops being Tier 1 work and becomes Tier 2.
+Todo lo que esté en esa lista hay que comprobarlo contra la fuente antes de
+confiar en ello. Una fecha límite dicha con seguridad y equivocada es peor que
+no tener lista, porque ella va a planear alrededor de esa fecha. Y si la
+narrativa empieza a describir a un niño en particular que está en su cuidado,
+esto deja de ser trabajo de Nivel 1 y pasa a ser de Nivel 2.

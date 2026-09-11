@@ -1,38 +1,41 @@
 ---
-title: A named escalation path
+title: Una ruta de escalamiento con nombre y apellido
 locale: es
 kind: addition
 number: 9
 order: 11
 lastUpdated: '2026-09-10'
-summary: Who does a teacher call at four in the afternoon when a tool did something strange? At a single site it is the director. At fourteen sites it has to be a named role, or it defaults to nobody.
+summary: ¿A quién llama una maestra a las cuatro de la tarde cuando una herramienta hizo algo raro? En una sola sede, a la directora. En catorce sedes tiene que ser un puesto designado, o por defecto no es nadie.
 relatedArtifacts: ['governance-charter']
 translationPending: true
 ---
 
-Who does a teacher call at four in the afternoon when a tool did something
-strange?
+¿A quién llama una maestra a las cuatro de la tarde cuando una herramienta hizo
+algo raro?
 
-At a single site the answer is obvious and unwritten: the director, who is
-twenty feet away. At fourteen sites it has to be written down and it has to be a
-named role, because an unnamed path does not default to the nearest sensible
-person. It defaults to nobody — the teacher mentions it to her site director,
-the site director is not sure whether it rises to anything, and the thing that
-happened is never recorded anywhere.
+En una sola sede la respuesta es obvia y no está escrita: la directora, que está
+a veinte pies de distancia. En catorce sedes tiene que estar por escrito y tiene
+que ser un puesto designado, porque una ruta sin nombre no cae por defecto en la
+persona sensata más cercana. Cae por defecto en nadie: la maestra se lo menciona
+a su directora de sede, la directora de sede no está segura de si aquello llega a
+ser algo, y lo que pasó no queda registrado en ninguna parte.
 
-What "named" requires:
+Qué exige que la ruta tenga nombre:
 
-- **A role, with a person currently in it**, published where staff actually look
-  rather than in the policy binder.
-- **A second name** for when the first is unreachable, since four in the
-  afternoon is exactly when one person is unreachable.
-- **A stated threshold that is deliberately low.** Staff should be told to
-  escalate when something seems wrong, not when they are confident it is wrong.
-  Asking a teacher to pre-judge whether an incident is reportable guarantees
-  under-reporting.
-- **A commitment that escalating is never penalised**, which is the same promise
-  the amnesty window makes and has to survive past it.
+- **Un puesto, con una persona ocupándolo en este momento**, publicado donde el
+  personal de verdad mira y no en la carpeta de políticas.
+- **Un segundo nombre** para cuando no se pueda localizar al primero, porque las
+  cuatro de la tarde es exactamente la hora a la que no se localiza a una
+  persona.
+- **Un umbral declarado y deliberadamente bajo.** Hay que decirle al personal que
+  escale cuando algo parezca estar mal, no cuando esté seguro de que lo está.
+  Pedirle a una maestra que juzgue de antemano si un incidente es reportable
+  garantiza que se reporte de menos.
+- **El compromiso de que escalar nunca se castiga**, que es la misma promesa que
+  hace la ventana de amnistía y que tiene que seguir viva después de que esa
+  ventana se cierre.
 
-The escalation path is also what makes the incidents line in the board report
-mean anything. Without it, a quarter with no incidents is indistinguishable from
-a quarter in which nobody knew who to tell.
+La ruta de escalamiento es además lo que hace que la línea de incidentes del
+informe a la junta directiva signifique algo. Sin ella, un trimestre sin
+incidentes es indistinguible de un trimestre en el que nadie supo a quién
+avisarle.

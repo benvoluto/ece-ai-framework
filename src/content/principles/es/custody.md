@@ -1,42 +1,51 @@
 ---
-title: Custody
+title: Custodia
 locale: es
 id: custody
-name: Custody
-claim: Know where a child's record goes, and be able to get it back.
+name: Custodia
+claim: Sepa a dónde va el expediente de un niño y pueda recuperarlo.
 order: 4
 lastUpdated: '2026-09-10'
 translationPending: true
 ---
 
-Custody is not a new duty invented for AI. Head Start programs already live
-under 45 CFR 1303.24, which requires a disclosure log: a written record of where
-a child's information went and why. Section 1303.23(e) goes further, and is the
-most useful provision most directors have never been shown. It gives parents an
-unqualified right to review any written agreement the program has with a third
-party. The text is not limited to agreements that name their own child, which
-makes it the strongest existing hook for a parent who asks to see an AI vendor
-contract. If you could not produce that contract today, that is the gap this
-principle is about.
+La custodia no es un deber nuevo inventado para la IA. Los programas de Head
+Start (el programa federal de educación temprana) ya viven bajo 45 CFR 1303.24,
+que exige un registro de divulgaciones: una constancia por escrito de a dónde
+fue la información de un niño y por qué. La sección 1303.23(e) va más lejos, y
+es la disposición más útil que la mayoría de los directores nunca ha visto. Les
+da a los padres el derecho, sin condiciones, de revisar cualquier acuerdo por
+escrito que el programa tenga con un tercero. El texto no se limita a los
+acuerdos que mencionan a su propio hijo, y eso lo convierte en el mejor apoyo
+que existe hoy para un padre o una madre que pide ver el contrato con un
+proveedor de IA. Si hoy usted no pudiera presentar ese contrato, ese vacío es
+justamente de lo que trata este principio.
 
-Two other rules set the outer edge. The Individuals with Disabilities Education
-Act (IDEA) gives parents a right to have records destroyed once they are no
-longer needed — a right the Family Educational Rights and Privacy Act (FERPA)
-alone does not confer. It is also a right an AI vendor cannot honor if it has
-ingested the text of an Individualized Family Service Plan (IFSP) into a
-retained embedding store, because deletion of the original file does not reach
-what the model kept. And the amended Children's Online Privacy Protection Act
-(COPPA) Rule requires separate verifiable parental consent for disclosing
-children's personal information to a third party for AI development, which the
-Federal Trade Commission (FTC) has said is not "integral" to a service and so
-cannot ride along on the general consent a family signed at enrollment.
+Otras dos reglas marcan el borde exterior. La ley IDEA (Individuals with
+Disabilities Education Act, la ley federal de educación para personas con
+discapacidades) les da a los padres el derecho a que los expedientes se
+destruyan una vez que ya no se necesitan, un derecho que FERPA (la ley federal
+de privacidad de los expedientes educativos) por sí sola no otorga. Es también
+un derecho que un proveedor de IA no puede cumplir si ya absorbió el texto de
+un IFSP (el plan individualizado de servicios para la familia) dentro de un
+almacén de representaciones que conserva, porque borrar el archivo original no
+alcanza lo que el modelo se quedó. Y la Regla COPPA (Children's Online Privacy
+Protection Act, la ley federal de protección de la privacidad de los niños en
+línea), en su versión reformada, exige un consentimiento parental verificable y
+separado para divulgar información personal de los niños a un tercero con fines
+de desarrollo de IA, algo que la FTC (la Comisión Federal de Comercio) ha dicho
+que no es «parte integral» de un servicio y que, por lo tanto, no puede viajar
+escondido dentro del consentimiento general que una familia firmó al
+inscribirse.
 
-Be careful how far you push that last point, because a vendor's counsel will be.
-The separate-consent requirement carries an express carve-out for disclosures
-integral to the nature of the service, and the FTC's statement addresses
-disclosures to third parties. It does not follow that AI training always
-requires separate consent. Note the real gap as well: the Rule is quieter about
-an operator training its own models on data it already holds. That is a contract
-term for you to write into your agreement, not a law for you to cite at
-someone. Both of these are points to re-check against the current Rule and the
-FTC's own language before anyone relies on them.
+Tenga cuidado con hasta dónde lleva ese último punto, porque el abogado del
+proveedor sí lo tendrá. El requisito de consentimiento separado trae una
+excepción expresa para las divulgaciones que son parte integral de la
+naturaleza del servicio, y la declaración de la FTC se refiere a las
+divulgaciones a terceros. De ahí no se sigue que entrenar IA siempre requiera
+un consentimiento separado. Fíjese también en el vacío real: la Regla dice
+mucho menos sobre un operador que entrena sus propios modelos con datos que ya
+tiene. Eso es una cláusula que a usted le toca escribir en su acuerdo, no una
+ley que pueda citarle a alguien. Los dos puntos hay que volver a revisarlos
+contra la Regla vigente y contra el texto de la propia FTC antes de que alguien
+se apoye en ellos.

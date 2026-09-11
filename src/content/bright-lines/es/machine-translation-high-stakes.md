@@ -1,11 +1,11 @@
 ---
-title: Machine translation in high-stakes conversations
+title: Traducción automática en conversaciones de alto impacto
 locale: es
 number: 6
 order: 6
 lastUpdated: '2026-09-10'
-rule: Do not rely on machine translation in Individualized Family Service Plan (IFSP) or Individualized Education Program (IEP) meetings, screening-result conversations, child-protection conversations, or eligibility determinations.
-shortRule: No machine translation for IFSP or IEP meetings, screening results, child-protection conversations, or eligibility decisions.
+rule: No dependa de la traducción automática en reuniones del Plan Individualizado de Servicios para la Familia (IFSP) o del Programa de Educación Individualizado (IEP), en conversaciones sobre el resultado de una evaluación, en conversaciones de protección infantil ni en determinaciones de elegibilidad.
+shortRule: Nada de traducción automática en reuniones de IFSP o IEP, resultados de evaluaciones, conversaciones de protección infantil o decisiones de elegibilidad.
 governs: ['language', 'standing', 'consequence']
 authorities:
   - '45 CFR 1302.33 — qualified bilingual staff or interpreters for screening and assessment communication with families'
@@ -14,26 +14,28 @@ authorities:
 translationPending: true
 ---
 
-Draw the line by what the conversation decides, not by the technology. Routine
-operational communication — newsletters, reminders, menus, closure notices — is
-fine, and machine translation is genuinely useful there. It reaches families in
-their own language faster and more often than a program could otherwise manage,
-and getting a menu slightly wrong is recoverable.
+Trace el límite por lo que decide la conversación, no por la tecnología. La
+comunicación operativa de rutina —boletines, recordatorios, menús, avisos de
+cierre— está bien, y ahí la traducción automática sirve de verdad. Llega a las
+familias en su propio idioma más rápido y más seguido de lo que un programa
+podría lograr de otra manera, y si un menú sale un poco mal, eso se arregla.
 
-High-stakes content is where machine translation fails, and the failures are
-documented. Medicine has recorded safety consequences from machine-translated
-clinical communication, and the National Center for State Courts issues explicit
-cautions against relying on it in proceedings that determine something. Four
-conversations in early childhood belong in that category: an Individualized
-Family Service Plan (IFSP) or Individualized Education Program (IEP) meeting, a
-conversation conveying a screening result, a child-protection conversation, and
-any eligibility determination. In each one, a parent is being asked to understand
-something and then agree, object, or decide — and a mistranslation does not
-announce itself.
+Donde la traducción automática falla es en el contenido de alto impacto, y esas
+fallas están documentadas. En medicina se han registrado consecuencias para la
+seguridad por comunicación clínica traducida a máquina, y el National Center for
+State Courts (el centro nacional de tribunales estatales) advierte de forma
+explícita contra depender de ella en procesos que deciden algo. Cuatro
+conversaciones de la educación temprana caen en esa categoría: una reunión del
+Plan Individualizado de Servicios para la Familia (IFSP) o del Programa de
+Educación Individualizado (IEP), una conversación en la que se comunica el
+resultado de una evaluación, una conversación de protección infantil y cualquier
+determinación de elegibilidad. En cada una de ellas se le pide a un padre o a
+una madre que entienda algo y luego acepte, objete o decida, y una mala
+traducción no se anuncia sola.
 
-For Head Start programs this is not a new duty. Section 1302.33 already
-requires qualified bilingual staff or interpreters for exactly these
-conversations. The bright line generalises an obligation most of the field
-already carries, and states plainly what the tool cannot substitute for. Use
-machine translation to get the meeting scheduled. Use a qualified human to hold
-it.
+Para los programas de Head Start (el programa federal de educación temprana)
+este no es un deber nuevo. La sección 1302.33 ya exige personal bilingüe
+calificado o intérpretes para exactamente estas conversaciones. El límite
+extiende una obligación que buena parte del campo ya carga, y dice con claridad
+lo que la herramienta no puede sustituir. Use la traducción automática para
+lograr que la reunión se agende. Use a una persona calificada para sostenerla.

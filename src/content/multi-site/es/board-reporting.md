@@ -1,35 +1,37 @@
 ---
-title: Board and owner reporting on a cadence
+title: Informar a la junta directiva y a los dueños con una cadencia fija
 locale: es
 kind: addition
 number: 7
 order: 9
 lastUpdated: '2026-09-10'
-summary: A standing quarterly item — tools in use by tier, incidents, what changed, what is pending approval. For Head Start this maps onto existing Policy Council and governing body reporting rather than adding a new obligation.
+summary: 'Un punto fijo trimestral: herramientas en uso por nivel, incidentes, qué cambió y qué está pendiente de aprobación. En Head Start (el programa federal de educación temprana) esto encaja en los informes que ya se rinden al Policy Council (el consejo de familias) y al cuerpo directivo, en vez de agregar una obligación nueva.'
 relatedArtifacts: ['governance-charter']
 translationPending: true
 ---
 
-Make it a standing quarterly item rather than a memo written when something goes
-wrong. Four fields are enough:
+Hágalo un punto fijo trimestral, no un memorando que se escribe cuando algo sale
+mal. Bastan cuatro campos:
 
-- **Tools in use, by tier.** Counts, and the additions since last quarter.
-- **Incidents.** What happened, what was done, what changed as a result. Zero is
-  a legitimate and informative answer, provided the escalation path is real
-  enough that a zero means something.
-- **What changed.** Vendor terms, a feature switched on by default, a state
-  requirement, a tool retired.
-- **What is pending approval.** With how long it has been pending, which is the
-  number that tells a board whether the governance structure is working or
-  quietly generating workarounds.
+- **Herramientas en uso, por nivel.** Los conteos, y lo que se agregó desde el
+  trimestre pasado.
+- **Incidentes.** Qué pasó, qué se hizo y qué cambió como consecuencia. Cero es
+  una respuesta legítima e informativa, siempre que la ruta de escalamiento sea
+  lo bastante real como para que un cero signifique algo.
+- **Qué cambió.** Los términos de un proveedor, una función encendida por
+  defecto, un requisito estatal, una herramienta retirada.
+- **Qué está pendiente de aprobación.** Con cuánto tiempo lleva pendiente, que es
+  el número que le dice a una junta directiva si la estructura de gobernanza está
+  funcionando o si está generando atajos en silencio.
 
-A standing item does two things a memo cannot. It gives the organization a
-defensible record that it has been governing this continuously rather than
-reacting, and it puts a small, regular demand on the register that keeps the
-register true.
+Un punto fijo hace dos cosas que un memorando no puede. Le da a la organización
+una constancia defendible de que ha estado gobernando esto de forma continua en
+lugar de reaccionar, y le impone al registro una exigencia pequeña y regular que
+lo mantiene verdadero.
 
-For Head Start grantees this maps onto existing Policy Council and governing body
-reporting rather than adding a new obligation. The program already reports to
-both bodies on a cadence; AI tool use becomes a line in a report that is already
-being written and already being minuted. Frame it that way when proposing it —
-it is not a new committee, it is four fields in an existing one.
+Para los concesionarios de Head Start, esto encaja en los informes que ya se
+rinden al Policy Council y al cuerpo directivo, en vez de agregar una obligación
+nueva. El programa ya le informa a los dos cuerpos con una periodicidad
+establecida; el uso de herramientas de IA pasa a ser una línea de un informe que
+ya se está escribiendo y que ya queda en actas. Preséntelo así cuando lo
+proponga: no es un comité nuevo, son cuatro campos en uno que ya existe.

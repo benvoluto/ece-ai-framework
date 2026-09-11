@@ -1,5 +1,5 @@
 ---
-title: "Subsidy billing that actually reconciles"
+title: "Facturación de subsidios que de verdad cuadra"
 locale: es
 lastUpdated: '2026-09-10'
 order: 2
@@ -7,51 +7,55 @@ tier: 2
 audience: provider
 phase: 1
 featuredOnHome: true
+translationPending: true
 homeSummary: >-
-  A center billing 34 subsidised children across two counties recovers a few
-  hundred dollars a month of correctly billed care — on these margins, the
-  difference between a raise for a teacher and no raise.
+  Un centro que factura por 34 niños subsidiados en dos condados recupera unos
+  cientos de dólares al mes de cuidado correctamente facturado: con estos
+  márgenes, la diferencia entre un aumento para una maestra y ningún aumento.
 governs:
   - relationship
   - custody
   - consequence
 scenario: >-
-  A center serves 34 subsidised children across two counties. Attendance sheets,
-  authorisation certificates and payment remittances never quite line up. Every
-  month a handful of days go unbilled or get paid at the wrong rate, and chasing
-  each one costs more staff time than it recovers — so nobody chases them.
+  Un centro atiende a 34 niños subsidiados en dos condados. Las hojas de
+  asistencia, los certificados de autorización y las remesas de pago nunca
+  terminan de coincidir. Cada mes un puñado de días se quedan sin facturar o se
+  pagan a la tarifa equivocada, y perseguir cada uno cuesta más tiempo de
+  personal del que recupera, así que nadie los persigue.
 returns: >-
-  This is not efficiency; it is revenue. On margins this thin, recovering a few
-  hundred dollars a month of correctly billed care is the difference between a
-  raise for a teacher and no raise. The reconciliation produces a discrepancy
-  list with the underlying evidence attached, in minutes.
+  Esto no es eficiencia; es ingreso. Con márgenes así de delgados, recuperar
+  unos cientos de dólares al mes de cuidado correctamente facturado es la
+  diferencia entre un aumento para una maestra y ningún aumento. La conciliación
+  produce en minutos una lista de diferencias con la evidencia de respaldo
+  adjunta.
 guardrail: >-
-  This is the most sensitive data in the building — family income,
-  immigration-adjacent documentation, custody arrangements. Written agreement,
-  register entry, no consumer tools. The tool flags; a person decides what gets
-  submitted.
-translationPending: true
+  Estos son los datos más delicados del edificio: los ingresos de la familia,
+  documentación relacionada con el estatus migratorio, arreglos de custodia.
+  Acuerdo por escrito, entrada en el registro, nada de herramientas de consumo.
+  La herramienta señala; una persona decide qué se manda.
 ---
 
-Thirty-four subsidised children, two counties, two sets of rules. One county
-pays on authorised days, the other on attended days. Certificates expire on
-rolling dates. A family moves mid-month and the authorisation follows late. The
-remittance arrives three weeks after the billing period with line items that do
-not name the child the way the attendance sheet does.
+Treinta y cuatro niños subsidiados, dos condados, dos juegos de reglas. Un
+condado paga por días autorizados y el otro por días asistidos. Los certificados
+vencen en fechas escalonadas. Una familia se muda a mitad de mes y la
+autorización llega tarde. La remesa llega tres semanas después del período de
+facturación, con renglones que no nombran al niño como lo nombra la hoja de
+asistencia.
 
-Every month the director notices four or five days that were never billed, or
-billed at the school-age rate for a toddler, or paid short with no explanation
-attached. Each one is worth thirty or sixty dollars. Each one takes half an hour
-of cross-referencing to prove. So they go, month after month, and the leak is
-invisible because nothing about it shows up as a loss — it shows up as revenue
-that simply never arrived.
+Cada mes la directora nota cuatro o cinco días que nunca se facturaron, o que se
+facturaron a la tarifa de edad escolar para un niño pequeño, o que se pagaron
+incompletos sin ninguna explicación. Cada uno vale treinta o sesenta dólares.
+Cada uno toma media hora de cruzar documentos para poder comprobarlo. Así que se
+van, mes tras mes, y la fuga es invisible porque nada de esto aparece como una
+pérdida: aparece como un ingreso que simplemente nunca llegó.
 
-Reconciling three documents against each other is exactly the kind of dull,
-rule-bound comparison worth automating. The output is not a decision; it is a
-list: these days, this rate, this certificate, here is the page each one came
-from. She checks the list and decides what to resubmit.
+Conciliar tres documentos entre sí es justamente el tipo de comparación aburrida
+y llena de reglas que vale la pena automatizar. El resultado no es una decisión;
+es una lista: estos días, esta tarifa, este certificado, y aquí está la página de
+donde salió cada uno. Ella revisa la lista y decide qué volver a mandar.
 
-Because this is subsidy data, it is Tier 2 without argument. Family income,
-immigration-adjacent paperwork and custody arrangements all sit in these files.
-That means an approved tool with a written agreement on file and a register
-entry — never a free consumer account, and never a person's own device.
+Como estos son datos de subsidio, es Nivel 2 sin discusión. Los ingresos de la
+familia, los papeles relacionados con el estatus migratorio y los arreglos de
+custodia están todos en estos expedientes. Eso quiere decir una herramienta
+aprobada, con un acuerdo por escrito en el archivo y una entrada en el registro:
+nunca una cuenta gratuita de consumo, y nunca el aparato personal de alguien.

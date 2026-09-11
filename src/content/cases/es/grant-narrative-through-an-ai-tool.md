@@ -1,11 +1,11 @@
 ---
-title: A grant narrative full of child vignettes goes through an AI tool
+title: Una narrativa de subvención llena de viñetas sobre niños pasa por una herramienta de IA
 locale: es
 lastUpdated: '2026-09-10'
 order: 8
-situation: A grant writer runs a program narrative containing vignettes about identifiable children through an AI tool.
-atStake: Not yet drafted.
-whatToDo: Not yet drafted.
+situation: Quien escribe las propuestas de subvención pasa por una herramienta de IA una narrativa del programa que contiene viñetas sobre niños identificables.
+atStake: Todavía no está redactado.
+whatToDo: Todavía no está redactado.
 governs: []
 brightLines: []
 settings: []
@@ -13,16 +13,18 @@ status: to-draft
 translationPending: true
 ---
 
-This case is named for launch but is not written yet.
+Este caso está nombrado para el lanzamiento, pero todavía no está escrito.
 
-It will cover the use nobody classifies as a child-data use: grant writing,
-which is back-office work right up until the narrative includes the story of a
-particular child, at which point the same text carries the same information as
-a file note. It will need to separate the part of the work that is genuinely
-low-risk drafting from the part that is a disclosure, and it will have to leave
-directors with a way to keep the vignettes — which are what makes a proposal
-persuasive — rather than simply telling them not to.
+Va a tratar sobre el uso que nadie clasifica como uso de datos de niños,
+escribir propuestas de subvención, que es trabajo de administración interna
+hasta el momento exacto en que la narrativa incluye la historia de un niño en
+particular, y desde ahí ese mismo texto lleva la misma información que una nota
+del expediente. Tendrá que separar la parte del trabajo que de verdad es
+redacción de bajo riesgo de la parte que es una divulgación, y tendrá que
+dejarles a las directoras una manera de conservar las viñetas —que son lo que
+hace convincente una propuesta— en vez de simplemente decirles que no.
 
-It is not drafted because that line needs to be drawn carefully enough to be
-usable in a real proposal cycle, and drawing it in the wrong place would make
-this site read as if it were against a sector's fundraising.
+No está redactado porque esa línea hay que trazarla con el cuidado suficiente
+para que sirva en un ciclo real de propuestas, y trazarla en el lugar equivocado
+haría que este sitio se leyera como si estuviera en contra de que el sector
+recaude fondos.

@@ -8,55 +8,104 @@ import { localePath } from '../../lib/i18n.js';
 
 const { locale = 'en' } = Astro.props;
 const tiers = [1, 2, 3];
+
+const copy = {
+  en: {
+    title: 'Start here: four questions',
+    description:
+      'Answer four questions about the tool in front of you. Get the risk tier, the guidance for that tier, and the right policy template for your program.',
+    caption: 'Start here',
+    heading: 'Four questions',
+    lede:
+      'Complete one sentence. Four answers do the entire job, and every one is answerable without knowing anything about AI.',
+    intro:
+      'This is a tool, not a form. Nothing you answer is sent anywhere \u2014 the whole thing runs in your browser, and no part of it reaches us or anyone else. There is no sign-up and nothing to submit.',
+    tiersHeading: 'The four tiers, written out',
+    tiersIntro:
+      'The tool above routes you to one of these. They are written out here as well, so the page works without JavaScript and so you can read the whole map before answering anything.',
+    tier0Name: 'Do not adopt',
+    tier0Body:
+      'The eight bright lines. This runs as a screener before the tiering questions, so a program that lands here never sees implementation guidance at all. There is no tier of paperwork that makes a bright line acceptable.',
+    tier0Link: 'Read the eight bright lines and the basis for each',
+    returnsLabel: 'What it returns',
+    warning:
+      '\u201CBack office is safe\u201D is the one shortcut this framework does not take. In early childhood the back office is where the child data lives: subsidy billing contains family income, immigration-adjacent documentation and custody information, and grant narratives routinely contain child vignettes. Tier 1 is defined by the absence of child and family data, not by the word \u201Cadministrative\u201D.',
+    whyHeading: 'Why the first question is about your program, not your tool',
+    whyBody:
+      'The first dropdown tiers by provider capacity as well as by risk. The same four answers return a one-page signed document for a family child care home, a six-page policy for a center, and a governance charter with contract riders for a multi-site operator or a Head Start grantee. The principles and the bright lines do not change across those three. Everything else does.',
+    allDocuments: 'See every document, without answering anything',
+  },
+  es: {
+    title: 'Empiece aquí: cuatro preguntas',
+    description:
+      'Responda cuatro preguntas sobre la herramienta que tiene enfrente. Reciba el nivel de riesgo, la guía para ese nivel y la plantilla de política que le corresponde a su programa.',
+    caption: 'Empiece aquí',
+    heading: 'Cuatro preguntas',
+    lede:
+      'Complete una oración. Cuatro respuestas hacen todo el trabajo, y cada una se puede contestar sin saber nada de IA.',
+    intro:
+      'Esto es una herramienta, no un formulario. Nada de lo que usted responda se envía a ninguna parte: todo ocurre en su navegador, y ninguna parte llega a nosotros ni a nadie más. No hay que registrarse y no hay nada que enviar.',
+    tiersHeading: 'Los cuatro niveles, escritos completos',
+    tiersIntro:
+      'La herramienta de arriba lo lleva a uno de estos. También están escritos aquí, para que la página funcione sin JavaScript y para que usted pueda leer el mapa completo antes de responder nada.',
+    tier0Name: 'No adoptar',
+    tier0Body:
+      'Los ocho límites infranqueables. Esto funciona como filtro antes de las preguntas de nivel, para que un programa que caiga aquí nunca vea guía de implementación. No hay ninguna cantidad de papeleo que vuelva aceptable un límite infranqueable.',
+    tier0Link: 'Lea los ocho límites infranqueables y el fundamento de cada uno',
+    returnsLabel: 'Qué devuelve',
+    warning:
+      '«La administración interna es segura» es el único atajo que este marco no toma. En la educación temprana, la administración interna es justamente donde viven los datos de los niños: la facturación de subsidios contiene el ingreso familiar, documentación relacionada con el estatus migratorio e información de custodia, y las narrativas de subvenciones contienen rutinariamente viñetas sobre niños. El Nivel 1 se define por la ausencia de datos de niños y familias, no por la palabra «administrativo».',
+    whyHeading: 'Por qué la primera pregunta es sobre su programa, no sobre su herramienta',
+    whyBody:
+      'La primera lista desplegable clasifica por la capacidad del proveedor además de por el riesgo. Las mismas cuatro respuestas devuelven un documento firmado de una página para un hogar de cuidado infantil familiar, una política de seis páginas para un centro, y una carta de gobernanza con cláusulas contractuales para un operador con varias sedes o un concesionario de Head Start. Los principios y los límites infranqueables no cambian entre esos tres. Todo lo demás sí.',
+    allDocuments: 'Vea todos los documentos, sin responder nada',
+  },
+};
+const c = copy[locale] ?? copy.en;
 ---
 
 <BaseLayout
-  title="Start here: four questions"
-  description="Answer four questions about the tool in front of you. Get the risk tier, the guidance for that tier, and the right policy template for your program."
+  title={c.title}
+  description={c.description}
   locale={locale}
 >
   <PageHeader
-    caption="Start here"
-    title="Four questions"
-    lede="Complete one sentence. Four answers do the entire job, and every one is answerable without knowing anything about AI."
+    caption={c.caption}
+    title={c.heading}
+    lede={c.lede}
     locale={locale}
   />
 
   <p class="govuk-body">
-    This is a tool, not a form. Nothing you answer is sent anywhere — the whole thing runs in
-    your browser, and no part of it reaches us or anyone else. There is no sign-up and nothing
-    to submit.
+    {c.intro}
   </p>
 
   <IntakeTool locale={locale} />
 
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
 
-  <h2 class="govuk-heading-m" id="the-tiers">The four tiers, written out</h2>
+  <h2 class="govuk-heading-m" id="the-tiers">{c.tiersHeading}</h2>
   <p class="govuk-body">
-    The tool above routes you to one of these. They are written out here as well, so the page
-    works without JavaScript and so you can read the whole map before answering anything.
+    {c.tiersIntro}
   </p>
 
   <div class="govuk-inset-text" id="tier-0">
     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
       <TierTag tier={0} locale={locale} link={false} />
-      <span class="govuk-!-margin-left-2">Do not adopt</span>
+      <span class="govuk-!-margin-left-2">{c.tier0Name}</span>
     </h3>
     <p class="govuk-body govuk-!-margin-bottom-2">
-      The eight bright lines. This runs as a screener <em>before</em> the tiering questions, so a
-      program that lands here never sees implementation guidance at all. There is no tier of
-      paperwork that makes a bright line acceptable.
+      {c.tier0Body}
     </p>
     <p class="govuk-body govuk-!-margin-bottom-0">
       <a class="govuk-link" href={localePath(locale, '/bright-lines')}>
-        Read the eight bright lines and the basis for each
+        {c.tier0Link}
       </a>
     </p>
   </div>
 
   {tiers.map((tier) => {
-    const def = TIER_DEFINITIONS[tier].en;
+    const def = TIER_DEFINITIONS[tier][locale] ?? TIER_DEFINITIONS[tier].en;
     return (
       <section id={`tier-${tier}`} class="govuk-!-margin-bottom-7">
         <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
@@ -68,7 +117,7 @@ const tiers = [1, 2, 3];
           {def.examples.map((example) => <li>{example}</li>)}
         </ul>
         <div class="app-annotation">
-          <span class="app-annotation__label">What it returns</span>
+          <span class="app-annotation__label">{c.returnsLabel}</span>
           <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
             {def.returns.map((item) => <li>{item}</li>)}
           </ul>
@@ -81,22 +130,15 @@ const tiers = [1, 2, 3];
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <strong class="govuk-warning-text__text">
       <span class="govuk-visually-hidden">Warning</span>
-      “Back office is safe” is the one shortcut this framework does not take. In early childhood
-      the back office is where the child data lives: subsidy billing contains family income,
-      immigration-adjacent documentation and custody information, and grant narratives routinely
-      contain child vignettes. Tier 1 is defined by the <em>absence</em> of child and family data,
-      not by the word “administrative”.
+      {c.warning}
     </strong>
   </div>
 
-  <h2 class="govuk-heading-m">Why the first question is about your program, not your tool</h2>
+  <h2 class="govuk-heading-m">{c.whyHeading}</h2>
   <p class="govuk-body">
-    The first dropdown tiers by provider capacity as well as by risk. The same four answers return
-    a one-page signed document for a family child care home, a six-page policy for a center, and a
-    governance charter with contract riders for a multi-site operator or a Head Start grantee. The
-    principles and the bright lines do not change across those three. Everything else does.
+    {c.whyBody}
   </p>
   <p class="govuk-body">
-    <a class="govuk-link" href={localePath(locale, '/policies')}>See every document, without answering anything</a>
+    <a class="govuk-link" href={localePath(locale, '/policies')}>{c.allDocuments}</a>
   </p>
 </BaseLayout>

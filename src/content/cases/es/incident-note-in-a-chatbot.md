@@ -1,11 +1,11 @@
 ---
-title: A teacher writes up an incident in a consumer chatbot
+title: Una maestra redacta un incidente en un chatbot de consumo
 locale: es
 lastUpdated: '2026-09-10'
 order: 2
-situation: A teacher pastes an incident description — with the child's name — into a consumer chatbot to write it up more professionally before it goes in the file.
-atStake: In a Head Start program this is arguably an undisclosed third-party disclosure with no consent, no reviewable agreement and no log entry — complete whether or not anything leaks. In any program it likely violates the family contract and the program's own privacy policy.
-whatToDo: De-identify before drafting, or use an approved tool with an agreement on file. Add it to the register. If the incident touches suspected maltreatment, no AI at all.
+situation: Una maestra pega la descripción de un incidente —con el nombre del niño— en un chatbot de consumo para redactarla de forma más profesional antes de que vaya al expediente.
+atStake: En un programa de Head Start (el programa federal de educación temprana) esto se puede considerar una divulgación a un tercero que nunca se informó, sin consentimiento, sin un acuerdo que alguien pueda revisar y sin una entrada en el registro — y la falta está completa, se filtre algo o no. En cualquier programa, es probable que viole el contrato con la familia y la propia política de privacidad del programa.
+whatToDo: Quite los datos que identifican al niño antes de redactar, o use una herramienta aprobada que tenga un acuerdo en archivo. Anótela en el registro. Si el incidente toca una sospecha de maltrato, nada de IA.
 governs: ['custody']
 brightLines: [4, 5]
 tier: 0
@@ -14,44 +14,49 @@ status: drafted
 translationPending: true
 ---
 
-This is the most common AI use in the sector and almost nobody has decided
-about it. The teacher is not being careless. She is doing unpaid writing at the
-end of a long day and reaching for the thing that makes it faster and makes her
-sound more professional in front of a family she respects.
+Este es el uso de IA más común en el sector y casi nadie ha decidido nada al
+respecto. La maestra no está siendo descuidada. Está escribiendo sin que le
+paguen al final de un día largo y busca lo que se lo hace más rápido y la hace
+sonar más profesional frente a una familia que respeta.
 
-The part providers most often miss is that the violation is complete whether or
-not anything leaks. Under the Head Start privacy provisions at 45 CFR Part
-1303, a grantee that pastes child observations into a consumer tool has
-arguably made a disclosure to a third party under §1303.22 — with no consent,
-no agreement anyone could review, and no entry in the §1303.24 disclosure log.
-Nothing has to go wrong for that to be true. Outside Head Start there is no
-§1303, but there is almost certainly a family contract and a privacy policy
-with your own signature on them, saying you do not share information about
-children with anyone you have not told families about.
+Lo que más se les escapa a los proveedores es que la falta está completa se
+filtre algo o no. Bajo las disposiciones de privacidad de Head Start en 45 CFR
+Part 1303, un concesionario que pega observaciones sobre niños en una
+herramienta de consumo posiblemente hizo una divulgación a un tercero bajo
+§1303.22, sin consentimiento, sin un acuerdo que alguien pudiera revisar y sin
+una entrada en el registro de divulgaciones del §1303.24. No hace falta que nada
+salga mal para que eso sea cierto. Fuera de Head Start no existe el §1303, pero
+casi con seguridad sí existe un contrato con la familia y una política de
+privacidad con su propia firma, que dicen que usted no comparte información
+sobre los niños con nadie de quien no les haya avisado a las familias.
 
-So the instruction to staff is short, and it is not "be careful":
+Así que la instrucción para el personal es corta, y no es «tenga cuidado»:
 
-- **Take the name out before you draft.** "A four-year-old in the Sunflower
-  room" writes up just as well as a name does, and the name adds nothing to the
-  sentence the teacher wanted help with.
-- **Or use an approved tool** — one with a written agreement on file naming
-  your program as the controller — and record its use in the register, so the
-  answer to "what tools touch information about children here" stays true.
-- **If the incident touches suspected maltreatment, no AI at all.** Not
-  de-identified, not an approved tool, none. That is bright line 4, and it
-  exists because no authority anywhere — no state child welfare agency, no
-  guidance under the Child Abuse Prevention and Treatment Act, nothing from any
-  early childhood body — has answered when reasonable suspicion attaches if a
-  tool flags first, or whether an AI-smoothed narrative is still the reporter's
-  own contemporaneous observation.
+- **Quite el nombre antes de redactar.** «Un niño de cuatro años del salón
+  Girasol» se redacta igual de bien que con el nombre, y el nombre no le agrega
+  nada a la oración con la que la maestra quería ayuda.
+- **O use una herramienta aprobada** —una que tenga en archivo un acuerdo por
+  escrito que nombre a su programa como el responsable de los datos— y anote su
+  uso en el registro, para que la respuesta a «qué herramientas tocan
+  información sobre los niños aquí» siga siendo cierta.
+- **Si el incidente toca una sospecha de maltrato, nada de IA.** Ni con los
+  datos quitados, ni con una herramienta aprobada, ninguna. Ese es el límite
+  infranqueable 4, y existe porque ninguna autoridad en ninguna parte —ninguna
+  agencia estatal de bienestar infantil, ninguna guía bajo la Child Abuse
+  Prevention and Treatment Act (la ley federal de prevención y tratamiento del
+  maltrato infantil), nada de ningún organismo de educación temprana— ha
+  contestado en qué momento nace la sospecha razonable si una herramienta marca
+  primero, ni si una narrativa suavizada por IA sigue siendo la observación
+  propia de quien reporta, hecha en el momento.
 
-Say all of this out loud at a staff meeting before you write it into a policy.
-A rule a teacher first meets in a signed document reads as an accusation; the
-same rule explained at a meeting reads as the program deciding something
-together.
+Diga todo esto en voz alta en una reunión del personal antes de escribirlo en
+una política. Una regla que una maestra conoce por primera vez en un documento
+que tiene que firmar se lee como una acusación; esa misma regla explicada en una
+reunión se lee como el programa decidiendo algo entre todos.
 
-**Verify before you rely on it.** A notice of proposed rulemaking published in
-May 2026 proposes changes to Head Start requirements; the records and
-confidentiality provisions were not among those proposed for change, and
-whether a final rule has issued is unconfirmed. Check the current text of Part
-1303 before quoting section numbers to a board.
+**Verifique antes de apoyarse en esto.** Un aviso de propuesta de reglamentación
+publicado en mayo de 2026 propone cambios a los requisitos de Head Start; las
+disposiciones sobre expedientes y confidencialidad no estaban entre las que se
+propuso cambiar, y no está confirmado si ya salió una regla final. Revise el
+texto vigente de la Part 1303 antes de citarle números de sección a una junta
+directiva.

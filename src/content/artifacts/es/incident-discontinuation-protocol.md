@@ -1,8 +1,8 @@
 ---
-title: Incident & Discontinuation Protocol
+title: Protocolo de Incidentes y Descontinuación
 locale: es
-audience: Director
-summary: A runbook for when a tool fails, leaks, or turns out to do something it did not disclose — what counts as an incident, the first hour, who to notify and when families must be told, how to stop using a tool and get the data back, and the record to keep.
+audience: Directora o director
+summary: "Una guía de pasos para cuando una herramienta falla, filtra datos o resulta que hace algo que no reveló: qué cuenta como incidente, la primera hora, a quién avisar y cuándo hay que decirle a las familias, cómo dejar de usar una herramienta y recuperar los datos, y qué registro guardar."
 lastUpdated: '2026-09-10'
 order: 11
 length: short
@@ -13,147 +13,163 @@ phase: 2
 translationPending: true
 ---
 
-## 1. What counts as an incident
+## 1. Qué cuenta como incidente
 
-Start the protocol on any of these. You need not be sure it is serious.
+Empiece el protocolo con cualquiera de estas situaciones. No necesita estar
+seguro de que es grave.
 
-- The vendor reports a breach, unauthorized access, or lost data.
-- Children's or families' information went somewhere it should not have —
-  including a staff member pasting a child's name or observation into a free
-  consumer chatbot.
-- A bright line was crossed: an AI output used in a decision about a child,
-  emotion or engagement inference, anything in a child-protection report, or
-  machine translation in a screening-result, IFSP, IEP or eligibility
-  conversation.
+- El proveedor reporta una filtración, un acceso no autorizado o datos perdidos.
+- Información de los niños o de las familias fue a parar a donde no debía,
+  incluido el caso de un miembro del personal que pega el nombre o la observación
+  de un niño en un chatbot gratuito de consumo.
+- Se cruzó un límite infranqueable: un resultado de IA usado en una decisión
+  sobre un niño, una inferencia de emociones o de nivel de participación,
+  cualquier cosa en un reporte de protección infantil, o traducción automática en
+  una conversación sobre resultados de una evaluación, un IFSP (plan
+  individualizado de servicios para la familia), un IEP (programa educativo
+  individualizado) o una determinación de elegibilidad.
 
-The quiet ones are the ones you will actually meet:
+Los casos callados son los que de verdad le van a tocar:
 
-- **A feature turned on by default** — an app you already use adds AI summaries,
-  photo auto-tagging or "insights" in an update. You did not approve it. Still
-  an incident.
-- **An output that was wrong about a child** and reached a file, a family or a
-  referral.
-- **A subprocessor or terms change** — who holds the data, where, or what they
-  may train on.
-- **Use outside the register** — an unregistered tool in use, or a registered
-  tool used beyond its entry.
+- **Una función que se activó sola** — una aplicación que usted ya usa agrega
+  resúmenes de IA, etiquetado automático de fotos o «insights» en una
+  actualización. Usted no lo aprobó. Aun así es un incidente.
+- **Un resultado equivocado sobre un niño** que llegó a un expediente, a una
+  familia o a una referencia.
+- **Un cambio de subprocesador o de términos** — quién tiene los datos, dónde, o
+  con qué pueden entrenar.
+- **Uso fuera del registro** — una herramienta sin registrar en uso, o una
+  herramienta registrada usada más allá de su entrada.
 
-## 2. The first hour
+## 2. La primera hora
 
-1. **Stop the use.** *"Please stop using [TOOL NAME] for anything with a child's
-   name in it until I say otherwise. Nothing you did is in trouble — I need an
-   hour."*
-2. **Delete nothing.** Not the output, not the chat history, not the email. Save
-   or screenshot it.
-3. **Write the facts down**: what happened, when you learned it, who was
-   involved, what the tool did.
-4. **Turn the feature off** or suspend the accounts.
-5. **Scope it**: which children, which families, what information, over what
-   period. An estimate is fine if you label it one.
-6. **Send nothing to families yet.** You have an hour to get the facts straight.
-   You do not have a week.
+1. **Detenga el uso.** *«Por favor deje de usar [NOMBRE DE LA HERRAMIENTA] para
+   cualquier cosa que lleve el nombre de un niño hasta que yo le avise. Usted no
+   está en problemas por nada de lo que hizo; necesito una hora.»*
+2. **No borre nada.** Ni el resultado, ni el historial del chat, ni el correo.
+   Guárdelo o tome una captura de pantalla.
+3. **Anote los hechos**: qué pasó, cuándo se enteró, quiénes estuvieron
+   involucrados, qué hizo la herramienta.
+4. **Desactive la función** o suspenda las cuentas.
+5. **Defina el alcance**: cuáles niños, cuáles familias, qué información, durante
+   qué periodo. Un estimado está bien si lo marca como estimado.
+6. **Todavía no les mande nada a las familias.** Tiene una hora para tener los
+   hechos claros. No tiene una semana.
 
-## 3. Who to notify, in order
+## 3. A quién avisar, en orden
 
-**1. The vendor, in writing, the same day** — email, so there is a record.
+**1. Al proveedor, por escrito, el mismo día** — por correo electrónico, para que
+quede constancia.
 
-> Subject: Incident involving [TOOL NAME] — written response requested
+> Asunto: Incidente relacionado con [NOMBRE DE LA HERRAMIENTA] — se solicita
+> respuesta por escrito
 >
-> On [DATE] we identified [WHAT HAPPENED] involving [TOOL NAME]. We have
-> suspended use. Please respond in writing by [DATE] with: what happened; what
-> information about children or families was involved; which subprocessors held
-> or processed it; what has been deleted and what remains, including anything
-> derived from our data; and the name and direct contact of the person handling
-> this. — [YOUR NAME], [ROLE], [PROGRAM NAME]
+> El [FECHA] identificamos [LO QUE PASÓ] relacionado con [NOMBRE DE LA
+> HERRAMIENTA]. Hemos suspendido el uso. Por favor responda por escrito antes del
+> [FECHA] con: qué pasó; qué información sobre niños o familias estuvo
+> involucrada; cuáles subprocesadores la tuvieron o la procesaron; qué se ha
+> borrado y qué queda, incluyendo cualquier cosa derivada de nuestros datos; y el
+> nombre y el contacto directo de la persona que está atendiendo esto. — [SU
+> NOMBRE], [PUESTO], [NOMBRE DEL PROGRAMA]
 
-**2. Staff**, with the stop instruction and a plain statement that reporting this
-is what we wanted them to do.
+**2. Al personal**, con la instrucción de detener el uso y con una frase clara de
+que reportar esto es justamente lo que queríamos que hicieran.
 
-**3. Your board or owner**, for anything involving children's information leaving
-the program, any bright-line use, or any tool you are stopping.
+**3. A su junta directiva o a su dueño**, por cualquier cosa que involucre
+información de niños saliendo del programa, cualquier uso que cruce un límite
+infranqueable, o cualquier herramienta que vaya a dejar de usar.
 
-**4. Families**, when any of these is true: information about their child went to
-someone not authorized to have it; their child's images, voice, work or records
-may have been used to train a vendor's AI without separate written consent; an AI
-output that was wrong about their child reached a file, a referral or a decision;
-or you would want to be told if it were your child. Write in their home language,
-say what you do not yet know, and do not ask them to do anything.
+**4. A las familias**, cuando cualquiera de estas cosas sea cierta: información
+sobre su hijo o hija fue a alguien que no estaba autorizado a tenerla; las
+imágenes, la voz, los trabajos o los registros de su hijo o hija pudieron haberse
+usado para entrenar la IA de un proveedor sin un consentimiento escrito y
+separado; un resultado de IA equivocado sobre su hijo o hija llegó a un
+expediente, a una referencia o a una decisión; o usted querría que le avisaran si
+fuera su propio hijo. Escriba en el idioma del hogar de la familia, diga lo que
+todavía no sabe, y no les pida que hagan nada.
 
-> Dear [FAMILY NAME], I am writing about a problem with a computer tool our
-> program uses for [PURPOSE]. On [DATE] we learned that [WHAT HAPPENED, IN ONE
-> SENTENCE]. Information about [CHILD NAME] may have been involved. What we have
-> done: we stopped using the tool on [DATE], asked the company for a written
-> answer, and asked them to delete our information. What we do not know yet:
-> [WHAT YOU DO NOT KNOW]. I will write again by [DATE] even if I have nothing
-> new. Reach me at [PHONE] or [EMAIL] with any question. — [NAME], [ROLE]
+> Estimada familia [NOMBRE DE LA FAMILIA]: le escribo sobre un problema con una
+> herramienta de computadora que nuestro programa usa para [PROPÓSITO]. El
+> [FECHA] nos enteramos de que [LO QUE PASÓ, EN UNA ORACIÓN]. Es posible que haya
+> estado involucrada información sobre [NOMBRE DEL NIÑO O NIÑA]. Lo que hemos
+> hecho: dejamos de usar la herramienta el [FECHA], le pedimos a la empresa una
+> respuesta por escrito y le pedimos que borre nuestra información. Lo que
+> todavía no sabemos: [LO QUE TODAVÍA NO SABE]. Le volveré a escribir antes del
+> [FECHA] aunque no tenga nada nuevo. Comuníquese conmigo al [TELÉFONO] o al
+> [CORREO ELECTRÓNICO] con cualquier pregunta. — [NOMBRE], [PUESTO]
 
-**5. Head Start programs.** If information about a child went to a third party,
-enter it in the disclosure log required by 45 CFR §1303.24 — whether or not the
-disclosure was authorized, and whether or not anything leaked. Under §1303.23(e)
-any parent may ask to review your written agreements with third parties, so
-expect to be asked for the vendor agreement. If the child was referred to or
-found eligible under IDEA, IDEA Part B or Part C confidentiality governs that
-record instead of Subpart C.
+**5. Programas de Head Start** (el programa federal de educación temprana). Si
+información sobre un niño fue a un tercero, anótela en el registro de
+divulgaciones que exige 45 CFR §1303.24, sin importar si la divulgación estaba
+autorizada y sin importar si algo se filtró. Bajo §1303.23(e) cualquier padre o
+madre puede pedir revisar sus acuerdos escritos con terceros, así que espere que
+le pidan el acuerdo con el proveedor. Si el niño fue referido o declarado
+elegible bajo IDEA (la ley federal de educación para personas con
+discapacidades), la confidencialidad de IDEA Part B o Part C rige ese registro en
+lugar de Subpart C.
 
-**6. Licensing, your funder, or your insurer**, if your licensing agreement,
-subsidy contract or policy requires reporting a data incident. Fill this in once,
-now, so you are not looking it up mid-incident: [AGENCY OR CONTACT], [WHAT MUST
-BE REPORTED], [BY WHEN].
+**6. A la agencia de licencias, a su financiador o a su aseguradora**, si su
+acuerdo de licencia, su contrato de subsidio o su póliza exige reportar un
+incidente de datos. Llene esto una sola vez, ahora, para no andar buscándolo en
+medio de un incidente: [AGENCIA O CONTACTO], [QUÉ SE DEBE REPORTAR], [PARA
+CUÁNDO].
 
-## 4. How to stop using a tool
+## 4. Cómo dejar de usar una herramienta
 
-Cancelling the subscription is the last step, not the first.
+Cancelar la suscripción es el último paso, no el primero.
 
-1. **Export your data while you still have access** — records, notes, photos,
-   attachments — and check the export opens.
-2. **Send written notice.** *"Effective [DATE], [PROGRAM NAME] is discontinuing
-   use of [TOOL NAME] and withdraws any instruction to process information about
-   our children and families."*
-3. **Ask for deletion, and name the scope.** *"Please delete all information
-   about our children and families, including copies held by your subprocessors,
-   backups, search indexes, embeddings, and any model, index or analysis derived
-   from our data. Confirm in writing by [DATE] what was deleted, what was
-   retained, on what basis, and when any remaining copy expires."* Deletion that
-   does not reach derived artifacts is not deletion: the record can go while
-   everything built from it stays.
-4. **Cut off access** — accounts, sign-in connections to your other systems,
-   shared folders.
-5. **File the confirmation** with your register entry. If none arrives by your
-   date, ask once more and record the non-response. A non-answer is a finding.
-6. **Update the Approved Tools Register**: discontinued, date, reason, deletion
-   confirmed yes or no.
-7. **Tell staff what to use instead.** A discontinuation with no replacement is
-   how unregistered use starts.
+1. **Exporte sus datos mientras todavía tiene acceso** — registros, notas, fotos,
+   adjuntos — y compruebe que la exportación se abre.
+2. **Mande un aviso por escrito.** *«A partir del [FECHA], [NOMBRE DEL PROGRAMA]
+   descontinúa el uso de [NOMBRE DE LA HERRAMIENTA] y retira cualquier
+   instrucción de procesar información sobre nuestros niños y familias.»*
+3. **Pida la eliminación, y diga hasta dónde llega.** *«Por favor borren toda la
+   información sobre nuestros niños y familias, incluidas las copias que tengan
+   sus subprocesadores, los respaldos, los índices de búsqueda, los embeddings, y
+   cualquier modelo, índice o análisis derivado de nuestros datos. Confirmen por
+   escrito antes del [FECHA] qué se borró, qué se conservó, con qué base, y
+   cuándo vence cualquier copia que quede.»* Una eliminación que no alcanza lo
+   derivado no es una eliminación: el registro se puede ir mientras todo lo que
+   se construyó a partir de él se queda.
+4. **Corte el acceso** — cuentas, conexiones de inicio de sesión con sus otros
+   sistemas, carpetas compartidas.
+5. **Archive la confirmación** junto con la entrada de su registro. Si no llega
+   ninguna para su fecha, pregunte una vez más y anote la falta de respuesta. Una
+   no respuesta es un hallazgo.
+6. **Actualice el Registro de Herramientas Aprobadas**: descontinuada, fecha,
+   razón, eliminación confirmada sí o no.
+7. **Dígale al personal qué usar en su lugar.** Una descontinuación sin
+   reemplazo es como empieza el uso sin registrar.
 
-## 5. What to document
+## 5. Qué documentar
 
-One record per incident, vendor emails attached, kept as long as your other
-licensing records.
+Un registro por incidente, con los correos del proveedor adjuntos, guardado
+durante el mismo tiempo que sus demás registros de licencia.
 
-| Field | Entry |
+| Campo | Anotación |
 | --- | --- |
-| Incident number · date opened |  |
-| Tool and vendor |  |
-| How we found out |  |
-| What happened, in two sentences |  |
-| Children or families affected (number; estimate?) |  |
-| Information involved |  |
-| Bright line engaged? Which? |  |
-| Use suspended (date) |  |
-| Vendor notified (date) · by whom |  |
-| Vendor written response received (date) |  |
-| Families notified (date) · how · languages |  |
-| Board or owner notified (date) |  |
-| Head Start disclosure log entry (date) |  |
-| Licensing, funder or insurer notified (date) |  |
-| Tool discontinued (date) |  |
-| Data exported (date) |  |
-| Deletion confirmed in writing (date) · derived data included? |  |
-| Register updated (date) |  |
-| What we changed so it does not happen again |  |
-| Closed (date) · by |  |
+| Número de incidente · fecha en que se abrió |  |
+| Herramienta y proveedor |  |
+| Cómo nos enteramos |  |
+| Qué pasó, en dos oraciones |  |
+| Niños o familias afectados (número; ¿es un estimado?) |  |
+| Información involucrada |  |
+| ¿Se cruzó un límite infranqueable? ¿Cuál? |  |
+| Uso suspendido (fecha) |  |
+| Proveedor notificado (fecha) · por quién |  |
+| Respuesta escrita del proveedor recibida (fecha) |  |
+| Familias notificadas (fecha) · cómo · idiomas |  |
+| Junta directiva o dueño notificado (fecha) |  |
+| Entrada en el registro de divulgaciones de Head Start (fecha) |  |
+| Agencia de licencias, financiador o aseguradora notificados (fecha) |  |
+| Herramienta descontinuada (fecha) |  |
+| Datos exportados (fecha) |  |
+| Eliminación confirmada por escrito (fecha) · ¿incluye datos derivados? |  |
+| Registro actualizado (fecha) |  |
+| Qué cambiamos para que no vuelva a pasar |  |
+| Cerrado (fecha) · por |  |
 
-Every incident should produce exactly one change: a register entry, a new
-question for vendors, a setting turned off, or a line in the staff one-pager.
-Write it down before you close the record, or the next incident is this one
-again.
+Cada incidente debe producir exactamente un cambio: una entrada en el registro,
+una pregunta nueva para los proveedores, una configuración desactivada, o una
+línea en la hoja de uso aceptable para el personal. Escríbalo antes de cerrar el
+registro, o el próximo incidente va a ser este mismo otra vez.

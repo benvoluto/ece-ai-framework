@@ -1,11 +1,11 @@
 ---
-title: Deletion, including derived data
+title: Eliminación, incluidos los datos derivados
 locale: es
 number: 4
 order: 4
 lastUpdated: '2026-09-10'
-question: "If a family asks us to delete their child's records, what exactly gets deleted — and does that include anything derived from those records?"
-whyItMatters: "IDEA gives parents a right to have records destroyed once they are no longer needed — a right FERPA alone does not confer, and one that most model architectures cannot honor. A vendor that has ingested IFSP text into a retained embedding store cannot give a family back what it has already learned from the child's file. For a Head Start grantee, 45 CFR 1303.21(b) displaces the Head Start privacy subpart with IDEA Part B or Part C confidentiality for any child referred to or found eligible under IDEA, in any grantee — so this right can attach to a program that assumed it was outside IDEA entirely."
+question: "Si una familia nos pide borrar los registros de su hijo, ¿qué se borra exactamente, y eso incluye todo lo que se haya derivado de esos registros?"
+whyItMatters: "IDEA (la ley federal de educación para personas con discapacidades) les da a los padres el derecho a que se destruyan los registros que ya no se necesitan; FERPA (la ley federal de privacidad de expedientes educativos) por sí sola no da ese derecho, y la mayoría de las arquitecturas de modelos no lo puede cumplir. Un proveedor que ya metió el texto de un IFSP (el plan individualizado de servicios para la familia) en un almacén de embeddings que conserva no puede devolverle a una familia lo que ya aprendió del expediente del niño. Para un concesionario de Head Start (el programa federal de educación temprana), 45 CFR 1303.21(b) reemplaza la subparte de privacidad de Head Start con la confidencialidad de IDEA Part B o Part C para cualquier niño referido o declarado elegible bajo IDEA, en cualquier concesionario. Así que este derecho puede alcanzar a un programa que creía estar del todo fuera de IDEA."
 authorities:
   - "IDEA confidentiality — parental right to destruction of records no longer needed"
   - "45 CFR 1303.21(b) — IDEA Part B/C confidentiality displaces Head Start Subpart C for any child referred to or eligible under IDEA"
@@ -14,16 +14,17 @@ governs: ['custody', 'standing']
 translationPending: true
 ---
 
-A real answer walks the data: the record in the database, the copies in backups and
-on what schedule those expire, the exports already sent to other systems, and
-anything the record was used to build — embeddings, indexes, model weights, cached
-summaries. It ends with a timeframe and a written confirmation you can hand a family.
+Una respuesta real recorre los datos: el registro en la base de datos, las copias en los
+respaldos y en qué calendario vencen, las exportaciones que ya se enviaron a otros
+sistemas, y todo lo que se construyó con ese registro: embeddings, índices, pesos de
+modelos, resúmenes guardados en caché. Termina con un plazo y una confirmación por
+escrito que usted le pueda entregar a la familia.
 
-A dodge stops at the user interface. "Deleted records are removed from your account"
-describes what you can see, not what the company still holds. "Anonymised" and
-"aggregated" are the two words to press on: ask whether the derived artifact can be
-traced back to the child, and if the answer is that it cannot, ask how they verified
-that.
+Una evasiva se detiene en la pantalla. «Los registros borrados se quitan de su cuenta»
+describe lo que usted puede ver, no lo que la empresa todavía guarda. «Anonimizado» y
+«agregado» son las dos palabras sobre las que hay que insistir: pregunte si lo que se
+derivó del registro se puede rastrear de vuelta hasta el niño, y si le dicen que no,
+pregunte cómo lo comprobaron.
 
-Note the date the vendor gave this answer. Deletion behavior changes with
-architecture, and the answer you were given in 2026 is not self-renewing.
+Anote la fecha en que el proveedor le dio esta respuesta. La forma de borrar cambia con
+la arquitectura, y la respuesta que le dieron en 2026 no se renueva sola.

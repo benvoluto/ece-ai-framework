@@ -1,5 +1,5 @@
 ---
-title: COPPA reaches every setting, but it binds the vendor
+title: COPPA alcanza a todos los entornos, pero a quien obliga es al proveedor
 locale: es
 kind: finding
 needsLegalReview: true
@@ -11,50 +11,58 @@ order: 10
 translationPending: true
 ---
 
-Every row of the crosswalk above ends somewhere different. This one does not.
-COPPA — the Children's Online Privacy Protection Act — regulates operators of
-online services directed to children under 13, and it does not care whether the
-program is a school. A family child care home, a private center, a Head Start
-grantee and a district pre-K classroom are all in the same position: the app
-their children's information is sitting in is regulated.
+Cada fila del cuadro comparativo de arriba termina en un lugar distinto. Esta
+no. COPPA — la Children's Online Privacy Protection Act, la ley federal de
+protección de la privacidad de los niños en línea — regula a los operadores de
+servicios en línea dirigidos a menores de 13 años, y no le importa si el
+programa es una escuela. Un hogar de cuidado infantil familiar, un centro
+privado, un concesionario de Head Start (el programa federal de educación
+temprana) y un salón de pre-kínder de un distrito escolar están todos en la
+misma posición: la aplicación donde está la información de sus niños sí está
+regulada.
 
-**But COPPA binds the vendor, not you.** That is the sentence to hold on to. The
-obligation to get verifiable parental consent, to limit collection, to disclose
-what is retained and to delete on request runs against the operator of the
-service. A program that wants those protections does not get them by writing a
-policy for itself. It gets them by writing them into the contract it signs — and
-that is why the leverage in every non-district setting runs through procurement
-rather than through compliance.
+**Pero COPPA obliga al proveedor, no a usted.** Esa es la frase que hay que
+retener. La obligación de obtener el consentimiento verificable de los padres,
+de limitar lo que se recoge, de decir qué se guarda y de borrar cuando se lo
+pidan corre contra el operador del servicio. Un programa que quiere esas
+protecciones no las consigue escribiéndose una política a sí mismo. Las
+consigue escribiéndolas en el contrato que firma — y por eso, en todos los
+entornos que no son de distrito escolar, la fuerza está en la compra y no en el
+cumplimiento normativo.
 
-## The uncertainty nobody has named yet
+## La incertidumbre que nadie ha nombrado todavía
 
-In K-12 the practice is settled enough that people stop thinking about it: the
-school consents on the parents' behalf so that thirty separate consent forms do
-not have to be collected for one classroom tool. Early childhood programs have
-been copying that practice.
+En K-12 la práctica está tan asentada que la gente deja de pensarla: la escuela
+da el consentimiento en nombre de los padres, para no tener que juntar treinta
+formularios distintos por una sola herramienta de un salón. Los programas de
+educación temprana han venido copiando esa práctica.
 
-The ground under it is thinner than it looks. The FTC explicitly declined to
-codify the ed-tech "school authorization" exception in the 2025 rule, to avoid
-conflicting with anticipated amendments to FERPA. So the widely relied-upon
-practice of a program consenting on parents' behalf rests on policy-statement
-guidance that was written for schools — and most early childhood providers are
-not schools. A private center consenting on behalf of its families is standing
-on an exception built for an institution it is not.
+El piso bajo esa práctica es más delgado de lo que parece. La FTC (la comisión
+federal de comercio) se negó expresamente a codificar en la regla de 2025 la
+excepción de «autorización escolar» para tecnología educativa, para no chocar
+con las enmiendas a FERPA que se esperan. Así que la práctica tan usada de que
+un programa consienta en nombre de los padres se apoya en una guía de
+declaración de política escrita para escuelas — y la mayoría de los programas de
+educación temprana no son escuelas. Un centro privado que consiente en nombre de
+sus familias está parado sobre una excepción hecha para una institución que él
+no es.
 
-That is a genuine, citable legal uncertainty, and as far as this draft can
-establish, no one in the field has named it. Naming it is not the same as
-resolving it, and this page does not resolve it.
+Esa es una incertidumbre legal real y citable, y hasta donde este borrador puede
+establecer, nadie en el campo la ha nombrado. Nombrarla no es lo mismo que
+resolverla, y esta página no la resuelve.
 
-**What to do while it is unresolved.** Collect parental consent directly for any
-tool that sends a child's information, image, voice or work to a vendor, rather
-than relying on your authority to consent for the family. Direct consent is
-valid under any reading. It costs one form and it removes the question.
+**Qué hacer mientras siga sin resolverse.** Recoja el consentimiento de los
+padres directamente para cualquier herramienta que mande a un proveedor la
+información, la imagen, la voz o el trabajo de un niño, en vez de apoyarse en su
+autoridad para consentir por la familia. El consentimiento directo es válido
+bajo cualquier lectura. Cuesta un formulario y elimina la pregunta.
 
-**One caution on the AI question specifically.** The separate-consent
-requirement carries an express carve-out for disclosures integral to the nature
-of the service, and the FTC's statement on AI addresses disclosures to third
-parties. Do not assume, and do not tell a vendor, that training a model on
-children's data always requires separate consent. The internal-training gap is
-real, and this page does not claim the rule closes it. This is one of the points
-that has to be checked against the rule text itself before anything here is
-relied on.
+**Una advertencia sobre la cuestión de la IA en particular.** El requisito de
+consentimiento separado trae una excepción expresa para las divulgaciones que
+son parte integral de la naturaleza del servicio, y la declaración de la FTC
+sobre IA se refiere a divulgaciones a terceros. No dé por sentado, ni le diga a
+un proveedor, que entrenar un modelo con datos de niños siempre exige un
+consentimiento separado. El vacío sobre el entrenamiento interno es real, y esta
+página no afirma que la regla lo cierre. Este es uno de los puntos que hay que
+cotejar con el texto mismo de la regla antes de apoyarse en nada de lo que dice
+aquí.

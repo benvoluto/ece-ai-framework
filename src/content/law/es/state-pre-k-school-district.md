@@ -1,11 +1,11 @@
 ---
-title: State pre-K run by a school district
+title: Pre-kínder estatal operado por un distrito escolar
 locale: es
 kind: setting
 ferpa: 'yes'
 governsInstead:
-  - 'FERPA, in the ordinary way'
-  - "The state's student-privacy and ed-tech vendor law — for example California Education Code §49073.1 or New York Education Law 2-d"
+  - 'FERPA, de la manera habitual'
+  - 'La ley estatal de privacidad estudiantil y de proveedores de tecnología educativa — por ejemplo, el CA Educ. Code §49073.1 o la NY Ed Law 2-d'
 authorities:
   - 'FERPA'
   - 'CA Educ. Code §49073.1'
@@ -15,17 +15,19 @@ order: 1
 translationPending: true
 ---
 
-If a school district operates the program, the children's records are education
-records and FERPA — the Family Educational Rights and Privacy Act — applies in
-the ordinary way. This is the one row in the crosswalk where the law most people
-assume is in play actually is.
+Si un distrito escolar opera el programa, los expedientes de los niños son
+expedientes educativos y FERPA — la Family Educational Rights and Privacy Act,
+la ley federal de privacidad de los expedientes educativos — aplica de la manera
+habitual. Esta es la única fila del cuadro comparativo donde la ley que casi
+todo el mundo da por hecho de verdad está en juego.
 
-FERPA is not the whole answer even here. A district also sits under its state's
-student-privacy and ed-tech vendor law, and those statutes are the ones that
-speak directly to contracts with education technology companies. California
-Education Code §49073.1 and New York Education Law 2-d are the two most
-frequently encountered.
+Ni siquiera aquí FERPA es toda la respuesta. Un distrito también está bajo la
+ley de su estado sobre privacidad estudiantil y proveedores de tecnología
+educativa, y son esas leyes las que hablan directamente de los contratos con las
+empresas de tecnología educativa. El California Education Code §49073.1 y la New
+York Education Law 2-d son las dos que más se encuentran.
 
-The practical consequence: this is the only setting the circulating K–12 vendor
-templates were actually written for. In every row below, a template that opens
-by reciting FERPA is describing a statute that does not apply to you.
+La consecuencia práctica: este es el único entorno para el que de verdad se
+escribieron las plantillas de proveedores de K-12 que circulan. En todas las
+filas de abajo, una plantilla que arranca citando FERPA está describiendo una
+ley que a usted no le aplica.

@@ -37,63 +37,126 @@ const artifactLabel = (slug) =>
     .join(' ')
     .replace(/^./, (c) => c.toUpperCase());
 
-const lede =
-  'The design constraint that governs the rest of this site — no lawyer, no IT department, twenty minutes — is right for the modal provider and wrong for a fourteen-site organization with an HR director and outside counsel.';
-const description =
-  'Governance structure, model contract language and a defensible answer for a board: what a chain, a large center or a Head Start grantee with delegate agencies has to add.';
+const copy = {
+  en: {
+    caption: 'The multi-site track',
+    lede:
+      'The design constraint that governs the rest of this site — no lawyer, no IT department, twenty minutes — is right for the modal provider and wrong for a fourteen-site organization with an HR director and outside counsel.',
+    description:
+      'Governance structure, model contract language and a defensible answer for a board: what a chain, a large center or a Head Start grantee with delegate agencies has to add.',
+    intro1:
+      'Larger operators are not a smaller problem. They are a different one, and the field has no guidance for them at all.',
+    intro2:
+      'A large center, a chain, or a Head Start grantee with delegate agencies has something the single site does not: the capacity to actually govern this. An HR director. Outside counsel. Someone whose job includes procurement. What it does not have is anyone telling it how.',
+    intro3a:
+      'So this page is not a longer version of the small-provider material, and you should not read it as one. If you are running fourteen sites you are not looking for a policy template — you are looking for a governance structure, model contract language, and a defensible answer for your board. That is what is below. Everything in',
+    policiesLink: 'the policies to adopt',
+    intro3b:
+      'still applies; these nine additions sit on top of it, and each one exists because it does not make sense below a certain size.',
+    failureModesHeading: 'Two ways this goes wrong at scale',
+    additionsHeading: 'What the multi-site track adds',
+    delegateHeading: 'Head Start grantees with delegate agencies',
+    failureModesIntro:
+      'Left alone, these organizations fail in two opposite directions, and both are worse than they look. One is documented as caution. The other is not documented at all.',
+    warningLabel: 'Warning',
+    warning: 'A blanket ban is not a safety posture. It is an unmonitored one.',
+    additionsIntro:
+      'Nine things, on top of everything a single site already does. Each exists because it does not make sense below a certain size, and each one is aimed at the same target: closing the distance between what the policy says and what is actually running at site eleven.',
+    ofNine: 'of 9',
+    vendorsLink: 'The ten questions to ask a vendor',
+    vendorsAfter: 'are where a single center starts. The rider is where a large one starts.',
+    crosswalkLink: 'The regulatory crosswalk',
+    crosswalkAfter: 'carries the state layer you would be setting that standard against.',
+    unchangedHeading: 'What does not change',
+    unchangedA: 'Different artifacts, a different page, a different reader — and the same',
+    principlesLink: 'principles',
+    unchangedB: 'and the same',
+    brightLinesLink: 'bright lines',
+    unchangedC:
+      'as everywhere else on this site. A charter with delegated authority, a rider your counsel negotiated and a quarterly item on the board agenda do not buy an exemption from any of them. They are how an organization of your size keeps them true at every site at once.',
+    unchangedClose:
+      'Scale changes who decides, how fast, on what evidence and with what leverage. It does not change what is allowed.',
+  },
+  es: {
+    caption: 'La ruta para varias sedes',
+    lede:
+      'La restricción de diseño que gobierna el resto de este sitio —sin abogado, sin departamento de tecnología, veinte minutos— es la correcta para el proveedor típico y la equivocada para una organización de catorce sedes que tiene un director de recursos humanos y asesoría legal externa.',
+    description:
+      'Estructura de gobernanza, texto contractual modelo y una respuesta defendible para una junta directiva: lo que tiene que agregar una cadena, un centro grande o un concesionario de Head Start con agencias delegadas.',
+    intro1:
+      'Los operadores grandes no son un problema más pequeño. Son un problema distinto, y el campo no tiene ninguna guía para ellos.',
+    intro2:
+      'Un centro grande, una cadena o un concesionario de Head Start (el programa federal de educación temprana) con agencias delegadas tiene algo que la sede única no tiene: la capacidad de gobernar esto de verdad. Un director de recursos humanos. Asesoría legal externa. Alguien cuyo trabajo incluye las compras. Lo que no tiene es a nadie que le diga cómo.',
+    intro3a:
+      'Por eso esta página no es una versión más larga del material para proveedores pequeños, y no debería leerla como tal. Si usted dirige catorce sedes, no está buscando una plantilla de política: está buscando una estructura de gobernanza, texto contractual modelo y una respuesta defendible para su junta directiva. Eso es lo que viene abajo. Todo lo que hay en',
+    policiesLink: 'las políticas que hay que adoptar',
+    intro3b:
+      'sigue aplicando; estas nueve adiciones se montan encima, y cada una existe porque no tiene sentido por debajo de cierto tamaño.',
+    failureModesHeading: 'Dos maneras en que esto sale mal a escala',
+    additionsHeading: 'Lo que agrega la ruta para varias sedes',
+    delegateHeading: 'Concesionarios de Head Start con agencias delegadas',
+    failureModesIntro:
+      'Si nadie interviene, estas organizaciones fallan en dos direcciones opuestas, y las dos son peores de lo que parecen. Una queda documentada como prudencia. La otra no queda documentada en absoluto.',
+    warningLabel: 'Advertencia',
+    warning: 'Una prohibición total no es una postura de seguridad. Es una postura sin supervisión.',
+    additionsIntro:
+      'Nueve cosas, encima de todo lo que una sola sede ya hace. Cada una existe porque no tiene sentido por debajo de cierto tamaño, y todas apuntan al mismo blanco: cerrar la distancia entre lo que dice la política y lo que de verdad está funcionando en la sede once.',
+    ofNine: 'de 9',
+    vendorsLink: 'Las diez preguntas que hay que hacerle a un proveedor',
+    vendorsAfter: 'son donde empieza un solo centro. La cláusula contractual es donde empieza uno grande.',
+    crosswalkLink: 'El mapa regulatorio',
+    crosswalkAfter: 'trae la capa estatal contra la cual usted fijaría ese estándar.',
+    unchangedHeading: 'Lo que no cambia',
+    unchangedA: 'Otros documentos, otra página, otro lector, y los mismos',
+    principlesLink: 'principios',
+    unchangedB: 'y los mismos',
+    brightLinesLink: 'límites infranqueables',
+    unchangedC:
+      'que en todo el resto de este sitio. Una carta con autoridad delegada, una cláusula contractual que negoció su asesoría legal y un punto trimestral en la agenda de la junta directiva no compran una exención de ninguno de ellos. Son la manera en que una organización de su tamaño los mantiene ciertos en todas las sedes a la vez.',
+    unchangedClose:
+      'La escala cambia quién decide, con qué rapidez, con qué evidencia y con cuánto poder de negociación. No cambia qué está permitido.',
+  },
+};
+
+const c = copy[locale] ?? copy.en;
 ---
-<BaseLayout title={t(locale, 'nav.multiSite')} description={description} locale={locale}>
+<BaseLayout title={t(locale, 'nav.multiSite')} description={c.description} locale={locale}>
   <PageHeader
-    caption="The multi-site track"
+    caption={c.caption}
     title={t(locale, 'nav.multiSite')}
-    lede={lede}
+    lede={c.lede}
     locale={locale}
     lastUpdated="2026-09-10"
   />
 
-  <p class="govuk-body">
-    Larger operators are not a smaller problem. They are a different one, and the field
-    has no guidance for them at all.
-  </p>
+  <p class="govuk-body">{c.intro1}</p>
+
+  <p class="govuk-body">{c.intro2}</p>
 
   <p class="govuk-body">
-    A large center, a chain, or a Head Start grantee with delegate agencies has something
-    the single site does not: the capacity to actually govern this. An HR director. Outside
-    counsel. Someone whose job includes procurement. What it does not have is anyone telling
-    it how.
-  </p>
-
-  <p class="govuk-body">
-    So this page is not a longer version of the small-provider material, and you should not
-    read it as one. If you are running fourteen sites you are not looking for a policy
-    template — you are looking for a governance structure, model contract language, and a
-    defensible answer for your board. That is what is below. Everything in
-    <a class="govuk-link" href={localePath(locale, '/policies')}>the policies to adopt</a>
-    still applies; these nine additions sit on top of it, and each one exists because it does
-    not make sense below a certain size.
+    {c.intro3a}{' '}
+    <a class="govuk-link" href={localePath(locale, '/policies')}>{c.policiesLink}</a>{' '}
+    {c.intro3b}
   </p>
 
   <nav class="govuk-!-margin-bottom-8" aria-label={t(locale, 'label.onThisPage')}>
     <h2 class="govuk-heading-s">{t(locale, 'label.onThisPage')}</h2>
     <ol class="govuk-list govuk-list--number govuk-body-s">
-      <li><a class="govuk-link" href="#failure-modes">Two ways this goes wrong at scale</a></li>
-      <li><a class="govuk-link" href="#additions">What the multi-site track adds</a></li>
-      <li><a class="govuk-link" href="#delegate-agencies">Head Start grantees with delegate agencies</a></li>
+      <li><a class="govuk-link" href="#failure-modes">{c.failureModesHeading}</a></li>
+      <li><a class="govuk-link" href="#additions">{c.additionsHeading}</a></li>
+      <li><a class="govuk-link" href="#delegate-agencies">{c.delegateHeading}</a></li>
     </ol>
   </nav>
 
-  <h2 class="govuk-heading-m" id="failure-modes">Two ways this goes wrong at scale</h2>
+  <h2 class="govuk-heading-m" id="failure-modes">{c.failureModesHeading}</h2>
 
-  <p class="govuk-body">
-    Left alone, these organizations fail in two opposite directions, and both are worse than
-    they look. One is documented as caution. The other is not documented at all.
-  </p>
+  <p class="govuk-body">{c.failureModesIntro}</p>
 
   <div class="govuk-warning-text">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <strong class="govuk-warning-text__text">
-      <span class="govuk-visually-hidden">Warning</span>
-      A blanket ban is not a safety posture. It is an unmonitored one.
+      <span class="govuk-visually-hidden">{c.warningLabel}</span>
+      {c.warning}
     </strong>
   </div>
 
@@ -120,13 +183,9 @@ const description =
 
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
 
-  <h2 class="govuk-heading-m" id="additions">What the multi-site track adds</h2>
+  <h2 class="govuk-heading-m" id="additions">{c.additionsHeading}</h2>
 
-  <p class="govuk-body">
-    Nine things, on top of everything a single site already does. Each exists because it does
-    not make sense below a certain size, and each one is aimed at the same target: closing the
-    distance between what the policy says and what is actually running at site eleven.
-  </p>
+  <p class="govuk-body">{c.additionsIntro}</p>
 
   <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-8">
     {additions.map(({ entry }) => (
@@ -139,7 +198,7 @@ const description =
   {additions.map(({ entry, Content }) => (
     <section class="govuk-!-margin-bottom-8" id={`addition-${entry.data.number}`}>
       <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
-        <span class="govuk-caption-m">{entry.data.number} of 9</span>
+        <span class="govuk-caption-m">{entry.data.number} {c.ofNine}</span>
         {entry.data.title}
       </h3>
       <p class="govuk-body-l">{entry.data.summary}</p>
@@ -156,15 +215,15 @@ const description =
 
       {entry.data.number === 3 && (
         <p class="govuk-body">
-          <a class="govuk-link" href={localePath(locale, '/vendors')}>The ten questions to ask a vendor</a>
-          are where a single center starts. The rider is where a large one starts.
+          <a class="govuk-link" href={localePath(locale, '/vendors')}>{c.vendorsLink}</a>{' '}
+          {c.vendorsAfter}
         </p>
       )}
 
       {entry.data.number === 5 && (
         <p class="govuk-body">
-          <a class="govuk-link" href={localePath(locale, '/law')}>The regulatory crosswalk</a>
-          carries the state layer you would be setting that standard against.
+          <a class="govuk-link" href={localePath(locale, '/law')}>{c.crosswalkLink}</a>{' '}
+          {c.crosswalkAfter}
         </p>
       )}
 
@@ -186,7 +245,7 @@ const description =
 
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
 
-  <h2 class="govuk-heading-m" id="delegate-agencies">Head Start grantees with delegate agencies</h2>
+  <h2 class="govuk-heading-m" id="delegate-agencies">{c.delegateHeading}</h2>
 
   {modules.map(({ entry, Content }) => (
     <div class="govuk-inset-text">
@@ -210,19 +269,15 @@ const description =
 
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
 
-  <h2 class="govuk-heading-m" id="what-does-not-change">What does not change</h2>
+  <h2 class="govuk-heading-m" id="what-does-not-change">{c.unchangedHeading}</h2>
 
   <p class="govuk-body">
-    Different artifacts, a different page, a different reader — and the same
-    <a class="govuk-link" href={localePath(locale, '/principles')}>principles</a> and the same
-    <a class="govuk-link" href={localePath(locale, '/bright-lines')}>bright lines</a> as
-    everywhere else on this site. A charter with delegated authority, a rider your counsel
-    negotiated and a quarterly item on the board agenda do not buy an exemption from any of
-    them. They are how an organization of your size keeps them true at every site at once.
+    {c.unchangedA}{' '}
+    <a class="govuk-link" href={localePath(locale, '/principles')}>{c.principlesLink}</a>{' '}
+    {c.unchangedB}{' '}
+    <a class="govuk-link" href={localePath(locale, '/bright-lines')}>{c.brightLinesLink}</a>{' '}
+    {c.unchangedC}
   </p>
 
-  <p class="govuk-body">
-    Scale changes who decides, how fast, on what evidence and with what leverage. It does not
-    change what is allowed.
-  </p>
+  <p class="govuk-body">{c.unchangedClose}</p>
 </BaseLayout>

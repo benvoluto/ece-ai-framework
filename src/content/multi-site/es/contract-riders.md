@@ -1,60 +1,67 @@
 ---
-title: Contract riders — because you actually have leverage
+title: 'Cláusulas contractuales: porque usted sí tiene poder de negociación'
 locale: es
 kind: addition
 number: 3
 order: 5
 lastUpdated: '2026-09-10'
-summary: The biggest asymmetry in the sector, and the most valuable thing large operators can do. A single center can only ask the ten questions. A fourteen-site organization can require terms — and if the field's larger buyers converge on the same ones, vendor defaults shift for everyone.
+summary: La mayor asimetría del sector, y lo más valioso que pueden hacer los operadores grandes. Un centro solo puede hacer las diez preguntas. Una organización de catorce sedes puede exigir términos, y si los compradores más grandes del campo convergen en los mismos, lo que los proveedores ofrecen por defecto cambia para todos.
 relatedArtifacts: ['model-contract-rider']
 translationPending: true
 ---
 
-This is the biggest asymmetry in the sector and the most valuable thing large
-operators can do, so it is worth being direct about why.
+Esta es la mayor asimetría del sector y lo más valioso que pueden hacer los
+operadores grandes, así que vale la pena ser directo sobre por qué.
 
-A single center can only ask the ten vendor questions. It asks them, it listens
-to the answers, and then it decides whether to buy the product on the terms the
-vendor already wrote. A fourteen-site organization, or a grantee with delegate
-agencies, is in a different position entirely: it can require terms as a
-condition of the contract, and a vendor that would ignore one center will
-negotiate with a buyer that size.
+Un centro solo puede hacerle al proveedor las diez preguntas. Las hace, escucha
+las respuestas y luego decide si compra el producto en los términos que el
+proveedor ya redactó. Una organización de catorce sedes, o un concesionario con
+agencias delegadas, está en una posición completamente distinta: puede exigir
+términos como condición del contrato, y un proveedor que ignoraría a un solo
+centro sí negocia con un comprador de ese tamaño.
 
-Terms worth requiring as a rider to the vendor's own agreement:
+Términos que vale la pena exigir como cláusula añadida al propio contrato del
+proveedor:
 
-- **No training on our data, including internally.** State it that way. A
-  commitment not to share data with third parties for training is not the same
-  commitment, and the gap between them is where the real exposure sits.
-- **No biometric processing without our written instruction.** Not "without
-  consent", which pushes the decision onto families; without the organization's
-  written instruction, which keeps the switch on your side of the table.
-- **Deletion that reaches derived artifacts.** Deleting the records while
-  keeping the embeddings, the transcripts, the summaries and the fine-tuned
-  weights derived from them is not deletion. Say what has to go.
-- **Subprocessor notice.** You are entitled to know who else is handling the
-  data, and to be told before the list changes rather than after.
-- **Validation evidence on request, disaggregated for dual language learners
-  (DLLs).** If a product makes claims about accuracy, the rider should let you
-  ask for the evidence broken out for the children you actually serve.
-- **A notification commitment with a clock on it.** A number of days, in the
-  contract, for notice of a breach or a material change to the product's AI
-  behavior. "Prompt notice" is not a commitment.
+- **Nada de entrenar con nuestros datos, tampoco internamente.** Dígalo así. El
+  compromiso de no compartir datos con terceros para entrenamiento no es el mismo
+  compromiso, y en la diferencia entre los dos es donde está la exposición real.
+- **Nada de procesamiento biométrico sin nuestra instrucción por escrito.** No
+  «sin consentimiento», que le pasa la decisión a las familias; sin la
+  instrucción escrita de la organización, que deja el interruptor de su lado de
+  la mesa.
+- **Una eliminación que alcance a lo derivado.** Borrar los registros y quedarse
+  con los embeddings, las transcripciones, los resúmenes y los pesos del modelo
+  ajustados a partir de ellos no es eliminar. Diga qué tiene que desaparecer.
+- **Aviso de subprocesadores.** Usted tiene derecho a saber quién más está
+  manejando los datos, y a que se lo digan antes de que la lista cambie, no
+  después.
+- **Evidencia de validación a solicitud, desglosada para estudiantes de dos
+  idiomas (DLL).** Si un producto hace afirmaciones sobre su exactitud, la
+  cláusula debe permitirle pedir la evidencia desglosada para los niños a los que
+  usted de verdad atiende.
+- **Un compromiso de notificación con un reloj.** Un número de días, en el
+  contrato, para avisar de una filtración de datos o de un cambio material en el
+  comportamiento de IA del producto. «Aviso oportuno» no es un compromiso.
 
-A note on one of these, so the rider is not oversold. Do not rest the
-no-training term on a claim that children's privacy law always requires separate
-consent before a vendor trains on children's data. The separate-consent
-requirement carries an express carve-out for disclosures integral to the nature
-of the service, and the Federal Trade Commission's AI statement addresses
-disclosures to third parties — which leaves a real gap around a vendor's
-internal training. **That gap is the argument for the rider, not against it.**
-You are contracting for a protection the regulation does not clearly supply, and
-that is a stronger position to take to a vendor than a legal assertion its
-counsel will pick apart.
+Una nota sobre uno de estos puntos, para no vender la cláusula por más de lo que
+es. No apoye el término de no entrenamiento en la afirmación de que la ley de
+privacidad infantil siempre exige un consentimiento separado antes de que un
+proveedor entrene con datos de niños. El requisito de consentimiento separado
+trae una excepción expresa para las divulgaciones que son parte integral de la
+naturaleza del servicio, y la declaración sobre IA de la FTC (la Federal Trade
+Commission, la agencia federal de comercio) se refiere a divulgaciones a
+terceros, lo que deja un hueco real alrededor del entrenamiento interno de un
+proveedor. **Ese hueco es el argumento a favor de la cláusula, no en contra.**
+Usted está contratando una protección que la regulación no da con claridad, y esa
+es una posición más firme frente a un proveedor que una afirmación legal que su
+abogado va a desarmar.
 
-**Publish your rider language.** This is the part that is a public good rather
-than a procurement exercise. If the field's larger buyers converge on the same
-terms, vendor defaults shift for everyone — including for the family child care
-provider with no leverage at all, who will never negotiate anything and will
-simply receive whatever the standard contract says by then. Large operators are
-the only actors in this sector who can supply that, and it costs them nothing
-beyond publishing what they already negotiated.
+**Publique el texto de su cláusula.** Esta es la parte que es un bien público y
+no un ejercicio de compras. Si los compradores más grandes del campo convergen en
+los mismos términos, lo que los proveedores ofrecen por defecto cambia para
+todos, incluida la persona con un hogar de cuidado infantil familiar que no tiene
+ningún poder de negociación, que nunca va a negociar nada y simplemente va a
+recibir lo que para entonces diga el contrato estándar. Los operadores grandes
+son los únicos actores de este sector que pueden aportar eso, y no les cuesta
+nada más que publicar lo que ya negociaron.

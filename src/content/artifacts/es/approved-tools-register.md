@@ -1,8 +1,8 @@
 ---
-title: Approved Tools Register
+title: Registro de Herramientas Aprobadas
 locale: es
-audience: Director
-summary: One page listing every tool in use, what it is for, its tier, who approved it, whether there is an agreement on file, what data it touches, and when it gets looked at again. This is the document a licensor or a monitor asks for.
+audience: Directora o director
+summary: Una página que lista cada herramienta en uso, para qué sirve, su nivel, quién la aprobó, si hay un acuerdo en archivo, qué datos toca y cuándo se vuelve a revisar. Este es el documento que pide un inspector de licencias o un revisor de monitoreo.
 lastUpdated: '2026-09-10'
 order: 7
 length: fillable
@@ -14,81 +14,92 @@ phase: 1
 translationPending: true
 ---
 
-Kept by [NAME], [ROLE]. Last reviewed [DATE]. [PROGRAM NAME] shows this register
-on request to a licensor, a monitor, a funder, or a family.
+Lo mantiene [NOMBRE], [PUESTO]. Última revisión: [FECHA]. [NOMBRE DEL PROGRAMA]
+muestra este registro cuando lo pide un inspector de licencias, un revisor de
+monitoreo, un financiador o una familia.
 
-## How to fill it in
+## Cómo llenarlo
 
-**Tier.** Tier the tool by the data it touches, not by the department that uses
-it:
+**Nivel.** Clasifique la herramienta por los datos que toca, no por el área que
+la usa:
 
-- **Tier 1** — back office, no child or family data. Marketing, menus,
-  newsletters naming no child, professional development, staff scheduling.
-- **Tier 2** — operations touching child or family data. Subsidy billing,
-  enrollment records, licensing documentation, CACFP (Child and Adult Care Food
-  Program) reconciliation, grant narratives containing child vignettes, family
-  communication and translation.
-- **Tier 3** — about an individual child, or used by a child. Screening and
-  assessment support, observation narratives, photo and video portfolios,
-  behavior tracking, referral routing, classroom cameras, anything a child
-  interacts with.
+- **Nivel 1** — administración interna, sin datos de niños ni familias. Mercadeo,
+  menús, boletines que no nombran a ningún niño, desarrollo profesional, horarios
+  del personal.
+- **Nivel 2** — operaciones que tocan datos de niños o familias. Facturación de
+  subsidios, registros de inscripción, documentación de licencias, conciliación
+  de CACFP (el programa federal de alimentos para el cuidado de niños y adultos),
+  narrativas de subvenciones que contienen viñetas sobre niños, comunicación con
+  las familias y traducción.
+- **Nivel 3** — sobre un niño en particular, o usada por un niño. Apoyo a
+  evaluaciones y tamizajes, narrativas de observación, portafolios de fotos y
+  videos, seguimiento de conducta, enrutamiento de referencias, cámaras en el
+  salón, cualquier cosa con la que un niño interactúe.
 
-Do not assume the back office is Tier 1. Subsidy billing holds family income,
-immigration-adjacent documents and custody information. A grant narrative holds
-child vignettes. Tier 1 means the absence of child and family data, not the word
-"administrative."
+No dé por hecho que la administración interna es Nivel 1. La facturación de
+subsidios contiene los ingresos de la familia, documentos relacionados con el
+estatus migratorio e información sobre la custodia. Una narrativa de subvención
+contiene viñetas sobre niños. Nivel 1 significa la ausencia de datos de niños y
+familias, no la palabra «administrativo».
 
-A tool that crosses one of the bright lines does not get a register entry. It
-gets a no.
+Una herramienta que cruza uno de los límites infranqueables no recibe una entrada
+en el registro. Recibe un no.
 
-**Agreement on file.** Write yes only if [PROGRAM NAME] holds a signed, written
-agreement with the company covering this tool, and you can put your hand on it
-today. A public terms-of-service page you clicked through is not an agreement on
-file — write "click-through only." Anything at Tier 2 or Tier 3 with no
-agreement on file is the line to fix first; until it is fixed, stop putting child
-or family data into it.
+**Acuerdo en archivo.** Escriba «sí» solo si [NOMBRE DEL PROGRAMA] tiene un
+acuerdo escrito y firmado con la empresa que cubre esta herramienta, y usted
+puede ponerle la mano encima hoy mismo. Una página pública de términos de
+servicio que usted aceptó con un clic no es un acuerdo en archivo: escriba «solo
+aceptación con un clic». Cualquier cosa de Nivel 2 o Nivel 3 sin acuerdo en
+archivo es lo primero que hay que arreglar; hasta que se arregle, deje de poner
+datos de niños o familias en ella.
 
-**Data it touches.** Name the actual data, not a category. "Child names, photos,
-teacher observations" tells a monitor something. "Program data" does not.
+**Datos que toca.** Nombre los datos reales, no una categoría. «Nombres de niños,
+fotos, observaciones de las maestras» le dice algo a un revisor. «Datos del
+programa» no.
 
-**Review date.** Every entry gets one. Suggested: Tier 1 every [12 MONTHS],
-Tier 2 every [12 MONTHS], Tier 3 every [6 MONTHS].
+**Fecha de revisión.** Cada entrada lleva una. Sugerencia: Nivel 1 cada
+[12 MESES], Nivel 2 cada [12 MESES], Nivel 3 cada [6 MESES].
 
-## What triggers a new entry
+## Qué obliga a crear una entrada nueva
 
-- You buy a tool, or sign up for a free one.
-- **A company turns on an AI feature in a tool you already use.** A vendor
-  feature release is an adoption event: register it and tier it, the same as a
-  purchase. This is the most likely way AI actually enters a program — it arrives
-  as a product update, not as a decision anyone made. A tool that was Tier 2 on
-  Monday can be Tier 3 on Tuesday because a feature shipped overnight. Turn the
-  feature off until the entry is done.
-- A staff member starts using something on their own. Add it first, decide
-  second.
-- A tool changes what data it collects, where it stores it, or who else it hands
-  data to.
-- A tool is dropped. Do not delete the row — mark it discontinued, with the date
-  and what happened to the data.
+- Usted compra una herramienta, o se inscribe en una gratuita.
+- **Una empresa activa una función de IA en una herramienta que usted ya usa.**
+  El lanzamiento de una función por parte de un proveedor es un evento de
+  adopción: regístrela y clasifíquela por nivel, igual que una compra. Esta es la
+  forma más probable en que la IA entra de verdad a un programa: llega como una
+  actualización del producto, no como una decisión que alguien tomó. Una
+  herramienta que el lunes era de Nivel 2 puede ser de Nivel 3 el martes porque
+  una función se lanzó de la noche a la mañana. Desactive la función hasta que la
+  entrada esté completa.
+- Un miembro del personal empieza a usar algo por su cuenta. Primero anótelo,
+  después decida.
+- Una herramienta cambia qué datos recoge, dónde los guarda o a quién más se los
+  entrega.
+- Se deja de usar una herramienta. No borre la fila: márquela como descontinuada,
+  con la fecha y qué pasó con los datos.
 
-## The register
+## El registro
 
-| Tool | What we use it for | Tier | Approved by | Date approved | Agreement on file | Data it touches | Review date |
+| Herramienta | Para qué la usamos | Nivel | Aprobada por | Fecha de aprobación | Acuerdo en archivo | Datos que toca | Fecha de revisión |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| **EXAMPLE — delete this row.** Observation and documentation app with an AI feature that drafts learning stories from classroom photos | Daily notes and photo portfolios shared with families | 3 | [DIRECTOR NAME] | [DATE] | Yes — signed [DATE], filed in [WHERE]. No training on our data; no face or voice measurement | Child names, dates of birth, photos, video, teacher observations, family contact details | [DATE] |
+| **EJEMPLO — borre esta fila.** Aplicación de observación y documentación con una función de IA que redacta historias de aprendizaje a partir de fotos del salón | Notas diarias y portafolios de fotos que se comparten con las familias | 3 | [NOMBRE DEL DIRECTOR O DIRECTORA] | [FECHA] | Sí — firmado el [FECHA], archivado en [DÓNDE]. No entrenan con nuestros datos; no hay medición de cara ni de voz | Nombres de niños, fechas de nacimiento, fotos, video, observaciones de las maestras, datos de contacto de las familias | [FECHA] |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |
 
-## Before an entry goes in at Tier 3
+## Antes de que entre una herramienta de Nivel 3
 
-- The ten vendor questions asked, with answers and dates written down.
-- Separate family consent collected on the images, voice and model training form
-  — not the photo release, not the enrollment packet.
-- A written record of who makes the human decision, for anything the tool
-  produces about a child.
-- An exit plan: what happens to the data if [PROGRAM NAME] stops using this tool.
+- Las diez preguntas al proveedor, hechas, con las respuestas y las fechas
+  anotadas.
+- Consentimiento familiar separado, recogido en el formulario de imágenes, voz y
+  entrenamiento de modelos: no la autorización de fotos, no el paquete de
+  inscripción.
+- Un registro escrito de quién toma la decisión humana sobre cualquier cosa que
+  la herramienta produzca acerca de un niño.
+- Un plan de salida: qué pasa con los datos si [NOMBRE DEL PROGRAMA] deja de usar
+  esta herramienta.
 
-Signed: [DIRECTOR NAME]
+Firma: [NOMBRE DEL DIRECTOR O DIRECTORA]
 
-Date: [DATE]
+Fecha: [FECHA]

@@ -1,11 +1,11 @@
 ---
-title: The app adds an AI feature, and it is on by default
+title: La aplicación agrega una función de IA, y viene activada
 locale: es
 lastUpdated: '2026-09-10'
 order: 1
-situation: Your observation and documentation app adds an AI feature that drafts learning stories from classroom photos. It is on by default.
-atStake: Whether the vendor is using children's images to train a model — and whether auto-tagging computes face geometry, which triggers biometric statutes in several states. Also whether the drafted narrative is still the teacher's observation.
-whatToDo: Turn it off until you have asked questions 3, 4 and 7 on the vendor question sheet. Re-consent families before turning it on, using the separate images-and-training form rather than the existing photo release.
+situation: Su aplicación de observación y documentación agrega una función de IA que redacta historias de aprendizaje a partir de fotos del salón. Viene activada de manera predeterminada.
+atStake: Si el proveedor está usando imágenes de los niños para entrenar un modelo, y si el etiquetado automático calcula la geometría del rostro, lo que activa las leyes biométricas de varios estados. También si la narrativa redactada sigue siendo la observación de la maestra.
+whatToDo: Apáguela hasta que haya hecho las preguntas 3, 4 y 7 de la hoja de preguntas para proveedores. Vuelva a pedir el consentimiento de las familias antes de encenderla, usando el formulario aparte de imágenes y entrenamiento, no la autorización de fotos que ya tiene.
 governs: ['custody', 'standing']
 brightLines: []
 tier: 3
@@ -14,45 +14,49 @@ status: drafted
 translationPending: true
 ---
 
-Nobody bought this. It arrived in a product update, and the decision that
-matters — that it runs unless someone turns it off — was made by the vendor, not
-by you. That is the first thing to notice, because everything else in your
-policy assumes adoption is a moment you can point to.
+Nadie compró esto. Llegó en una actualización del producto, y la decisión que
+importa —que funcione mientras alguien no la apague— la tomó el proveedor, no
+usted. Eso es lo primero que hay que notar, porque todo lo demás en su política
+da por hecho que adoptar algo es un momento que usted puede señalar.
 
-Three separate questions are tangled together here, and it helps to pull them
-apart.
+Aquí hay tres preguntas distintas enredadas, y ayuda separarlas.
 
-- **Training.** Are children's images from your classrooms being used to
-  improve the vendor's model, or anyone else's? Ask it plainly and get the
-  answer in writing with a date on it.
-- **Biometrics.** If the feature tags photos by who is in them, it may be
-  computing face geometry. That is a biometric identifier, and several states
-  regulate it directly — Illinois BIPA reaches private entities and expressly
-  excludes state and local government agencies, so a private center or a
-  nonprofit grantee carries more exposure here than a public school district
-  does.
-- **Authorship.** A learning story is a teacher's observation of a particular
-  child. If the model writes the first draft from a photograph, the program
-  needs to be able to say what the teacher actually saw.
+- **Entrenamiento.** ¿Se están usando las imágenes de los niños de sus salones
+  para mejorar el modelo del proveedor, o el de cualquier otro? Pregúntelo sin
+  rodeos y consiga la respuesta por escrito y con fecha.
+- **Biometría.** Si la función etiqueta las fotos según quién sale en ellas,
+  puede estar calculando la geometría del rostro. Eso es un identificador
+  biométrico, y varios estados lo regulan directamente: la ley BIPA de Illinois
+  (la ley estatal de privacidad de información biométrica) alcanza a las
+  entidades privadas y excluye expresamente a las agencias estatales y locales
+  de gobierno, así que un centro privado o un concesionario sin fines de lucro
+  queda más expuesto aquí que un distrito escolar público.
+- **Autoría.** Una historia de aprendizaje es la observación que una maestra
+  hace de un niño en particular. Si el modelo escribe el primer borrador a
+  partir de una foto, el programa tiene que poder decir qué fue lo que la
+  maestra vio de verdad.
 
-Turn the feature off first. It is much easier to turn something on after you
-have the answers than to explain, later, why it ran for four months while you
-were asking.
+Primero apague la función. Es mucho más fácil encender algo cuando ya tiene las
+respuestas que explicar después por qué estuvo funcionando cuatro meses mientras
+usted preguntaba.
 
-Then re-consent. The existing photo release covers photographs — it does not
-cover a company using your children's images to develop a product, and families
-signed it without that in mind. Use a separate form that says so in its own
-sentence, and make saying no cost a family nothing.
+Después vuelva a pedir el consentimiento. La autorización de fotos que ya tiene
+cubre las fotografías; no cubre que una empresa use las imágenes de sus niños
+para desarrollar un producto, y las familias la firmaron sin pensar en eso. Use
+un formulario aparte que lo diga en su propia oración, y asegúrese de que
+negarse no le cueste nada a la familia.
 
-**One caution on how you justify this.** The amended COPPA Rule (the Children's
-Online Privacy Protection Act rule, effective June 2025 with full compliance in
-April 2026) requires separate verifiable parental consent to disclose
-children's personal information to a third party for AI development, and the
-Federal Trade Commission treats such disclosures as not integral to the
-service. But the separate-consent requirement carries an express carve-out for
-disclosures integral to the nature of the service, and it says considerably
-less about a company training its own models on data it already holds. Do not
-tell a vendor that AI training always requires separate consent — their counsel
-will catch it. Say that you require it by contract, and put it in the
-agreement. This reading of COPPA is one of the items on our list to re-verify
-against the primary source before this site is published.
+**Una advertencia sobre cómo justificar esto.** La regla modificada de COPPA
+(la ley federal de protección de la privacidad en línea de los niños, vigente
+desde junio de 2025 y con cumplimiento pleno en abril de 2026) exige un
+consentimiento parental verificable y separado para divulgarle información
+personal de los niños a un tercero con fines de desarrollo de IA, y la FTC (la
+Comisión Federal de Comercio) considera que esas divulgaciones no son parte
+esencial del servicio. Pero el requisito de consentimiento separado trae una
+excepción expresa para las divulgaciones que sí son esenciales a la naturaleza
+del servicio, y dice bastante menos sobre una empresa que entrena sus propios
+modelos con datos que ya tiene. No le diga a un proveedor que el entrenamiento
+de IA siempre exige consentimiento separado: su abogado se lo va a señalar. Diga
+que usted lo exige por contrato, y póngalo en el acuerdo. Esta lectura de COPPA
+es uno de los puntos de nuestra lista para volver a verificar contra la fuente
+primaria antes de publicar este sitio.

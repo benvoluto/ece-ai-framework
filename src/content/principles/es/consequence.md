@@ -1,33 +1,37 @@
 ---
-title: Consequence
+title: Consecuencia
 locale: es
 id: consequence
-name: Consequence
-claim: No AI output decides anything about a child.
+name: Consecuencia
+claim: Ningún resultado de la IA decide nada sobre un niño.
 order: 5
 lastUpdated: '2026-09-10'
 translationPending: true
 ---
 
-This principle generalizes rules that Head Start programs already live under,
-which is what makes it adoptable rather than aspirational. Section 1302.33
-prohibits using screening or assessment to exclude children from enrollment, or
-to rank, compare or evaluate individual children for rewards or sanctions.
-Section 1302.17 prohibits expulsion for behavior. Neither rule was written with
-AI in mind, and neither needs to have been. Both say the same thing: an
-instrument produces information, and information is not a decision.
+Este principio generaliza reglas bajo las cuales los programas de Head Start
+(el programa federal de educación temprana) ya viven, y eso es lo que lo hace
+adoptable en lugar de aspiracional. La sección 1302.33 prohíbe usar un tamizaje
+o una evaluación para excluir a un niño de la inscripción, o para clasificar,
+comparar o evaluar a niños individuales con el fin de premiarlos o
+sancionarlos. La sección 1302.17 prohíbe la expulsión por conducta. Ninguna de
+las dos reglas se escribió pensando en la IA, y ninguna necesitaba haberlo
+hecho. Las dos dicen lo mismo: un instrumento produce información, y la
+información no es una decisión.
 
-Generalized to AI, the rule reads: no AI output may be the basis for excluding,
-disenrolling, suspending or expelling a child, or for a special education
-referral, without an independent human determination on the underlying evidence.
-"Independent" is doing real work in that sentence. It means a person looks at
-what actually happened — the observations, the record, the conversation with the
-family — and reaches a conclusion that would stand on its own if the tool's
-output were removed from the file. A person who reads the score and agrees with
-it has not made an independent determination.
+Llevada a la IA, la regla dice así: ningún resultado de la IA puede ser la base
+para excluir, dar de baja, suspender o expulsar a un niño, ni para una
+referencia a educación especial, sin una determinación humana independiente
+sobre la evidencia de fondo. La palabra «independiente» está haciendo trabajo
+de verdad en esa oración. Quiere decir que una persona mira lo que en realidad
+pasó —las observaciones, el expediente, la conversación con la familia— y llega
+a una conclusión que se sostendría sola si el resultado de la herramienta se
+quitara del archivo. Una persona que lee el puntaje y está de acuerdo con él no
+ha hecho una determinación independiente.
 
-Anchoring the guardrail in existing compliance obligations rather than in novel
-ethics is deliberate. A director who has to justify this to an owner, a board or
-a licensor is not arguing about the philosophy of automated decisions. She is
-pointing at a rule her program is already required to follow and saying that a
-new tool does not create an exception to it.
+Anclar esta protección en obligaciones de cumplimiento que ya existen, y no en
+una ética nueva, es a propósito. Una directora que tiene que justificar esto
+ante un dueño, una junta o un licenciador no está discutiendo la filosofía de
+las decisiones automatizadas. Está señalando una regla que su programa ya está
+obligado a seguir y diciendo que una herramienta nueva no crea una excepción a
+ella.

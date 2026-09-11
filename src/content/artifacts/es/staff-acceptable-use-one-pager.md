@@ -1,8 +1,8 @@
 ---
-title: Staff Acceptable-Use One-Pager
+title: Hoja de uso aceptable para el personal
 locale: es
-audience: All staff
-summary: One sheet for the staff room. What you may use AI for, what you must never use it for, and what to do when you are not sure.
+audience: Todo el personal
+summary: Una hoja para el cuarto del personal. Para qué puede usar la IA, para qué nunca debe usarla y qué hacer cuando tenga dudas.
 lastUpdated: '2026-09-11'
 length: one-page
 onShelf: true
@@ -15,52 +15,59 @@ order: 4
 translationPending: true
 ---
 
-## Green light
+## Luz verde
 
-Go ahead. Use an approved AI tool for writing that names no child and says
-nothing about a child:
+Adelante. Use una herramienta de IA aprobada para escribir textos que no nombren
+a ningún niño y que no digan nada sobre un niño:
 
-- Newsletters, menus, supply lists, flyers, job postings
-- Your own questions, to help you plan: songs for circle time, an activity for
-  a rainy Tuesday, a way to explain sharing to a three-year-old
-- Making a notice shorter or easier to read
-- Translating a routine message — a reminder, a menu, a closing day
+- Boletines, menús, listas de materiales, volantes, anuncios de empleo
+- Sus propias preguntas, para ayudarle a planear: canciones para la hora del
+  círculo, una actividad para un martes lluvioso, una manera de explicarle a un
+  niño de tres años qué es compartir
+- Hacer que un aviso quede más corto o más fácil de leer
+- Traducir un mensaje de rutina: un recordatorio, un menú, un día de cierre
 
-**A person reads every word before it goes out.** Every time, no exceptions.
+**Una persona lee cada palabra antes de que salga.** Siempre, sin excepciones.
 
-For billing, enrollment, licensing paperwork and food program records, use only
-a tool on our Approved Tools Register. It is posted at [WHERE THE REGISTER IS
-KEPT]. If the tool is not on the list, it is not approved. Ask first.
+Para la facturación, la inscripción, el papeleo de la licencia y los registros
+del programa de alimentos, use solo una herramienta que esté en nuestro Registro
+de Herramientas Aprobadas. Está puesto en [DÓNDE SE GUARDA EL REGISTRO]. Si la
+herramienta no está en la lista, no está aprobada. Pregunte primero.
 
-## Red light
+## Luz roja
 
-Never, no matter how busy the day is.
+Nunca, por más ocupado que esté el día.
 
-- **Never type a child's name, photo, or anything about a child into a free
-  chatbot or a free app.** Not a first name. Not "a four-year-old in my room
-  who bites." A free tool is not an approved tool.
-- **Never use AI anywhere in a report of suspected abuse or neglect.** Not to
-  write it, not to reword it, not to check it. Those words are yours.
-- **Never use a translation app for a hard conversation** — a screening result,
-  a meeting about services, anything about a child's safety, anything about
-  whether a child qualifies for something. Ask for an interpreter and wait.
-- **Never act on what a tool says about a child until a person has looked at
-  the real evidence.** The tool does not know the child. You do.
-- **Never let AI be the reason a child is sent home, removed from the program,
-  disciplined, or turned away at enrollment.**
-- **Never let AI start or decide a referral** for special education or early
-  intervention.
-- **Never use a tool that reads children's faces, voices or bodies** to guess
-  how they feel or how interested they are.
-- **Never use a tool that scans a face or a voice to identify a child** — sign
-  in, sign out, photo tagging — and never upload children's photos, videos,
-  voices or work to a company that will use them to build its AI. Both of those
-  need a signed consent form from the family first, and it is not your job to
-  collect it.
+- **Nunca escriba el nombre de un niño, su foto ni nada sobre un niño en un
+  chatbot gratuito ni en una aplicación gratuita.** Ni el primer nombre. Ni "un
+  niño de cuatro años de mi salón que muerde". Una herramienta gratuita no es
+  una herramienta aprobada.
+- **Nunca use IA en ninguna parte de un reporte de sospecha de maltrato o
+  negligencia.** Ni para escribirlo, ni para cambiarle las palabras, ni para
+  revisarlo. Esas palabras son suyas.
+- **Nunca use una aplicación de traducción para una conversación difícil**: el
+  resultado de una evaluación, una reunión sobre servicios, cualquier cosa sobre
+  la seguridad de un niño, cualquier cosa sobre si un niño califica para algo.
+  Pida un intérprete y espere.
+- **Nunca actúe según lo que una herramienta diga sobre un niño hasta que una
+  persona haya visto la evidencia real.** La herramienta no conoce al niño.
+  Usted sí.
+- **Nunca deje que la IA sea la razón por la que se manda a un niño a casa, se
+  le saca del programa, se le disciplina o se le niega la inscripción.**
+- **Nunca deje que la IA inicie ni decida una referencia** a educación especial
+  o intervención temprana.
+- **Nunca use una herramienta que lea la cara, la voz o el cuerpo de los niños**
+  para adivinar cómo se sienten o qué tan interesados están.
+- **Nunca use una herramienta que escanee una cara o una voz para identificar a
+  un niño** —entrada, salida, etiquetado de fotos— y nunca suba fotos, videos,
+  voces ni trabajos de los niños a una empresa que los va a usar para construir
+  su IA. Las dos cosas necesitan primero un formulario de consentimiento firmado
+  por la familia, y a usted no le toca recogerlo.
 
-## Not sure?
+## ¿Tiene dudas?
 
-**Stop, and ask [NAME] at [PHONE OR EMAIL] before you type anything — asking is
-never the wrong call, and nobody here gets in trouble for asking.**
+**Deténgase y pregúntele a [NOMBRE] al [TELÉFONO O CORREO ELECTRÓNICO] antes de
+escribir nada. Preguntar nunca es la decisión equivocada, y aquí nadie se mete
+en problemas por preguntar.**
 
-Posted [DATE]. Reviewed every [12 MONTHS].
+Publicado el [FECHA]. Se revisa cada [12 MESES].

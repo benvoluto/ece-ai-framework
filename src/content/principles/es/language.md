@@ -1,33 +1,37 @@
 ---
-title: Language
+title: Idioma
 locale: es
 id: language
-name: Language
-claim: Serve the third of children who are learning two languages.
+name: Idioma
+claim: Atienda a la tercera parte de los niños que están aprendiendo dos idiomas.
 order: 6
 lastUpdated: '2026-09-10'
 translationPending: true
 ---
 
-There are 7.1 million dual language learners (DLLs) ages 0–5 in the United
-States. That is a third of all young children, and more than 20% of the
-young-child population in over half of all states. They are not a special case
-to be handled after the main guidance is written. They are the population the
-guidance is about. A framework that treats them as an appendix has already
-failed for a third of the children it covers.
+En los Estados Unidos hay 7.1 millones de estudiantes de dos idiomas (DLL, por
+sus siglas en inglés) de 0 a 5 años. Es la tercera parte de todos los niños
+pequeños, y más del 20% de la población de niños pequeños en más de la mitad de
+los estados. No son un caso especial que se atiende después de escribir la guía
+principal. Son la población de la que trata la guía. Un marco que los deja como
+apéndice ya fracasó para una tercera parte de los niños que cubre.
 
-Every AI failure mode compounds for these children. Speech recognition performs
-worse on accented speech and on child speech, and a DLL child is often both at
-once. Screening instruments require cultural and linguistic adaptation before
-their results mean anything, and a tool that scores against a norm the child was
-never part of will produce a confident number that is wrong. Translated consent
-forms are where informed consent quietly fails: the family signs, the file is
-complete, and no one in the exchange understood the same document.
+Cada forma en que la IA falla se multiplica para estos niños. El
+reconocimiento de voz funciona peor con el habla con acento y con el habla
+infantil, y un niño DLL muchas veces es las dos cosas a la vez. Los
+instrumentos de tamizaje necesitan una adaptación cultural y lingüística antes
+de que sus resultados signifiquen algo, y una herramienta que califica contra
+una norma de la que el niño nunca formó parte va a producir un número seguro de
+sí mismo y equivocado. Los formularios de consentimiento traducidos son el
+lugar donde el consentimiento informado falla en silencio: la familia firma, el
+expediente queda completo, y nadie en ese intercambio entendió el mismo
+documento.
 
-The good news for anyone who has to justify this internally is that the duty
-already exists. Section 1302.102(c)(2) requires analysis disaggregated by dual
-language learner status. So a program can require DLL-disaggregated performance
-evidence from a vendor — does this tool work as well for these children as for
-the others, and show us — as an extension of a duty it already carries, rather
-than as a new ask invented by a framework. Ask the question in those terms and
-it is much harder to wave away.
+La buena noticia, para quien tenga que justificar esto dentro de su programa,
+es que el deber ya existe. La sección 1302.102(c)(2) exige un análisis
+desglosado por condición de estudiante de dos idiomas. Así que un programa
+puede exigirle a un proveedor evidencia de desempeño desglosada por DLL —¿esta
+herramienta funciona igual de bien para estos niños que para los demás?,
+muéstrenmelo— como una extensión de un deber que ya carga, y no como una
+exigencia nueva inventada por un marco. Haga la pregunta en esos términos y
+será mucho más difícil que se la quiten de encima.

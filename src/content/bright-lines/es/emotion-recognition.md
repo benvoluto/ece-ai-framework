@@ -1,11 +1,11 @@
 ---
-title: Emotion recognition on children
+title: Reconocimiento de emociones en niños
 locale: es
 number: 1
 order: 1
 lastUpdated: '2026-09-10'
-rule: Do not use emotion, affect, or engagement recognition on children.
-shortRule: No tool that reads a child's face, voice, or body to infer how they feel or how engaged they are.
+rule: No use reconocimiento de emociones, afecto o nivel de participación en niños.
+shortRule: Ninguna herramienta que lea la cara, la voz o el cuerpo de un niño para deducir cómo se siente o cuánto participa.
 governs: ['development', 'standing', 'consequence']
 authorities:
   - 'EU AI Act, Article 5(1)(f) — prohibits emotion inference in education institutions'
@@ -13,22 +13,25 @@ authorities:
 translationPending: true
 ---
 
-This covers any tool that claims to read a child's face, voice, posture, or
-movement and report back how that child feels or how engaged they are, whatever
-the feature is called. Attention scoring, mood tracking, engagement analytics and
-frustration detection are the same thing under different names.
+Esto abarca cualquier herramienta que diga leer la cara, la voz, la postura o el
+movimiento de un niño e informar cómo se siente ese niño o cuánto está
+participando, sea cual sea el nombre que le pongan a la función. Puntajes de
+atención, seguimiento del estado de ánimo, análisis de participación y detección
+de frustración son lo mismo con nombres distintos.
 
-The European Union has already prohibited this outright. Article 5(1)(f) of the
-EU AI Act bars emotion inference in education institutions, and it reaches
-placing a system on the market and putting it into service — not only the end
-use — so it binds vendors, not just the programs that buy from them. There is
-no United States analogue to that prohibition. That absence is precisely why the
-field should write one for itself rather than wait.
+La Unión Europea ya lo prohibió por completo. El Artículo 5(1)(f) del EU AI Act
+(la ley europea de inteligencia artificial) prohíbe deducir emociones en
+instituciones educativas, y alcanza tanto poner un sistema en el mercado como
+ponerlo en servicio —no solo el uso final—, así que obliga a los proveedores, no
+únicamente a los programas que les compran. En Estados Unidos no existe una
+prohibición equivalente. Esa ausencia es justamente la razón por la que el campo
+debería escribir la suya en vez de esperar.
 
-The mechanism of harm is documented, and it is not speculative. Halberstadt and
-colleagues (2020) found that prospective teachers were 1.36 times more likely to
-show racialized anger bias toward Black children's faces. Human raters carry that
-bias; the training labels those raters produce carry it; and the models trained
-on those labels learn it. A system built this way does not remove adult
-misreading of a child. It industrializes it, attaches a number to it, and files
-it in the child's record.
+El mecanismo del daño está documentado y no es especulación. Halberstadt y sus
+colegas (2020) encontraron que los futuros maestros tenían 1.36 veces más
+probabilidad de mostrar un sesgo racializado de enojo ante las caras de niños
+negros. Las personas que califican cargan ese sesgo; las etiquetas de
+entrenamiento que esas personas producen lo cargan; y los modelos entrenados con
+esas etiquetas lo aprenden. Un sistema construido así no elimina la mala lectura
+que un adulto hace de un niño. La industrializa, le pone un número y la archiva
+en el expediente del niño.

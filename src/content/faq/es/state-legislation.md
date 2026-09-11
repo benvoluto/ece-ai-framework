@@ -1,6 +1,6 @@
 ---
-title: States and AI legislation
-question: "Aren't states already legislating on AI in early childhood?"
+title: Los estados y la legislación sobre IA
+question: "¿Los estados no están legislando ya sobre la IA en la primera infancia?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 1
@@ -9,19 +9,23 @@ homeOrder: 1
 translationPending: true
 ---
 
-No. Not one has.
+No. Ni uno solo.
 
-FutureEd tracks 77 AI-in-education bills across 27 states this session. MultiState
-counts 134 across 31. Neither tracker contains a single pre-K, preschool, child
-care, or Head Start provision. State education-department AI guidance is now
-widespread, and it is entirely K-12-framed.
+FutureEd le sigue la pista a 77 proyectos de ley sobre IA en educación en 27
+estados en esta sesión legislativa. MultiState cuenta 134 en 31 estados. Ninguno
+de los dos rastreadores contiene una sola disposición sobre pre-K, preescolar,
+cuidado infantil o Head Start (el programa federal de educación temprana). La
+orientación sobre IA de los departamentos estatales de educación ya está en todas
+partes, y está escrita entera para K-12 (de kínder a doceavo grado).
 
-What *is* moving fast is state law on chatbots, biometrics, and minors' data —
-14 chatbot laws enacted in the 2026 term alone — and all of it is written for
-adolescents. A statute drafted around a teenager who can recognize a chatbot,
-close the app and tell someone does not describe a three-year-old.
+Lo que *sí* avanza rápido son las leyes estatales sobre chatbots, biometría y
+datos de menores —14 leyes sobre chatbots aprobadas solo en el período de 2026—
+y todas están escritas pensando en adolescentes. Una ley redactada alrededor de
+un joven que puede reconocer un chatbot, cerrar la aplicación y contárselo a
+alguien no describe a un niño de tres años.
 
-That gap is also an opportunity. Child safety is the one lane where state AI law
-is explicitly protected from federal preemption efforts. A framework built on
-child-safety and child-privacy obligations therefore sits on the most durable
-ground available.
+Ese vacío también es una oportunidad. La seguridad infantil es el único carril
+donde la ley estatal sobre IA está protegida de forma explícita frente a los
+intentos federales de anularla. Un marco construido sobre obligaciones de
+seguridad y privacidad de los niños se apoya, por eso, en el terreno más firme
+que hay.

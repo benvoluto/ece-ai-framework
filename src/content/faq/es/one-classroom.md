@@ -1,6 +1,6 @@
 ---
-title: One classroom
-question: "We're one classroom. Isn't this for big organizations?"
+title: Un solo salón
+question: "Somos un solo salón. ¿Esto no es para organizaciones grandes?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 4
@@ -9,19 +9,21 @@ homeOrder: 4
 translationPending: true
 ---
 
-It is written for you first. The modal early childhood provider is a single site
-where one person is the director, the compliance officer, the HR department and
-the IT department — or a home-based provider who is the entire organization.
-That is the reader every page here assumes: no lawyer, no IT department, about
-twenty minutes.
+Está escrito para usted primero. El programa de primera infancia más común es un
+solo local donde una persona es la directora, la encargada de cumplimiento, el
+departamento de recursos humanos y el departamento de tecnología; o una
+proveedora en su propia casa que es toda la organización. Ese es el lector que
+supone cada página de aquí: sin abogado, sin departamento de tecnología, unos
+veinte minutos.
 
-So the artifacts are tiered by provider capacity as well as by risk. The same
-guidance becomes a one-page signed document for a family child care home, a
-six-page policy for a center, and a governance charter with contract riders for
-a multi-site operator. The principles and the bright lines do not change across
-those three. Everything else does.
+Por eso los documentos están escalonados por la capacidad del proveedor, no solo
+por el riesgo. La misma guía se vuelve un documento firmado de una página para un
+hogar de cuidado infantil familiar, una política de seis páginas para un centro,
+y una carta de gobernanza con cláusulas contractuales para una organización con
+varias sedes. Los principios y los límites infranqueables no cambian entre esos
+tres. Todo lo demás sí.
 
-The [one-page AI policy](/policies) exists precisely for the single classroom.
-Read it, fill in your program name, sign it, date it, and you have done the
-thing. A forty-page framework gets downloaded once; a one-pager someone signs
-gets adopted.
+La [política de IA de una página](/es/policies) existe justamente para el salón
+único. Léala, escriba el nombre de su programa, fírmela, póngale la fecha y ya
+está hecho. Un marco de cuarenta páginas se descarga una vez; una hoja de una
+página que alguien firma sí se adopta.

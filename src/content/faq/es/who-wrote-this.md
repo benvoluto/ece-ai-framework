@@ -1,6 +1,6 @@
 ---
-title: Who wrote this
-question: "Who wrote this, and why should we trust it?"
+title: Quién escribió esto
+question: "¿Quién escribió esto y por qué deberíamos confiar en ello?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 12
@@ -8,30 +8,33 @@ onHome: false
 translationPending: true
 ---
 
-The honest answer is that you should not trust it yet, and this page is where we
-say so rather than somewhere small at the bottom.
+La respuesta honesta es que todavía no debería confiar en esto, y esta página es
+donde lo decimos, en lugar de esconderlo en letra chica al final.
 
-This is an unreviewed working draft. There is no governing body behind it. No
-counsel has reviewed any part of it. Who convenes the body that would own this
-work is an open question that has not been decided, and we are not going to
-decorate the page with names to make it look otherwise.
+Este es un borrador de trabajo sin revisar. No hay ningún organismo rector
+detrás. Ningún abogado ha revisado ninguna parte. Quién convoca al organismo que
+sería dueño de este trabajo es una pregunta abierta que no se ha decidido, y no
+vamos a adornar la página con nombres para aparentar lo contrario.
 
-What we can tell you is what the process has to be, because the pattern that
-earns legitimacy in a neutral field resource is known:
+Lo que sí le podemos decir es cómo tiene que ser el proceso, porque el patrón que
+le da legitimidad a un recurso neutral del campo ya se conoce:
 
-- a named chair with standing outside the technology conversation
-- a cross-constituency body, with family child care providers and center
-  directors seated as members rather than consulted
-- Head Start grantee leadership, the resource and referral network, and state
-  child care administrators at the table
-- a research partner
-- open funders
-- a published sequence: consensus principles first, then operationalized
-  standards, then research
+- una presidencia con nombre y con autoridad reconocida fuera de la conversación
+  sobre tecnología
+- un organismo con representación de todos los sectores, donde las proveedoras de
+  cuidado infantil familiar y las directoras de centros sean miembros y no solo
+  gente a la que se consulta
+- el liderazgo de los concesionarios de Head Start (el programa federal de
+  educación temprana), la red de recursos y referencias, y los administradores
+  estatales de cuidado infantil sentados a la mesa
+- un socio de investigación
+- financiadores declarados abiertamente
+- una secuencia publicada: primero los principios de consenso, luego los
+  estándares llevados a la práctica, luego la investigación
 
-None of that is in place. Until it is, judge this the way you would judge any
-unsigned document: by whether every claim on it carries the statute, the
-regulation or the evidence that makes it defensible. That is why the provenance
-is attached to each bright line, and why the [open questions](/about) are
-published rather than smoothed over. Where something needs verifying before it
-should be relied on, the page says so.
+Nada de eso existe todavía. Hasta que exista, juzgue esto como juzgaría cualquier
+documento sin firma: por si cada afirmación que trae carga la ley, el reglamento
+o la evidencia que la hace defendible. Por eso la procedencia va adjunta a cada
+límite infranqueable, y por eso las [preguntas abiertas](/es/about) están
+publicadas en vez de disimuladas. Donde algo hay que verificarlo antes de
+apoyarse en ello, la página lo dice.

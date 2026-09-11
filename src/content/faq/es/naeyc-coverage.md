@@ -1,6 +1,6 @@
 ---
-title: Existing field guidance
-question: "Doesn't NAEYC already cover this?"
+title: La orientación que ya existe en el campo
+question: "¿Esto no lo cubre ya NAEYC?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 2
@@ -9,16 +9,17 @@ homeOrder: 2
 translationPending: true
 ---
 
-Not yet. The field's flagship technology position statement is fourteen years
-old. It was written in 2012 and it predates the smartphone-saturated classroom,
-let alone a generative model drafting a learning story from a photograph of a
-child.
+Todavía no. La declaración de posición sobre tecnología que es la referencia
+principal del campo tiene catorce años. Se escribió en 2012, antes del salón
+saturado de teléfonos inteligentes, y mucho antes de un modelo generativo que
+redacta una historia de aprendizaje a partir de la foto de un niño.
 
-This is not a criticism of the field's authorities. It is a statement of where
-the gap is. Nothing in the existing position statement tells a director whether
-to turn off an AI feature that arrived by default in an app she already pays
-for, or what to require of the vendor before she turns it on.
+Esto no es una crítica a las autoridades del campo. Es decir dónde está el
+hueco. Nada en la declaración de posición actual le dice a una directora si debe
+apagar una función de IA que llegó ya activada en una aplicación que ella
+ya paga, ni qué exigirle al proveedor antes de encenderla.
 
-This site is written to fill that gap, not to replace the field's authorities.
-If NAEYC, Zero to Three or a comparable body takes this work up and publishes
-its own, that is the outcome we want.
+Este sitio está escrito para llenar ese hueco, no para reemplazar a las
+autoridades del campo. Si NAEYC (la asociación nacional de educación de la
+primera infancia), Zero to Three o un organismo comparable retoma este trabajo y
+publica el suyo, ese es el resultado que queremos.

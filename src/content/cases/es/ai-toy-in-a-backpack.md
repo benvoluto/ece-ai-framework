@@ -1,11 +1,11 @@
 ---
-title: An AI toy arrives in a child's backpack
+title: Llega un juguete con IA en la mochila de un niño
 locale: es
 lastUpdated: '2026-09-10'
 order: 9
-situation: A child arrives with an AI-enabled toy from home, and it is in the classroom before anyone has decided anything about it.
-atStake: Not yet drafted.
-whatToDo: Not yet drafted.
+situation: Un niño llega de su casa con un juguete que funciona con IA, y ya está en el salón antes de que nadie haya decidido nada al respecto.
+atStake: Todavía no está redactado.
+whatToDo: Todavía no está redactado.
 governs: []
 brightLines: []
 settings: []
@@ -13,15 +13,17 @@ status: to-draft
 translationPending: true
 ---
 
-This case is named for launch but is not written yet.
+Este caso está nombrado para el lanzamiento, pero todavía no está escrito.
 
-It will cover the device the program never selected, never contracted for and
-cannot audit — a connected toy that may listen, may record and may talk back,
-brought in by a family with entirely good intentions. The case has to give a
-director something she can actually say to that family, and something she can
-put in a handbook, without treating a gift as an accusation.
+Va a tratar sobre el aparato que el programa nunca eligió, nunca contrató y no
+puede auditar: un juguete conectado que puede escuchar, puede grabar y puede
+contestar, traído por una familia con toda la buena intención. El caso tiene
+que darle a una directora algo que de verdad pueda decirle a esa familia, y
+algo que pueda poner en el manual, sin tratar un regalo como si fuera una
+acusación.
 
-PIRG's Trouble in Toyland 2025 findings are the most vivid citable evidence
-available for this one, and the case will be built on them. It is not drafted
-because those findings should be read in full and cited precisely before they
-appear here, rather than summarized from secondary coverage.
+Los hallazgos del informe Trouble in Toyland 2025 de PIRG son la evidencia
+citable más contundente que existe para este caso, y el caso se va a construir
+sobre ellos. No está redactado porque esos hallazgos se deben leer completos y
+citar con precisión antes de aparecer aquí, en vez de resumirlos a partir de
+notas de prensa.

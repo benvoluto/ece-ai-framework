@@ -1,6 +1,6 @@
 ---
-title: Vendor compliance claims
-question: "Our vendor says they're FERPA compliant and SOPIPA compliant. Isn't that enough?"
+title: Lo que el proveedor dice sobre cumplimiento
+question: "Nuestro proveedor dice que cumple con FERPA y con SOPIPA. ¿No basta con eso?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 6
@@ -8,32 +8,37 @@ onHome: false
 translationPending: true
 ---
 
-Those two claims are doing less work than they sound like they are, and in
-California one of them may be citing the wrong statute altogether.
+Esas dos afirmaciones hacen mucho menos trabajo del que parece, y en California
+una de ellas puede estar citando la ley equivocada.
 
-**FERPA probably does not govern your program.** The Family Educational Rights
-and Privacy Act reaches state pre-K run by a school district, and Head Start that
-is itself a FERPA-covered educational agency. It does not reach a private or
-community child care center, a family child care home, or a Head Start program
-run by a community action agency, nonprofit, tribe or private entity. A vendor
-telling a private center it is FERPA compliant has answered a question that
-center did not need to ask.
+**Es probable que FERPA no rija su programa.** La Family Educational Rights and
+Privacy Act (FERPA, la ley federal de privacidad de los expedientes educativos)
+alcanza al pre-K estatal que opera un distrito escolar, y a un programa de Head
+Start (el programa federal de educación temprana) que sea en sí mismo una agencia
+educativa cubierta por FERPA. No alcanza a un centro de cuidado infantil privado
+o comunitario, ni a un hogar de cuidado infantil familiar, ni a un programa de
+Head Start que opere una agencia de acción comunitaria, una organización sin
+fines de lucro, una tribu o una entidad privada. El proveedor que le dice a un
+centro privado que cumple con FERPA le contestó una pregunta que ese centro no
+necesitaba hacer.
 
-**In California, SOPIPA is very likely the wrong law.** AB 2799 (2016) did not
-amend the Student Online Personal Information Protection Act. It added a separate
-statute at Business and Professions Code §22586 — the Early Learning Personal
-Information Protection Act, ELPIPA — covering operators of services used and
-marketed primarily for preschool and pre-K purposes, with biometric information
-expressly included in "covered information." An early childhood vendor in
-California may be regulated by ELPIPA and not by SOPIPA. Templates citing
-SOPIPA or AB 1584 are citing the wrong law.
+**En California, SOPIPA es muy probablemente la ley equivocada.** La AB 2799
+(2016) no modificó la Student Online Personal Information Protection Act
+(SOPIPA). Creó una ley aparte, en el Business and Professions Code §22586: la
+Early Learning Personal Information Protection Act, ELPIPA, que cubre a los
+operadores de servicios usados y promovidos principalmente para fines de
+preescolar y pre-K, y que incluye de manera expresa la información biométrica
+dentro de la «información cubierta». Un proveedor de primera infancia en
+California puede estar regulado por ELPIPA y no por SOPIPA. Las plantillas que
+citan SOPIPA o la AB 1584 citan la ley equivocada.
 
-**COPPA is the law that actually reaches every setting** — but it binds the
-vendor, not you. The Children's Online Privacy Protection Act regulates operators
-of services directed to children under 13 and does not care whether your
-program is a school. Your leverage over it runs through your contract, which is
-why this site gives you [ten questions to ask](/vendors) and, for larger
-operators, [model contract riders](/multi-site).
+**COPPA es la ley que sí llega a todos los entornos**, pero obliga al proveedor,
+no a usted. La Children's Online Privacy Protection Act (COPPA, la ley federal de
+privacidad en línea de los niños) regula a los operadores de servicios dirigidos
+a menores de 13 años y no le importa si su programa es una escuela o no. Lo que
+usted puede exigir ahí pasa por su contrato, y por eso este sitio le da [diez
+preguntas que hacer](/es/vendors) y, para los operadores más grandes,
+[cláusulas contractuales modelo](/es/multi-site).
 
-So "we're compliant" is the beginning of the conversation. Ask: compliant with
-which statute, and does that statute reach a program like mine?
+Así que «cumplimos» es el principio de la conversación, no el final. Pregunte:
+¿cumplen con cuál ley, y esa ley alcanza a un programa como el mío?

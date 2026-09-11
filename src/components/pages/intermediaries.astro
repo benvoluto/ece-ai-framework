@@ -10,19 +10,61 @@ const [entry] = await getCollection('pages', (e) => e.id === `${locale}/intermed
 const { Content } = await render(entry);
 const d = entry.data;
 
-const contents = [
-  { id: 'why-a-separate-track', label: 'Why this is a separate track' },
-  { id: 'where-ai-helps', label: 'Where AI helps in intermediary work' },
-  { id: 'the-standard', label: "The standard for the intermediary's own AI" },
-  { id: 'co-branding', label: 'Co-branding: delivering the provider artifacts under your own name' },
-  { id: 'the-artifact', label: 'The Intermediary AI Practice Standard' },
-];
+const copy = {
+  en: {
+    title: 'For intermediaries',
+    whoFor1:
+      'This page is for a community development financial institution (CDFI), a resource and referral agency (R&R or CCR&R), a training and technical assistance (T&TA) provider, a coaching network or a shared services alliance. If you are a director or a family child care provider, the rest of the site is written for you — start at',
+    contents: [
+      { id: 'why-a-separate-track', label: 'Why this is a separate track' },
+      { id: 'where-ai-helps', label: 'Where AI helps in intermediary work' },
+      { id: 'the-standard', label: "The standard for the intermediary's own AI" },
+      { id: 'co-branding', label: 'Co-branding: delivering the provider artifacts under your own name' },
+      { id: 'the-artifact', label: 'The Intermediary AI Practice Standard' },
+    ],
+    whereNext: 'Where to go next',
+    nextGoodUses: 'The four intermediary uses in full',
+    nextGoodUsesTail: ', each with its tier and its guardrail.',
+    nextCase: 'The lender is offered an AI underwriting model',
+    nextCaseTail: ' — the worked case behind the lending standard.',
+    nextPoliciesTail: '— the artifact set, including the Intermediary AI Practice Standard.',
+    nextAnd: 'and',
+    nextBrightLinesTail:
+      '— the two things that do not change when you deliver this under your own name.',
+    nextVendorsTail: '— the ten questions, which an intermediary can ask on behalf of a whole portfolio.',
+  },
+  es: {
+    title: 'Para intermediarios',
+    whoFor1:
+      'Esta página es para una institución financiera de desarrollo comunitario (CDFI, por sus siglas en inglés), una agencia de recursos y referencias (R&R o CCR&R), un proveedor de capacitación y asistencia técnica (T&TA), una red de coaching o una alianza de servicios compartidos. Si usted es directora o proveedora de cuidado infantil familiar, el resto del sitio está escrito para usted: empiece en',
+    contents: [
+      { id: 'why-a-separate-track', label: 'Por qué esta es una vía aparte' },
+      { id: 'where-ai-helps', label: 'Dónde ayuda la IA en el trabajo de un intermediario' },
+      { id: 'the-standard', label: 'El estándar para la propia IA del intermediario' },
+      { id: 'co-branding', label: 'Marca compartida: entregar los documentos para proveedores bajo su propio nombre' },
+      { id: 'the-artifact', label: 'El estándar de práctica de IA para intermediarios' },
+    ],
+    whereNext: 'A dónde ir después',
+    nextGoodUses: 'Los cuatro usos de intermediarios, completos',
+    nextGoodUsesTail: ', cada uno con su nivel y su límite de protección.',
+    nextCase: 'Al prestamista le ofrecen un modelo de IA para evaluar el crédito',
+    nextCaseTail: ' — el caso trabajado que está detrás del estándar de préstamos.',
+    nextPoliciesTail: '— el conjunto de documentos, incluido el Estándar de práctica de IA para intermediarios.',
+    nextAnd: 'y',
+    nextBrightLinesTail:
+      '— las dos cosas que no cambian cuando usted entrega esto bajo su propio nombre.',
+    nextVendorsTail: '— las diez preguntas, que un intermediario puede hacer en nombre de toda una cartera.',
+  },
+};
+
+const c = copy[locale] ?? copy.en;
+const contents = c.contents;
 ---
 
 <BaseLayout title={d.title} description={d.description} locale={locale}>
   <PageHeader
     caption={t(locale, 'nav.intermediaries')}
-    title="For intermediaries"
+    title={c.title}
     lede={d.lede}
     locale={locale}
     lastUpdated={d.lastUpdated}
@@ -30,11 +72,7 @@ const contents = [
 
   <div class="govuk-inset-text">
     <p class="govuk-body govuk-!-margin-bottom-0">
-      This page is for a community development financial institution (CDFI), a
-      resource and referral agency (R&amp;R or CCR&amp;R), a training and technical
-      assistance (T&amp;TA) provider, a coaching network or a shared services
-      alliance. If you are a director or a family child care provider, the rest
-      of the site is written for you — start at{' '}
+      {c.whoFor1}{' '}
       <a class="govuk-link" href={localePath(locale, '/start')}>{t(locale, 'nav.start')}</a>.
     </p>
   </div>
@@ -54,32 +92,32 @@ const contents = [
 
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
 
-  <h2 class="govuk-heading-m" id="where-to-next">Where to go next</h2>
+  <h2 class="govuk-heading-m" id="where-to-next">{c.whereNext}</h2>
 
   <ul class="govuk-list govuk-list--bullet">
     <li>
       <a class="govuk-link" href={`${localePath(locale, '/good-uses')}#for-intermediaries`}>
-        The four intermediary uses in full
-      </a>, each with its tier and its guardrail.
+        {c.nextGoodUses}
+      </a>{c.nextGoodUsesTail}
     </li>
     <li>
       <a class="govuk-link" href={`${localePath(locale, '/cases')}#cdfi-underwriting-model`}>
-        The lender is offered an AI underwriting model
-      </a> — the worked case behind the lending standard.
+        {c.nextCase}
+      </a>{c.nextCaseTail}
     </li>
     <li>
       <a class="govuk-link" href={localePath(locale, '/policies')}>{t(locale, 'nav.policies')}</a>
-      {' '}— the artifact set, including the Intermediary AI Practice Standard.
+      {' '}{c.nextPoliciesTail}
     </li>
     <li>
       <a class="govuk-link" href={localePath(locale, '/bright-lines')}>{t(locale, 'nav.brightLines')}</a>
-      {' '}and{' '}
+      {' '}{c.nextAnd}{' '}
       <a class="govuk-link" href={localePath(locale, '/principles')}>{t(locale, 'nav.principles')}</a>
-      {' '}— the two things that do not change when you deliver this under your own name.
+      {' '}{c.nextBrightLinesTail}
     </li>
     <li>
       <a class="govuk-link" href={localePath(locale, '/vendors')}>{t(locale, 'nav.vendors')}</a>
-      {' '}— the ten questions, which an intermediary can ask on behalf of a whole portfolio.
+      {' '}{c.nextVendorsTail}
     </li>
   </ul>
 </BaseLayout>

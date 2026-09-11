@@ -1,38 +1,40 @@
 ---
-title: 'Failure mode two: the unmanaged yes'
+title: 'Modo de falla dos: el sí sin gobernanza'
 locale: es
 kind: failure-mode
 order: 2
 lastUpdated: '2026-09-10'
-summary: Scale cuts the other way just as easily. Nobody has an inventory, no two sites operate to the same standard, and governance debt compounds faster than at a single site because there are more people able to say yes.
+summary: La escala corta igual de fácil en el otro sentido. Nadie tiene un inventario, no hay dos sedes que operen con el mismo estándar, y la deuda de gobernanza se acumula más rápido que en una sola sede porque hay más gente con capacidad de decir que sí.
 relatedArtifacts: ['governance-charter', 'pilot-protocol']
 translationPending: true
 ---
 
-Scale cuts the other way just as easily, and the second failure mode is quieter
-than the first because every individual step in it looks reasonable.
+La escala corta igual de fácil en el otro sentido, y el segundo modo de falla es
+más silencioso que el primero porque cada paso individual parece razonable.
 
-One site pilots a camera vendor. Another turns on an observation and
-documentation app's AI feature because the vendor switched it on by default and
-nobody read the release note. Procurement buys an enterprise chatbot for the
-central office, on the sensible theory that a paid account with a contract is
-safer than a free one. None of these decisions is mad. No one of them, by
-itself, is a scandal.
+Una sede hace un piloto con un proveedor de cámaras. Otra activa la función de IA
+de una aplicación de observación y documentación porque el proveedor la encendió
+por defecto y nadie leyó la nota de versión. El área de compras adquiere un
+chatbot empresarial para la oficina central, con la teoría sensata de que una
+cuenta pagada y con contrato es más segura que una gratuita. Ninguna de estas
+decisiones es una locura. Ninguna de ellas, por sí sola, es un escándalo.
 
-What is missing is the thing that only exists at the organization level. Nobody
-has an inventory. No two sites are operating to the same standard, so the answer
-to "what do you do about AI?" depends entirely on which director is asked. The
-written agreement covering one site's tool does not cover the same tool at the
-next site, and nobody has checked whether it needs to.
+Lo que falta es lo que solo existe a nivel de la organización. Nadie tiene un
+inventario. No hay dos sedes que operen con el mismo estándar, así que la
+respuesta a «¿qué hacen ustedes con la IA?» depende enteramente de a qué director
+se le pregunte. El acuerdo por escrito que cubre la herramienta de una sede no
+cubre la misma herramienta en la sede siguiente, y nadie ha revisado si hace
+falta que la cubra.
 
-And governance debt compounds faster here than at a single site, for a
-structural reason: **there are more people able to say yes.** A single-site
-director accumulates one director's worth of unreviewed decisions. A fourteen-site
-organization accumulates fourteen directors' worth, plus procurement's, plus
-whatever the vendor turned on without asking — and it accumulates them in
-parallel, so the gap between what the policy says and what is actually running
-widens faster every quarter that nobody looks.
+Y la deuda de gobernanza se acumula más rápido aquí que en una sola sede, por una
+razón estructural: **hay más gente con capacidad de decir que sí.** El director de
+una sola sede acumula las decisiones sin revisar de un solo director. Una
+organización de catorce sedes acumula las de catorce directores, más las del área
+de compras, más lo que el proveedor haya encendido sin preguntar, y las acumula
+en paralelo, de modo que la distancia entre lo que dice la política y lo que de
+verdad está funcionando se ensancha más rápido cada trimestre que nadie mira.
 
-The fix is not a longer policy. It is a register that is one register, an
-approval authority that is written down and actually delegated, and a rule that
-nothing above Tier 1 goes live anywhere until it is on the list.
+El arreglo no es una política más larga. Es un registro que sea un solo registro,
+una autoridad de aprobación que esté por escrito y realmente delegada, y una
+regla de que nada por encima del Nivel 1 entra en funcionamiento en ninguna parte
+hasta que esté en la lista.

@@ -1,8 +1,8 @@
 ---
-title: 'Consent: Images, Voice & Model Training'
+title: 'Consentimiento: imágenes, voz y entrenamiento de modelos'
 locale: es
-audience: Families
-summary: A separate form with three separate questions — photos and video we keep, face and voice recognition, and any company use of your child's images, voice, work or records to build AI. Each one is yes or no on its own, and you can change your answer.
+audience: Familias
+summary: 'Un formulario aparte con tres preguntas separadas: las fotos y los videos que guardamos, el reconocimiento de cara y de voz, y el uso que una empresa haga de las imágenes, la voz, los trabajos o los registros de su hijo o hija para construir IA. Cada una se contesta sí o no por su cuenta, y usted puede cambiar su respuesta.'
 lastUpdated: '2026-09-10'
 order: 6
 length: short
@@ -13,113 +13,126 @@ phase: 2
 translationPending: true
 ---
 
-## This form is separate, and you can say no
+## Este formulario es aparte, y usted puede decir que no
 
-[PROGRAM NAME] is asking you three questions about pictures, video and
-recordings of your child. Each question is separate. You may say yes to one and
-no to another.
+[NOMBRE DEL PROGRAMA] le está haciendo tres preguntas sobre fotos, videos y
+grabaciones de su hijo o hija. Cada pregunta es aparte. Usted puede decir que sí
+a una y que no a otra.
 
-**Saying no changes nothing about your child's care.** Your child keeps the same
-spot, the same room, the same teachers and the same services. Nothing here is a
-condition of enrollment, and nothing here affects a subsidy or a payment.
+**Decir que no no cambia nada del cuidado de su hijo o hija.** Su hijo o hija
+mantiene el mismo lugar, el mismo salón, los mismos maestros y los mismos
+servicios. Nada de esto es condición para inscribirse, y nada de esto afecta un
+subsidio ni un pago.
 
-This form is not part of your enrollment paperwork and it is not part of our
-Family Notice. The Family Notice tells you what we do. This form asks your
-permission. They are not the same thing, so we keep them apart.
+Este formulario no es parte de su papeleo de inscripción y no es parte de
+nuestro Aviso para las familias. El Aviso para las familias le dice lo que
+hacemos. Este formulario le pide su permiso. No son lo mismo, y por eso los
+mantenemos separados.
 
-We know this form comes from the people who care for your child every day, and
-that can make no a hard word to say. Say it anyway if it is your answer. The
-staff in your child's room do not need to see this form. [NAME] keeps it and
-tells staff only what they must do.
+Sabemos que este formulario viene de las personas que cuidan a su hijo o hija
+todos los días, y eso puede hacer que "no" sea una palabra difícil de decir.
+Dígala de todos modos si esa es su respuesta. El personal del salón de su hijo o
+hija no necesita ver este formulario. [NOMBRE] lo guarda y solo le dice al
+personal lo que tiene que hacer.
 
-## What "training" means
+## Qué significa "entrenar"
 
-Companies that make software collect pictures, words and voices. Some of them
-feed that material into their AI so the AI gets better at its job. That is called
-**training**.
+Las empresas que hacen programas de computadora juntan fotos, palabras y voces.
+Algunas le dan ese material a su IA para que la IA haga mejor su trabajo. A eso
+se le llama **entrenar**.
 
-If your child's photo is used for training, the photo becomes part of what the
-software learned from. Deleting the photo later does not unteach the software.
-That is why this question is on its own, and why the answer we give a company
-without asking you first is no.
+Si la foto de su hijo o hija se usa para entrenar, la foto pasa a ser parte de
+lo que el programa aprendió. Borrar la foto después no le quita al programa lo
+que ya aprendió. Por eso esta pregunta va aparte, y por eso la respuesta que le
+damos a una empresa sin preguntarle a usted primero es no.
 
-## Your three choices
+## Sus tres opciones
 
-**1. Photos and video that we keep.** We take photos and short videos of children
-during the day. We use them for [DAILY NOTES TO FAMILIES, YOUR CHILD'S PORTFOLIO,
-AND OUR OWN RECORDS]. We keep them in [WHERE THEY ARE STORED] for [HOW LONG]. We
-do not sell them. We do not post them in public or use them in advertising unless
-you tell us so separately, in writing.
+**1. Fotos y videos que nosotros guardamos.** Tomamos fotos y videos cortos de
+los niños durante el día. Los usamos para [LAS NOTAS DIARIAS PARA LAS FAMILIAS,
+EL PORTAFOLIO DE SU HIJO O HIJA Y NUESTROS PROPIOS REGISTROS]. Los guardamos en
+[DÓNDE SE GUARDAN] por [CUÁNTO TIEMPO]. No los vendemos. No los publicamos en
+público ni los usamos en publicidad, a menos que usted nos lo diga aparte, por
+escrito.
 
-**2. Face and voice recognition.** Some tools measure the shape of a face or the
-sound of a voice and turn it into a number that picks your child out from other
-children. Programs use this to tag photos automatically or to check children in
-and out. This is called biometric information, and it is different from an
-ordinary picture: a picture shows your child, a face measurement identifies your
-child. [PROGRAM NAME] uses [NAME THE KIND OF TOOL, IN ONE SENTENCE — OR WRITE
-"NO TOOL THAT DOES THIS"]. If we ever start, we will ask you before we turn it on.
+**2. Reconocimiento de cara y de voz.** Algunas herramientas miden la forma de
+una cara o el sonido de una voz y lo convierten en un número que distingue a su
+hijo o hija de los demás niños. Los programas usan esto para etiquetar fotos
+automáticamente o para registrar la entrada y la salida de los niños. A esto se
+le llama información biométrica, y es distinta de una foto común: una foto
+muestra a su hijo o hija; una medida de la cara identifica a su hijo o hija.
+[NOMBRE DEL PROGRAMA] usa [NOMBRE EL TIPO DE HERRAMIENTA, EN UNA ORACIÓN — O
+ESCRIBA "NINGUNA HERRAMIENTA HACE ESTO"]. Si alguna vez empezamos, se lo
+preguntaremos antes de encenderla.
 
-**3. Company use of your child's material to train AI.** The companies whose
-software we use may want to use your child's images, voice, work or records to
-build or improve their AI. Federal law says we have to ask you about this
-separately — it cannot be bundled into anything else you signed. We will not
-allow it unless you check yes right here.
+**3. Que una empresa use el material de su hijo o hija para entrenar su IA.**
+Las empresas cuyos programas usamos pueden querer usar las imágenes, la voz, los
+trabajos o los registros de su hijo o hija para construir o mejorar su IA. La
+ley federal dice que tenemos que preguntarle esto por separado: no se puede
+meter dentro de otra cosa que usted ya firmó. No lo permitiremos a menos que
+usted marque que sí aquí mismo.
 
-| Your choice | Yes | No |
+| Su respuesta | Sí | No |
 | --- | --- | --- |
-| **1.** [PROGRAM NAME] may take and keep photos and video of my child, for the uses described above. |  |  |
-| **2.** [PROGRAM NAME] may use a tool that measures my child's face or voice to identify my child. |  |  |
-| **3.** A company may use my child's images, voice, work or records to train or improve its AI. |  |  |
+| **1.** [NOMBRE DEL PROGRAMA] puede tomar y guardar fotos y videos de mi hijo o hija, para los usos descritos arriba. |  |  |
+| **2.** [NOMBRE DEL PROGRAMA] puede usar una herramienta que mida la cara o la voz de mi hijo o hija para identificarlo o identificarla. |  |  |
+| **3.** Una empresa puede usar las imágenes, la voz, los trabajos o los registros de mi hijo o hija para entrenar o mejorar su IA. |  |  |
 
-A blank row means no. We will not treat silence as a yes.
+Una fila en blanco significa no. No tomaremos el silencio como un sí.
 
-## Changing your mind
+## Si cambia de opinión
 
-You can change any answer at any time, and you do not have to give a reason.
-Tell [NAME] at [PHONE] or [EMAIL], or ask for a new form and hand it back.
+Usted puede cambiar cualquier respuesta en cualquier momento, y no tiene que dar
+una razón. Dígaselo a [NOMBRE] al [TELÉFONO] o [CORREO ELECTRÓNICO], o pida un
+formulario nuevo y entréguelo.
 
-We will stop within [5 BUSINESS DAYS] and write to you to confirm what we
-stopped. Taking back permission stops what happens next. It cannot always undo
-what already happened, which is the reason question 3 matters more than it looks.
+Pararemos dentro de [5 DÍAS HÁBILES] y le escribiremos para confirmarle qué
+paramos. Retirar el permiso detiene lo que viene después. No siempre puede
+deshacer lo que ya pasó, y esa es la razón por la que la pregunta 3 importa más
+de lo que parece.
 
-## Getting records destroyed
+## Cómo pedir que se destruyan los registros
 
-If your child receives early intervention or special education services, you have
-the right to ask that records about your child be destroyed once they are no
-longer needed. This right comes from IDEA, the Individuals with Disabilities
-Education Act, and it is stronger than the school-records law most people have
-heard of.
+Si su hijo o hija recibe servicios de intervención temprana o de educación
+especial, usted tiene derecho a pedir que se destruyan los registros sobre su
+hijo o hija cuando ya no se necesiten. Este derecho viene de IDEA, la
+Individuals with Disabilities Education Act (la ley federal de educación para
+personas con discapacidades), y es más fuerte que la ley de expedientes
+escolares de la que más gente ha oído hablar.
 
-Ask [NAME]. We will tell you what we hold, what any company holds, and what we
-can have destroyed.
+Pregúntele a [NOMBRE]. Le diremos qué tenemos nosotros, qué tiene cualquier
+empresa y qué podemos hacer que se destruya.
 
-You may also ask to see the written agreement we have with any company that
-touches information about your child. Ask any time.
+Usted también puede pedir ver el acuerdo por escrito que tenemos con cualquier
+empresa que toque información sobre su hijo o hija. Pídalo en cualquier momento.
 
-## Questions
+## Preguntas
 
-[NAME], [ROLE], at [PHONE] or [EMAIL].
+[NOMBRE], [PUESTO], al [TELÉFONO] o [CORREO ELECTRÓNICO].
 
-If English is not the language you read most easily, tell us. We will get you
-this form in [LANGUAGE] and go through it with a qualified interpreter, at no
-cost to you.
+Si el inglés no es el idioma que usted lee con más facilidad, díganoslo. Le
+daremos este formulario en [IDIOMA] y lo repasaremos con usted con un intérprete
+calificado, sin ningún costo para usted.
 
 ---
 
-Child's name: [CHILD NAME]
+Nombre del niño o de la niña: [NOMBRE DEL NIÑO O NIÑA]
 
-Parent or guardian name: [PARENT NAME]
+Nombre del padre, de la madre o del tutor: [NOMBRE DEL PADRE, MADRE O TUTOR]
 
-Signature: ______________________  Date: [DATE]
+Firma: ______________________  Fecha: [FECHA]
 
-Given to the family on [DATE]. Received on [DATE]. Kept by [NAME] in [WHERE].
+Entregado a la familia el [FECHA]. Recibido el [FECHA]. Guardado por [NOMBRE] en
+[DÓNDE].
 
-## Note for [PROGRAM NAME] staff — remove this section before handing the form out
+## Nota para el personal de [NOMBRE DEL PROGRAMA] — quite esta sección antes de entregar el formulario
 
-- Hand this out on its own. Never in the enrollment packet, never stapled to the
-  photo release, never inside the Family Notice.
-- Ask again whenever a tool changes what it captures, or a company turns on a new
-  feature. A feature release is a new ask.
-- File the completed forms where you can find one in a minute. Check the boxes
-  against the Approved Tools Register before you turn anything on.
-- If a family has not returned the form, the answer is no.
+- Entréguelo solo. Nunca en el paquete de inscripción, nunca engrapado a la
+  autorización de fotos, nunca dentro del Aviso para las familias.
+- Vuelva a preguntar cada vez que una herramienta cambie lo que captura, o que
+  una empresa encienda una función nueva. El lanzamiento de una función es una
+  pregunta nueva.
+- Archive los formularios completos donde pueda encontrar uno en un minuto.
+  Compare las casillas marcadas con el Registro de Herramientas Aprobadas antes
+  de encender nada.
+- Si una familia no ha devuelto el formulario, la respuesta es no.

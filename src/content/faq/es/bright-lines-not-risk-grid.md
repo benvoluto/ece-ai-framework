@@ -1,6 +1,6 @@
 ---
-title: Why bright lines
-question: "Why bright lines instead of a risk assessment framework?"
+title: Por qué límites infranqueables
+question: "¿Por qué límites infranqueables y no un marco de evaluación de riesgos?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 8
@@ -8,24 +8,26 @@ onHome: false
 translationPending: true
 ---
 
-Because a short prohibited-use list is usable and a five-by-five
-impact-likelihood grid is not.
+Porque una lista corta de usos prohibidos se puede usar y una matriz de cinco por
+cinco de impacto y probabilidad no.
 
-Picture the reader. She is the director, the compliance officer, the HR
-department and the IT department, and she is reading this between nap time and
-pickup. Handing her a scoring matrix means handing her a second job she will not
-do. Handing her eight sentences means she can decide, today, whether the thing in
-front of her is out of bounds.
+Imagine a la lectora. Ella es la directora, la encargada de cumplimiento, el
+departamento de recursos humanos y el departamento de tecnología, y está leyendo
+esto entre la siesta y la hora de salida. Darle una matriz de puntajes es darle un
+segundo trabajo que no va a hacer. Darle ocho oraciones es dejarla decidir, hoy
+mismo, si lo que tiene enfrente está fuera de los límites.
 
-Bright lines also travel. A director has to justify a refusal to an owner or a
-board, sometimes in a meeting she did not call. "We don't do emotion recognition
-on children" is quotable. A risk score is not.
+Los límites infranqueables además viajan. Una directora tiene que justificarle una
+negativa a un dueño o a una junta directiva, a veces en una reunión que ella no
+convocó. «Nosotros no hacemos reconocimiento de emociones en niños» se puede
+citar. Un puntaje de riesgo no.
 
-This is why every bright line on this site pairs the rule with the legal or
-evidentiary basis that makes it defensible — the statute, the regulation, or the
-documented evidence. The rule is short so it gets used; the basis is attached so
-it survives being challenged. See [the bright lines](/bright-lines).
+Por eso cada límite infranqueable de este sitio junta la regla con el fundamento
+legal o probatorio que la hace defendible: la ley, el reglamento o la evidencia
+documentada. La regla es corta para que se use; el fundamento va adjunto para que
+aguante cuando alguien la cuestione. Vea [los límites
+infranqueables](/es/bright-lines).
 
-Everything that is not a bright line still gets assessed — that is what the
-[tiering](/start) is for. The bright lines are the small set of things where the
-assessment has already been done and the answer does not change.
+Todo lo que no es un límite infranqueable sí se evalúa: para eso están [los
+niveles](/es/start). Los límites infranqueables son el grupo pequeño de cosas
+donde la evaluación ya está hecha y la respuesta no cambia.

@@ -15,33 +15,14 @@ const slugOf = (entry) => entry.id.replace(new RegExp(`^${locale}/`), "");
 
 /** Group by who the document is for, in the order a reader arrives in. */
 const GROUPS = [
-  {
-    id: 'single-site',
-    title: 'Family child care and single sites',
-    blurb:
-      'If only one artifact gets built well, it is the one-page policy. Print it, read it, sign it, date it.',
-    match: (d) => d.forWhom?.includes('fcc') && !d.forWhom?.includes('multi-site'),
-  },
-  {
-    id: 'centers',
-    title: 'Centers',
-    blurb:
-      'Longer, and structured so a director can delete the sections that do not apply.',
-    match: (d) => d.forWhom?.includes('center') && !d.forWhom?.includes('fcc'),
-  },
+  { id: 'single-site', match: (d) => d.forWhom?.includes('fcc') && !d.forWhom?.includes('multi-site') },
+  { id: 'centers', match: (d) => d.forWhom?.includes('center') && !d.forWhom?.includes('fcc') },
   {
     id: 'multi-site',
-    title: 'Multi-site operators, chains and Head Start grantees',
-    blurb:
-      'A governance structure and model contract language, not a longer policy. These exist because they do not make sense below a certain size.',
-    match: (d) => d.forWhom?.includes('multi-site') && !d.forWhom?.includes('fcc') && !d.forWhom?.includes('center'),
+    match: (d) =>
+      d.forWhom?.includes('multi-site') && !d.forWhom?.includes('fcc') && !d.forWhom?.includes('center'),
   },
-  {
-    id: 'intermediaries',
-    title: 'Intermediaries',
-    blurb: 'For a CDFI, a resource and referral agency, or a training and technical assistance provider.',
-    match: (d) => d.forWhom?.includes('intermediary') && !d.forWhom?.includes('fcc'),
-  },
+  { id: 'intermediaries', match: (d) => d.forWhom?.includes('intermediary') && !d.forWhom?.includes('fcc') },
 ];
 
 const grouped = GROUPS.map((group) => ({
@@ -55,34 +36,127 @@ const everyone = all.filter((entry) => !placed.has(entry.id));
 const shelf = all
   .filter((entry) => entry.data.onShelf)
   .sort((a, b) => (a.data.shelfOrder ?? 99) - (b.data.shelfOrder ?? 99));
+
+const copy = {
+  en: {
+    title: 'Policies to adopt',
+    description:
+      'Sixteen artifacts in editable formats, with fill-in markers, last-updated stamps, and a Spanish version of each. No form, no email capture.',
+    caption: 'Policies to adopt',
+    heading: 'Sixteen artifacts, not one policy',
+    lede:
+      'Every one ships editable, with fill-in markers where your own text goes, a last-updated stamp, and a Spanish version. No form, no email capture \u2014 anything that gates a policy template behind a signup loses the providers who need it most.',
+    intro1:
+      'Each document is a page you can read, a Word file you can edit, and a Markdown file you can do anything with. All three come from one source, so they cannot drift apart.',
+    intro2:
+      'Two variants of the core policy are published rather than one canonical version. That is deliberate: it lowers the stakes of choosing.',
+    notSure: 'Not sure which you need? Answer four questions.',
+    shelfHeading: 'Take what you need',
+    shelfLede: 'The four that do the most work.',
+    groups: {
+      'single-site': {
+        title: 'Family child care and single sites',
+        blurb: 'If only one artifact gets built well, it is the one-page policy. Print it, read it, sign it, date it.',
+      },
+      centers: {
+        title: 'Centers',
+        blurb: 'Longer, and structured so a director can delete the sections that do not apply.',
+      },
+      'multi-site': {
+        title: 'Multi-site operators, chains and Head Start grantees',
+        blurb: 'A governance structure and model contract language, not a longer policy. These exist because they do not make sense below a certain size.',
+      },
+      intermediaries: {
+        title: 'Intermediaries',
+        blurb: 'For a CDFI, a resource and referral agency, or a training and technical assistance provider.',
+      },
+      everyone: {
+        title: 'For any program',
+        blurb: 'These apply whatever your size.',
+      },
+    },
+    phase: 'Phase',
+    versionOf: 'version of',
+    mechanicHeading: 'The mechanic that compounds',
+    mechanicBody:
+      "Programs are asked to send back the policy they actually adopted. Within two years that makes this the only body that knows what the field's AI policies really say \u2014 a research asset, a revision input, and a legitimacy claim at once.",
+    mechanicNote:
+      'There is nowhere to send it yet. No body has been convened, and until one has, there is no one to receive it.',
+  },
+  es: {
+    title: 'Políticas para adoptar',
+    description:
+      'Dieciséis documentos en formatos editables, con espacios para llenar, fecha de última actualización y una versión en español de cada uno. Sin formularios, sin pedir su correo.',
+    caption: 'Políticas para adoptar',
+    heading: 'Dieciséis documentos, no una sola política',
+    lede:
+      'Todos se entregan editables, con espacios marcados donde va su propio texto, la fecha de la última actualización y una versión en español. Sin formularios, sin pedir su correo: cualquier cosa que ponga una plantilla de política detrás de un registro pierde justamente a los proveedores que más la necesitan.',
+    intro1:
+      'Cada documento es una página que usted puede leer, un archivo de Word que puede editar y un archivo Markdown con el que puede hacer lo que quiera. Los tres salen de una sola fuente, así que no se pueden desalinear.',
+    intro2:
+      'Se publican dos variantes de la política principal en lugar de una sola versión canónica. Es a propósito: baja lo que está en juego al elegir.',
+    notSure: '¿No sabe cuál necesita? Responda cuatro preguntas.',
+    shelfHeading: 'Tome lo que necesite',
+    shelfLede: 'Los cuatro que hacen más trabajo.',
+    groups: {
+      'single-site': {
+        title: 'Cuidado infantil familiar y sedes únicas',
+        blurb: 'Si solo un documento se hace bien, es la política de una página. Imprímala, léala, fírmela y póngale fecha.',
+      },
+      centers: {
+        title: 'Centros',
+        blurb: 'Más largos, y estructurados para que un director pueda borrar las secciones que no apliquen.',
+      },
+      'multi-site': {
+        title: 'Operadores con varias sedes, cadenas y concesionarios de Head Start',
+        blurb: 'Una estructura de gobernanza y lenguaje contractual modelo, no una política más larga. Estos existen porque no tienen sentido por debajo de cierto tamaño.',
+      },
+      intermediaries: {
+        title: 'Intermediarios',
+        blurb: 'Para un CDFI, una agencia de recursos y referencias (R&R), o un proveedor de capacitación y asistencia técnica (T&TA).',
+      },
+      everyone: {
+        title: 'Para cualquier programa',
+        blurb: 'Estos aplican sin importar su tamaño.',
+      },
+    },
+    phase: 'Fase',
+    versionOf: 'versión de',
+    mechanicHeading: 'El mecanismo que se acumula',
+    mechanicBody:
+      'Se les pide a los programas que devuelvan la política que efectivamente adoptaron. En dos años, eso convierte a este organismo en el único que sabe lo que realmente dicen las políticas de IA del campo: un activo de investigación, un insumo para revisiones y un argumento de legitimidad, todo a la vez.',
+    mechanicNote:
+      'Todavía no hay a dónde enviarla. No se ha convocado ningún organismo, y hasta que se convoque no hay quién la reciba.',
+  },
+};
+const c = copy[locale] ?? copy.en;
+const otherLocale = locale === 'en' ? 'es' : 'en';
 ---
 
 <BaseLayout
-  title="Policies to adopt"
-  description="Sixteen artifacts in editable formats, with fill-in markers, last-updated stamps, and a Spanish version of each. No form, no email capture."
+  title={c.title}
+  description={c.description}
   locale={locale}
   fullWidth
 >
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <PageHeader
-        caption="Policies to adopt"
-        title="Sixteen artifacts, not one policy"
-        lede="Every one ships editable, with fill-in markers where your own text goes, a last-updated stamp, and a Spanish version. No form, no email capture — anything that gates a policy template behind a signup loses the providers who need it most."
+        caption={c.caption}
+        title={c.heading}
+        lede={c.lede}
         locale={locale}
       />
 
       <p class="govuk-body">
-        Each document is a page you can read, a Word file you can edit, and a Markdown file you can
-        do anything with. All three come from one source, so they cannot drift apart.
+        {c.intro1}
       </p>
       <p class="govuk-body">
-        Two variants of the core policy are published rather than one canonical version. That is
-        deliberate: it lowers the stakes of choosing.
+        {c.intro2}
       </p>
       <p class="govuk-body">
         <a class="govuk-link" href={localePath(locale, '/start')}>
-          Not sure which you need? Answer four questions.
+          {c.notSure}
         </a>
       </p>
     </div>
@@ -90,8 +164,8 @@ const shelf = all
 
   {shelf.length > 0 && (
     <section class="govuk-!-margin-top-6 govuk-!-margin-bottom-8">
-      <h2 class="govuk-heading-m">Take what you need</h2>
-      <p class="govuk-body">The four that do the most work.</p>
+      <h2 class="govuk-heading-m">{c.shelfHeading}</h2>
+      <p class="govuk-body">{c.shelfLede}</p>
       <div class="govuk-grid-row">
         {shelf.map((entry) => (
           <div class="govuk-grid-column-one-half govuk-!-margin-bottom-5">
@@ -108,7 +182,7 @@ const shelf = all
                 <span aria-hidden="true"> · </span>
                 <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.md`} download>Markdown</a>
                 <span aria-hidden="true"> · </span>
-                <a class="govuk-link" href={localePath('es', `/artifacts/${slugOf(entry)}`)} lang="es" hreflang="es">Español</a>
+                <a class="govuk-link" href={localePath(otherLocale, `/artifacts/${slugOf(entry)}`)} lang={otherLocale} hreflang={otherLocale}>{otherLocale === 'es' ? 'Español' : 'English'}</a>
               </p>
             </div>
           </div>
@@ -119,12 +193,12 @@ const shelf = all
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      {[...grouped.filter((g) => g.entries.length > 0), { id: 'everyone', title: 'For any program', blurb: 'These apply whatever your size.', entries: everyone }]
+      {[...grouped.filter((g) => g.entries.length > 0), { id: 'everyone', entries: everyone }]
         .filter((group) => group.entries.length > 0)
         .map((group) => (
           <section id={group.id} class="govuk-!-margin-bottom-8">
-            <h2 class="govuk-heading-m">{group.title}</h2>
-            <p class="govuk-body">{group.blurb}</p>
+            <h2 class="govuk-heading-m">{c.groups[group.id].title}</h2>
+            <p class="govuk-body">{c.groups[group.id].blurb}</p>
 
             <dl class="govuk-summary-list">
               {group.entries.map((entry) => (
@@ -135,7 +209,7 @@ const shelf = all
                     </a>
                     {entry.data.phase > 1 && (
                       <span class="govuk-!-margin-left-1">
-                        <strong class="govuk-tag govuk-tag--grey">Phase {entry.data.phase}</strong>
+                        <strong class="govuk-tag govuk-tag--grey">{c.phase} {entry.data.phase}</strong>
                       </span>
                     )}
                   </dt>
@@ -149,11 +223,11 @@ const shelf = all
                   </dd>
                   <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.docx`} download>
-                      Word<span class="govuk-visually-hidden"> version of {entry.data.title}</span>
+                      Word<span class="govuk-visually-hidden"> {c.versionOf} {entry.data.title}</span>
                     </a>
                     <span aria-hidden="true"> · </span>
                     <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.md`} download>
-                      .md<span class="govuk-visually-hidden"> version of {entry.data.title}</span>
+                      .md<span class="govuk-visually-hidden"> {c.versionOf} {entry.data.title}</span>
                     </a>
                   </dd>
                 </div>
@@ -163,15 +237,12 @@ const shelf = all
         ))}
 
       <div class="govuk-inset-text">
-        <h2 class="govuk-heading-s">The mechanic that compounds</h2>
+        <h2 class="govuk-heading-s">{c.mechanicHeading}</h2>
         <p class="govuk-body">
-          Programs are asked to send back the policy they actually adopted. Within two years that
-          makes this the only body that knows what the field's AI policies really say — a research
-          asset, a revision input, and a legitimacy claim at once.
+          {c.mechanicBody}
         </p>
         <p class="govuk-body govuk-!-margin-bottom-0">
-          There is nowhere to send it yet. No body has been convened, and until one has, there is no
-          one to receive it.
+          {c.mechanicNote}
         </p>
       </div>
     </div>

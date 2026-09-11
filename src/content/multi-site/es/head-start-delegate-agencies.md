@@ -1,46 +1,50 @@
 ---
-title: Head Start grantees with delegate agencies
+title: Concesionarios de Head Start con agencias delegadas
 locale: es
 kind: module
 order: 12
 lastUpdated: '2026-09-10'
-summary: The grantee is accountable for delegate compliance under Part 1303, but delegates make their own operating decisions and may adopt tools the grantee never reviewed. The register, the rider and the escalation path all have to reach across that boundary.
+summary: El concesionario responde por el cumplimiento de sus delegadas bajo la Part 1303, pero las delegadas toman sus propias decisiones operativas y pueden adoptar herramientas que el concesionario nunca revisó. El registro, la cláusula contractual y la ruta de escalamiento tienen que cruzar esa frontera.
 relatedArtifacts: ['governance-charter', 'model-contract-rider', 'shadow-ai-amnesty-kit']
 translationPending: true
 ---
 
-A grantee with delegate agencies is a specific sub-case of the multi-site
-problem, and the specific part is a mismatch between accountability and control.
+Un concesionario de Head Start (el programa federal de educación temprana) con
+agencias delegadas es un subcaso específico del problema de las varias sedes, y
+lo específico es un desajuste entre quién responde y quién controla.
 
-The grantee is accountable for delegate compliance under 45 CFR Part 1303, the
-Head Start privacy rule. But delegates make their own operating decisions. A
-delegate can adopt a tool the grantee never reviewed, sign an agreement the
-grantee never saw, and put child records into a system that does not appear
-anywhere in the grantee's inventory — while the grantee remains answerable for
-the result.
+El concesionario responde por el cumplimiento de sus delegadas bajo 45 CFR Part 1303, la regla de privacidad de Head Start. Pero las
+delegadas toman sus propias decisiones operativas. Una delegada puede adoptar una herramienta que el
+concesionario nunca revisó, firmar un acuerdo que el concesionario nunca vio y
+meter expedientes de niños en un sistema que no aparece en ninguna parte del
+inventario del concesionario, mientras el concesionario sigue siendo el que
+responde por el resultado.
 
-Three of the nine additions therefore have to reach across the delegate
-boundary, and they only work if they are written that way from the start:
+Por eso tres de las nueve adiciones tienen que cruzar la frontera de las
+delegadas, y solo funcionan si se escriben así desde el principio:
 
-- **The register** includes delegate-operated tools, with the delegate named in
-  the adoption-status column. A register that stops at the grantee's own sites
-  describes a fraction of what the grantee is accountable for.
-- **The rider** is available to delegates, and where the grantee contracts
-  centrally the delegates are covered by it. This is the cheapest way to give a
-  small delegate agency terms it could never have negotiated alone — and it is
-  the same public-good argument as the rider itself, applied inside one
-  organization.
-- **The escalation path** is reachable by delegate staff. A teacher at a delegate
-  agency has to have a name to call, and it cannot be a name that only exists on
-  the grantee's internal directory.
+- **El registro** incluye las herramientas que operan las delegadas, con la
+  delegada nombrada en la columna de estado de adopción. Un registro que se
+  detiene en las sedes propias del concesionario describe apenas una fracción de
+  aquello por lo que el concesionario responde.
+- **La cláusula contractual** está disponible para las delegadas, y donde el
+  concesionario contrata de forma central, las delegadas quedan cubiertas por
+  ella. Esta es la manera más barata de darle a una agencia delegada pequeña unos
+  términos que jamás habría negociado sola, y es el mismo argumento de bien
+  público que la cláusula misma, aplicado dentro de una sola organización.
+- **La ruta de escalamiento** está al alcance del personal de las delegadas. Una
+  maestra de una agencia delegada tiene que tener un nombre al cual llamar, y no
+  puede ser un nombre que solo existe en el directorio interno del concesionario.
 
-The practical move is to stop treating this as a new obligation. The grantee's
-monitoring instrument should ask about AI tools the way it asks about anything
-else it is answerable for — a question in the existing instrument, answered at
-the existing cadence, reviewed by the people who already review it.
+El movimiento práctico es dejar de tratar esto como una obligación nueva. El
+instrumento de monitoreo del concesionario debería preguntar por las herramientas
+de IA igual que pregunta por cualquier otra cosa de la que responde: una pregunta
+dentro del instrumento que ya existe, contestada con la periodicidad que ya
+existe, revisada por las personas que ya lo revisan.
 
-One note on currency, since this is a live area. A notice of proposed rulemaking
-published in May 2026 did not propose changes to the records and confidentiality
-provisions, but whether a final rule has issued is unconfirmed as of this draft.
-Check the current text of Part 1303 against the Federal Register before relying
-on any of this in a monitoring context.
+Una nota sobre vigencia, porque esta es un área viva. Un aviso de propuesta de
+reglamentación (notice of proposed rulemaking) publicado en mayo de 2026 no
+propuso cambios a las disposiciones sobre expedientes y confidencialidad, pero si
+ya se emitió una regla final es algo que no está confirmado a la fecha de este
+borrador. Verifique el texto vigente de la Part 1303 contra el Federal Register
+antes de apoyarse en algo de esto en un contexto de monitoreo.

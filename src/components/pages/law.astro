@@ -31,25 +31,177 @@ const lastUpdated = all
   .sort()
   .at(-1);
 
-/** The table cell, spelled out in words so it survives greyscale and screen readers. */
-const FERPA_LABEL = {
-  yes: 'Yes',
-  no: 'No',
-  'not-directly': 'Not directly',
-  depends: 'Depends',
+const copy = {
+  en: {
+    pageTitle: 'What the law says',
+    description:
+      'Which law actually governs the data in your early childhood program, setting by setting: FERPA, Head Start Part 1303, IDEA, COPPA and the state layer. An unreviewed working draft that has not been through counsel.',
+    caption: 'What the law says',
+    title: 'Which law actually governs the data in my program?',
+    lede: 'The answer changes completely depending on who operates the program. A district-run pre-K classroom, a Head Start grantee that is a community action agency and a family child care home are under three different sets of rules — and most of the vendor contract templates in circulation cite the wrong statute for all but the first.',
+
+    bannerTitle: 'No lawyer has read this page',
+    bannerHeading:
+      'This crosswalk is an unreviewed working draft. It is not legal advice, and it cannot ship as a field standard until an attorney owns it.',
+    bannerBefore:
+      'Two readings in particular are unresolved and are marked as such below: whether',
+    bannerLinkNy: 'New York Education Law 2-d reaches community-based pre-K providers',
+    bannerMid: ', and',
+    bannerLinkIl: 'whether Illinois SOPPA reaches preschool at all',
+    bannerAfter:
+      '. The state lookup further down is deliberately full of empty answers. An honest blank is the point: nothing has been filled in that could not be traced to a source.',
+
+    tocCrosswalk: 'The crosswalk: six settings, six answers',
+    tocSettings: 'Each setting in full',
+    tocFindings: 'Three findings that change practice',
+    tocStates: 'The state layer',
+    tocOpenQuestions: 'Open questions for a lawyer',
+
+    crosswalkHeading: 'The crosswalk: six settings, six answers',
+    crosswalkBody:
+      'Find the row that describes who operates your program. FERPA — the Family Educational Rights and Privacy Act — applies in two of these six settings. In the other four, a policy or a vendor agreement that opens by reciting FERPA is describing a statute that does not govern you.',
+    tableCaption: 'Which law governs, by who operates the program',
+    colSetting: 'Setting',
+    colFerpa: 'Does FERPA apply?',
+    colGoverns: 'What governs instead',
+    ferpa: { yes: 'Yes', no: 'No', 'not-directly': 'Not directly', depends: 'Depends' },
+    notStated: 'Not stated',
+
+    settingsHeading: 'Each setting in full',
+
+    findingsHeading: 'Three findings that change practice',
+    findingsBody:
+      'The table settles which statute you are under. These three are the reason the page exists: each one is a place where the practice the field has settled into does not match what the law actually says.',
+    findingLabel: 'Finding',
+    findingOf: 'of',
+    warning: 'Warning',
+    findingWarning:
+      'This finding names an unsettled question rather than resolving it. It needs a lawyer before anyone relies on it.',
+
+    statesHeading: 'The state layer',
+    statesBody1:
+      'State law is where this moves fastest, so the state layer is built as a lookup rather than as prose, and it is honest about what it does not know. These six states are here because of where dual language learners and providers are concentrated: California, Texas, New York, Florida, New Jersey and Illinois.',
+    statesBody2a: 'Every state answers the same four questions. Where this draft cannot trace an answer to a source, the answer reads',
+    statesBody2Strong: 'Not established here',
+    statesBody2b: 'rather than a guess. Every entry below is marked as awaiting legal review.',
+    stateQ1: 'Does the state’s student-privacy law reach pre-K or child care?',
+    stateQ2: 'Is there a biometric statute with a private right of action?',
+    stateQ3: 'What do the state’s CCDF plan and provider agreement require? CCDF is the Child Care and Development Fund, the federal money that flows through the state to subsidised programs.',
+    stateQ4: 'What has the state AI office or education department published that a provider might be handed?',
+    awaitingReview: 'Awaiting legal review',
+    statesFooterBefore:
+      'If your state is not one of the six, the federal answer for your setting in the crosswalk above is your floor, and the',
+    statesFooterLink: 'questions to ask a vendor',
+    statesFooterAfter:
+      'are the practical way to get in writing what a state statute may or may not already require.',
+
+    openQuestionsHeading: 'Open questions for a lawyer',
+    openQuestionsBody:
+      'Two state readings need an attorney before this page can be published as anything other than a draft. They are set out here rather than resolved, because both are consequential in either direction and neither could be confirmed for this draft. Both should be owned by a pro bono legal partner, which this site does not yet have.',
+    openQuestionLabel: 'Open question',
+    openQuestionInset: 'Unresolved. Nothing on this page asks you to act on either reading.',
+
+    closingStrong: 'What this page is for.',
+    closingBefore:
+      'It tells you which statute to argue from. It does not tell you what your particular contract says, and it has not been reviewed by counsel. Where the crosswalk leaves you with contract leverage rather than statutory protection — which is four of the six settings — the',
+    closingLinkVendors: 'ten questions to ask a vendor',
+    closingMid: 'and the',
+    closingLinkPolicies: 'documents on the shelf',
+    closingAfter: 'are where that leverage is written down.',
+  },
+  es: {
+    pageTitle: 'Lo que dice la ley',
+    description:
+      'Qué ley rige de verdad los datos de su programa de educación temprana, entorno por entorno: FERPA, Head Start Part 1303, IDEA, COPPA y la capa estatal. Un borrador de trabajo sin revisar que no ha pasado por un abogado.',
+    caption: 'Lo que dice la ley',
+    title: '¿Qué ley rige de verdad los datos de mi programa?',
+    lede: 'La respuesta cambia por completo según quién opere el programa. Un salón de pre-kínder de un distrito escolar, un concesionario de Head Start (el programa federal de educación temprana) que es una agencia de acción comunitaria y un hogar de cuidado infantil familiar están bajo tres conjuntos de reglas distintos — y casi todas las plantillas de contrato de proveedores que circulan citan la ley equivocada para todos menos el primero.',
+
+    bannerTitle: 'Ningún abogado ha leído esta página',
+    bannerHeading:
+      'Este cuadro comparativo es un borrador de trabajo sin revisar. No es asesoría legal, y no puede publicarse como un estándar del campo hasta que un abogado se haga cargo de él.',
+    bannerBefore:
+      'Hay dos lecturas en particular que están sin resolver y que se marcan como tales más abajo: si',
+    bannerLinkNy: 'la New York Education Law 2-d alcanza a los proveedores comunitarios de pre-kínder',
+    bannerMid: ', y',
+    bannerLinkIl: 'si SOPPA de Illinois alcanza siquiera al preescolar',
+    bannerAfter:
+      '. La tabla de consulta estatal de más abajo está deliberadamente llena de respuestas vacías. Un espacio en blanco honesto es justamente el punto: no se ha rellenado nada que no se pueda rastrear hasta una fuente.',
+
+    tocCrosswalk: 'El cuadro comparativo: seis entornos, seis respuestas',
+    tocSettings: 'Cada entorno en detalle',
+    tocFindings: 'Tres hallazgos que cambian la práctica',
+    tocStates: 'La capa estatal',
+    tocOpenQuestions: 'Preguntas abiertas para un abogado',
+
+    crosswalkHeading: 'El cuadro comparativo: seis entornos, seis respuestas',
+    crosswalkBody:
+      'Busque la fila que describe quién opera su programa. FERPA —la Family Educational Rights and Privacy Act, la ley federal de privacidad de los expedientes educativos— aplica en dos de estos seis entornos. En los otros cuatro, una política o un contrato de proveedor que arranca citando FERPA está describiendo una ley que a usted no le rige.',
+    tableCaption: 'Qué ley rige, según quién opere el programa',
+    colSetting: 'Entorno',
+    colFerpa: '¿Aplica FERPA?',
+    colGoverns: 'Qué rige en su lugar',
+    ferpa: { yes: 'Sí', no: 'No', 'not-directly': 'No directamente', depends: 'Depende' },
+    notStated: 'No se indica',
+
+    settingsHeading: 'Cada entorno en detalle',
+
+    findingsHeading: 'Tres hallazgos que cambian la práctica',
+    findingsBody:
+      'La tabla resuelve bajo qué ley está usted. Estos tres son la razón de ser de la página: cada uno es un lugar donde la práctica en la que se ha asentado el campo no coincide con lo que la ley dice de verdad.',
+    findingLabel: 'Hallazgo',
+    findingOf: 'de',
+    warning: 'Advertencia',
+    findingWarning:
+      'Este hallazgo nombra una pregunta sin resolver en vez de resolverla. Necesita un abogado antes de que nadie se apoye en él.',
+
+    statesHeading: 'La capa estatal',
+    statesBody1:
+      'La ley estatal es donde esto se mueve más rápido, así que la capa estatal está armada como una tabla de consulta y no como prosa, y es honesta sobre lo que no sabe. Estos seis estados están aquí por dónde se concentran los niños que aprenden dos idiomas y los programas de cuidado: California, Texas, New York, Florida, New Jersey e Illinois.',
+    statesBody2a: 'Cada estado responde las mismas cuatro preguntas. Donde este borrador no puede rastrear una respuesta hasta una fuente, la respuesta dice',
+    statesBody2Strong: 'No se ha establecido aquí',
+    statesBody2b: 'en vez de una suposición. Cada entrada de abajo está marcada como pendiente de revisión legal.',
+    stateQ1: '¿La ley de privacidad estudiantil del estado alcanza al pre-kínder o al cuidado infantil?',
+    stateQ2: '¿Hay una ley de biometría con derecho privado de acción?',
+    stateQ3: '¿Qué exigen el plan estatal de CCDF y el acuerdo del estado con los proveedores de cuidado? CCDF es el Child Care and Development Fund, el dinero federal que pasa por el estado hacia los programas subsidiados.',
+    stateQ4: '¿Qué ha publicado la oficina estatal de IA o el departamento de educación que le puedan entregar a un proveedor de cuidado?',
+    awaitingReview: 'Pendiente de revisión legal',
+    statesFooterBefore:
+      'Si su estado no es uno de los seis, la respuesta federal para su entorno en el cuadro comparativo de arriba es su piso, y las',
+    statesFooterLink: 'preguntas para hacerle a un proveedor',
+    statesFooterAfter:
+      'son la manera práctica de conseguir por escrito lo que una ley estatal quizá ya exige, o quizá no.',
+
+    openQuestionsHeading: 'Preguntas abiertas para un abogado',
+    openQuestionsBody:
+      'Hay dos lecturas de leyes estatales que necesitan un abogado antes de que esta página pueda publicarse como algo que no sea un borrador. Se exponen aquí en vez de resolverse, porque las dos tienen consecuencias en cualquier dirección y ninguna se pudo confirmar para este borrador. De las dos debería hacerse cargo un socio legal pro bono, que este sitio todavía no tiene.',
+    openQuestionLabel: 'Pregunta abierta',
+    openQuestionInset:
+      'Sin resolver. Nada en esta página le pide actuar según ninguna de las dos lecturas.',
+
+    closingStrong: 'Para qué sirve esta página.',
+    closingBefore:
+      'Le dice desde qué ley argumentar. No le dice qué dice su contrato en particular, y no ha sido revisada por un abogado. Donde el cuadro comparativo lo deja con fuerza contractual en vez de con protección legal —que son cuatro de los seis entornos—, las',
+    closingLinkVendors: 'diez preguntas para hacerle a un proveedor',
+    closingMid: 'y las',
+    closingLinkPolicies: 'políticas listas para adoptar',
+    closingAfter: 'son donde esa fuerza queda escrita.',
+  },
 };
 
-const description =
-  'Which law actually governs the data in your early childhood program, setting by setting: FERPA, Head Start Part 1303, IDEA, COPPA and the state layer. An unreviewed working draft that has not been through counsel.';
+const c = copy[locale] ?? copy.en;
+
+/** The table cell, spelled out in words so it survives greyscale and screen readers. */
+const FERPA_LABEL = c.ferpa;
 ---
 
-<BaseLayout title="What the law says" description={description} locale={locale} fullWidth>
+<BaseLayout title={c.pageTitle} description={c.description} locale={locale} fullWidth>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <PageHeader
-        caption="What the law says"
-        title="Which law actually governs the data in my program?"
-        lede="The answer changes completely depending on who operates the program. A district-run pre-K classroom, a Head Start grantee that is a community action agency and a family child care home are under three different sets of rules — and most of the vendor contract templates in circulation cite the wrong statute for all but the first."
+        caption={c.caption}
+        title={c.title}
+        lede={c.lede}
         locale={locale}
         lastUpdated={lastUpdated}
       />
@@ -62,44 +214,39 @@ const description =
       >
         <div class="govuk-notification-banner__header">
           <h2 class="govuk-notification-banner__title" id="counsel-banner-title">
-            No lawyer has read this page
+            {c.bannerTitle}
           </h2>
         </div>
         <div class="govuk-notification-banner__content">
           <p class="govuk-notification-banner__heading">
-            This crosswalk is an unreviewed working draft. It is not legal advice, and it cannot
-            ship as a field standard until an attorney owns it.
+            {c.bannerHeading}
           </p>
           <p class="govuk-body">
-            Two readings in particular are unresolved and are marked as such below: whether
+            {c.bannerBefore}
             <a class="govuk-notification-banner__link" href="#question-ny-ed-law-2d">
-              New York Education Law 2-d reaches community-based pre-K providers
-            </a>, and
+              {c.bannerLinkNy}
+            </a>{c.bannerMid}
             <a class="govuk-notification-banner__link" href="#question-illinois-soppa">
-              whether Illinois SOPPA reaches preschool at all
-            </a>. The state lookup further down is deliberately full of empty answers. An honest
-            blank is the point: nothing has been filled in that could not be traced to a source.
+              {c.bannerLinkIl}
+            </a>{c.bannerAfter}
           </p>
         </div>
       </div>
 
       <h2 class="govuk-heading-m" id="contents">{t(locale, 'label.onThisPage')}</h2>
       <ul class="govuk-list govuk-list--bullet">
-        <li><a class="govuk-link" href="#crosswalk">The crosswalk: six settings, six answers</a></li>
-        <li><a class="govuk-link" href="#settings">Each setting in full</a></li>
-        <li><a class="govuk-link" href="#findings">Three findings that change practice</a></li>
-        <li><a class="govuk-link" href="#states">The state layer</a></li>
-        <li><a class="govuk-link" href="#open-questions">Open questions for a lawyer</a></li>
+        <li><a class="govuk-link" href="#crosswalk">{c.tocCrosswalk}</a></li>
+        <li><a class="govuk-link" href="#settings">{c.tocSettings}</a></li>
+        <li><a class="govuk-link" href="#findings">{c.tocFindings}</a></li>
+        <li><a class="govuk-link" href="#states">{c.tocStates}</a></li>
+        <li><a class="govuk-link" href="#open-questions">{c.tocOpenQuestions}</a></li>
       </ul>
 
       <h2 class="govuk-heading-l govuk-!-margin-top-8" id="crosswalk">
-        The crosswalk: six settings, six answers
+        {c.crosswalkHeading}
       </h2>
       <p class="govuk-body">
-        Find the row that describes who operates your program. FERPA — the Family Educational
-        Rights and Privacy Act — applies in two of these six settings. In the other four, a policy
-        or a vendor agreement that opens by reciting FERPA is describing a statute that does not
-        govern you.
+        {c.crosswalkBody}
       </p>
     </div>
   </div>
@@ -112,13 +259,13 @@ const description =
   >
     <table class="govuk-table">
       <caption class="govuk-table__caption govuk-table__caption--m" id="crosswalk-table-caption">
-        Which law governs, by who operates the program
+        {c.tableCaption}
       </caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Setting</th>
-          <th scope="col" class="govuk-table__header">Does FERPA apply?</th>
-          <th scope="col" class="govuk-table__header">What governs instead</th>
+          <th scope="col" class="govuk-table__header">{c.colSetting}</th>
+          <th scope="col" class="govuk-table__header">{c.colFerpa}</th>
+          <th scope="col" class="govuk-table__header">{c.colGoverns}</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -143,13 +290,13 @@ const description =
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h2 class="govuk-heading-l govuk-!-margin-top-4" id="settings">Each setting in full</h2>
+      <h2 class="govuk-heading-l govuk-!-margin-top-4" id="settings">{c.settingsHeading}</h2>
 
       {settings.map((setting) => (
         <section id={`setting-${setting.slug}`} class="govuk-!-margin-bottom-8">
           <h3 class="govuk-heading-m govuk-!-margin-bottom-2">
             <span class="govuk-caption-m">
-              FERPA: {FERPA_LABEL[setting.data.ferpa] ?? 'Not stated'}
+              FERPA: {FERPA_LABEL[setting.data.ferpa] ?? c.notStated}
             </span>
             {setting.data.title}
           </h3>
@@ -172,18 +319,16 @@ const description =
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
 
       <h2 class="govuk-heading-l govuk-!-margin-top-6" id="findings">
-        Three findings that change practice
+        {c.findingsHeading}
       </h2>
       <p class="govuk-body">
-        The table settles which statute you are under. These three are the reason the page exists:
-        each one is a place where the practice the field has settled into does not match what the
-        law actually says.
+        {c.findingsBody}
       </p>
 
       {findings.map((finding, i) => (
         <section id={`finding-${finding.slug}`} class="govuk-!-margin-bottom-8">
           <h3 class="govuk-heading-m govuk-!-margin-bottom-2">
-            <span class="govuk-caption-m">Finding {i + 1} of {findings.length}</span>
+            <span class="govuk-caption-m">{c.findingLabel} {i + 1} {c.findingOf} {findings.length}</span>
             {finding.data.title}
           </h3>
 
@@ -191,9 +336,8 @@ const description =
             <div class="govuk-warning-text">
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
               <strong class="govuk-warning-text__text">
-                <span class="govuk-visually-hidden">Warning</span>
-                This finding names an unsettled question rather than resolving it. It needs a
-                lawyer before anyone relies on it.
+                <span class="govuk-visually-hidden">{c.warning}</span>
+                {c.findingWarning}
               </strong>
             </div>
           )}
@@ -215,24 +359,21 @@ const description =
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
 
-      <h2 class="govuk-heading-l govuk-!-margin-top-6" id="states">The state layer</h2>
+      <h2 class="govuk-heading-l govuk-!-margin-top-6" id="states">{c.statesHeading}</h2>
       <p class="govuk-body">
-        State law is where this moves fastest, so the state layer is built as a lookup rather than
-        as prose, and it is honest about what it does not know. These six states are here because
-        of where dual language learners and providers are concentrated: California, Texas, New
-        York, Florida, New Jersey and Illinois.
+        {c.statesBody1}
       </p>
       <p class="govuk-body">
-        Every state answers the same four questions. Where this draft cannot trace an answer to a
-        source, the answer reads <strong>Not established here</strong> rather than a guess. Every
-        entry below is marked as awaiting legal review.
+        {c.statesBody2a}
+        <strong>{c.statesBody2Strong}</strong>
+        {c.statesBody2b}
       </p>
 
       <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-6">
-        <li>Does the state&rsquo;s student-privacy law reach pre-K or child care?</li>
-        <li>Is there a biometric statute with a private right of action?</li>
-        <li>What do the state&rsquo;s CCDF plan and provider agreement require? CCDF is the Child Care and Development Fund, the federal money that flows through the state to subsidised programs.</li>
-        <li>What has the state AI office or education department published that a provider might be handed?</li>
+        <li>{c.stateQ1}</li>
+        <li>{c.stateQ2}</li>
+        <li>{c.stateQ3}</li>
+        <li>{c.stateQ4}</li>
       </ol>
 
       <div class="govuk-accordion" data-module="govuk-accordion" id="state-lookup">
@@ -245,7 +386,7 @@ const description =
                 </span>
               </h3>
               <div class="govuk-accordion__section-summary govuk-body" id={`state-summary-${i + 1}`}>
-                {state.data.stateCode} &middot; Awaiting legal review
+                {state.data.stateCode} &middot; {c.awaitingReview}
               </div>
             </div>
             <div id={`state-content-${i + 1}`} class="govuk-accordion__section-content">
@@ -269,23 +410,18 @@ const description =
       </div>
 
       <p class="govuk-body govuk-!-margin-top-6">
-        If your state is not one of the six, the federal answer for your setting in the crosswalk
-        above is your floor, and the
-        <a class="govuk-link" href={localePath(locale, '/vendors')}>questions to ask a vendor</a>
-        are the practical way to get in writing what a state statute may or may not already
-        require.
+        {c.statesFooterBefore}
+        <a class="govuk-link" href={localePath(locale, '/vendors')}>{c.statesFooterLink}</a>
+        {c.statesFooterAfter}
       </p>
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
 
       <h2 class="govuk-heading-l govuk-!-margin-top-6" id="open-questions">
-        Open questions for a lawyer
+        {c.openQuestionsHeading}
       </h2>
       <p class="govuk-body">
-        Two state readings need an attorney before this page can be published as anything other
-        than a draft. They are set out here rather than resolved, because both are consequential
-        in either direction and neither could be confirmed for this draft. Both should be owned by
-        a pro bono legal partner, which this site does not yet have.
+        {c.openQuestionsBody}
       </p>
 
       {openQuestions.map((question) => (
@@ -294,13 +430,13 @@ const description =
           class="govuk-!-margin-bottom-8"
         >
           <h3 class="govuk-heading-m govuk-!-margin-bottom-2">
-            <span class="govuk-caption-m">Open question</span>
+            <span class="govuk-caption-m">{c.openQuestionLabel}</span>
             {question.data.title}
           </h3>
 
           <div class="govuk-inset-text">
             <p class="govuk-body-s govuk-!-margin-bottom-0">
-              Unresolved. Nothing on this page asks you to act on either reading.
+              {c.openQuestionInset}
             </p>
           </div>
 
@@ -321,14 +457,12 @@ const description =
 
       <div class="govuk-inset-text">
         <p class="govuk-body">
-          <strong>What this page is for.</strong> It tells you which statute to argue from. It does
-          not tell you what your particular contract says, and it has not been reviewed by counsel.
-          Where the crosswalk leaves you with contract leverage rather than statutory protection —
-          which is four of the six settings — the
-          <a class="govuk-link" href={localePath(locale, '/vendors')}>ten questions to ask a vendor</a>
-          and the
-          <a class="govuk-link" href={localePath(locale, '/policies')}>documents on the shelf</a>
-          are where that leverage is written down.
+          <strong>{c.closingStrong}</strong>
+          {c.closingBefore}
+          <a class="govuk-link" href={localePath(locale, '/vendors')}>{c.closingLinkVendors}</a>
+          {c.closingMid}
+          <a class="govuk-link" href={localePath(locale, '/policies')}>{c.closingLinkPolicies}</a>
+          {c.closingAfter}
         </p>
       </div>
     </div>

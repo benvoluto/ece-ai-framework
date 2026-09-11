@@ -1,14 +1,14 @@
 ---
-title: Private or community child care center
+title: Centro de cuidado infantil privado o comunitario
 locale: es
 kind: setting
 ferpa: 'no'
 governsInstead:
-  - 'COPPA — on the vendor, not on the program'
-  - 'State biometric law'
-  - 'State consumer privacy law'
-  - 'Child care licensing regulations'
-  - "The program's own privacy policy and family contracts"
+  - 'COPPA — recae sobre el proveedor de la herramienta, no sobre el programa'
+  - 'La ley estatal sobre biometría'
+  - 'La ley estatal de privacidad del consumidor'
+  - 'Los reglamentos de licencias de cuidado infantil'
+  - 'La política de privacidad del propio programa y sus contratos con las familias'
 authorities:
   - 'COPPA'
   - 'COPPA Final Rule 2025'
@@ -17,23 +17,26 @@ order: 4
 translationPending: true
 ---
 
-FERPA does not reach a private or community child care center. This is the
-single most common misunderstanding in the field, and it matters because almost
-every vendor template and staff-training deck in circulation is built on FERPA.
+FERPA (la ley federal de privacidad de los expedientes educativos) no alcanza a
+un centro de cuidado infantil privado o comunitario. Este es el malentendido más
+común del campo, y importa porque casi todas las plantillas de proveedores y las
+presentaciones de capacitación que circulan están construidas sobre FERPA.
 
-What governs instead is assembled from four sources, none of which is a
-comprehensive privacy statute for your setting:
+Lo que rige en su lugar se arma con cuatro fuentes, y ninguna de ellas es una
+ley de privacidad completa para su entorno:
 
-- **COPPA**, the Children's Online Privacy Protection Act, which binds the
-  vendor rather than the program. See the first of the three findings below for
-  what that does and does not give you.
-- **State biometric law**, where the state has one.
-- **State consumer privacy law**, where it applies to an entity of your size.
-- **Licensing regulations**, which usually address records retention and release
-  but rarely address software.
+- **COPPA**, la Children's Online Privacy Protection Act, la ley federal de
+  protección de la privacidad de los niños en línea, que obliga al proveedor de
+  la herramienta y no al programa. Vea el primero de los tres hallazgos de abajo
+  para saber qué le da eso y qué no.
+- **La ley estatal sobre biometría**, donde el estado tenga una.
+- **La ley estatal de privacidad del consumidor**, donde aplique a una entidad
+  de su tamaño.
+- **Los reglamentos de licencias**, que por lo general hablan de la retención y
+  la entrega de expedientes, pero casi nunca del software.
 
-And then the fourth source, which is the one you control: **your own privacy
-policy and your family contracts.** In this setting those documents are not
-supplementary to the law. For a great deal of what a family cares about, they
-are the only floor there is — which is precisely why the contract, not the
-statute, is where a center's leverage sits.
+Y después la cuarta fuente, que es la que usted controla: **su propia política
+de privacidad y sus contratos con las familias.** En este entorno esos
+documentos no son un complemento de la ley. Para buena parte de lo que a una
+familia le importa, son el único piso que existe — y por eso mismo la fuerza de
+un centro está en el contrato y no en la ley.

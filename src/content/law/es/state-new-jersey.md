@@ -9,19 +9,20 @@ order: 24
 translationPending: true
 ---
 
-**Does the state's student-privacy law reach pre-K or child care?** Not
-established here.
+**¿La ley de privacidad estudiantil del estado alcanza al pre-kínder o al
+cuidado infantil?** No se ha establecido aquí.
 
-**Is there a biometric statute with a private right of action?** Not established
-here.
+**¿Hay una ley de biometría con derecho privado de acción?** No se ha
+establecido aquí.
 
-**What do the state's CCDF plan and provider agreement require?** Not
-established here.
+**¿Qué exigen el plan estatal de CCDF —el fondo federal de cuidado y desarrollo
+infantil que pasa por el estado hacia los programas subsidiados— y el acuerdo
+del estado con los proveedores de cuidado?** No se ha establecido aquí.
 
-**What has the state AI office or education department published that a provider
-might be handed?** Not established here.
+**¿Qué ha publicado la oficina estatal de IA o el departamento de educación que
+le puedan entregar a un proveedor de cuidado?** No se ha establecido aquí.
 
-Four empty answers are the honest state of this row. Until it is filled, work
-from the federal answer for your setting in the crosswalk above, and put what
-you need from a vendor into the contract rather than assuming a state statute
-has already required it.
+Cuatro respuestas vacías son el estado honesto de esta fila. Hasta que se llene,
+trabaje desde la respuesta federal para su entorno en el cuadro comparativo de
+arriba, y ponga en el contrato lo que necesita de un proveedor en vez de suponer
+que una ley estatal ya se lo exigió.

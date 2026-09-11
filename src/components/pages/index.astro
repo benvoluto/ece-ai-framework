@@ -38,11 +38,73 @@ const faqEntries = (await getCollection('faq'))
 const faqRendered = await Promise.all(
   faqEntries.map(async (entry) => ({ entry, Content: (await render(entry)).Content })),
 );
+
+/** Page chrome in both languages. Content strings come from the collections. */
+const copy = {
+  en: {
+    description:
+      'A field resource for early childhood providers on the ethical and constructive use of AI. Answer four questions about the tool in front of you and get the guidance, the tier, and the right policy template.',
+    routeHeading: 'Thinking about an AI tool? Answer four questions.',
+    routeLede:
+      'You complete one sentence. It returns the risk tier, what that tier requires of you, and the right document for a program your size \u2014 a one-page policy for a family child care home, a full policy for a center, a governance charter for a grantee.',
+    routeNote:
+      'Nothing you answer is sent anywhere. There is no sign-up, and every document on this site is free to download without one.',
+    helpsHeading: 'Three places this is already saving programs real money.',
+    helpsLede:
+      'Most of what AI can do in early childhood is unglamorous, low-risk, and worth real money to a business running on one to three percent margins. Every hour it returns is an hour an adult spends with children.',
+    helpsAll: 'All twelve, each with its tier and its guardrail',
+    linesHeading: 'Three things not to do, whatever the tool promises.',
+    linesBasis: 'The basis for this',
+    linesAll: 'All eight, each with the law or the evidence behind it',
+    shelfHeading: 'Take what you need.',
+    shelfLede:
+      'No form, no email capture. Editable, with blanks where your own details go, and a Spanish version beside each.',
+    shelfAll: 'All sixteen documents',
+    versionOf: 'version of',
+    whyHeading: 'Why does this exist?',
+    whyAll: 'The rest of the questions, including whether this is legal advice',
+    standingLabel: 'Who wrote this, and when.',
+    standingBody:
+      'No standards body has been convened and no part of this has been reviewed by counsel. Until that changes, this site is a draft in public rather than a field standard.',
+    standingLink: "What is settled, what is open, and how this site's own AI use worked",
+    lastReviewed: 'last reviewed',
+  },
+  es: {
+    description:
+      'Un recurso para proveedores de educación temprana sobre el uso ético y constructivo de la IA. Responda cuatro preguntas sobre la herramienta que tiene enfrente y reciba la guía, el nivel de riesgo y la plantilla de política que le corresponde.',
+    routeHeading: '¿Está considerando una herramienta de IA? Responda cuatro preguntas.',
+    routeLede:
+      'Usted completa una oración. Le devuelve el nivel de riesgo, lo que ese nivel le exige y el documento indicado para un programa de su tamaño: una política de una página para un hogar de cuidado infantil familiar, una política completa para un centro, una carta de gobernanza para un concesionario.',
+    routeNote:
+      'Nada de lo que usted responda se envía a ninguna parte. No hay que registrarse, y todos los documentos de este sitio se descargan gratis sin hacerlo.',
+    helpsHeading: 'Tres lugares donde esto ya le está ahorrando dinero real a los programas.',
+    helpsLede:
+      'Casi todo lo que la IA puede hacer en la educación temprana no tiene nada de glamoroso, es de bajo riesgo y vale dinero real para un negocio que opera con márgenes de uno a tres por ciento. Cada hora que devuelve es una hora que un adulto pasa con los niños.',
+    helpsAll: 'Los doce, cada uno con su nivel y su límite de protección',
+    linesHeading: 'Tres cosas que no se hacen, prometa lo que prometa la herramienta.',
+    linesBasis: 'El fundamento de esto',
+    linesAll: 'Los ocho, cada uno con la ley o la evidencia que lo respalda',
+    shelfHeading: 'Tome lo que necesite.',
+    shelfLede:
+      'Sin formularios, sin pedir su correo. Editables, con espacios en blanco donde van sus propios datos, y una versión en inglés junto a cada uno.',
+    shelfAll: 'Los dieciséis documentos',
+    versionOf: 'versión de',
+    whyHeading: '¿Por qué existe esto?',
+    whyAll: 'Las demás preguntas, incluida si esto es asesoría legal',
+    standingLabel: 'Quién escribió esto, y cuándo.',
+    standingBody:
+      'No se ha convocado ningún organismo de estándares y ningún abogado ha revisado nada de esto. Hasta que eso cambie, este sitio es un borrador en público, no un estándar del campo.',
+    standingLink: 'Qué está decidido, qué sigue abierto y cómo se usó la IA para construir este sitio',
+    lastReviewed: 'última revisión',
+  },
+};
+const c = copy[locale] ?? copy.en;
+const otherLocale = locale === 'en' ? 'es' : 'en';
 ---
 
 <BaseLayout
   title={null}
-  description="A field resource for early childhood providers on the ethical and constructive use of AI. Answer four questions about the tool in front of you and get the guidance, the tier, and the right policy template."
+  description={c.description}
   locale={locale}
   fullWidth
 >
@@ -50,16 +112,13 @@ const faqRendered = await Promise.all(
   <section class="govuk-grid-row govuk-!-margin-bottom-8" id="route">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-        Thinking about an AI tool? Answer four questions.
+        {c.routeHeading}
       </h1>
       <p class="govuk-body-l">
-        You complete one sentence. It returns the risk tier, what that tier requires of you, and
-        the right document for a program your size — a one-page policy for a family child care
-        home, a full policy for a center, a governance charter for a grantee.
+        {c.routeLede}
       </p>
       <p class="govuk-body">
-        Nothing you answer is sent anywhere. There is no sign-up, and every document on this site
-        is free to download without one.
+        {c.routeNote}
       </p>
 
       <IntakeTool locale={locale} />
@@ -73,11 +132,9 @@ const faqRendered = await Promise.all(
     <section class="govuk-!-margin-bottom-8" id="where-it-helps">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-          <h2 class="govuk-heading-l">Three places this is already saving programs real money.</h2>
+          <h2 class="govuk-heading-l">{c.helpsHeading}</h2>
           <p class="govuk-body">
-            Most of what AI can do in early childhood is unglamorous, low-risk, and worth real
-            money to a business running on one to three percent margins. Every hour it returns is
-            an hour an adult spends with children.
+            {c.helpsLede}
           </p>
         </div>
       </div>
@@ -102,7 +159,7 @@ const faqRendered = await Promise.all(
         <div class="govuk-grid-column-two-thirds-from-desktop">
           <p class="govuk-body">
             <a class="govuk-link" href={localePath(locale, '/good-uses')}>
-              All twelve, each with its tier and its guardrail
+              {c.helpsAll}
             </a>
           </p>
         </div>
@@ -117,21 +174,21 @@ const faqRendered = await Promise.all(
     <section class="govuk-!-margin-bottom-8" id="bright-lines">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-          <h2 class="govuk-heading-l">Three things not to do, whatever the tool promises.</h2>
+          <h2 class="govuk-heading-l">{c.linesHeading}</h2>
           <ol class="govuk-list govuk-list--number govuk-!-margin-top-5">
             {homeLines.map((entry) => (
               <li class="govuk-!-margin-bottom-4">
                 <span class="govuk-body-l">{entry.data.shortRule}</span>
                 <br />
                 <a class="govuk-link govuk-body-s" href={`${localePath(locale, '/bright-lines')}#line-${entry.data.number}`}>
-                  The basis for this
+                  {c.linesBasis}
                 </a>
               </li>
             ))}
           </ol>
           <p class="govuk-body">
             <a class="govuk-link" href={localePath(locale, '/bright-lines')}>
-              All eight, each with the law or the evidence behind it
+              {c.linesAll}
             </a>
           </p>
         </div>
@@ -146,10 +203,9 @@ const faqRendered = await Promise.all(
     <section class="govuk-!-margin-bottom-8" id="shelf">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-          <h2 class="govuk-heading-l">Take what you need.</h2>
+          <h2 class="govuk-heading-l">{c.shelfHeading}</h2>
           <p class="govuk-body">
-            No form, no email capture. Editable, with blanks where your own details go, and a
-            Spanish version beside each.
+            {c.shelfLede}
           </p>
         </div>
       </div>
@@ -167,15 +223,15 @@ const faqRendered = await Promise.all(
               <p class="govuk-body-s">{entry.data.summary}</p>
               <p class="govuk-body-s govuk-!-margin-bottom-0">
                 <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.docx`} download>
-                  Word<span class="govuk-visually-hidden"> version of {entry.data.title}</span>
+                  Word<span class="govuk-visually-hidden"> {c.versionOf} {entry.data.title}</span>
                 </a>
                 <span aria-hidden="true"> · </span>
                 <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.md`} download>
-                  Markdown<span class="govuk-visually-hidden"> version of {entry.data.title}</span>
+                  Markdown<span class="govuk-visually-hidden"> {c.versionOf} {entry.data.title}</span>
                 </a>
                 <span aria-hidden="true"> · </span>
-                <a class="govuk-link" href={localePath('es', `/artifacts/${slugOf(entry)}`)} lang="es" hreflang="es">
-                  Español
+                <a class="govuk-link" href={localePath(otherLocale, `/artifacts/${slugOf(entry)}`)} lang={otherLocale} hreflang={otherLocale}>
+                  {otherLocale === 'es' ? 'Español' : 'English'}
                 </a>
               </p>
             </div>
@@ -186,7 +242,7 @@ const faqRendered = await Promise.all(
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
           <p class="govuk-body">
-            <a class="govuk-link" href={localePath(locale, '/policies')}>All sixteen documents</a>
+            <a class="govuk-link" href={localePath(locale, '/policies')}>{c.shelfAll}</a>
           </p>
         </div>
       </div>
@@ -200,7 +256,7 @@ const faqRendered = await Promise.all(
     <section class="govuk-!-margin-bottom-8" id="why">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-          <h2 class="govuk-heading-l">Why does this exist?</h2>
+          <h2 class="govuk-heading-l">{c.whyHeading}</h2>
 
           <div class="govuk-accordion" data-module="govuk-accordion" id="home-faq">
             {faqRendered.map(({ entry, Content }, i) => (
@@ -221,7 +277,7 @@ const faqRendered = await Promise.all(
 
           <p class="govuk-body govuk-!-margin-top-6">
             <a class="govuk-link" href={localePath(locale, '/faq')}>
-              The rest of the questions, including whether this is legal advice
+              {c.whyAll}
             </a>
           </p>
         </div>
@@ -240,14 +296,12 @@ const faqRendered = await Promise.all(
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <div class="govuk-inset-text">
         <p class="govuk-body">
-          <strong>Who wrote this, and when.</strong> {SITE.version}, last reviewed{' '}
-          <time datetime={SITE.lastReviewed}>{SITE.lastReviewed}</time>. No standards body has
-          been convened and no part of this has been reviewed by counsel. Until that changes,
-          this site is a draft in public rather than a field standard.
+          <strong>{c.standingLabel}</strong> {SITE.version}, {c.lastReviewed}{' '}
+          <time datetime={SITE.lastReviewed}>{SITE.lastReviewed}</time>. {c.standingBody}
         </p>
         <p class="govuk-body govuk-!-margin-bottom-0">
           <a class="govuk-link" href={localePath(locale, '/about')}>
-            What is settled, what is open, and how this site's own AI use worked
+            {c.standingLink}
           </a>
         </p>
       </div>

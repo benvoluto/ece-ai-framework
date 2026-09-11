@@ -22,43 +22,85 @@ const lastUpdated = lines
   .sort()
   .at(-1);
 
-const description =
-  'Eight things not to do with AI in an early childhood program, whatever the tool promises, each with the legal or evidentiary basis that makes it defensible to an owner or a board.';
+const copy = {
+  en: {
+    description:
+      'Eight things not to do with AI in an early childhood program, whatever the tool promises, each with the legal or evidentiary basis that makes it defensible to an owner or a board.',
+    pageTitle: 'Bright lines',
+    caption: 'Bright lines',
+    heading: 'Eight things not to do',
+    lede: 'Eight uses of AI that an early childhood program should rule out, whatever the tool promises. Each one is paired with the statute, regulation or evidence that makes it defensible when an owner or a board asks why.',
+    intro:
+      'A short prohibited-use list is usable. A five-by-five impact-likelihood grid is not. These eight are the list, and they do not change with the size of the program: the same eight apply to a family child care home, a center and a multi-site grantee.',
+    warningLabel: 'Warning',
+    warning:
+      'A tool that does any of these is Tier 0 — do not adopt. There is no version of it with enough safeguards bolted on to move it up a tier.',
+    screenerBefore: 'Answer the four questions on',
+    screenerAfter: 'and these eight run first, as a screener, before any of the tiering questions.',
+    theEight: 'The eight',
+    lineCaption: 'Bright line',
+    alreadyHeading: 'If you are already doing one of these',
+    alreadyBefore:
+      'Stop the use, not the program. Turn the feature off if the tool has a switch for it, ask the vendor in writing to confirm it is off for your account, and record the date you did both. If the feature cannot be turned off, the tool comes out. Then work through',
+    alreadyAfter:
+      'for the uses you are keeping, so the rest of your tools have a tier and a written basis behind them.',
+  },
+  es: {
+    description:
+      'Ocho cosas que no se hacen con IA en un programa de educación temprana, prometa lo que prometa la herramienta, cada una con el fundamento legal o de evidencia que la hace defendible ante un dueño o una junta directiva.',
+    pageTitle: 'Límites infranqueables',
+    caption: 'Límites infranqueables',
+    heading: 'Ocho cosas que no se hacen',
+    lede: 'Ocho usos de la IA que un programa de educación temprana debería descartar, prometa lo que prometa la herramienta. Cada uno viene con la ley, el reglamento o la evidencia que lo hace defendible cuando un dueño o una junta directiva pregunta por qué.',
+    intro:
+      'Una lista corta de usos prohibidos se puede usar. Una cuadrícula de cinco por cinco de impacto y probabilidad, no. Estos ocho son la lista, y no cambian con el tamaño del programa: los mismos ocho aplican a un hogar de cuidado infantil familiar, a un centro y a un concesionario con varias sedes.',
+    warningLabel: 'Advertencia',
+    warning:
+      'Una herramienta que haga cualquiera de estas cosas es Nivel 0: no adoptar. No existe una versión de ella con suficientes protecciones encima como para subirla de nivel.',
+    screenerBefore: 'Conteste las cuatro preguntas de',
+    screenerAfter:
+      'y estos ocho corren primero, como filtro, antes de cualquiera de las preguntas de nivel.',
+    theEight: 'Los ocho',
+    lineCaption: 'Límite infranqueable',
+    alreadyHeading: 'Si ya está haciendo alguna de estas cosas',
+    alreadyBefore:
+      'Detenga el uso, no el programa. Apague la función si la herramienta tiene un interruptor para eso, pídale al proveedor por escrito que confirme que está apagada en su cuenta, y anote la fecha en que hizo las dos cosas. Si la función no se puede apagar, la herramienta sale. Después trabaje con',
+    alreadyAfter:
+      'para los usos que sí va a conservar, para que el resto de sus herramientas tengan un nivel y un fundamento por escrito detrás.',
+  },
+};
+
+const c = copy[locale] ?? copy.en;
 ---
 
-<BaseLayout title="Bright lines" description={description} locale={locale}>
+<BaseLayout title={c.pageTitle} description={c.description} locale={locale}>
   <PageHeader
-    caption="Bright lines"
-    title="Eight things not to do"
-    lede="Eight uses of AI that an early childhood program should rule out, whatever the tool promises. Each one is paired with the statute, regulation or evidence that makes it defensible when an owner or a board asks why."
+    caption={c.caption}
+    title={c.heading}
+    lede={c.lede}
     locale={locale}
     lastUpdated={lastUpdated}
   />
 
-  <p class="govuk-body">
-    A short prohibited-use list is usable. A five-by-five impact-likelihood grid is not. These
-    eight are the list, and they do not change with the size of the program: the same eight
-    apply to a family child care home, a center and a multi-site grantee.
-  </p>
+  <p class="govuk-body">{c.intro}</p>
 
   <div class="govuk-warning-text">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <strong class="govuk-warning-text__text">
-      <span class="govuk-visually-hidden">Warning</span>
-      A tool that does any of these is Tier 0 &mdash; do not adopt. There is no version of it
-      with enough safeguards bolted on to move it up a tier.
+      <span class="govuk-visually-hidden">{c.warningLabel}</span>
+      {c.warning}
     </strong>
   </div>
 
   <p class="govuk-body">
     <TierTag tier={0} locale={locale} withName={false} link={false} />
     <span class="govuk-!-margin-left-2">
-      Answer the four questions on <a class="govuk-link" href={localePath(locale, '/start')}>Start here</a>
-      and these eight run first, as a screener, before any of the tiering questions.
+      {c.screenerBefore} <a class="govuk-link" href={localePath(locale, '/start')}>{t(locale, 'nav.start')}</a>
+      {c.screenerAfter}
     </span>
   </p>
 
-  <h2 class="govuk-heading-m" id="the-eight">The eight</h2>
+  <h2 class="govuk-heading-m" id="the-eight">{c.theEight}</h2>
 
   <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-8">
     {lines.map((line) => (
@@ -73,7 +115,7 @@ const description =
   {lines.map((line) => (
     <section id={`line-${line.data.number}`} class="govuk-!-margin-bottom-8">
       <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
-        <span class="govuk-caption-m">Bright line {line.data.number}</span>
+        <span class="govuk-caption-m">{c.lineCaption} {line.data.number}</span>
         {line.data.title}
       </h2>
 
@@ -104,13 +146,11 @@ const description =
     </section>
   ))}
 
-  <h2 class="govuk-heading-m" id="if-you-are-already-doing-one">If you are already doing one of these</h2>
+  <h2 class="govuk-heading-m" id="if-you-are-already-doing-one">{c.alreadyHeading}</h2>
 
   <p class="govuk-body">
-    Stop the use, not the program. Turn the feature off if the tool has a switch for it, ask the
-    vendor in writing to confirm it is off for your account, and record the date you did both. If
-    the feature cannot be turned off, the tool comes out. Then work through
-    <a class="govuk-link" href={localePath(locale, '/start')}>Start here</a> for the uses you are
-    keeping, so the rest of your tools have a tier and a written basis behind them.
+    {c.alreadyBefore}
+    <a class="govuk-link" href={localePath(locale, '/start')}>{t(locale, 'nav.start')}</a>
+    {c.alreadyAfter}
   </p>
 </BaseLayout>

@@ -1,11 +1,11 @@
 ---
-title: Exit and export
+title: Salida y exportación
 locale: es
 number: 9
 order: 9
 lastUpdated: '2026-09-10'
-question: "What happens to our data if we leave, and can we export it in a usable format?"
-whyItMatters: "Custody means knowing where a child's record goes and being able to get it back. The moment you cannot leave a product without losing children's records is the moment every other answer on this sheet becomes unenforceable, because the only sanction a single-site program has is the ability to choose a different vendor next year."
+question: "¿Qué pasa con nuestros datos si nos vamos, y podemos exportarlos en un formato que se pueda usar?"
+whyItMatters: "Custodia quiere decir saber a dónde va el expediente de un niño y poder recuperarlo. El momento en que usted no puede dejar un producto sin perder los registros de los niños es el momento en que todas las demás respuestas de esta hoja dejan de poder hacerse cumplir, porque la única sanción que tiene un programa de una sola sede es poder elegir otro proveedor el año que viene."
 authorities:
   - "45 CFR 1303 Subpart C — parent inspection and amendment, which the program cannot honor without its own copy"
   - "45 CFR 1303.24 — disclosure logs"
@@ -13,13 +13,14 @@ governs: ['custody', 'currency']
 translationPending: true
 ---
 
-A real answer names the file formats, says whether photographs and video come with
-the records or separately, gives the window you have to retrieve everything after the
-contract ends, and confirms what is deleted from the vendor's side afterwards. Ask
-whether you can run an export now, while you are still a prospect.
+Una respuesta real nombra los formatos de archivo, dice si las fotos y los videos salen
+junto con los registros o aparte, da el plazo que usted tiene para recuperar todo después
+de que termine el contrato, y confirma qué se borra del lado del proveedor después.
+Pregunte si puede hacer una exportación ahora, mientras todavía es un cliente potencial.
 
-A dodge offers a PDF. A printout of a child's file is a record you can read but not
-move, which in practice means starting over in the next system. "Export available on
-request" without a format or a timeframe is the same answer.
+Una evasiva le ofrece un PDF. Una impresión del expediente de un niño es un registro que
+usted puede leer pero no mover, y en la práctica eso significa empezar de cero en el
+siguiente sistema. «Exportación disponible a solicitud», sin formato ni plazo, es la
+misma respuesta.
 
-Try the export before you decide, and write the date you tried it on the sheet.
+Pruebe la exportación antes de decidir, y escriba en la hoja la fecha en que la probó.

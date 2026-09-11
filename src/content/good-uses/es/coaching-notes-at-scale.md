@@ -1,5 +1,5 @@
 ---
-title: "What the coaching notes have been saying all along"
+title: "Lo que las notas de coaching llevan años diciendo"
 locale: es
 lastUpdated: '2026-09-10'
 order: 9
@@ -7,49 +7,52 @@ tier: 2
 audience: intermediary
 phase: 2
 featuredOnHome: false
+translationPending: true
 governs:
   - custody
   - consequence
 scenario: >-
-  A resource and referral agency holds six years of technical assistance notes
-  across 400 providers — thousands of pages of free text that nobody has ever
-  read as a set. Everyone in the building has a theory about where providers get
-  stuck. Nobody has evidence.
+  Una agencia de recursos y referencias tiene seis años de notas de asistencia
+  técnica de 400 proveedores: miles de páginas de texto libre que nadie ha leído
+  nunca como conjunto. Todos en la oficina tienen una teoría sobre dónde se
+  atascan los proveedores. Nadie tiene evidencia.
 returns: >-
-  Qualitative coding at a scale that was never affordable: which topics recur,
-  which cluster with later closure, where the coaching model is repeating
-  itself, and what providers keep asking for that the organization does not
-  offer. An archive becomes a program design input — and the kind of finding a
-  funder will pay to act on.
+  Codificación cualitativa a una escala que nunca fue costeable: qué temas se
+  repiten, cuáles aparecen junto con un cierre posterior, dónde el modelo de
+  coaching se está repitiendo a sí mismo, y qué siguen pidiendo los proveedores
+  que la organización no ofrece. Un archivo se convierte en un insumo para
+  diseñar el programa, y en el tipo de hallazgo por el que un financiador paga
+  para actuar.
 guardrail: >-
-  Notes carry provider and sometimes family identities. De-identify before
-  analysis, or work in an approved environment with an agreement in place.
-  Findings describe patterns across a portfolio; they never quietly become a
-  score attached to an individual provider.
-translationPending: true
+  Las notas llevan identidades de proveedores y a veces de familias. Quite los
+  datos que identifican antes del análisis, o trabaje en un entorno aprobado y
+  con un acuerdo por escrito. Los hallazgos describen patrones de toda la
+  cartera; nunca se convierten calladamente en un puntaje pegado a un proveedor
+  en particular.
 ---
 
-Six years of technical assistance notes across 400 providers is one of the
-richest datasets in the sector, and almost every agency that has one has never
-read it. Not from neglect — coaches write the note, the note goes in the file,
-and the file exists so that the next coach has context. Thousands of pages of
-free text, filed one provider at a time, never read as a set.
+Seis años de notas de asistencia técnica de 400 proveedores es uno de los
+conjuntos de datos más ricos del sector, y casi ninguna agencia que tiene uno lo
+ha leído. No por descuido: el coach escribe la nota, la nota va al expediente, y
+el expediente existe para que el próximo coach tenga contexto. Miles de páginas
+de texto libre, archivadas de un proveedor a la vez, nunca leídas como conjunto.
 
-Everyone in the building has a theory about where providers get stuck.
-Enrollment. Staffing. The subsidy portal. The theories are held with confidence
-and they are not evidence, because nobody has ever been able to afford the
-months of hand-coding it would take to test them.
+Todos en la oficina tienen una teoría sobre dónde se atascan los proveedores. La
+inscripción. El personal. El portal de subsidios. Las teorías se sostienen con
+mucha seguridad y no son evidencia, porque nadie ha podido pagar nunca los meses
+de codificación a mano que haría falta para comprobarlas.
 
-Reading the archive as a corpus is now affordable. Which topics recur and in
-which order. Which ones cluster with a closure eighteen months later. Where the
-coaching model is saying the same thing to the same provider for the fourth
-time. What providers keep asking for that the organization does not currently
-offer. That last one is a program design finding, and it is the kind of thing
-a funder will pay to act on.
+Leer el archivo completo, como un solo cuerpo de texto, ya es costeable. Qué
+temas se repiten y en qué orden. Cuáles aparecen junto a un cierre dieciocho
+meses después. Dónde el modelo de coaching le está diciendo lo mismo al mismo
+proveedor por cuarta vez. Qué siguen pidiendo los proveedores que la
+organización hoy no ofrece. Eso último es un hallazgo sobre el diseño del
+programa, y es el tipo de cosa por la que un financiador paga para actuar.
 
-The notes carry provider identities and sometimes family ones, so de-identify
-before the analysis or do the work inside an approved environment with an
-agreement in place. And the findings are about the portfolio. The moment a
-pattern becomes a rating quietly attached to one provider's file, this has
-turned into something else — see where to send the coach next, which is
-governed much more tightly for exactly that reason.
+Las notas llevan identidades de proveedores y a veces de familias, así que quite
+los datos que identifican antes del análisis, o haga el trabajo dentro de un
+entorno aprobado y con un acuerdo por escrito. Y los hallazgos son sobre la
+cartera. En el momento en que un patrón se convierte calladamente en una
+calificación pegada al expediente de un proveedor, esto se volvió otra cosa: vea
+«A dónde mandar al coach», que está gobernado mucho más estrictamente por
+exactamente esa razón.

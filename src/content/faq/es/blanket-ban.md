@@ -1,6 +1,6 @@
 ---
-title: A blanket ban
-question: "Our legal team said no AI. Isn't that the safest choice?"
+title: Una prohibición total
+question: "Nuestro equipo legal dijo que nada de IA. ¿No es esa la opción más segura?"
 locale: es
 lastUpdated: '2026-09-10'
 order: 9
@@ -8,22 +8,25 @@ onHome: false
 translationPending: true
 ---
 
-It feels like the safe choice. It is documented as a policy, so everyone moves
-on. Here is what actually happens next.
+Se siente como la opción segura. Queda documentada como política y todo el mundo
+sigue con su día. Esto es lo que pasa después, de verdad.
 
-Staff use AI anyway — on personal phones, in free consumer accounts, with child
-names in the prompt, outside any register, any agreement and any disclosure log.
-The organization now has the same exposure it had before, minus the ability to
-see it, plus a written policy proving it knew better.
+El personal usa IA de todos modos: en sus teléfonos personales, en cuentas
+gratuitas de consumo, con nombres de niños escritos en el mensaje, fuera de todo
+registro, de todo acuerdo y de todo registro de divulgaciones. La organización
+tiene ahora la misma exposición que tenía antes, menos la capacidad de verla, más
+una política escrita que prueba que sabía que no debía.
 
-**A blanket ban is not a safety posture. It is an unmonitored one.**
+**Una prohibición total no es una postura de seguridad. Es una postura sin
+vigilancia.**
 
-The corollary matters too. A program that forbids AI outright is choosing to
-leave real money on the table — the billing recovery, the translated closure
-notices, the grant it never applied for — while its staff take the risks anyway.
-That is the worst of both trades. See [where AI earns its place](/good-uses).
+El corolario también importa. Un programa que prohíbe la IA por completo está
+eligiendo dejar dinero real sobre la mesa —la facturación que por fin se
+recupera, los avisos de cierre traducidos, la subvención que nunca solicitó—
+mientras su personal corre los riesgos de todos modos. Ese es el peor de los dos
+tratos. Vea [dónde la IA se gana su lugar](/es/good-uses).
 
-If you are coming from a ban, the first move is not a policy. It is finding out
-what is already in use: a short amnesty window where anyone can add a tool to the
-register with no consequence. Skip that and the policy you write governs a
-fiction.
+Si viene de una prohibición, el primer paso no es una política. Es averiguar qué
+se está usando ya: una ventana corta de amnistía en la que cualquiera puede
+agregar una herramienta al registro sin consecuencias. Sáltese eso y la política
+que escriba va a gobernar una ficción.

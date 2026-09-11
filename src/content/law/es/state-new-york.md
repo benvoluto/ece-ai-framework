@@ -11,21 +11,24 @@ order: 22
 translationPending: true
 ---
 
-**Does the state's student-privacy law reach pre-K or child care?** Partly, and
-the boundary is unresolved. New York Education Law 2-d is the state's
-student-data-privacy statute, and it governs a district-operated pre-K program
-in the ordinary way. It also defines "school" to include publicly funded pre-K —
-which on its face pulls community-based organizations delivering publicly funded
-pre-K inside the statute. If that reading holds it is a significant fact for New
-York City providers, many of whom deliver publicly funded pre-K without thinking
-of themselves as schools. This page does not assert that reading. It is one of
-the two open questions below.
+**¿La ley de privacidad estudiantil del estado alcanza al pre-kínder o al
+cuidado infantil?** En parte, y el límite está sin resolver. La New York
+Education Law 2-d es la ley estatal de privacidad de los datos de los
+estudiantes, y rige de la manera habitual un programa de pre-kínder operado por
+un distrito escolar. También define «escuela» de modo que incluye el pre-kínder
+financiado con fondos públicos — lo que, leído tal cual, mete dentro de la ley a
+las organizaciones comunitarias que ofrecen pre-kínder financiado con fondos
+públicos. Si esa lectura se sostiene, es un hecho importante para los
+proveedores de la ciudad de Nueva York, muchos de los cuales ofrecen
+pre-kínder con fondos públicos sin pensar en sí mismos como escuelas. Esta
+página no afirma esa lectura. Es una de las dos preguntas abiertas de más abajo.
 
-**Is there a biometric statute with a private right of action?** Not established
-here.
+**¿Hay una ley de biometría con derecho privado de acción?** No se ha
+establecido aquí.
 
-**What do the state's CCDF plan and provider agreement require?** Not
-established here.
+**¿Qué exigen el plan estatal de CCDF —el fondo federal de cuidado y desarrollo
+infantil que pasa por el estado hacia los programas subsidiados— y el acuerdo
+del estado con los proveedores de cuidado?** No se ha establecido aquí.
 
-**What has the state AI office or education department published that a provider
-might be handed?** Not established here.
+**¿Qué ha publicado la oficina estatal de IA o el departamento de educación que
+le puedan entregar a un proveedor de cuidado?** No se ha establecido aquí.

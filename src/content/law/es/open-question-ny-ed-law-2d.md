@@ -1,5 +1,5 @@
 ---
-title: Does New York Education Law 2-d reach community-based pre-K providers?
+title: ¿La New York Education Law 2-d alcanza a los proveedores comunitarios de pre-kínder?
 locale: es
 kind: open-question
 needsLegalReview: true
@@ -10,25 +10,28 @@ order: 30
 translationPending: true
 ---
 
-New York Education Law 2-d defines "school" to include publicly funded pre-K. On
-its face, that definition pulls community-based organizations delivering
-publicly funded pre-K inside the statute — which would mean a nonprofit or
-private center running a publicly funded pre-K classroom carries the same
-student-data-privacy obligations as a district, including the ones that bite on
-contracts with education technology vendors.
+La New York Education Law 2-d define «escuela» de modo que incluye el
+pre-kínder financiado con fondos públicos. Leída tal cual, esa definición mete
+dentro de la ley a las organizaciones comunitarias que ofrecen pre-kínder
+financiado con fondos públicos — lo que significaría que una organización sin
+fines de lucro o un centro privado que opera un salón de pre-kínder con fondos
+públicos carga con las mismas obligaciones de privacidad de datos estudiantiles
+que un distrito escolar, incluidas las que muerden en los contratos con
+proveedores de tecnología educativa.
 
-If that reading is right it is a large fact for New York City providers in
-particular, and it is not one the field is currently acting on. If it is wrong,
-saying it here would send hundreds of programs to renegotiate contracts they did
-not need to reopen.
+Si esa lectura es correcta, es un hecho grande sobre todo para los proveedores
+de la ciudad de Nueva York, y no es uno sobre el que el campo esté actuando hoy.
+Si es incorrecta, decirlo aquí mandaría a cientos de programas a renegociar
+contratos que no hacía falta reabrir.
 
-This draft cannot resolve it. The question needs an attorney who will read the
-definition against the rest of the statute and against how the state has applied
-it, and will own the answer. The site does not yet have a pro bono legal partner
-to do that, and this question is one of the reasons it needs one.
+Este borrador no lo puede resolver. La pregunta necesita un abogado que lea la
+definición frente al resto de la ley y frente a cómo la ha aplicado el estado, y
+que se haga cargo de la respuesta. El sitio todavía no tiene un socio legal pro
+bono que lo haga, y esta pregunta es una de las razones por las que lo necesita.
 
-**What to do in the meantime.** Nothing here asks you to act on the broader
-reading. If you deliver publicly funded pre-K in New York, the safe practical
-step is the one that is right under every reading: get the data-protection terms
-you want from your vendor in writing, in the contract, rather than relying on a
-statute whose reach over your program is unsettled.
+**Qué hacer mientras tanto.** Nada de lo que hay aquí le pide actuar según la
+lectura amplia. Si usted ofrece pre-kínder financiado con fondos públicos en
+Nueva York, el paso práctico seguro es el que es correcto bajo cualquier
+lectura: consiga por escrito, en el contrato, las cláusulas de protección de
+datos que quiere de su proveedor, en vez de apoyarse en una ley cuyo alcance
+sobre su programa no está resuelto.

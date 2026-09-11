@@ -1,37 +1,38 @@
 ---
-title: One tool register, many sites
+title: Un solo registro de herramientas, muchas sedes
 locale: es
 kind: addition
 number: 2
 order: 4
 lastUpdated: '2026-09-10'
-summary: The single-site register does not scale. One source of truth, per-site adoption status, and a standing rule that no site adopts a Tier 2 or Tier 3 tool that is not on it.
+summary: 'El registro de una sola sede no escala. Una sola fuente de verdad, el estado de adopción sede por sede, y una regla permanente: ninguna sede adopta una herramienta de Nivel 2 o Nivel 3 que no esté en él.'
 relatedArtifacts: ['governance-charter']
 translationPending: true
 ---
 
-The single-site Approved Tools Register does not scale by being copied fourteen
-times. Fourteen registers is not an inventory; it is fourteen partial views that
-disagree with each other, and the disagreement only surfaces during a monitoring
-review.
+El Registro de Herramientas Aprobadas de una sola sede no escala copiándolo
+catorce veces. Catorce registros no son un inventario; son catorce vistas
+parciales que se contradicen entre sí, y la contradicción solo sale a la luz
+durante una revisión de monitoreo.
 
-What a multi-site organization needs instead:
+Lo que una organización con varias sedes necesita en su lugar:
 
-- **One source of truth.** A single register, centrally held, listing every tool
-  the organization has approved — tool, purpose, tier, who approved it, the date,
-  whether a written agreement is on file, what data it touches, and the review
-  date.
-- **Per-site adoption status.** The same row, with a column for each site: in
-  use, not in use, pilot. This is what makes the register answer the two
-  questions that actually get asked — "is this tool approved?" and "who is
-  running it?" — without a round of phone calls.
-- **A standing rule with no exceptions.** No site adopts a Tier 2 or Tier 3 tool
-  that is not on the register. A site may ask for a tool to be added, and the
-  charter says who answers and how fast. A site may not go first and inform the
-  register afterwards.
+- **Una sola fuente de verdad.** Un registro único, de custodia central, que
+  liste todas las herramientas que la organización ha aprobado: herramienta,
+  propósito, nivel, quién la aprobó, la fecha, si hay un acuerdo por escrito en el
+  expediente, qué datos toca y la fecha de revisión.
+- **Estado de adopción sede por sede.** La misma fila, con una columna por cada
+  sede: en uso, sin uso, en piloto. Eso es lo que hace que el registro responda
+  las dos preguntas que de verdad se hacen —«¿esta herramienta está aprobada?» y
+  «¿quién la está usando?»— sin una ronda de llamadas.
+- **Una regla permanente y sin excepciones.** Ninguna sede adopta una herramienta
+  de Nivel 2 o Nivel 3 que no esté en el registro. Una sede puede pedir que se
+  agregue una herramienta, y la carta de gobernanza dice quién responde y en
+  cuánto tiempo. Una sede no puede adelantarse y avisarle al registro después.
 
-The register is the artifact most likely to be requested in a licensing visit or
-a monitoring review, and it is the one document that makes every other addition
-on this page enforceable. Without it, the contract riders cover a set of vendors
-nobody can list, the escalation path does not know which tool a teacher is
-calling about, and the board report is an estimate.
+El registro es el documento que con más probabilidad le van a pedir en una visita
+de licenciamiento o en una revisión de monitoreo, y es el único que hace
+exigibles todas las demás adiciones de esta página. Sin él, las cláusulas
+contractuales cubren un conjunto de proveedores que nadie puede enumerar, la ruta
+de escalamiento no sabe de qué herramienta le está llamando una maestra, y el
+informe a la junta directiva es un cálculo aproximado.
