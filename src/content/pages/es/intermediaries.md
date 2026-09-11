@@ -58,7 +58,7 @@ lo demás.
 Cuatro de los doce usos constructivos de este sitio son usos de intermediarios.
 Están desarrollados completos en
 <a class="govuk-link" href="/es/good-uses#for-intermediaries">Dónde ayuda la IA</a>, cada uno con su nivel de
-riesgo, su límite de protección y el principio al que responde. En resumen:
+riesgo, su salvaguarda y el principio al que responde. En resumen:
 
 - <a class="govuk-link" href="/es/good-uses#coaching-notes-at-scale">Lo que las notas de coaching llevan años diciendo</a>
   — Nivel 2. Años de notas de asistencia técnica leídas como conjunto por

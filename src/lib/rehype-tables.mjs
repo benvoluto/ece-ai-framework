@@ -7,6 +7,11 @@
  *
  * Doing this in rehype rather than in client script means it works with
  * JavaScript turned off, which matters for the audience this site is for.
+ *
+ * CACHE TRAP. Astro's content layer caches rendered markdown in
+ * node_modules/.astro/data-store.json. Editing this file does NOT invalidate
+ * that cache, so a change here appears to do nothing until you run
+ * `npm run clean` (or delete node_modules/.astro) and rebuild.
  */
 import { visit } from 'unist-util-visit';
 
@@ -28,15 +33,17 @@ export function rehypeAccessibleTables() {
         cell.properties = { ...cell.properties, scope: inHead ? 'col' : 'row' };
       });
 
-      // A focusable region so the container can be scrolled from the keyboard.
+      // A focusable container, scrollable from the keyboard.
       parent.children[index] = {
         type: 'element',
         tagName: 'div',
         properties: {
+          // tabindex makes the container scrollable from the keyboard, which is
+          // the whole point. No role or aria-label: Astro gives content files no
+          // vfile path, so the locale cannot be resolved here, and an English
+          // label on a Spanish page is worse than no label at all.
           className: ['app-table-wrapper'],
-          role: 'region',
           tabIndex: 0,
-          'aria-label': 'Table',
         },
         children: [node],
       };

@@ -52,13 +52,23 @@ su personal y sus contratistas, en:
 - operaciones de negocio de rutina: redacción, traducción, horarios,
   investigación.
 
-Usamos la misma clasificación de tres niveles que les pedimos usar a los
-proveedores. El Nivel 1 es trabajo que no toca datos que identifiquen a un
+Tomamos prestada la estructura de tres niveles que les pedimos usar a los
+proveedores, pero no sus criterios. Los de ellos dependen de los datos de niños
+y familias, porque en un programa lo que está en juego es un niño. Los nuestros
+dependen de los datos de los proveedores, porque aquí lo que está en juego es un
+negocio del que depende un proveedor.
+
+Bajo esta norma, el Nivel 1 es trabajo que no toca datos que identifiquen a un
 proveedor ni a una familia. El Nivel 2 toca datos de negocio de un proveedor
 identificado. El Nivel 3 es cualquier cosa que alimente una decisión que afecte
 el dinero, la posición o la participación de un proveedor. El Nivel 3 requiere
 la aprobación por escrito de [PUESTO DESIGNADO] antes de adoptarlo, y otra vez
 antes de cualquier cambio en el modelo que está detrás.
+
+Cuando uno de nuestros propios usos toca registros que nombran a un niño o a una
+familia —por ejemplo, notas de asesoría que citan una observación de salón—, los
+niveles dirigidos a proveedores también rigen ese uso, y se aplica el más alto de
+los dos.
 
 ## 2. Lo que no vamos a hacer
 
@@ -284,7 +294,7 @@ un paquete de acompañamiento o en nuestro sitio web— vale lo siguiente.
 
 **Lo que no podemos cambiar.**
 
-- Los siete principios y las ocho líneas rojas. No cambian según el tamaño del
+- Los siete principios y los ocho límites infranqueables. No cambian según el tamaño del
   proveedor, ni según el nivel, ni según el intermediario. Son la parte que hace
   que todo lo demás tenga coherencia, y un intermediario que suaviza una de
   ellas ha producido un documento distinto que no debería llevar el nombre de

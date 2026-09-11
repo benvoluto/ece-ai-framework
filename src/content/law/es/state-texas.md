@@ -9,7 +9,7 @@ order: 21
 translationPending: true
 ---
 
-**¿La ley de privacidad estudiantil del estado alcanza al pre-kínder o al
+**¿La ley de privacidad estudiantil del estado alcanza al prekínder o al
 cuidado infantil?** No se ha establecido aquí.
 
 **¿Hay una ley de biometría con derecho privado de acción?** No se ha

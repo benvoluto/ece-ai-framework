@@ -12,7 +12,7 @@ translationPending: true
 Puede tomar cosas prestadas de ella. No puede apoyarse en ella, porque dos de los
 siete principios de este sitio no aparecen en ningún otro marco de IA en ninguna
 parte, y faltan en todos por la misma razón. Cada marco que circula hoy se
-escribió para K-12 (de kínder a doceavo grado) o para organizaciones sin fines de
+escribió para K-12 (de kínder a 12.º grado) o para organizaciones sin fines de
 lucro en general.
 
 **En ninguno de ellos hay una prueba de adecuación al desarrollo.** Una

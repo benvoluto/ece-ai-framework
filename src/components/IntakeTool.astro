@@ -112,7 +112,7 @@ const clauses = isEs
       { id: 'names', before: 'considerando una herramienta que', yes: 've o recibe información que identifica a un niño o a una familia', no: 'no ve ni recibe información que identifique a un niño o a una familia' },
       { id: 'biometric', before: ',', yes: 'capta la cara, la voz o el cuerpo de un niño', no: 'no capta la cara, la voz ni el cuerpo de un niño' },
       { id: 'decision', before: ',', yes: 'informará una decisión sobre un niño en particular', no: 'no informará ninguna decisión sobre un niño en particular' },
-      { id: 'children', before: ' y', yes: 'será usado directamente por niños', no: 'no será usado directamente por niños' },
+      { id: 'children', before: ' y', yes: 'será usada directamente por niños', no: 'no será usada directamente por niños' },
     ]
   : [
       { id: 'names', before: 'considering a tool that', yes: 'does', no: 'does not', after: 'see or receive information naming an individual child or family' },
@@ -198,13 +198,17 @@ const clauses = isEs
     <p class="govuk-hint">{c.sentenceHint}</p>
 
     <p class="app-sentence">
-      <span>{isEs ? 'Somos un' : 'We are a'}</span>{' '}
+      <span>{isEs ? 'Somos' : 'We are a'}</span>{' '}
       <label class="govuk-visually-hidden" for="q-provider">
         {isEs ? 'Tipo de programa' : 'Type of program'}
       </label>
       <select class="app-sentence__select" id="q-provider" data-q="provider" data-answered="false">
         <option value="">{isEs ? '— elija —' : '— choose —'}</option>
-        {PROVIDER_TYPES.map((p) => <option value={p.id}>{p[locale] ?? p.en}</option>)}
+        {PROVIDER_TYPES.map((p) => (
+          <option value={p.id}>
+            {locale === 'es' ? `${p.esArticle ?? 'un'} ${p.es}` : p.en}
+          </option>
+        ))}
       </select>{' '}
       {clauses.map((clause, i) => (
         <>

@@ -1,5 +1,5 @@
 ---
-title: ¿La New York Education Law 2-d alcanza a los proveedores comunitarios de pre-kínder?
+title: ¿La New York Education Law 2-d alcanza a los proveedores comunitarios de prekínder?
 locale: es
 kind: open-question
 needsLegalReview: true
@@ -11,10 +11,10 @@ translationPending: true
 ---
 
 La New York Education Law 2-d define «escuela» de modo que incluye el
-pre-kínder financiado con fondos públicos. Leída tal cual, esa definición mete
-dentro de la ley a las organizaciones comunitarias que ofrecen pre-kínder
+prekínder financiado con fondos públicos. Leída tal cual, esa definición mete
+dentro de la ley a las organizaciones comunitarias que ofrecen prekínder
 financiado con fondos públicos — lo que significaría que una organización sin
-fines de lucro o un centro privado que opera un salón de pre-kínder con fondos
+fines de lucro o un centro privado que opera un salón de prekínder con fondos
 públicos carga con las mismas obligaciones de privacidad de datos estudiantiles
 que un distrito escolar, incluidas las que muerden en los contratos con
 proveedores de tecnología educativa.
@@ -30,7 +30,7 @@ que se haga cargo de la respuesta. El sitio todavía no tiene un socio legal pro
 bono que lo haga, y esta pregunta es una de las razones por las que lo necesita.
 
 **Qué hacer mientras tanto.** Nada de lo que hay aquí le pide actuar según la
-lectura amplia. Si usted ofrece pre-kínder financiado con fondos públicos en
+lectura amplia. Si usted ofrece prekínder financiado con fondos públicos en
 Nueva York, el paso práctico seguro es el que es correcto bajo cualquier
 lectura: consiga por escrito, en el contrato, las cláusulas de protección de
 datos que quiere de su proveedor, en vez de apoyarse en una ley cuyo alcance

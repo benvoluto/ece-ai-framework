@@ -152,7 +152,7 @@ Pida el enlace.
 ## 8. Validación
 
 **Para cualquier cosa que produzca un juicio sobre un niño: ¿con qué se validó, y
-se analizó el desempeño por separado para los estudiantes de dos idiomas (DLL) y
+se analizó el desempeño por separado para los estudiantes de dos idiomas (DLL, por sus siglas en inglés) y
 para los niños con discapacidades?**
 
 *Una evasiva suena así:* «Se ha usado con más de un millón de niños», o un número

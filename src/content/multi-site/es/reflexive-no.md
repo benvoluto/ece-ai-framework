@@ -4,7 +4,7 @@ locale: es
 kind: failure-mode
 order: 1
 lastUpdated: '2026-09-10'
-summary: Una prohibición total parece la opción segura y queda documentada como política, así que todos siguen adelante. Lo que produce en realidad es la misma exposición, menos la capacidad de verla, más un documento escrito que prueba que la organización lo sabía.
+summary: Una prohibición total parece la opción segura y queda documentada como política, así que todos siguen adelante. Lo que produce en realidad es la misma exposición, menos la capacidad de verla, más un documento escrito que prueba que la organización sabía muy bien lo que correspondía hacer.
 relatedArtifacts: ['shadow-ai-amnesty-kit', 'governance-charter']
 translationPending: true
 ---
@@ -21,7 +21,7 @@ divulgaciones. El trabajo no cambió en nada; lo único que cambió fue la
 visibilidad.
 
 Así que la organización ahora carga con la misma exposición que tenía antes,
-menos la capacidad de verla, más una política escrita que prueba que lo sabía.
+menos la capacidad de verla, más una política escrita que prueba que sabía muy bien lo que correspondía hacer.
 Las dos mitades de esa frase importan. La primera es un problema operativo: no se
 puede revisar un acuerdo que uno no sabe que existe, no se puede anotar una
 divulgación de la que nunca se enteró, y no se puede responder a una visita de

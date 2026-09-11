@@ -129,7 +129,7 @@ const c = copy[locale] ?? copy.en;
   <div class="govuk-warning-text">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <strong class="govuk-warning-text__text">
-      <span class="govuk-visually-hidden">Warning</span>
+      <span class="govuk-visually-hidden">{locale === 'es' ? 'Advertencia' : 'Warning'}</span>
       {c.warning}
     </strong>
   </div>

@@ -96,8 +96,9 @@ disciplinarias conforme a este manual:
 2. Usar IA en cualquier punto de la documentación o el reporte de sospecha de
    maltrato o negligencia infantil.
 3. Usar traducción automática en una conversación sobre el resultado de una
-   evaluación, en una reunión de IFSP o IEP (los planes de servicios para niños
-   con retrasos en el desarrollo o discapacidades), en una conversación de
+   evaluación, en una reunión de IFSP (el plan individualizado de servicios para la
+   familia, para niños de cero a tres años) o de IEP (el programa educativo
+   individualizado, para niños de tres años en adelante), en una conversación de
    protección infantil o en una determinación de elegibilidad.
 4. Actuar según lo que una herramienta diga sobre un niño en particular antes de
    que una persona calificada haya revisado la evidencia de fondo y haya tomado

@@ -293,13 +293,13 @@ estatal y local —así que un centro privado o una organización sin fines de l
 que recibe una subvención tiene más exposición aquí que un distrito escolar
 público—, la ELPIPA de California, y la New York Education Law 2-d (la ley de
 educación de Nueva York). El [RESPONSABLE DE GOBERNANZA DE IA] revisa la
-capa estatal del mapa regulatorio cada [ANUAL] y cada vez que abrimos una sede
+capa estatal del mapa regulatorio cada [CADA CUÁNTO: POR EJEMPLO, 12 MESES] y cada vez que abrimos una sede
 en un estado nuevo.
 
 ## 12. Revisión, vigencia y adopción
 
 El Grupo de Revisión de IA revisa esta carta cada [12 MESES] y cada vez que
-cambia una línea roja, una regla federal o una ley estatal. La fecha de revisión
+cambia un límite infranqueable, una regla federal o una ley estatal. La fecha de revisión
 y la versión van impresas en cada copia. Un documento de gobernanza sin fecha no
 es un documento de gobernanza.
 

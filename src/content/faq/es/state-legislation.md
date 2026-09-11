@@ -16,7 +16,7 @@ estados en esta sesión legislativa. MultiState cuenta 134 en 31 estados. Ningun
 de los dos rastreadores contiene una sola disposición sobre pre-K, preescolar,
 cuidado infantil o Head Start (el programa federal de educación temprana). La
 orientación sobre IA de los departamentos estatales de educación ya está en todas
-partes, y está escrita entera para K-12 (de kínder a doceavo grado).
+partes, y está escrita entera para K-12 (de kínder a 12.º grado).
 
 Lo que *sí* avanza rápido son las leyes estatales sobre chatbots, biometría y
 datos de menores —14 leyes sobre chatbots aprobadas solo en el período de 2026—

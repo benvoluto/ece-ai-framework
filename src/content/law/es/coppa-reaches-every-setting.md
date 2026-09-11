@@ -17,7 +17,7 @@ protección de la privacidad de los niños en línea — regula a los operadores
 servicios en línea dirigidos a menores de 13 años, y no le importa si el
 programa es una escuela. Un hogar de cuidado infantil familiar, un centro
 privado, un concesionario de Head Start (el programa federal de educación
-temprana) y un salón de pre-kínder de un distrito escolar están todos en la
+temprana) y un salón de prekínder de un distrito escolar están todos en la
 misma posición: la aplicación donde está la información de sus niños sí está
 regulada.
 

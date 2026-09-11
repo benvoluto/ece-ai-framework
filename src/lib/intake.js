@@ -24,21 +24,25 @@ export const PROVIDER_TYPES = [
     id: 'fcc',
     en: 'family child care home',
     es: 'hogar de cuidado infantil familiar',
+    esArticle: 'un',
   },
   {
     id: 'center',
     en: 'center',
     es: 'centro',
+    esArticle: 'un',
   },
   {
     id: 'multi-site',
     en: 'multi-site or Head Start grantee',
     es: 'organización con varias sedes o concesionario de Head Start',
+    esArticle: 'una',
   },
   {
     id: 'intermediary',
     en: 'intermediary',
     es: 'intermediario',
+    esArticle: 'un',
   },
 ];
 
@@ -76,8 +80,8 @@ export const QUESTIONS = [
     en: { yes: 'will', no: 'will not' },
     es: { yes: 'sí', no: 'no' },
     enClause: 'be used directly by children',
-    esClause: 'será usado directamente por niños',
-    esClauseYes: 'será usado directamente por niños',
+    esClause: 'será usada directamente por niños',
+    esClauseYes: 'será usada directamente por niños',
   },
 ];
 
@@ -403,8 +407,9 @@ export function sentenceFor(state, locale = 'en') {
   if (locale === 'es') {
     const clause = (q, value) =>
       value ? q.esClauseYes : `no ${q.esClause.replace(/^no /, '')}`;
+    const article = provider?.esArticle ?? 'un';
     return (
-      `Somos un ${providerLabel} considerando una herramienta que ` +
+      `Somos ${article} ${providerLabel} considerando una herramienta que ` +
       `${clause(QUESTIONS[0], state.names)}, ` +
       `${clause(QUESTIONS[1], state.biometric)}, ` +
       `${clause(QUESTIONS[2], state.decision)} y ` +

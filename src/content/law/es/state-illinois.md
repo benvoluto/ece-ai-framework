@@ -11,7 +11,7 @@ order: 25
 translationPending: true
 ---
 
-**¿La ley de privacidad estudiantil del estado alcanza al pre-kínder o al
+**¿La ley de privacidad estudiantil del estado alcanza al prekínder o al
 cuidado infantil?** Sin resolver. Illinois tiene una ley sobre la protección de
 la información personal de los estudiantes en línea, SOPPA, y si alcanza
 siquiera al preescolar no se pudo confirmar para este borrador. Esa es una de

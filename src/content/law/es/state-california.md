@@ -12,17 +12,17 @@ order: 20
 translationPending: true
 ---
 
-**¿La ley de privacidad estudiantil del estado alcanza al pre-kínder o al
+**¿La ley de privacidad estudiantil del estado alcanza al prekínder o al
 cuidado infantil?** Sí, a través de una ley que casi todas las plantillas se
 saltan. AB 2799 (2016) creó la Early Learning Personal Information Protection
 Act, ELPIPA (la ley de protección de la información personal en la educación
 temprana), en el Business and Professions Code §22586. Cubre a los operadores de
 servicios que se usan y se promocionan principalmente para fines de preescolar y
-pre-kínder, con la información biométrica expresamente dentro de la «covered
+prekínder, con la información biométrica expresamente dentro de la «covered
 information», la información cubierta. Un proveedor de educación temprana en
 California puede estar sujeto a ELPIPA y no a SOPIPA (la ley de California sobre
 privacidad de la información de los estudiantes en servicios en línea). Para el
-pre-kínder operado por un distrito escolar, el Education Code §49073.1 rige
+prekínder operado por un distrito escolar, el Education Code §49073.1 rige
 además los contratos del distrito con proveedores de tecnología educativa. Las
 dos leyes regulan al proveedor, así que el contrato es donde un programa las
 usa.

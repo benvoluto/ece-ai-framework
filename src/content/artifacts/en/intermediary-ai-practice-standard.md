@@ -43,12 +43,20 @@ decision support by [ORGANIZATION NAME], its staff, and its contractors, in:
 - grantmaking, subaward decisions, and applicant screening; and
 - routine business operations — drafting, translation, scheduling, research.
 
-We apply the same three-tier classification we ask providers to use. Tier 1 is
-work touching no provider-identifying or family-identifying data. Tier 2 touches
-identified provider business data. Tier 3 is anything that informs a decision
-affecting a provider's money, standing, or participation. Tier 3 requires
-written approval by [NAMED ROLE] before adoption and again before any change to
-the model behind it.
+We borrow the three-tier structure we ask providers to use, but not its
+triggers. Theirs turn on child and family data, because what is at stake in a
+program is a child. Ours turn on provider data, because what is at stake here is
+a business that a provider depends on.
+
+Under this standard, Tier 1 is work touching no provider-identifying or
+family-identifying data. Tier 2 touches identified provider business data.
+Tier 3 is anything that informs a decision affecting a provider's money,
+standing, or participation. Tier 3 requires written approval by [NAMED ROLE]
+before adoption and again before any change to the model behind it.
+
+Where one of our own uses touches records naming a child or a family — coaching
+notes that quote a classroom observation, for instance — the provider-facing
+tiers govern that use as well, and the higher of the two applies.
 
 ## 2. What we will not do
 

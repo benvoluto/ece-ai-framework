@@ -41,6 +41,7 @@ const L = {
       'This policy is reviewed every [12 MONTHS], and again whenever a tool we use ships a new feature. A vendor feature release is an adoption event: we register it and tier it like any other adoption.',
     whoHeading: 'Who to ask',
     whoBody: 'Questions about this policy go to [NAME], [ROLE], at [PHONE] or [EMAIL].',
+    programName: '[PROGRAM NAME]',
     signed: 'Signed',
     date: 'Date',
     noticeIntro:
@@ -83,6 +84,7 @@ const L = {
     whoHeading: 'A quién preguntar',
     whoBody:
       'Las preguntas sobre esta política van a [NOMBRE], [PUESTO], al [TELÉFONO] o [CORREO ELECTRÓNICO].',
+    programName: '[NOMBRE DEL PROGRAMA]',
     signed: 'Firma',
     date: 'Fecha',
     noticeIntro:
@@ -157,7 +159,7 @@ export function generateDocuments(state, locale = 'en', today = '') {
   const policy = [
     `# ${s.policyTitle}`,
     '',
-    `**[PROGRAM NAME]** — ${providerLabel}`,
+    `**${s.programName}** — ${providerLabel}`,
     stamp,
     '',
     `> ${s.draft}`,
@@ -242,7 +244,7 @@ export function generateDocuments(state, locale = 'en', today = '') {
   const notice = [
     `# ${s.noticeTitle}`,
     '',
-    `**[PROGRAM NAME]**`,
+    `**${s.programName}**`,
     stamp,
     '',
     `> ${s.draft}`,

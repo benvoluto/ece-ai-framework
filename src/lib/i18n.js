@@ -90,7 +90,7 @@ export const ui = {
     'label.atStake': 'Qué está en juego',
     'label.do': 'Qué hacer',
     'label.returns': 'Qué devuelve',
-    'label.guardrail': 'Límite de protección',
+    'label.guardrail': 'Salvaguarda',
     'label.basis': 'El fundamento',
     'label.authority': 'Base legal o evidencia',
     'label.verify': 'Verificar antes de publicar',

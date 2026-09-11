@@ -19,7 +19,7 @@ translationPending: true
 esté llena y firmada.** La mayoría de los pilotos grandes de IA no tienen una
 condición de alto por escrito, y precisamente por eso nunca paran: se vence la
 ventana, la herramienta sigue instalada, nadie decide nada, y un piloto se
-convierte en una adopción por descuido. La condición de alto de abajo es un
+convierte en una adopción por inercia, sin que nadie lo decida. La condición de alto de abajo es un
 campo obligatorio, no una sugerencia, y quien aprueba la firma antes del primer
 día, no después del último.
 
@@ -92,7 +92,7 @@ en que ocurre.
 **Y el final ordinario:** si los criterios de éxito de la Sección 2 no se
 cumplen para la fecha de término, el piloto termina en la fecha de término. La
 herramienta se desinstala, se quitan los accesos y el renglón del Registro se
-cierra. Nada continúa por descuido.
+cierra. Nada sigue en marcha solo porque nadie lo detuvo.
 
 Quién puede pararlo: el responsable del piloto, el director de la sede, el
 [RESPONSABLE DE GOBERNANZA DE IA] o cualquier integrante del Grupo de Revisión
@@ -131,7 +131,7 @@ a [NOMBRE], [PUESTO], al [TELÉFONO] o al [CORREO ELECTRÓNICO]."
 
 En un piloto de Nivel 3, el aviso no basta. Se requiere el consentimiento de los
 padres por separado antes de que la información de cualquier niño entre a la
-herramienta, y una familia que dice que no conserva los mismos servicios.
+herramienta, y si una familia dice que no, sus servicios no cambian en nada.
 
 ## 5. Expediente de la decisión de cierre
 

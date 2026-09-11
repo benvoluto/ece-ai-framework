@@ -15,7 +15,7 @@ catorce sedes con una directora de recursos humanos y abogados externos.
 
 Los operadores grandes no son un problema más pequeño. Son un problema distinto,
 y el campo no tiene ninguna orientación para ellos. Ustedes tienen algo que el
-sitio único no tiene: la capacidad de gobernar esto de verdad. Lo que no tienen es
+programa de una sola sede no tiene: la capacidad de gobernar esto de verdad. Lo que no tienen es
 a nadie que les diga cómo.
 
 Por eso hay una vía aparte. Nueve elementos adicionales que solo tienen sentido

@@ -20,7 +20,7 @@ AB 2799 (2016) no modificó SOPIPA. Creó una ley aparte, en el California
 Business and Professions Code §22586: la Early Learning Personal Information
 Protection Act, ELPIPA (la ley de protección de la información personal en la
 educación temprana). Cubre a los operadores de servicios que se usan y se
-promocionan principalmente para fines de preescolar y pre-kínder. La información
+promocionan principalmente para fines de preescolar y prekínder. La información
 biométrica está incluida expresamente en lo que la ley trata como «covered
 information», la información cubierta.
 

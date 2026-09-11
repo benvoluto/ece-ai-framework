@@ -61,9 +61,9 @@ hijo o hija de los demás niños. Los programas usan esto para etiquetar fotos
 automáticamente o para registrar la entrada y la salida de los niños. A esto se
 le llama información biométrica, y es distinta de una foto común: una foto
 muestra a su hijo o hija; una medida de la cara identifica a su hijo o hija.
-[NOMBRE DEL PROGRAMA] usa [NOMBRE EL TIPO DE HERRAMIENTA, EN UNA ORACIÓN — O
-ESCRIBA "NINGUNA HERRAMIENTA HACE ESTO"]. Si alguna vez empezamos, se lo
-preguntaremos antes de encenderla.
+En [NOMBRE DEL PROGRAMA]: [ESCRIBA EN UNA ORACIÓN QUÉ TIPO DE HERRAMIENTA
+USAMOS — O ESCRIBA "NO USAMOS NINGUNA HERRAMIENTA DE ESTE TIPO"]. Si alguna vez
+empezamos, se lo preguntaremos antes de encenderla.
 
 **3. Que una empresa use el material de su hijo o hija para entrenar su IA.**
 Las empresas cuyos programas usamos pueden querer usar las imágenes, la voz, los
@@ -110,7 +110,7 @@ empresa que toque información sobre su hijo o hija. Pídalo en cualquier moment
 
 [NOMBRE], [PUESTO], al [TELÉFONO] o [CORREO ELECTRÓNICO].
 
-Si el inglés no es el idioma que usted lee con más facilidad, díganoslo. Le
+Si el español no es el idioma que usted lee con más facilidad, díganoslo. Le
 daremos este formulario en [IDIOMA] y lo repasaremos con usted con un intérprete
 calificado, sin ningún costo para usted.
 

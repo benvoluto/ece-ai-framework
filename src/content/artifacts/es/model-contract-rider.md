@@ -216,7 +216,7 @@ investigación, ni versión beta. El Proveedor le avisará al Programa por escri
 antes de lanzar cualquier función que caiga dentro del alcance de esta Sección,
 y no pondrá una función así a disposición del Programa.
 
-**Qué hace esta cláusula.** Esta es una línea roja en este marco y está escrita
+**Qué hace esta cláusula.** Esta es un límite infranqueable en este marco y está escrita
 sin válvula de escape a propósito, porque cada versión de esta capacidad llega
 con otra etiqueta: "hallazgos", "analítica de participación", "señales de
 bienestar". Pregunte directamente, dentro del contrato, y la etiqueta deja de

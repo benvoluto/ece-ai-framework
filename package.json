@@ -10,7 +10,8 @@
     "astro": "astro",
     "check": "astro check",
     "artifacts": "node scripts/build-artifacts.mjs",
-    "verify": "node scripts/validate-content.mjs && node scripts/test-intake.mjs && npm run build && node scripts/check-build.mjs"
+    "verify": "node scripts/validate-content.mjs && node scripts/test-intake.mjs && npm run build && node scripts/check-build.mjs",
+    "clean": "rm -rf dist .astro node_modules/.astro node_modules/.vite public/artifacts"
   },
   "dependencies": {
     "astro": "^5.14.1",
