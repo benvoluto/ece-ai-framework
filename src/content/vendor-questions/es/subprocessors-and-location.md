@@ -7,9 +7,9 @@ lastUpdated: '2026-09-10'
 question: "¿Quiénes son sus subprocesadores, y dónde se guardan y se procesan los datos de los niños?"
 whyItMatters: "Usted no le puede cumplir a una familia la promesa de custodia si no sabe a dónde fue el expediente. El 45 CFR 1303.24 de Head Start (el programa federal de educación temprana) ya exige un registro de divulgaciones, y el §1303.23(e) les da a los padres un derecho sin condiciones a revisar cualquier acuerdo por escrito que el programa tenga con un tercero. El texto no se limita a los acuerdos que nombran a su hijo, y por eso es hoy el gancho más fuerte que tiene un padre que pide ver el contrato con un proveedor de IA. Una lista de subprocesadores es lo que le permite contestar esa petición en vez de reenviarla."
 authorities:
-  - "45 CFR 1303.24 — disclosure logs"
-  - "45 CFR 1303.23(e) — parents may review any written agreement the program has with a third party"
-  - "45 CFR 1303 Subpart C — disclosure exceptions and consent"
+  - "45 CFR 1303.24 — registros de divulgaciones"
+  - "45 CFR 1303.23(e) — los padres pueden revisar cualquier acuerdo por escrito que el programa tenga con un tercero"
+  - "45 CFR 1303 Subpart C — excepciones a la divulgación y consentimiento"
 governs: ['custody', 'currency']
 translationPending: true
 ---

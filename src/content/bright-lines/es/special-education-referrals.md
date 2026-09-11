@@ -8,8 +8,8 @@ rule: No use la IA como base para una referencia a educación especial o interve
 shortRule: 'Ninguna referencia a educación especial o intervención temprana sale de un resultado de IA por sí solo: decide una persona, a partir de la evidencia.'
 governs: ['consequence', 'standing']
 authorities:
-  - 'Oregon child-welfare screening tool — discontinued after disproportionate flagging of Black children'
-  - 'Allegheny Family Screening Tool — US Department of Justice civil-rights inquiry over disability bias'
+  - 'Oregon child-welfare screening tool — descontinuada tras marcar a un número desproporcionado de niños negros'
+  - 'Allegheny Family Screening Tool — investigación de derechos civiles del US Department of Justice por sesgo contra la discapacidad'
 translationPending: true
 ---
 

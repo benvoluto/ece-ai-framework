@@ -4,8 +4,8 @@ locale: es
 kind: finding
 needsLegalReview: true
 authorities:
-  - 'COPPA — regulates operators of online services directed to children under 13, and does not ask whether the program is a school'
-  - 'COPPA Final Rule 2025 — the FTC declined to codify the ed-tech "school authorization" exception, to avoid conflicting with anticipated FERPA amendments'
+  - 'COPPA — regula a los operadores de servicios en línea dirigidos a menores de 13 años, y no pregunta si el programa es una escuela'
+  - 'COPPA Final Rule 2025 — la FTC se negó a codificar la excepción de «autorización escolar» para tecnología educativa, para no chocar con las enmiendas a FERPA que se esperan'
 lastUpdated: '2026-09-10'
 order: 10
 translationPending: true

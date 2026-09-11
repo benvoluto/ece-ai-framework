@@ -8,8 +8,8 @@ rule: No use identificación biométrica de niños por cara o por voz —entrada
 shortRule: Nada de identificar a niños por su cara o su voz sin un consentimiento de los padres expreso, separado y revocable.
 governs: ['custody', 'standing']
 authorities:
-  - 'Illinois Biometric Information Privacy Act (BIPA) — applies to private entities; expressly excludes state and local government agencies'
-  - 'Amended COPPA Rule — biometric identifiers, including voiceprints and facial templates, are personal information'
+  - 'Illinois Biometric Information Privacy Act (BIPA) — aplica a las entidades privadas; excluye expresamente a las agencias de gobierno estatales y locales'
+  - 'Amended COPPA Rule — los identificadores biométricos, incluidas las huellas de voz y las plantillas faciales, son información personal'
 translationPending: true
 ---
 

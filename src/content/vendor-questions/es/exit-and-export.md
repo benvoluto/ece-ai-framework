@@ -7,8 +7,8 @@ lastUpdated: '2026-09-10'
 question: "¿Qué pasa con nuestros datos si nos vamos, y podemos exportarlos en un formato que se pueda usar?"
 whyItMatters: "Custodia quiere decir saber a dónde va el expediente de un niño y poder recuperarlo. El momento en que usted no puede dejar un producto sin perder los registros de los niños es el momento en que todas las demás respuestas de esta hoja dejan de poder hacerse cumplir, porque la única sanción que tiene un programa de una sola sede es poder elegir otro proveedor el año que viene."
 authorities:
-  - "45 CFR 1303 Subpart C — parent inspection and amendment, which the program cannot honor without its own copy"
-  - "45 CFR 1303.24 — disclosure logs"
+  - "45 CFR 1303 Subpart C — inspección y corrección por parte de los padres, que el programa no puede cumplir sin tener su propia copia"
+  - "45 CFR 1303.24 — registros de divulgaciones"
 governs: ['custody', 'currency']
 translationPending: true
 ---

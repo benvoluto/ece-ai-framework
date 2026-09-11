@@ -8,7 +8,7 @@ rule: No use IA en ninguna parte de la documentación de un reporte obligatorio 
 shortRule: 'Nada de IA en un reporte de protección infantil: ni para redactarlo, ni para resumirlo, ni para señalarlo.'
 governs: ['consequence', 'standing']
 authorities:
-  - 'No authority addresses this: no state child welfare agency guidance, no CAPTA guidance, and nothing from any early childhood body'
+  - 'Ninguna autoridad lo trata: no hay guía de ninguna agencia estatal de bienestar infantil, no hay guía de CAPTA y no hay nada de ningún organismo de educación temprana'
 translationPending: true
 ---
 

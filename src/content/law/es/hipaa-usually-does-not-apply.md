@@ -3,7 +3,7 @@ title: HIPAA casi nunca aplica, y la gente lo entiende al revés
 locale: es
 kind: finding
 authorities:
-  - 'HIPAA — the covered-entity test turns on electronic billing for health services'
+  - 'HIPAA — la prueba de entidad cubierta depende de si se factura electrónicamente por servicios de salud'
   - '45 CFR Part 1303 (Head Start privacy)'
   - 'IDEA confidentiality'
 lastUpdated: '2026-09-10'

@@ -4,7 +4,7 @@ locale: es
 kind: open-question
 needsLegalReview: true
 authorities:
-  - 'NY Ed Law 2-d — definition of "school"'
+  - 'NY Ed Law 2-d — la definición de «escuela»'
 lastUpdated: '2026-09-10'
 order: 30
 translationPending: true

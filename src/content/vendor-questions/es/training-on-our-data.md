@@ -7,9 +7,9 @@ lastUpdated: '2026-09-10'
 question: "¿Alguna información que nosotros ingresamos, o que su producto recoge sobre los niños, se usa para entrenar o mejorar sus modelos, o los de alguien más? Si es así, ¿con qué consentimiento?"
 whyItMatters: "Esta es la pregunta que decide si las observaciones, las fotos, la voz y los trabajos de un niño se vuelven datos de entrenamiento permanentes. La versión enmendada de la Regla COPPA (la ley federal de privacidad en línea de los niños) exige un consentimiento parental verificable y separado antes de que se divulgue información personal de niños a un tercero para desarrollar IA, y la FTC (la agencia federal de comercio) ha dicho que esa divulgación no es «integral» al servicio, así que no puede ir montada en el consentimiento general que la familia firmó al inscribirse. La Regla dice menos sobre una empresa que entrena sus propios modelos con datos que ya tiene, y por eso usted hace la pregunta en dos partes y escribe la respuesta en el contrato."
 authorities:
-  - "COPPA Final Rule 2025, effective June 2025, full compliance April 2026 — separate verifiable parental consent for disclosure of children's personal information to a third party for AI development"
-  - "FTC position that such disclosures are not \"integral to the nature of the service\""
-  - "45 CFR 1303.23(e) — parents may review any written agreement the program has with a third party"
+  - "COPPA Final Rule 2025, effective June 2025, full compliance April 2026 — consentimiento parental verificable y separado para divulgar información personal de los niños a un tercero con el fin de desarrollar IA"
+  - "Postura de la FTC de que esas divulgaciones no son «parte integral de la naturaleza del servicio»"
+  - "45 CFR 1303.23(e) — los padres pueden revisar cualquier acuerdo por escrito que el programa tenga con un tercero"
 governs: ['custody', 'standing', 'consequence']
 translationPending: true
 ---

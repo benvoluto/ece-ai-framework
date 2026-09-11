@@ -7,8 +7,8 @@ lastUpdated: '2026-09-10'
 question: "¿A quién llamamos cuando el producto genera algo equivocado sobre un niño, y cuál es su compromiso de avisarnos si algo sale mal del lado de ustedes?"
 whyItMatters: "En una sola pregunta caben dos fallas distintas, y los proveedores las contestan de manera diferente. La primera es un resultado equivocado sobre un niño con nombre y apellido: una observación confusa, una nota mal traducida para una familia, un resumen que le atribuye algo al niño equivocado; y quien tiene que arreglarlo es la directora, hoy mismo. La segunda es una falla del proveedor: una filtración de datos, una caída del servicio, un cambio de modelo que altera lo que dice el producto. Las dos terminan en el mismo escritorio, porque en un programa de una sola sede quien lee esta página es toda la organización."
 authorities:
-  - "45 CFR 1303.24 — disclosure logs, which a breach notification has to feed"
-  - "45 CFR 1303.23(e) — the written agreement families may ask to review is where the commitment belongs"
+  - "45 CFR 1303.24 — registros de divulgaciones, que un aviso de filtración de datos tiene que alimentar"
+  - "45 CFR 1303.23(e) — el acuerdo por escrito que las familias pueden pedir revisar es donde ese compromiso debe quedar"
 governs: ['consequence', 'relationship', 'currency']
 translationPending: true
 ---

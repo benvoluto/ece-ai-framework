@@ -8,8 +8,8 @@ rule: No ponga información personal de un niño o de una familia en un chatbot 
 shortRule: Nada de información de niños o familias en un chatbot de IA gratuito o de consumo sin un acuerdo por escrito detrás.
 governs: ['custody', 'standing']
 authorities:
-  - '45 CFR 1303.22 — disclosure of child records to third parties'
-  - '45 CFR 1303.24 — the disclosure log'
+  - '45 CFR 1303.22 — divulgación de expedientes de niños a terceros'
+  - '45 CFR 1303.24 — el registro de divulgaciones'
 translationPending: true
 ---
 

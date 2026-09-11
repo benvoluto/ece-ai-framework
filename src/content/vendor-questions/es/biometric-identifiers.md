@@ -7,8 +7,8 @@ lastUpdated: '2026-09-10'
 question: "¿Su producto calcula geometría facial, huellas de voz o cualquier otro identificador biométrico de los niños? Incluyendo para etiquetar fotos, para la entrada y salida, o para buscar."
 whyItMatters: "La captura biométrica de niños es uno de los pocos puntos de este campo donde una familia puede demandar directamente. BIPA (la ley de privacidad de información biométrica de Illinois) aplica a las «entidades privadas» y excluye expresamente a las agencias del gobierno estatal y local, lo cual voltea el mapa de riesgo que casi todos suponen: un centro privado o un concesionario sin fines de lucro carga más exposición aquí que un distrito escolar público, y BIPA trae daños fijados por ley. La Regla COPPA (la ley federal de privacidad en línea de los niños) enmendada incluye expresamente los identificadores biométricos —entre ellos las huellas de voz y las plantillas faciales— dentro de la «información personal». El consentimiento tiene que darlo un padre o una madre en nombre de un niño que no lo puede dar, y esa es una pregunta legal viva, sin respuesta limpia."
 authorities:
-  - "Illinois Biometric Information Privacy Act — applies to private entities, excludes state and local government agencies, private right of action and liquidated damages"
-  - "COPPA Final Rule 2025 — biometric identifiers, including voiceprints and facial templates, are \"personal information\""
+  - "Illinois Biometric Information Privacy Act — aplica a las entidades privadas, excluye a las agencias del gobierno estatal y local, derecho de acción privada y daños fijados por ley"
+  - "COPPA Final Rule 2025 — los identificadores biométricos, incluidas las huellas de voz y las plantillas faciales, son «información personal»"
 governs: ['custody', 'standing']
 translationPending: true
 ---

@@ -8,8 +8,8 @@ rule: No permita que un proveedor entrene sus modelos con imágenes, voces, trab
 shortRule: Ningún proveedor entrena sus modelos con imágenes, voces, trabajos o registros de niños sin un consentimiento parental verificable y separado.
 governs: ['custody', 'standing']
 authorities:
-  - "COPPA Final Rule, effective June 2025, full compliance April 2026 — separate verifiable parental consent for disclosing children's personal information to third parties for AI development"
-  - 'Federal Trade Commission — such disclosures are not "integral" to a service and so cannot ride on general consent'
+  - 'COPPA Final Rule, en vigor desde junio de 2025, cumplimiento total en abril de 2026 — consentimiento parental verificable y separado para divulgar información personal de niños a terceros con fines de desarrollo de IA'
+  - 'Federal Trade Commission — esas divulgaciones no son «integral» (esenciales) para un servicio, así que no pueden ampararse en el consentimiento general'
 verifyBeforePublishing: 'El requisito de consentimiento separado trae una excepción expresa para las divulgaciones «integral to the nature of the service» (esenciales para la naturaleza del servicio), y la declaración de la FTC se refiere a divulgaciones a terceros. No escriba que el entrenamiento de IA exige «siempre» un consentimiento separado: el vacío sobre el entrenamiento interno es real y el abogado de un proveedor lo va a notar.'
 translationPending: true
 ---

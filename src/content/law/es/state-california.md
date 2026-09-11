@@ -6,7 +6,7 @@ stateCode: CA
 needsLegalReview: true
 authorities:
   - 'AB 2799 (2016); Cal. Bus. & Prof. Code §22586 — ELPIPA'
-  - 'CA Educ. Code §49073.1 — district contracts with education technology vendors'
+  - 'CA Educ. Code §49073.1 — los contratos del distrito con proveedores de tecnología educativa'
 lastUpdated: '2026-09-10'
 order: 20
 translationPending: true

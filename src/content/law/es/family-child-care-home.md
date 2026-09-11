@@ -11,7 +11,7 @@ governsInstead:
   - 'La política de privacidad del propio programa y sus contratos con las familias, prácticamente sin ningún piso institucional de privacidad'
 authorities:
   - 'COPPA'
-  - 'Child care licensing regulations'
+  - 'Reglamentos de licencias de cuidado infantil'
 lastUpdated: '2026-09-10'
 order: 5
 translationPending: true

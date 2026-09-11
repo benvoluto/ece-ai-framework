@@ -7,8 +7,8 @@ lastUpdated: '2026-09-10'
 question: "¿Firmarán un acuerdo que nos nombre a nosotros como los responsables de los datos, con el papel de ustedes limitado a procesarlos siguiendo nuestras instrucciones?"
 whyItMatters: "COPPA (la ley federal de privacidad en línea de los niños) es la ley que de verdad alcanza a todos los entornos de educación temprana, porque regula a los operadores de servicios dirigidos a menores de 13 años y no le importa si el programa es una escuela. Pero obliga al proveedor, no al programa. Eso quiere decir que la fuerza que tiene un programa pasa por su contrato. Nombrar al programa como el responsable de los datos y al proveedor como quien solo los procesa siguiendo instrucciones es lo que convierte todo lo demás de esta hoja, de una promesa, en una cláusula que usted puede hacer cumplir."
 authorities:
-  - "COPPA Final Rule 2025 — binds the operator, so provider leverage runs through the contract"
-  - "45 CFR 1303.23(e) — parents may review the written agreement, so the agreement has to exist"
+  - "COPPA Final Rule 2025 — obliga al operador, así que la fuerza que el programa tiene frente al proveedor pasa por el contrato"
+  - "45 CFR 1303.23(e) — los padres pueden revisar el acuerdo por escrito, así que el acuerdo tiene que existir"
 governs: ['custody', 'standing']
 translationPending: true
 ---

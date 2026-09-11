@@ -7,9 +7,9 @@ lastUpdated: '2026-09-10'
 question: "Si una familia nos pide borrar los registros de su hijo, ¿qué se borra exactamente, y eso incluye todo lo que se haya derivado de esos registros?"
 whyItMatters: "IDEA (la ley federal de educación para personas con discapacidades) les da a los padres el derecho a que se destruyan los registros que ya no se necesitan; FERPA (la ley federal de privacidad de expedientes educativos) por sí sola no da ese derecho, y la mayoría de las arquitecturas de modelos no lo puede cumplir. Un proveedor que ya metió el texto de un IFSP (el plan individualizado de servicios para la familia) en un almacén de embeddings que conserva no puede devolverle a una familia lo que ya aprendió del expediente del niño. Para un concesionario de Head Start (el programa federal de educación temprana), 45 CFR 1303.21(b) reemplaza la subparte de privacidad de Head Start con la confidencialidad de IDEA Part B o Part C para cualquier niño referido o declarado elegible bajo IDEA, en cualquier concesionario. Así que este derecho puede alcanzar a un programa que creía estar del todo fuera de IDEA."
 authorities:
-  - "IDEA confidentiality — parental right to destruction of records no longer needed"
-  - "45 CFR 1303.21(b) — IDEA Part B/C confidentiality displaces Head Start Subpart C for any child referred to or eligible under IDEA"
-  - "45 CFR 1303 Subpart C — parent inspection, amendment and destruction"
+  - "IDEA confidentiality — derecho de los padres a que se destruyan los registros que ya no se necesitan"
+  - "45 CFR 1303.21(b) — la confidencialidad de IDEA Part B/C reemplaza la Subpart C de Head Start para cualquier niño referido a IDEA o elegible bajo IDEA"
+  - "45 CFR 1303 Subpart C — inspección, corrección y destrucción por parte de los padres"
 governs: ['custody', 'standing']
 translationPending: true
 ---

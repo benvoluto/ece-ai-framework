@@ -8,9 +8,9 @@ rule: No use la IA como base para expulsar, suspender, dar de baja o negar la in
 shortRule: Ningún resultado de IA puede ser la base para expulsar, suspender, dar de baja o negar la inscripción de un niño.
 governs: ['consequence', 'standing']
 authorities:
-  - '45 CFR 1302.17 — Head Start suspension and expulsion'
-  - '45 CFR 1302.33 — screening and assessment may not be used to exclude, rank, compare, or evaluate individual children'
-  - 'Preschool expulsion data — Gilliam (2005); Civil Rights Data Collection, 2013–14'
+  - '45 CFR 1302.17 — suspensión y expulsión en Head Start'
+  - '45 CFR 1302.33 — el tamizaje y la evaluación no pueden usarse para excluir, clasificar, comparar ni evaluar a niños en particular'
+  - 'Datos de expulsión en el preescolar — Gilliam (2005); Civil Rights Data Collection, 2013–14'
 verifyBeforePublishing: 'Los multiplicadores de expulsión vienen de Gilliam (2005) y la disparidad en las suspensiones, de la CRDC de 2013–14. Busque el ciclo más reciente de la CRDC y actualice ambas cifras antes de que esta página se publique.'
 translationPending: true
 ---

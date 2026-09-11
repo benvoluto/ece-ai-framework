@@ -3,9 +3,9 @@ title: La ley de privacidad de educación temprana de California no es SOPIPA
 locale: es
 kind: finding
 authorities:
-  - 'AB 2799 (2016) — added a separate statute rather than amending SOPIPA'
-  - 'Cal. Bus. & Prof. Code §22586 — the Early Learning Personal Information Protection Act (ELPIPA), with biometric information expressly included in "covered information"'
-  - 'SOPIPA / AB 1584 — the K-12 statutes that early childhood templates cite by mistake'
+  - 'AB 2799 (2016) — creó una ley aparte en vez de modificar SOPIPA'
+  - 'Cal. Bus. & Prof. Code §22586 — la Early Learning Personal Information Protection Act (ELPIPA), con la información biométrica incluida expresamente en la «covered information»'
+  - 'SOPIPA / AB 1584 — las leyes de K-12 que las plantillas de educación temprana citan por equivocación'
 lastUpdated: '2026-09-10'
 order: 11
 translationPending: true

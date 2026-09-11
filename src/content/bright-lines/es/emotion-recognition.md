@@ -8,8 +8,8 @@ rule: No use reconocimiento de emociones, afecto o nivel de participación en ni
 shortRule: Ninguna herramienta que lea la cara, la voz o el cuerpo de un niño para deducir cómo se siente o cuánto participa.
 governs: ['development', 'standing', 'consequence']
 authorities:
-  - 'EU AI Act, Article 5(1)(f) — prohibits emotion inference in education institutions'
-  - "Halberstadt et al. (2020) — prospective teachers 1.36 times more likely to show racialized anger bias toward Black children's faces"
+  - 'EU AI Act, Article 5(1)(f) — prohíbe deducir emociones en instituciones educativas'
+  - 'Halberstadt et al. (2020) — los futuros maestros tenían 1.36 veces más probabilidad de mostrar un sesgo racializado de enojo ante las caras de niños negros'
 translationPending: true
 ---
 

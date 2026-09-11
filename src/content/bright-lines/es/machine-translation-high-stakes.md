@@ -8,9 +8,9 @@ rule: No dependa de la traducción automática en reuniones del Plan Individuali
 shortRule: Nada de traducción automática en reuniones de IFSP o IEP, resultados de evaluaciones, conversaciones de protección infantil o decisiones de elegibilidad.
 governs: ['language', 'standing', 'consequence']
 authorities:
-  - '45 CFR 1302.33 — qualified bilingual staff or interpreters for screening and assessment communication with families'
-  - 'National Center for State Courts — explicit cautions on machine translation in high-stakes proceedings'
-  - 'Documented safety consequences of machine translation in medicine'
+  - '45 CFR 1302.33 — personal bilingüe calificado o intérpretes para la comunicación con las familias sobre tamizajes y evaluaciones'
+  - 'National Center for State Courts — advertencias explícitas sobre la traducción automática en procesos de alto impacto'
+  - 'Consecuencias documentadas para la seguridad por traducción automática en medicina'
 translationPending: true
 ---
 

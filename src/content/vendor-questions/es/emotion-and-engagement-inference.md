@@ -7,9 +7,9 @@ lastUpdated: '2026-09-10'
 question: "¿Su producto infiere emociones, afecto, nivel de participación o riesgo de conducta sobre un niño?"
 whyItMatters: "Haga esta pregunta directamente; suele estar escondida bajo la palabra «insights». Inferir emociones de los niños es el primer límite infranqueable de este marco, y el mecanismo está documentado, no es teoría: Halberstadt et al. (2020) encontró que los futuros maestros tenían 1.36 veces más probabilidad de mostrar un sesgo racializado de enojo ante las caras de niños negros. Las personas que ponen las etiquetas cargan ese sesgo, las etiquetas de entrenamiento lo cargan, y los modelos lo aprenden. El Artículo 5(1)(f) del EU AI Act (la ley de inteligencia artificial de la Unión Europea) prohíbe de plano inferir emociones en instituciones educativas, y alcanza la comercialización y la puesta en servicio, no solo el uso final, así que obliga a los proveedores igual que a los programas. En Estados Unidos no existe una prohibición equivalente, y precisamente por eso el campo debería preguntar."
 authorities:
-  - "EU AI Act Art. 5(1)(f) — prohibits emotion inference in education institutions, binding on placing on the market and putting into service"
-  - "Halberstadt et al. (2020) — prospective teachers 1.36 times more likely to show racialized anger bias toward Black children's faces"
-  - "45 CFR 1302.33 — screening and assessment may not be used to rank, compare or evaluate individual children"
+  - "EU AI Act Art. 5(1)(f) — prohíbe inferir emociones en instituciones educativas, y obliga tanto en la comercialización como en la puesta en servicio"
+  - "Halberstadt et al. (2020) — los futuros maestros tenían 1.36 veces más probabilidad de mostrar un sesgo racializado de enojo ante las caras de niños negros"
+  - "45 CFR 1302.33 — el tamizaje y la evaluación no se pueden usar para clasificar, comparar ni evaluar a niños en particular"
 governs: ['development', 'consequence', 'standing']
 translationPending: true
 ---
