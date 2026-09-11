@@ -1,0 +1,228 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../PageHeader.astro';
+import TierTag from '../TierTag.astro';
+import Annotation from '../Annotation.astro';
+import { t, localePath } from '../../lib/i18n.js';
+
+const { locale = 'en' } = Astro.props;
+
+const all = await getCollection('multiSite', (e) => e.id.startsWith(`${locale}/`));
+
+/** Render each body once, up front: Astro cannot await inside the template. */
+const rendered = await Promise.all(
+  all.map(async (entry) => ({ entry, Content: (await render(entry)).Content }))
+);
+const by = (kind) =>
+  rendered
+    .filter((r) => r.entry.data.kind === kind)
+    .sort((a, b) => (a.entry.data.number ?? a.entry.data.order) - (b.entry.data.number ?? b.entry.data.order));
+
+const failureModes = by('failure-mode');
+const additions = by('addition');
+const modules = by('module');
+
+/**
+ * Artifact titles come from the artifacts collection where that pass has
+ * landed; until then, fall back to a readable label built from the slug.
+ */
+const artifacts = await getCollection('artifacts', (e) => e.id.startsWith(`${locale}/`));
+const titleBySlug = new Map(artifacts.map((a) => [a.id.split('/').slice(1).join('/'), a.data.title]));
+const artifactLabel = (slug) =>
+  titleBySlug.get(slug) ??
+  slug
+    .split('-')
+    .map((word) => (word === 'ai' ? 'AI' : word))
+    .join(' ')
+    .replace(/^./, (c) => c.toUpperCase());
+
+const lede =
+  'The design constraint that governs the rest of this site — no lawyer, no IT department, twenty minutes — is right for the modal provider and wrong for a fourteen-site organization with an HR director and outside counsel.';
+const description =
+  'Governance structure, model contract language and a defensible answer for a board: what a chain, a large center or a Head Start grantee with delegate agencies has to add.';
+---
+<BaseLayout title={t(locale, 'nav.multiSite')} description={description} locale={locale}>
+  <PageHeader
+    caption="The multi-site track"
+    title={t(locale, 'nav.multiSite')}
+    lede={lede}
+    locale={locale}
+    lastUpdated="2026-09-10"
+  />
+
+  <p class="govuk-body">
+    Larger operators are not a smaller problem. They are a different one, and the field
+    has no guidance for them at all.
+  </p>
+
+  <p class="govuk-body">
+    A large center, a chain, or a Head Start grantee with delegate agencies has something
+    the single site does not: the capacity to actually govern this. An HR director. Outside
+    counsel. Someone whose job includes procurement. What it does not have is anyone telling
+    it how.
+  </p>
+
+  <p class="govuk-body">
+    So this page is not a longer version of the small-provider material, and you should not
+    read it as one. If you are running fourteen sites you are not looking for a policy
+    template — you are looking for a governance structure, model contract language, and a
+    defensible answer for your board. That is what is below. Everything in
+    <a class="govuk-link" href={localePath(locale, '/policies')}>the policies to adopt</a>
+    still applies; these nine additions sit on top of it, and each one exists because it does
+    not make sense below a certain size.
+  </p>
+
+  <nav class="govuk-!-margin-bottom-8" aria-label={t(locale, 'label.onThisPage')}>
+    <h2 class="govuk-heading-s">{t(locale, 'label.onThisPage')}</h2>
+    <ol class="govuk-list govuk-list--number govuk-body-s">
+      <li><a class="govuk-link" href="#failure-modes">Two ways this goes wrong at scale</a></li>
+      <li><a class="govuk-link" href="#additions">What the multi-site track adds</a></li>
+      <li><a class="govuk-link" href="#delegate-agencies">Head Start grantees with delegate agencies</a></li>
+    </ol>
+  </nav>
+
+  <h2 class="govuk-heading-m" id="failure-modes">Two ways this goes wrong at scale</h2>
+
+  <p class="govuk-body">
+    Left alone, these organizations fail in two opposite directions, and both are worse than
+    they look. One is documented as caution. The other is not documented at all.
+  </p>
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      A blanket ban is not a safety posture. It is an unmonitored one.
+    </strong>
+  </div>
+
+  {failureModes.map(({ entry, Content }) => (
+    <section class="govuk-!-margin-bottom-8" id={entry.id.split('/').slice(1).join('/')}>
+      <h3 class="govuk-heading-s">{entry.data.title}</h3>
+      <p class="govuk-body-l">{entry.data.summary}</p>
+      <div class="govuk-body app-prose"><Content /></div>
+      {entry.data.relatedArtifacts.length > 0 && (
+        <Annotation label={t(locale, 'label.relatedArtifacts')}>
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+            {entry.data.relatedArtifacts.map((slug) => (
+              <li>
+                <a class="govuk-link" href={localePath(locale, `/artifacts/${slug}`)}>
+                  {artifactLabel(slug)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Annotation>
+      )}
+    </section>
+  ))}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="additions">What the multi-site track adds</h2>
+
+  <p class="govuk-body">
+    Nine things, on top of everything a single site already does. Each exists because it does
+    not make sense below a certain size, and each one is aimed at the same target: closing the
+    distance between what the policy says and what is actually running at site eleven.
+  </p>
+
+  <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-8">
+    {additions.map(({ entry }) => (
+      <li>
+        <a class="govuk-link" href={`#addition-${entry.data.number}`}>{entry.data.title}</a>
+      </li>
+    ))}
+  </ol>
+
+  {additions.map(({ entry, Content }) => (
+    <section class="govuk-!-margin-bottom-8" id={`addition-${entry.data.number}`}>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+        <span class="govuk-caption-m">{entry.data.number} of 9</span>
+        {entry.data.title}
+      </h3>
+      <p class="govuk-body-l">{entry.data.summary}</p>
+
+      {entry.data.number === 1 && (
+        <p class="govuk-body govuk-!-margin-bottom-4">
+          <span class="govuk-!-margin-right-2"><TierTag tier={1} locale={locale} withName={true} /></span>
+          <span class="govuk-!-margin-right-2"><TierTag tier={2} locale={locale} withName={true} /></span>
+          <span class="govuk-!-margin-right-2"><TierTag tier={3} locale={locale} withName={true} /></span>
+        </p>
+      )}
+
+      <div class="govuk-body app-prose"><Content /></div>
+
+      {entry.data.number === 3 && (
+        <p class="govuk-body">
+          <a class="govuk-link" href={localePath(locale, '/vendors')}>The ten questions to ask a vendor</a>
+          are where a single center starts. The rider is where a large one starts.
+        </p>
+      )}
+
+      {entry.data.number === 5 && (
+        <p class="govuk-body">
+          <a class="govuk-link" href={localePath(locale, '/law')}>The regulatory crosswalk</a>
+          carries the state layer you would be setting that standard against.
+        </p>
+      )}
+
+      {entry.data.relatedArtifacts.length > 0 && (
+        <Annotation label={t(locale, 'label.relatedArtifacts')}>
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+            {entry.data.relatedArtifacts.map((slug) => (
+              <li>
+                <a class="govuk-link" href={localePath(locale, `/artifacts/${slug}`)}>
+                  {artifactLabel(slug)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Annotation>
+      )}
+    </section>
+  ))}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="delegate-agencies">Head Start grantees with delegate agencies</h2>
+
+  {modules.map(({ entry, Content }) => (
+    <div class="govuk-inset-text">
+      <p class="govuk-body-l">{entry.data.summary}</p>
+      <div class="app-prose"><Content /></div>
+      {entry.data.relatedArtifacts.length > 0 && (
+        <Annotation label={t(locale, 'label.relatedArtifacts')}>
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+            {entry.data.relatedArtifacts.map((slug) => (
+              <li>
+                <a class="govuk-link" href={localePath(locale, `/artifacts/${slug}`)}>
+                  {artifactLabel(slug)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Annotation>
+      )}
+    </div>
+  ))}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="what-does-not-change">What does not change</h2>
+
+  <p class="govuk-body">
+    Different artifacts, a different page, a different reader — and the same
+    <a class="govuk-link" href={localePath(locale, '/principles')}>principles</a> and the same
+    <a class="govuk-link" href={localePath(locale, '/bright-lines')}>bright lines</a> as
+    everywhere else on this site. A charter with delegated authority, a rider your counsel
+    negotiated and a quarterly item on the board agenda do not buy an exemption from any of
+    them. They are how an organization of your size keeps them true at every site at once.
+  </p>
+
+  <p class="govuk-body">
+    Scale changes who decides, how fast, on what evidence and with what leverage. It does not
+    change what is allowed.
+  </p>
+</BaseLayout>

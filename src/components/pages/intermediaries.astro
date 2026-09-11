@@ -1,0 +1,85 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../PageHeader.astro';
+import { t, localePath } from '../../lib/i18n.js';
+
+const { locale = 'en' } = Astro.props;
+
+const [entry] = await getCollection('pages', (e) => e.id === `${locale}/intermediaries`);
+const { Content } = await render(entry);
+const d = entry.data;
+
+const contents = [
+  { id: 'why-a-separate-track', label: 'Why this is a separate track' },
+  { id: 'where-ai-helps', label: 'Where AI helps in intermediary work' },
+  { id: 'the-standard', label: "The standard for the intermediary's own AI" },
+  { id: 'co-branding', label: 'Co-branding: delivering the provider artifacts under your own name' },
+  { id: 'the-artifact', label: 'The Intermediary AI Practice Standard' },
+];
+---
+
+<BaseLayout title={d.title} description={d.description} locale={locale}>
+  <PageHeader
+    caption={t(locale, 'nav.intermediaries')}
+    title="For intermediaries"
+    lede={d.lede}
+    locale={locale}
+    lastUpdated={d.lastUpdated}
+  />
+
+  <div class="govuk-inset-text">
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      This page is for a community development financial institution (CDFI), a
+      resource and referral agency (R&amp;R or CCR&amp;R), a training and technical
+      assistance (T&amp;TA) provider, a coaching network or a shared services
+      alliance. If you are a director or a family child care provider, the rest
+      of the site is written for you — start at{' '}
+      <a class="govuk-link" href={localePath(locale, '/start')}>{t(locale, 'nav.start')}</a>.
+    </p>
+  </div>
+
+  <nav class="govuk-!-margin-bottom-8" aria-labelledby="contents-heading">
+    <h2 class="govuk-heading-s" id="contents-heading">{t(locale, 'label.onThisPage')}</h2>
+    <ol class="govuk-list govuk-list--number">
+      {contents.map((item) => (
+        <li><a class="govuk-link" href={`#${item.id}`}>{item.label}</a></li>
+      ))}
+    </ol>
+  </nav>
+
+  <div class="app-prose">
+    <Content />
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="where-to-next">Where to go next</h2>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a class="govuk-link" href={`${localePath(locale, '/good-uses')}#for-intermediaries`}>
+        The four intermediary uses in full
+      </a>, each with its tier and its guardrail.
+    </li>
+    <li>
+      <a class="govuk-link" href={`${localePath(locale, '/cases')}#cdfi-underwriting-model`}>
+        The lender is offered an AI underwriting model
+      </a> — the worked case behind the lending standard.
+    </li>
+    <li>
+      <a class="govuk-link" href={localePath(locale, '/policies')}>{t(locale, 'nav.policies')}</a>
+      {' '}— the artifact set, including the Intermediary AI Practice Standard.
+    </li>
+    <li>
+      <a class="govuk-link" href={localePath(locale, '/bright-lines')}>{t(locale, 'nav.brightLines')}</a>
+      {' '}and{' '}
+      <a class="govuk-link" href={localePath(locale, '/principles')}>{t(locale, 'nav.principles')}</a>
+      {' '}— the two things that do not change when you deliver this under your own name.
+    </li>
+    <li>
+      <a class="govuk-link" href={localePath(locale, '/vendors')}>{t(locale, 'nav.vendors')}</a>
+      {' '}— the ten questions, which an intermediary can ask on behalf of a whole portfolio.
+    </li>
+  </ul>
+</BaseLayout>

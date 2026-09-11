@@ -258,6 +258,29 @@ async function main() {
     }
   }
 
+  // A Spanish file that still holds its English body is a seeded placeholder,
+  // not a translation. Shipping one is the exact failure the Language principle
+  // warns about, so it is an error rather than a warning.
+  for (const [name, sets] of Object.entries(bySlug)) {
+    if (!sets) continue;
+    const schema = SCHEMAS[name];
+    for (const slug of sets.es) {
+      if (!sets.en.has(slug)) continue;
+      const esPath = path.join(CONTENT, schema.dir, 'es', `${slug}.md`);
+      const enPath = path.join(CONTENT, schema.dir, 'en', `${slug}.md`);
+      try {
+        const es = matter(await readFile(esPath, 'utf8')).content.trim();
+        const en = matter(await readFile(enPath, 'utf8')).content.trim();
+        if (es && es === en) {
+          console.error(`\u2717 ${schema.dir}/es/${slug}.md is still the English text \u2014 seeded placeholder, not a translation`);
+          errors++;
+        }
+      } catch {
+        /* A missing file is reported by the orphan check below. */
+      }
+    }
+  }
+
   // Orphaned translations: a Spanish file with no English counterpart, or vice versa.
   for (const [name, sets] of Object.entries(bySlug)) {
     if (!sets) continue;

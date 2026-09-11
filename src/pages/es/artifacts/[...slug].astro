@@ -1,0 +1,15 @@
+---
+import ArtifactPage from '../../../components/pages/artifact.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const all = await getCollection('artifacts', (e) => e.id.startsWith('es/'));
+  return all.map((entry) => ({
+    params: { slug: entry.id.replace(/^es\//, '') },
+    props: { entry, locale: 'es', slug: entry.id.replace(/^es\//, '') },
+  }));
+}
+
+const { entry, locale, slug } = Astro.props;
+---
+<ArtifactPage entry={entry} locale={locale} slug={slug} />
