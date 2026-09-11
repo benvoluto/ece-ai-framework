@@ -6,7 +6,7 @@ summary: A runbook for when a tool fails, leaks, or turns out to do something it
 lastUpdated: '2026-09-10'
 order: 11
 length: short
-forWhom: ['fcc', 'center', 'multi-site']
+forWhom: ['fcc', 'center', 'multi-site', 'intermediary']
 tiers: [1, 2, 3]
 governs: ['custody', 'standing', 'consequence', 'currency']
 phase: 2

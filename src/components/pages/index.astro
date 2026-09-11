@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import IntakeTool from '../IntakeTool.astro';
 import TierTag from '../TierTag.astro';
 import { SITE } from '../../lib/site.js';
-import { localePath } from '../../lib/i18n.js';
+import { siteVersion, localePath } from '../../lib/i18n.js';
 
 const { locale = 'en' } = Astro.props;
 const en = (entry) => entry.id.startsWith(`${locale}/`);
@@ -49,7 +49,7 @@ const copy = {
       'You complete one sentence. It returns the risk tier, what that tier requires of you, and the right document for a program your size \u2014 a one-page policy for a family child care home, a full policy for a center, a governance charter for a grantee.',
     routeNote:
       'Nothing you answer is sent anywhere. There is no sign-up, and every document on this site is free to download without one.',
-    helpsHeading: 'Three places this is already saving programs real money.',
+    helpsHeading: 'Three places the money actually is.',
     helpsLede:
       'Most of what AI can do in early childhood is unglamorous, low-risk, and worth real money to a business running on one to three percent margins. Every hour it returns is an hour an adult spends with children.',
     helpsAll: 'All twelve, each with its tier and its guardrail',
@@ -77,7 +77,7 @@ const copy = {
       'Usted completa una oración. Le devuelve el nivel de riesgo, lo que ese nivel le exige y el documento indicado para un programa de su tamaño: una política de una página para un hogar de cuidado infantil familiar, una política completa para un centro, una carta de gobernanza para un concesionario.',
     routeNote:
       'Nada de lo que usted responda se envía a ninguna parte. No hay que registrarse, y todos los documentos de este sitio se descargan gratis sin hacerlo.',
-    helpsHeading: 'Tres lugares donde esto ya le está ahorrando dinero real a los programas.',
+    helpsHeading: 'Tres lugares donde de verdad está el dinero.',
     helpsLede:
       'Casi todo lo que la IA puede hacer en la educación temprana no tiene nada de glamoroso, es de bajo riesgo y vale dinero real para un negocio que opera con márgenes de uno a tres por ciento. Cada hora que devuelve es una hora que un adulto pasa con los niños.',
     helpsAll: 'Los doce, cada uno con su nivel y su límite de protección',
@@ -296,7 +296,7 @@ const otherLocale = locale === 'en' ? 'es' : 'en';
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <div class="govuk-inset-text">
         <p class="govuk-body">
-          <strong>{c.standingLabel}</strong> {SITE.version}, {c.lastReviewed}{' '}
+          <strong>{c.standingLabel}</strong> {siteVersion(SITE, locale)}, {c.lastReviewed}{' '}
           <time datetime={SITE.lastReviewed}>{SITE.lastReviewed}</time>. {c.standingBody}
         </p>
         <p class="govuk-body govuk-!-margin-bottom-0">

@@ -4,6 +4,7 @@ locale: en
 audience: Families
 summary: Plain-language notice of what AI the program uses, in what part of the work, and what information it touches. A notice, not a consent form.
 lastUpdated: '2026-09-11'
+tiers: [1, 2, 3]
 length: one-page
 onShelf: true
 shelfOrder: 3

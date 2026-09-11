@@ -22,7 +22,13 @@ export const SITE = {
    */
   indexable: false,
   version: 'Working draft v2',
-  lastReviewed: '2026-09-10',
+  versionEs: 'Borrador de trabajo v2',
+  /**
+   * Kept at or after the newest lastUpdated in src/content, so the site-wide
+   * stamp never claims a review older than its own newest page.
+   * scripts/check-build.mjs fails the build if it falls behind.
+   */
+  lastReviewed: '2026-09-11',
   phase: 'Working draft',
   posture: 'Neutral field resource',
   postureEs: 'Recurso neutral para el campo',

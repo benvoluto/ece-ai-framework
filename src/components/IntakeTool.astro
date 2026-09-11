@@ -35,6 +35,7 @@ const copy = {
     returnsHeading: 'What you need to do',
     artifactsHeading: 'The documents you need',
     artifactsHint: 'Free, editable, no sign-up.',
+    alsoApplies: 'Everything else that applies to you',
     generateHeading: 'Generate your documents',
     generateHint:
       'Assembled from your four answers: a policy for your program and a matching family notice. Everything happens in your browser — your answers are never sent anywhere.',
@@ -78,6 +79,7 @@ const copy = {
     returnsHeading: 'Qué tiene que hacer',
     artifactsHeading: 'Los documentos que necesita',
     artifactsHint: 'Gratis, editables, sin registrarse.',
+    alsoApplies: 'Todo lo demás que aplica a usted',
     generateHeading: 'Genere sus documentos',
     generateHint:
       'Armados a partir de sus cuatro respuestas: una política para su programa y un aviso para las familias que la acompaña. Todo ocurre en su navegador; sus respuestas nunca se envían a ninguna parte.',
@@ -256,6 +258,15 @@ const clauses = isEs
     <p class="govuk-hint">{c.artifactsHint}</p>
     <ul class="govuk-list" id="result-artifacts"></ul>
 
+    <details class="govuk-details" data-module="govuk-details" id="result-artifacts-also" hidden>
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">{c.alsoApplies}</span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list"></ul>
+      </div>
+    </details>
+
     {/* ------------------------------------------------------------- Generation */}
     <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6" />
 
@@ -327,13 +338,14 @@ const clauses = isEs
     TIER_DEFINITIONS,
     tierFor,
     tierReason,
-    artifactsFor,
+    artifactsGrouped,
     sentenceFor,
     isComplete,
     encodeState,
     decodeState,
   } from '../lib/intake.js';
   import { generateDocuments } from '../lib/generate-policy.js';
+  import { artifactTitle } from '../lib/artifact-index.js';
 
   const root = document.querySelector('.app-intake');
   if (root) {
@@ -343,27 +355,6 @@ const clauses = isEs
     const show = (id, on) => {
       const el = $(id);
       if (el) el.hidden = !on;
-    };
-
-    /** Artifact titles are needed for the result list. Kept here so the tool has
-     *  no build-time dependency on content that other passes are still writing. */
-    const ARTIFACT_TITLES = {
-      'one-page-ai-policy': { en: 'The One-Page AI Policy', es: 'La política de IA de una página' },
-      'program-ai-use-policy': { en: 'Program AI Use Policy', es: 'Política de uso de IA del programa' },
-      'part-1303-addendum': { en: 'Part 1303 Addendum', es: 'Anexo de la Parte 1303' },
-      'staff-acceptable-use-one-pager': { en: 'Staff Acceptable-Use One-Pager', es: 'Hoja de uso aceptable para el personal' },
-      'family-notice': { en: 'Family Notice', es: 'Aviso para las familias' },
-      'consent-images-voice-model-training': { en: 'Consent: Images, Voice & Model Training', es: 'Consentimiento: imágenes, voz y entrenamiento de modelos' },
-      'approved-tools-register': { en: 'Approved Tools Register', es: 'Registro de herramientas aprobadas' },
-      'vendor-question-sheet': { en: 'Vendor Question Sheet', es: 'Hoja de preguntas para proveedores' },
-      'board-talking-points': { en: 'Board Talking Points', es: 'Puntos para la junta directiva' },
-      'handbook-addendum-language': { en: 'Handbook Addendum Language', es: 'Texto de anexo para el manual' },
-      'incident-discontinuation-protocol': { en: 'Incident & Discontinuation Protocol', es: 'Protocolo de incidentes y descontinuación' },
-      'governance-charter': { en: 'Governance Charter & Authority Matrix', es: 'Carta de gobernanza y matriz de autoridad' },
-      'model-contract-rider': { en: 'Model Contract Rider', es: 'Cláusula contractual modelo' },
-      'pilot-protocol': { en: 'Pilot Protocol & Stop Condition', es: 'Protocolo de piloto y condición de parada' },
-      'shadow-ai-amnesty-kit': { en: 'Shadow-AI Amnesty Kit', es: 'Kit de amnistía para IA en la sombra' },
-      'intermediary-ai-practice-standard': { en: 'Intermediary AI Practice Standard', es: 'Estándar de práctica de IA para intermediarios' },
     };
 
     const TAGS = { 0: 'govuk-tag--red', 1: 'govuk-tag--green', 2: 'govuk-tag--yellow', 3: 'govuk-tag--orange' };
@@ -412,15 +403,32 @@ const clauses = isEs
         return li;
       });
 
-      fill($('result-artifacts'), artifactsFor(state.provider, tier), (slug) => {
+      const makeLink = (slug) => {
         const li = document.createElement('li');
         const a = document.createElement('a');
         a.className = 'govuk-link';
         a.href = artifactHref(slug);
-        a.textContent = (ARTIFACT_TITLES[slug] || {})[locale] || slug;
+        a.textContent = artifactTitle(slug, locale);
         li.appendChild(a);
         return li;
-      });
+      };
+
+      const grouped = artifactsGrouped(state.provider, tier);
+      fill($('result-artifacts'), grouped.primary, makeLink);
+
+      // Everything else that applies stays available, but behind a disclosure:
+      // a reader with twenty minutes who is handed a dozen documents adopts none.
+      const alsoWrap = $('result-artifacts-also');
+      if (alsoWrap) {
+        alsoWrap.hidden = grouped.also.length === 0;
+        const summary = alsoWrap.querySelector('.govuk-details__summary-text');
+        if (summary) {
+          summary.textContent = isEs
+            ? `Todo lo demás que aplica a usted (${grouped.also.length})`
+            : `Everything else that applies to you (${grouped.also.length})`;
+        }
+        fill(alsoWrap.querySelector('ul'), grouped.also, makeLink);
+      }
 
       docs = null;
       show('generated', false);

@@ -7,7 +7,7 @@ lastUpdated: '2026-09-11'
 length: one-page
 onShelf: true
 shelfOrder: 2
-forWhom: ['fcc', 'center', 'multi-site']
+forWhom: ['fcc', 'center', 'multi-site', 'intermediary']
 tiers: [1, 2, 3]
 governs: ['relationship', 'custody', 'consequence', 'language']
 phase: 1

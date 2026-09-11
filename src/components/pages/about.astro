@@ -3,7 +3,7 @@ import { getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../PageHeader.astro';
 import Annotation from '../Annotation.astro';
-import { t, localePath } from '../../lib/i18n.js';
+import { siteVersion, t, localePath } from '../../lib/i18n.js';
 import { SITE } from '../../lib/site.js';
 
 const { locale = 'en' } = Astro.props;
@@ -396,7 +396,7 @@ const copy = {
       {
         date: '2026-09-10',
         display: '10 September 2026',
-        version: SITE.version,
+        version: siteVersion(SITE, 'en'),
         what: "Initial working draft, built from site plan v2. First publication of the principles, the bright lines, the tiering, the federal layer of the regulatory crosswalk, the vendor questions, the constructive uses and the artifacts. Nothing in this release has been reviewed by counsel and nothing has been adopted.",
       },
     ],

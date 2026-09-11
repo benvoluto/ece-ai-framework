@@ -7,7 +7,7 @@ situation: Su sistema de datos de Head Start (el programa federal de educación 
 atStake: Marcar a un niño para darle seguimiento es una decisión sobre un niño en particular, y llega a través de un sistema de cumplimiento que nadie considera una herramienta de IA. Esta es la vía más probable por la que la IA entra de verdad a los programas de Head Start, y llegará como una actualización del producto y no como una decisión de compra.
 whatToDo: Trate el lanzamiento de una función del proveedor como un acto de adopción — regístrela, asígnele un nivel y exija la determinación humana antes de que cualquier marca influya en una referencia o en una decisión de servicio. Pregunte con qué se validó el modelo que marca a los niños, y si se analizó su desempeño según el idioma del hogar y la condición de discapacidad.
 governs: ['consequence', 'language', 'currency']
-brightLines: []
+brightLines: [3]
 tier: 3
 settings: ['center', 'multi-site']
 status: drafted

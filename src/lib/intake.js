@@ -1,3 +1,5 @@
+import { ARTIFACTS } from './artifact-index.js';
+
 /**
  * The four-question intake.
  *
@@ -314,63 +316,84 @@ export function tierReason(answers, locale = 'en') {
 }
 
 /**
- * Which artifacts to hand back, by provider type and tier.
- * Slugs match src/content/artifacts/<locale>/<slug>.md.
+ * Which artifacts to hand back, for a provider type at a tier.
+ *
+ * Applicability is declared once, in each artifact's own frontmatter
+ * (forWhom and tiers), and read here from the generated index. It used to be
+ * a second hardcoded list, which drifted: the intake returned documents whose
+ * own header said they did not apply to the reader.
+ *
+ * Tier 0 is the exception. A programme that lands on a bright line is not
+ * being handed implementation documents — it gets the one document for
+ * stopping, which is why that case is listed rather than derived.
  */
-const BY_PROVIDER = {
+const TIER_0_ARTIFACTS = ['incident-discontinuation-protocol'];
+
+/** @returns {string[]} artifact slugs, in the order the documents are numbered. */
+export function artifactsFor(providerType, tier) {
+  const applies = (a) => {
+    // An empty forWhom means it applies to everyone; same for tiers.
+    const forThem = !a.forWhom?.length || a.forWhom.includes(providerType);
+    const atTier = !a.tiers?.length || a.tiers.includes(tier);
+    return forThem && atTier;
+  };
+
+  if (tier === 0) {
+    return TIER_0_ARTIFACTS.filter((slug) => {
+      const found = ARTIFACTS.find((a) => a.slug === slug);
+      return found && (!found.forWhom?.length || found.forWhom.includes(providerType));
+    });
+  }
+
+  return ARTIFACTS.filter(applies).map((a) => a.slug);
+}
+
+/**
+ * The two or three documents to lead with.
+ *
+ * artifactsFor() returns everything that applies, which at the larger end is a
+ * dozen documents — and a reader with twenty minutes who is handed twelve
+ * documents adopts none of them. These are the ones to put in front of her
+ * first; the rest stay available behind a disclosure.
+ *
+ * Every slug here must also be returned by artifactsFor() for that provider
+ * type and tier, or the reader is being offered something that does not apply.
+ * scripts/test-intake.mjs asserts that.
+ */
+const LEAD_WITH = {
   fcc: ['one-page-ai-policy', 'staff-acceptable-use-one-pager', 'family-notice'],
-  center: [
-    'program-ai-use-policy',
-    'staff-acceptable-use-one-pager',
-    'family-notice',
-    'handbook-addendum-language',
-  ],
-  'multi-site': [
-    'governance-charter',
-    'model-contract-rider',
-    'pilot-protocol',
-    'shadow-ai-amnesty-kit',
-    'part-1303-addendum',
-    'program-ai-use-policy',
-  ],
+  center: ['program-ai-use-policy', 'staff-acceptable-use-one-pager', 'family-notice'],
+  'multi-site': ['governance-charter', 'model-contract-rider', 'program-ai-use-policy'],
   intermediary: ['intermediary-ai-practice-standard', 'vendor-question-sheet'],
 };
 
-const BY_TIER = {
+/** Tier-specific documents that lead regardless of provider type. */
+const LEAD_WITH_AT_TIER = {
   0: ['incident-discontinuation-protocol'],
-  1: ['staff-acceptable-use-one-pager', 'approved-tools-register'],
-  2: [
-    'approved-tools-register',
-    'vendor-question-sheet',
-    'family-notice',
-    'incident-discontinuation-protocol',
-  ],
-  3: [
-    'approved-tools-register',
-    'vendor-question-sheet',
-    'consent-images-voice-model-training',
-    'family-notice',
-    'incident-discontinuation-protocol',
-  ],
+  1: [],
+  2: ['approved-tools-register', 'vendor-question-sheet'],
+  3: ['consent-images-voice-model-training', 'vendor-question-sheet', 'approved-tools-register'],
 };
 
-/** @returns {string[]} artifact slugs, de-duplicated, provider-type first. */
-export function artifactsFor(providerType, tier) {
-  const provider = BY_PROVIDER[providerType] ?? [];
-  const byTier = BY_TIER[tier] ?? [];
+/**
+ * @returns {{primary: string[], also: string[]}} the documents to lead with,
+ * and everything else that applies.
+ */
+export function artifactsGrouped(providerType, tier) {
+  const applicable = artifactsFor(providerType, tier);
+  const wanted = [
+    ...(LEAD_WITH_AT_TIER[tier] ?? []),
+    ...(LEAD_WITH[providerType] ?? []),
+  ];
   const seen = new Set();
-  const out = [];
-  for (const slug of [...provider, ...byTier]) {
-    if (!seen.has(slug)) {
+  const primary = [];
+  for (const slug of wanted) {
+    if (applicable.includes(slug) && !seen.has(slug)) {
       seen.add(slug);
-      out.push(slug);
+      primary.push(slug);
     }
   }
-  // A multi-site operator at Tier 3 should still see the board material.
-  if (tier === 3 && providerType !== 'intermediary' && !seen.has('board-talking-points')) {
-    out.push('board-talking-points');
-  }
-  return out;
+  return { primary, also: applicable.filter((slug) => !seen.has(slug)) };
 }
 
 /** The completed sentence, for display and for the generated documents. */

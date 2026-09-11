@@ -292,6 +292,30 @@ async function main() {
     }
   }
 
+  // The site-wide review stamp must not be older than the newest page, or a
+  // reader sees two different "last updated" dates on one screen.
+  try {
+    const siteSrc = await readFile(path.join(ROOT, 'src/lib/site.js'), 'utf8');
+    const stamp = siteSrc.match(/lastReviewed:\s*'([\d-]+)'/)?.[1];
+    let newest = '';
+    for (const name of Object.keys(SCHEMAS)) {
+      for (const entry of await collect(SCHEMAS[name].dir)) {
+        if (entry.errors) continue;
+        const { data } = matter(await readFile(entry.abs, 'utf8'));
+        if (typeof data.lastUpdated === 'string' && data.lastUpdated > newest) newest = data.lastUpdated;
+      }
+    }
+    if (stamp && newest && stamp < newest) {
+      console.error(
+        `\u2717 SITE.lastReviewed is ${stamp} but the newest content is ${newest} — ` +
+          `update lastReviewed in src/lib/site.js`,
+      );
+      errors++;
+    }
+  } catch {
+    /* site.js unreadable; the build will fail elsewhere with a better message. */
+  }
+
   if (errors) {
     console.error(`\n${errors} problem(s) across ${checked} file(s).`);
     process.exit(1);

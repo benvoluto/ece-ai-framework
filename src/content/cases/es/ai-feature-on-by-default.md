@@ -5,7 +5,7 @@ lastUpdated: '2026-09-10'
 order: 1
 situation: Su aplicación de observación y documentación agrega una función de IA que redacta historias de aprendizaje a partir de fotos del salón. Viene activada de manera predeterminada.
 atStake: Si el proveedor está usando imágenes de los niños para entrenar un modelo, y si el etiquetado automático calcula la geometría del rostro, lo que activa las leyes biométricas de varios estados. También si la narrativa redactada sigue siendo la observación de la maestra.
-whatToDo: Apáguela hasta que haya hecho las preguntas 3, 4 y 7 de la hoja de preguntas para proveedores. Vuelva a pedir el consentimiento de las familias antes de encenderla, usando el formulario aparte de imágenes y entrenamiento, no la autorización de fotos que ya tiene.
+whatToDo: Apáguela hasta que haya hecho las preguntas 1, 2 y 4 de la hoja de preguntas para proveedores. Vuelva a pedir el consentimiento de las familias antes de encenderla, usando el formulario aparte de imágenes y entrenamiento, no la autorización de fotos que ya tiene.
 governs: ['custody', 'standing']
 brightLines: []
 tier: 3

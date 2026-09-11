@@ -5,7 +5,7 @@ lastUpdated: '2026-09-10'
 order: 1
 situation: Your observation and documentation app adds an AI feature that drafts learning stories from classroom photos. It is on by default.
 atStake: Whether the vendor is using children's images to train a model — and whether auto-tagging computes face geometry, which triggers biometric statutes in several states. Also whether the drafted narrative is still the teacher's observation.
-whatToDo: Turn it off until you have asked questions 3, 4 and 7 on the vendor question sheet. Re-consent families before turning it on, using the separate images-and-training form rather than the existing photo release.
+whatToDo: Turn it off until you have asked questions 1, 2 and 4 on the vendor question sheet. Re-consent families before turning it on, using the separate images-and-training form rather than the existing photo release.
 governs: ['custody', 'standing']
 brightLines: []
 tier: 3

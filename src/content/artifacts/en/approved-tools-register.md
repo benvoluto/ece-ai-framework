@@ -7,7 +7,7 @@ lastUpdated: '2026-09-10'
 order: 7
 length: fillable
 fillable: true
-forWhom: ['fcc', 'center', 'multi-site']
+forWhom: ['fcc', 'center', 'multi-site', 'intermediary']
 tiers: [1, 2, 3]
 governs: ['custody', 'consequence', 'currency']
 phase: 1

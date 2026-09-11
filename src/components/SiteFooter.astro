@@ -1,7 +1,7 @@
 ---
 import { SITE } from '../lib/site.js';
 import { NAV } from '../lib/nav.js';
-import { t, localePath, DEFAULT_LOCALE } from '../lib/i18n.js';
+import { siteVersion, t, localePath, DEFAULT_LOCALE } from '../lib/i18n.js';
 
 const { locale = DEFAULT_LOCALE } = Astro.props;
 const links = NAV.filter((item) => item.path !== '/');
@@ -25,7 +25,7 @@ const links = NAV.filter((item) => item.path !== '/');
           {t(locale, 'banner.text')}
         </p>
         <p class="govuk-footer__licence-description">
-          {t(locale, 'label.version')}: {SITE.version} &middot;
+          {t(locale, 'label.version')}: {siteVersion(SITE, locale)} &middot;
           {t(locale, 'label.lastUpdated')}: <time datetime={SITE.lastReviewed}>{SITE.lastReviewed}</time>
         </p>
         <p class="govuk-footer__licence-description govuk-!-font-size-16">

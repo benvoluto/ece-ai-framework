@@ -1,5 +1,5 @@
 ---
-import { t, DEFAULT_LOCALE } from '../lib/i18n.js';
+import { siteVersion, t, DEFAULT_LOCALE } from '../lib/i18n.js';
 import { SITE } from '../lib/site.js';
 
 const { caption, title, lede, locale = DEFAULT_LOCALE, lastUpdated, translationPending = false } = Astro.props;
@@ -14,7 +14,7 @@ const { caption, title, lede, locale = DEFAULT_LOCALE, lastUpdated, translationP
     </div>
   )}
   <p class="govuk-body-s govuk-!-margin-top-4">
-    {t(locale, 'label.version')}: {SITE.version} &middot;
+    {t(locale, 'label.version')}: {siteVersion(SITE, locale)} &middot;
     {t(locale, 'label.lastUpdated')}:{' '}
     <time datetime={lastUpdated ?? SITE.lastReviewed}>{lastUpdated ?? SITE.lastReviewed}</time>
   </p>

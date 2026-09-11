@@ -9,7 +9,7 @@ length: one-page
 onShelf: true
 shelfOrder: 1
 forWhom: ['fcc', 'center']
-tiers: [1, 2]
+tiers: [1, 2, 3]
 governs: ['relationship', 'custody', 'consequence', 'language']
 phase: 1
 ---

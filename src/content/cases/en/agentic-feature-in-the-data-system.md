@@ -7,7 +7,7 @@ situation: Your Head Start data system ships an agentic feature that drafts fami
 atStake: Flagging children for follow-up is a decision about a specific child, arriving through a compliance system nobody thinks of as an AI tool. This is the most likely real-world path by which AI enters Head Start programs, and it will arrive as a product update rather than a purchase decision.
 whatToDo: Treat a vendor feature release as an adoption event — register it, tier it, and require the human determination before any flag informs a referral or a service decision. Ask what the flagging model was validated on, and whether performance was analyzed by home language and disability status.
 governs: ['consequence', 'language', 'currency']
-brightLines: []
+brightLines: [3]
 tier: 3
 settings: ['center', 'multi-site']
 status: drafted

@@ -143,6 +143,11 @@ export function siteTitle(site, locale) {
   return locale === 'es' ? (site.titleEs ?? site.title) : site.title;
 }
 
+/** Version label in the given locale. */
+export function siteVersion(site, locale) {
+  return locale === 'es' ? (site.versionEs ?? site.version) : site.version;
+}
+
 /** Posture line in the given locale. */
 export function sitePosture(site, locale) {
   return locale === 'es' ? (site.postureEs ?? site.posture) : site.posture;

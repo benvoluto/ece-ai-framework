@@ -7,10 +7,13 @@
  *   node scripts/test-intake.mjs
  */
 import assert from 'node:assert/strict';
+import { readdirSync, readFileSync } from 'node:fs';
+import matter from 'gray-matter';
 import {
   tierFor,
   tierReason,
   artifactsFor,
+  artifactsGrouped,
   sentenceFor,
   isComplete,
   encodeState,
@@ -149,10 +152,84 @@ test('every provider type gets documents at every tier', () => {
     }
 });
 
-test('a family child care home gets the one-page policy, not the long one', () => {
-  const artifacts = artifactsFor('fcc', 1);
-  assert.ok(artifacts.includes('one-page-ai-policy'));
-  assert.ok(!artifacts.includes('program-ai-use-policy'));
+test('a family child care home leads with the one-page policy, not the long one', () => {
+  const { primary } = artifactsGrouped('fcc', 1);
+  assert.ok(primary.includes('one-page-ai-policy'));
+  assert.ok(!primary.includes('program-ai-use-policy'));
+});
+
+// --- Routing must agree with the artifacts' own frontmatter -----------------
+// These two sources drifted once already: the intake handed readers documents
+// whose own header said they did not apply.
+
+const ARTIFACT_META = Object.fromEntries(
+  readdirSync('src/content/artifacts/en')
+    .filter((f) => f.endsWith('.md'))
+    .map((f) => [
+      f.replace(/\.md$/, ''),
+      matter(readFileSync(`src/content/artifacts/en/${f}`, 'utf8')).data,
+    ]),
+);
+
+test('every routed artifact exists', () => {
+  for (const { id } of PROVIDER_TYPES)
+    for (const tier of [0, 1, 2, 3])
+      for (const slug of artifactsFor(id, tier))
+        assert.ok(ARTIFACT_META[slug], `${id}/tier ${tier} routes to missing artifact ${slug}`);
+});
+
+test('no routed artifact contradicts its own forWhom', () => {
+  for (const { id } of PROVIDER_TYPES)
+    for (const tier of [0, 1, 2, 3])
+      for (const slug of artifactsFor(id, tier)) {
+        const forWhom = ARTIFACT_META[slug].forWhom ?? [];
+        assert.ok(
+          !forWhom.length || forWhom.includes(id),
+          `${id}/tier ${tier}: ${slug} declares forWhom=[${forWhom}]`,
+        );
+      }
+});
+
+test('no routed artifact contradicts its own tiers', () => {
+  for (const { id } of PROVIDER_TYPES)
+    for (const tier of [1, 2, 3])
+      for (const slug of artifactsFor(id, tier)) {
+        const tiers = ARTIFACT_META[slug].tiers ?? [];
+        assert.ok(
+          !tiers.length || tiers.includes(tier),
+          `${id}/tier ${tier}: ${slug} declares tiers=[${tiers}]`,
+        );
+      }
+});
+
+test('every lead-with document is one that actually applies', () => {
+  for (const { id } of PROVIDER_TYPES)
+    for (const tier of [0, 1, 2, 3]) {
+      const { primary, also } = artifactsGrouped(id, tier);
+      const applicable = artifactsFor(id, tier);
+      for (const slug of primary)
+        assert.ok(applicable.includes(slug), `${id}/tier ${tier}: leads with inapplicable ${slug}`);
+      assert.equal(
+        new Set([...primary, ...also]).size,
+        applicable.length,
+        `${id}/tier ${tier}: grouping lost or duplicated an artifact`,
+      );
+    }
+});
+
+test('a reader is never led with more than six documents', () => {
+  for (const { id } of PROVIDER_TYPES)
+    for (const tier of [0, 1, 2, 3]) {
+      const { primary } = artifactsGrouped(id, tier);
+      assert.ok(primary.length <= 6, `${id}/tier ${tier} leads with ${primary.length} documents`);
+    }
+});
+
+test('every artifact declares who it is for', () => {
+  for (const [slug, data] of Object.entries(ARTIFACT_META)) {
+    assert.ok(data.forWhom?.length, `${slug} declares no forWhom`);
+    assert.ok(data.tiers?.length, `${slug} declares no tiers`);
+  }
 });
 
 test('a multi-site operator gets governance, not just a template', () => {

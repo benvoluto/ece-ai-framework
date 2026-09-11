@@ -4,6 +4,7 @@ locale: es
 audience: Familias
 summary: 'Aviso en lenguaje sencillo sobre qué IA usa el programa, en qué parte del trabajo la usa y qué información toca. Es un aviso, no un formulario de consentimiento.'
 lastUpdated: '2026-09-11'
+tiers: [1, 2, 3]
 length: one-page
 onShelf: true
 shelfOrder: 3
