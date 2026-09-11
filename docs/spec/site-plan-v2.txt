@@ -239,7 +239,7 @@ form, no email capture. Anything that gates a policy
 template behind a signup will lose the providers who
 need it most.
 5 · FAQ PREVIEW
-Why does this exist?
+Why does this site exist?
 Four questions surfaced as collapsed rows,
 
 expanding in place, with a link to the full FAQ. These
