@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/build-artifacts.mjs && astro build",
+    "build": "node scripts/validate-content.mjs && node scripts/build-artifacts.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "artifacts": "node scripts/build-artifacts.mjs"
+    "artifacts": "node scripts/build-artifacts.mjs",
+    "verify": "node scripts/validate-content.mjs && node scripts/test-intake.mjs && npm run build && node scripts/check-build.mjs"
   },
   "dependencies": {
     "astro": "^5.14.1",

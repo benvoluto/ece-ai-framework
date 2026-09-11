@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+
+/**
+ * Licence notices.
+ *
+ * The MIT licence requires that its copyright notice and permission notice be
+ * included in all copies or substantial portions of the software. Shipping
+ * govuk-frontend's compiled CSS and JavaScript in our pages is such a copy, so
+ * the notice belongs in the site itself and not only in node_modules.
+ *
+ * It also states plainly what we are NOT permitted to use, which is the part a
+ * reader is more likely to wonder about.
+ */
+const { locale = 'en' } = Astro.props;
+
+const copy = {
+  en: {
+    title: 'License notices',
+    caption: 'About this site',
+    heading: 'License notices',
+    lede:
+      'What this site is built from, what those licenses require, and what they do not permit.',
+    brandHeading: 'What this site does not use, and may not',
+    brandBody:
+      'The GOV.UK Design System is open source under the MIT license and may be used outside UK government. The GOV.UK brand is not. This site therefore uses the design system’s layout, components, color palette, grid, focus states and typographic scale, and none of the following:',
+    brandList: [
+      'the Royal Arms crest or any crown device',
+      'the GOV.UK wordmark or the GOV.UK header branding',
+      'the GDS Transport typeface, which is licensed for UK government use only — this site substitutes a system font stack, which also means no font files are downloaded at all',
+      'the Open Government Licence footer text',
+      'anything else implying affiliation with, endorsement by, or connection to the United Kingdom government',
+    ],
+    brandNote:
+      'The build fails if any of these appear in the output. This site is not affiliated with, endorsed by, or connected to the United Kingdom government.',
+    depsHeading: 'Open source components',
+    depsBody: 'This site is built with the following, each under the MIT license:',
+    noticeHeading: 'The MIT license',
+    noticeBody:
+      'The following notice applies to govuk-frontend and to each component listed above. Copyright is held by the respective authors.',
+    contentHeading: 'The content on this site',
+    contentBody:
+      'The guidance, the policy templates and the other documents are drafts, published so that programs can adopt and adapt them. Nothing on this site has been reviewed by counsel and none of it is legal advice. Licensing terms for the content have not been decided; that is one of the open questions.',
+    contentLink: 'The open questions',
+  },
+  es: {
+    title: 'Avisos de licencia',
+    caption: 'Acerca de este sitio',
+    heading: 'Avisos de licencia',
+    lede:
+      'Con qué está construido este sitio, qué exigen esas licencias y qué no permiten.',
+    brandHeading: 'Lo que este sitio no usa, y no puede usar',
+    brandBody:
+      'El GOV.UK Design System es de código abierto bajo la licencia MIT y puede usarse fuera del gobierno del Reino Unido. La marca GOV.UK no. Por eso este sitio usa la estructura, los componentes, la paleta de colores, la cuadrícula, los estados de foco y la escala tipográfica del sistema de diseño, y nada de lo siguiente:',
+    brandList: [
+      'el escudo de armas real ni ningún emblema de corona',
+      'el logotipo GOV.UK ni la identidad del encabezado de GOV.UK',
+      'la tipografía GDS Transport, cuya licencia es solo para uso del gobierno del Reino Unido; este sitio la sustituye por tipografías del sistema, lo que además significa que no se descarga ningún archivo de fuentes',
+      'el texto de la Open Government Licence en el pie de página',
+      'cualquier otra cosa que dé a entender afiliación, respaldo o conexión con el gobierno del Reino Unido',
+    ],
+    brandNote:
+      'La compilación falla si algo de esto aparece en el resultado. Este sitio no está afiliado al gobierno del Reino Unido, no cuenta con su respaldo ni tiene conexión con él.',
+    depsHeading: 'Componentes de código abierto',
+    depsBody: 'Este sitio está construido con lo siguiente, cada uno bajo la licencia MIT:',
+    noticeHeading: 'La licencia MIT',
+    noticeBody:
+      'El siguiente aviso aplica a govuk-frontend y a cada componente de la lista anterior. Los derechos de autor corresponden a sus respectivos autores.',
+    contentHeading: 'El contenido de este sitio',
+    contentBody:
+      'La guía, las plantillas de políticas y los demás documentos son borradores, publicados para que los programas puedan adoptarlos y adaptarlos. Nada en este sitio ha sido revisado por un abogado y nada constituye asesoría legal. Los términos de licencia del contenido todavía no se han decidido; esa es una de las preguntas abiertas.',
+    contentLink: 'Las preguntas abiertas',
+  },
+};
+
+const c = copy[locale] ?? copy.en;
+
+const DEPENDENCIES = [
+  { name: 'govuk-frontend', version: '6.5.0', url: 'https://github.com/alphagov/govuk-frontend', by: 'Crown Copyright (Government Digital Service)' },
+  { name: 'astro', version: '5', url: 'https://github.com/withastro/astro', by: 'Fred K. Schott and the Astro contributors' },
+  { name: '@astrojs/mdx', version: '4', url: 'https://github.com/withastro/astro', by: 'the Astro contributors' },
+  { name: '@astrojs/sitemap', version: '3', url: 'https://github.com/withastro/astro', by: 'the Astro contributors' },
+  { name: 'sass', version: '1', url: 'https://github.com/sass/dart-sass', by: 'Google Inc.' },
+  { name: 'docx', version: '9', url: 'https://github.com/dolanmiu/docx', by: 'Dolan Miu' },
+  { name: 'marked', version: '15', url: 'https://github.com/markedjs/marked', by: 'Christopher Jeffrey and contributors' },
+  { name: 'gray-matter', version: '4', url: 'https://github.com/jonschlinkert/gray-matter', by: 'Jon Schlinkert' },
+  { name: 'unist-util-visit', version: '5', url: 'https://github.com/syntax-tree/unist-util-visit', by: 'Titus Wormer' },
+];
+
+const MIT_NOTICE = `Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`;
+---
+
+<BaseLayout title={c.title} description={c.lede} locale={locale}>
+  <PageHeader caption={c.caption} title={c.heading} lede={c.lede} locale={locale} />
+
+  <h2 class="govuk-heading-m">{c.brandHeading}</h2>
+  <p class="govuk-body">{c.brandBody}</p>
+  <ul class="govuk-list govuk-list--bullet">
+    {c.brandList.map((item) => <li>{item}</li>)}
+  </ul>
+  <div class="govuk-inset-text">
+    <p class="govuk-body govuk-!-margin-bottom-0">{c.brandNote}</p>
+  </div>
+
+  <h2 class="govuk-heading-m">{c.depsHeading}</h2>
+  <p class="govuk-body">{c.depsBody}</p>
+  <dl class="govuk-summary-list">
+    {DEPENDENCIES.map((dep) => (
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          <a class="govuk-link" href={dep.url} rel="external">{dep.name}</a>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <span class="govuk-body-s">{dep.by}</span>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <span class="govuk-body-s">MIT</span>
+        </dd>
+      </div>
+    ))}
+  </dl>
+
+  <h2 class="govuk-heading-m">{c.noticeHeading}</h2>
+  <p class="govuk-body">{c.noticeBody}</p>
+  <pre class="app-license-text" tabindex="0" role="region" aria-label={c.noticeHeading}><code>{MIT_NOTICE}</code></pre>
+
+  <h2 class="govuk-heading-m">{c.contentHeading}</h2>
+  <p class="govuk-body">{c.contentBody}</p>
+  <p class="govuk-body">
+    <a class="govuk-link" href={locale === 'es' ? '/es/about#open-questions' : '/about#open-questions'}>
+      {c.contentLink}
+    </a>
+  </p>
+</BaseLayout>

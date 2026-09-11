@@ -329,7 +329,8 @@
     margin-bottom: govuk.govuk-spacing(3);
   }
 
-  h3 {
+  h3,
+  h4 {
     @include govuk.govuk-font($size: 19, $weight: bold);
     margin-top: govuk.govuk-spacing(6);
     margin-bottom: govuk.govuk-spacing(2);
@@ -437,4 +438,54 @@
 .app-generated-note {
   background-color: govuk.govuk-colour("black", $variant: "tint-95");
   padding: govuk.govuk-spacing(2);
+}
+
+// --- Tables inside rendered Markdown bodies -----------------------------------
+// The fillable registers run to eight columns. Without this they scroll the
+// whole page sideways on a phone, which breaks every other column on the page.
+// The wrapper is applied by src/components/pages/artifact.astro at runtime.
+.app-artifact-body,
+.app-prose {
+  .app-table-wrapper {
+    margin-bottom: govuk.govuk-spacing(6);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    table {
+      margin-bottom: 0;
+      min-width: 36em;
+    }
+  }
+
+  // A focusable scroll container can be scrolled from the keyboard.
+  .app-table-wrapper:focus-visible {
+    outline: 3px solid govuk.$govuk-focus-colour;
+    outline-offset: 0;
+  }
+}
+
+// The generated-document preview is a scroll container too, so it needs to be
+// reachable and scrollable without a mouse.
+.app-generated-preview:focus-visible {
+  outline: 3px solid govuk.$govuk-focus-colour;
+  outline-offset: 0;
+}
+
+// --- Licence notice text ------------------------------------------------------
+// Preformatted legal text needs to stay readable on a phone without forcing the
+// page to scroll sideways.
+.app-license-text {
+  @include govuk.govuk-font($size: 16);
+  background-color: govuk.govuk-colour("black", $variant: "tint-95");
+  border-left: govuk.govuk-spacing(1) solid govuk.$govuk-border-colour;
+  margin-bottom: govuk.govuk-spacing(6);
+  overflow-x: auto;
+  padding: govuk.govuk-spacing(4);
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  &:focus-visible {
+    outline: 3px solid govuk.$govuk-focus-colour;
+    outline-offset: 0;
+  }
 }

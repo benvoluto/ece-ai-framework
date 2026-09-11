@@ -24,8 +24,11 @@ Determine this first. It changes which of the sections below bind you.
 - **45 CFR 1303.21(a).** A program receiving funds under a Department of
   Education program, and therefore subject to the Family Educational Rights and
   Privacy Act (FERPA), complies with FERPA instead of this Head Start subpart.
-  If that is [GRANTEE NAME], Sections 2 through 5 of this addendum do not apply
-  and the program's FERPA obligations govern the same conduct.
+  If that is [GRANTEE NAME], Sections 2 through 4 of this addendum do not apply
+  and the program's FERPA obligations govern the same conduct. Note what this
+  does **not** displace: §1303.21(a) reaches the Part 1303 privacy subpart only.
+  The Head Start Program Performance Standards in Part 1302 — Sections 5, 6 and
+  7 below — continue to bind the program in full.
 - **45 CFR 1303.21(b).** For any child referred to or found eligible under the
   Individuals with Disabilities Education Act (IDEA), Part B or Part C
   confidentiality requirements displace Subpart C. This applies **in any
@@ -34,8 +37,11 @@ Determine this first. It changes which of the sections below bind you.
   Individualized Education Program (IEP), referral material, or evaluation
   records for such a child is handled under IDEA confidentiality, including the
   parental right to have records destroyed when no longer needed.
-- Otherwise: **45 CFR 1303 Subpart C** governs, and Sections 2 through 5 apply
+- Otherwise: **45 CFR 1303 Subpart C** governs, and Sections 2 through 4 apply
   in full.
+
+Sections 5, 6 and 7 sit in Part 1302, not Part 1303, and apply to every grantee
+whichever determination is recorded below.
 
 [GRANTEE NAME]'s determination: [SUBPART C / FERPA]. Recorded by [NAME], [ROLE],
 on [DATE].

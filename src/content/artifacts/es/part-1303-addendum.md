@@ -29,8 +29,11 @@ Determine esto primero. Cambia cuáles de las secciones de abajo lo obligan.
   ley federal de privacidad de los expedientes educativos), cumple con FERPA en
   lugar de esta subparte de Head Start (el programa federal de educación
   temprana). Si ese es el caso de [NOMBRE DEL CONCESIONARIO], las Secciones 2 a
-  5 de este anexo no aplican y las obligaciones del programa bajo FERPA rigen la
-  misma conducta.
+  4 de este anexo no aplican y las obligaciones del programa bajo FERPA rigen la
+  misma conducta. Fíjese en lo que esto **no** desplaza: §1303.21(a) alcanza
+  únicamente la subparte de privacidad de la Part 1303. Los Head Start Program
+  Performance Standards de la Part 1302 —las Secciones 5, 6 y 7 de abajo— siguen
+  obligando al programa por completo.
 - **45 CFR 1303.21(b).** Para cualquier niño referido o declarado elegible bajo
   la Individuals with Disabilities Education Act (IDEA, la ley federal de
   educación para personas con discapacidades), los requisitos de
@@ -41,8 +44,11 @@ Determine esto primero. Cambia cuáles de las secciones de abajo lo obligan.
   educativo individualizado), material de referencia o expedientes de evaluación
   de un niño así se maneja bajo la confidencialidad de IDEA, incluido el derecho
   de los padres a que los expedientes se destruyan cuando ya no se necesiten.
-- De lo contrario: rige la **Subparte C de 45 CFR 1303**, y las Secciones 2 a 5
+- De lo contrario: rige la **Subparte C de 45 CFR 1303**, y las Secciones 2 a 4
   aplican por completo.
+
+Las Secciones 5, 6 y 7 están en la Part 1302, no en la Part 1303, y aplican a
+todo concesionario sea cual sea la determinación que se anote abajo.
 
 La determinación de [NOMBRE DEL CONCESIONARIO]: [SUBPARTE C / FERPA]. Anotada
 por [NOMBRE], [PUESTO], el [FECHA].

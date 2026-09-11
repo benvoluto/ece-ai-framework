@@ -10,7 +10,7 @@ const links = NAV.filter((item) => item.path !== '/');
   <div class="govuk-width-container">
     <div class="govuk-footer__meta">
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-        <h2 class="govuk-visually-hidden">Support links</h2>
+        <h2 class="govuk-visually-hidden">{locale === 'es' ? 'Enlaces del sitio' : 'Support links'}</h2>
         <ul class="govuk-footer__inline-list">
           {links.map((item) => (
             <li class="govuk-footer__inline-list-item">
@@ -30,10 +30,14 @@ const links = NAV.filter((item) => item.path !== '/');
         </p>
         <p class="govuk-footer__licence-description govuk-!-font-size-16">
           {locale === 'es' ? 'Construido con el ' : 'Built with the '}
-          <a class="govuk-footer__link" href="https://design-system.service.gov.uk/" rel="external">GOV.UK&nbsp;Design&nbsp;System</a>,
+          <a class="govuk-footer__link" href="https://design-system.service.gov.uk/" rel="external">GOV.UK&nbsp;Design&nbsp;System</a>
           {locale === 'es'
             ? ', usado bajo la licencia MIT. Este sitio no está afiliado al gobierno del Reino Unido, no cuenta con su respaldo ni tiene conexión con él, y no usa ninguno de sus elementos de marca.'
             : ', used under the MIT license. This site is not affiliated with, endorsed by, or connected to the United Kingdom government, and uses none of its brand assets.'}
+          {' '}
+          <a class="govuk-footer__link" href={localePath(locale, '/licenses')}>
+            {locale === 'es' ? 'Avisos de licencia' : 'License notices'}
+          </a>
         </p>
       </div>
     </div>

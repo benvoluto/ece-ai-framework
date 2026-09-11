@@ -30,7 +30,7 @@ consigue escribiéndolas en el contrato que firma — y por eso, en todos los
 entornos que no son de distrito escolar, la fuerza está en la compra y no en el
 cumplimiento normativo.
 
-## La incertidumbre que nadie ha nombrado todavía
+#### La incertidumbre que nadie ha nombrado todavía
 
 En K-12 la práctica está tan asentada que la gente deja de pensarla: la escuela
 da el consentimiento en nombre de los padres, para no tener que juntar treinta

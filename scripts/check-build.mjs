@@ -76,8 +76,21 @@ async function main() {
     }
 
     // --- UK government brand assets ---
-    if (/govuk-crest|govuk-logotype|GDS Transport|Open Government Licence|nationalarchives\.gov\.uk/i.test(html)) {
+    // The licence-notices page names these deliberately, to state that the site
+    // does not use them. Naming them there is the opposite of displaying them,
+    // so that one route is exempt from the text check. It is NOT exempt from the
+    // asset check below, which is what would actually catch a crest being served.
+    const isLicensePage = /^\/(es\/)?licenses$/.test(route);
+    if (
+      !isLicensePage &&
+      /govuk-crest|govuk-logotype|GDS Transport|Open Government Licence|nationalarchives\.gov\.uk/i.test(html)
+    ) {
       problems.push(`${route} references a UK government brand asset — we have no right to display these`);
+    }
+    // An actual crest or logotype file being referenced is a problem anywhere,
+    // including on the licence page.
+    if (/src=["'][^"']*(govuk-crest|govuk-logotype)[^"']*["']|url\(["']?[^)"']*(govuk-crest|govuk-logotype)/i.test(html)) {
+      problems.push(`${route} loads a UK government brand image file`);
     }
 
     // --- Accessibility basics ---

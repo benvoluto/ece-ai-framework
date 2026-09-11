@@ -178,9 +178,13 @@ const otherLocale = locale === 'en' ? 'es' : 'en';
               </h3>
               <p class="govuk-body-s">{entry.data.summary}</p>
               <p class="govuk-body-s govuk-!-margin-bottom-0">
-                <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.docx`} download>Word</a>
+                <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.docx`} download>
+                  Word<span class="govuk-visually-hidden"> {c.versionOf} {entry.data.title}</span>
+                </a>
                 <span aria-hidden="true"> · </span>
-                <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.md`} download>Markdown</a>
+                <a class="govuk-link" href={`/artifacts/${locale}/${slugOf(entry)}.md`} download>
+                  Markdown<span class="govuk-visually-hidden"> {c.versionOf} {entry.data.title}</span>
+                </a>
                 <span aria-hidden="true"> · </span>
                 <a class="govuk-link" href={localePath(otherLocale, `/artifacts/${slugOf(entry)}`)} lang={otherLocale} hreflang={otherLocale}>{otherLocale === 'es' ? 'Español' : 'English'}</a>
               </p>

@@ -25,7 +25,7 @@ policy for itself. It gets them by writing them into the contract it signs — a
 that is why the leverage in every non-district setting runs through procurement
 rather than through compliance.
 
-## The uncertainty nobody has named yet
+#### The uncertainty nobody has named yet
 
 In K-12 the practice is settled enough that people stop thinking about it: the
 school consents on the parents' behalf so that thirty separate consent forms do
