@@ -22,17 +22,18 @@ const links = NAV.filter((item) => item.path !== '/');
         </ul>
 
         <p class="govuk-footer__licence-description">
-          {SITE.disclaimer}
+          {t(locale, 'banner.text')}
         </p>
         <p class="govuk-footer__licence-description">
           {t(locale, 'label.version')}: {SITE.version} &middot;
           {t(locale, 'label.lastUpdated')}: <time datetime={SITE.lastReviewed}>{SITE.lastReviewed}</time>
         </p>
         <p class="govuk-footer__licence-description govuk-!-font-size-16">
-          Built with the
+          {locale === 'es' ? 'Construido con el ' : 'Built with the '}
           <a class="govuk-footer__link" href="https://design-system.service.gov.uk/" rel="external">GOV.UK&nbsp;Design&nbsp;System</a>,
-          used under the MIT license. This site is not affiliated with, endorsed by, or connected to
-          the United Kingdom government, and uses none of its brand assets.
+          {locale === 'es'
+            ? ', usado bajo la licencia MIT. Este sitio no está afiliado al gobierno del Reino Unido, no cuenta con su respaldo ni tiene conexión con él, y no usa ninguno de sus elementos de marca.'
+            : ', used under the MIT license. This site is not affiliated with, endorsed by, or connected to the United Kingdom government, and uses none of its brand assets.'}
         </p>
       </div>
     </div>

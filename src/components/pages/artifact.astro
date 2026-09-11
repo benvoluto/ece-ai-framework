@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE } from '../../lib/site.js';
-import { t, localePath } from '../../lib/i18n.js';
+import { t, localePath, siteTitle } from '../../lib/i18n.js';
 import TierTag from '../TierTag.astro';
 
 /**
@@ -81,7 +81,7 @@ const d = entry.data;
 
     <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-4" />
     <p class="govuk-body-s">
-      {SITE.title} &middot; {t(locale, 'label.version')}: {d.version} &middot;
+      {siteTitle(SITE, locale)} &middot; {t(locale, 'label.version')}: {d.version} &middot;
       {t(locale, 'label.lastUpdated')}: <time datetime={d.lastUpdated}>{d.lastUpdated}</time>
     </p>
     <p class="govuk-body-s app-print-only">{SITE.url}</p>

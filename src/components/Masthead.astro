@@ -1,6 +1,6 @@
 ---
 import { SITE } from '../lib/site.js';
-import { t, localePath, stripLocale, DEFAULT_LOCALE } from '../lib/i18n.js';
+import { t, localePath, stripLocale, siteTitle, sitePosture, DEFAULT_LOCALE } from '../lib/i18n.js';
 
 const { locale = DEFAULT_LOCALE, pathname = '/' } = Astro.props;
 const otherLocale = locale === 'en' ? 'es' : 'en';
@@ -8,9 +8,9 @@ const barePath = stripLocale(pathname.replace(/\/$/, '') || '/');
 ---
 <div class="app-masthead">
   <div class="govuk-width-container">
-    <a class="app-masthead__title" href={localePath(locale, '/')}>{SITE.title}</a>
+    <a class="app-masthead__title" href={localePath(locale, '/')}>{siteTitle(SITE, locale)}</a>
     <p class="app-masthead__meta govuk-!-margin-top-1">
-      {SITE.version} &middot; {SITE.posture}
+      {SITE.version} &middot; {sitePosture(SITE, locale)}
       <span class="govuk-!-margin-left-3">
         <a class="govuk-link govuk-link--inverse" href={localePath(otherLocale, barePath)} lang={otherLocale} hreflang={otherLocale}>
           {t(locale, 'lang.switch')}

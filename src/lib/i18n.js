@@ -137,4 +137,15 @@ export function stripLocale(pathname) {
   return pathname || '/';
 }
 
+
+/** Site title in the given locale. Falls back to the English working title. */
+export function siteTitle(site, locale) {
+  return locale === 'es' ? (site.titleEs ?? site.title) : site.title;
+}
+
+/** Posture line in the given locale. */
+export function sitePosture(site, locale) {
+  return locale === 'es' ? (site.postureEs ?? site.posture) : site.posture;
+}
+
 export { LOCALES, DEFAULT_LOCALE };

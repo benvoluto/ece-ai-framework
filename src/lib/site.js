@@ -4,10 +4,16 @@
  * (the spec's candidate was "Birth to Five AI Standards").
  */
 export const SITE = {
-  /** Working title, per decision to keep the descriptive title for now. */
+  /**
+   * Working title, per the decision to keep the descriptive title for now.
+   * The Spanish is a translation of the working title, not a second name: if a
+   * short public name is chosen later, both change together.
+   */
   title: 'A Framework for Ethical and Constructive Use of AI in Early Childhood Education',
+  titleEs: 'Un marco para el uso ético y constructivo de la IA en la educación temprana',
   /** Used in the masthead where the full title will not fit. */
   shortName: 'AI in Early Childhood',
+  shortNameEs: 'La IA en la educación temprana',
   /** Placeholder production origin. Update when a domain is registered. */
   url: 'https://ece-ai-framework.vercel.app',
   /**
@@ -19,6 +25,7 @@ export const SITE = {
   lastReviewed: '2026-09-10',
   phase: 'Working draft',
   posture: 'Neutral field resource',
+  postureEs: 'Recurso neutral para el campo',
   /** Global disclaimer. Rendered in the phase banner and every artifact. */
   disclaimer:
     'This is an unreviewed working draft. Nothing here has been reviewed by counsel and it is not legal advice.',

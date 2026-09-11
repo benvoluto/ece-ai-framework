@@ -1,7 +1,7 @@
 ---
 import '../styles/main.scss';
 import { SITE } from '../lib/site.js';
-import { t, localePath, stripLocale, DEFAULT_LOCALE } from '../lib/i18n.js';
+import { t, localePath, stripLocale, siteTitle, DEFAULT_LOCALE } from '../lib/i18n.js';
 import Masthead from '../components/Masthead.astro';
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
@@ -18,7 +18,8 @@ const {
 
 const pathname = Astro.url.pathname;
 const barePath = stripLocale(pathname.replace(/\/+$/, '') || '/');
-const pageTitle = title ? `${title} — ${SITE.title}` : SITE.title;
+const localTitle = siteTitle(SITE, locale);
+const pageTitle = title ? `${title} — ${localTitle}` : localTitle;
 const canonical = new URL(localePath(locale, barePath), SITE.url).href;
 const altEn = new URL(localePath('en', barePath), SITE.url).href;
 const altEs = new URL(localePath('es', barePath), SITE.url).href;
@@ -36,7 +37,7 @@ const altEs = new URL(localePath('es', barePath), SITE.url).href;
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="es" href={altEs} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta property="og:title" content={title || SITE.title} />
+    <meta property="og:title" content={title || localTitle} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={locale === 'es' ? 'es_US' : 'en_US'} />
