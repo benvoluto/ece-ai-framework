@@ -1,0 +1,116 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Annotation from '../components/Annotation.astro';
+import PrincipleRefs from '../components/PrincipleRefs.astro';
+import TierTag from '../components/TierTag.astro';
+import { t, localePath } from '../lib/i18n.js';
+
+const locale = 'en';
+
+const entries = (await getCollection('brightLines', (e) => e.id.startsWith('en/'))).sort(
+  (a, b) => a.data.number - b.data.number,
+);
+
+const lines = await Promise.all(
+  entries.map(async (entry) => ({ data: entry.data, Content: (await render(entry)).Content })),
+);
+
+const lastUpdated = lines
+  .map((line) => line.data.lastUpdated)
+  .sort()
+  .at(-1);
+
+const description =
+  'Eight things not to do with AI in an early childhood program, whatever the tool promises, each with the legal or evidentiary basis that makes it defensible to an owner or a board.';
+---
+
+<BaseLayout title="Bright lines" description={description} locale={locale}>
+  <PageHeader
+    caption="Bright lines"
+    title="Eight things not to do"
+    lede="Eight uses of AI that an early childhood program should rule out, whatever the tool promises. Each one is paired with the statute, regulation or evidence that makes it defensible when an owner or a board asks why."
+    locale={locale}
+    lastUpdated={lastUpdated}
+  />
+
+  <p class="govuk-body">
+    A short prohibited-use list is usable. A five-by-five impact-likelihood grid is not. These
+    eight are the list, and they do not change with the size of the program: the same eight
+    apply to a family child care home, a center and a multi-site grantee.
+  </p>
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      A tool that does any of these is Tier 0 &mdash; do not adopt. There is no version of it
+      with enough safeguards bolted on to move it up a tier.
+    </strong>
+  </div>
+
+  <p class="govuk-body">
+    <TierTag tier={0} locale={locale} withName={false} link={false} />
+    <span class="govuk-!-margin-left-2">
+      Answer the four questions on <a class="govuk-link" href={localePath(locale, '/start')}>Start here</a>
+      and these eight run first, as a screener, before any of the tiering questions.
+    </span>
+  </p>
+
+  <h2 class="govuk-heading-m" id="the-eight">The eight</h2>
+
+  <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-8">
+    {lines.map((line) => (
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href={`#line-${line.data.number}`}>
+          {line.data.shortRule}
+        </a>
+      </li>
+    ))}
+  </ol>
+
+  {lines.map((line) => (
+    <section id={`line-${line.data.number}`} class="govuk-!-margin-bottom-8">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+        <span class="govuk-caption-m">Bright line {line.data.number}</span>
+        {line.data.title}
+      </h2>
+
+      <p class="govuk-body-l">{line.data.rule}</p>
+
+      <Annotation label={t(locale, 'label.basis')}>
+        <line.Content />
+      </Annotation>
+
+      {line.data.authorities.length > 0 && (
+        <>
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">{t(locale, 'label.authority')}</h3>
+          <ul class="govuk-list govuk-list--bullet govuk-body-s">
+            {line.data.authorities.map((authority) => <li>{authority}</li>)}
+          </ul>
+        </>
+      )}
+
+      {line.data.verifyBeforePublishing && (
+        <div class="govuk-inset-text">
+          <p class="govuk-body-s govuk-!-margin-bottom-0">
+            <strong>{t(locale, 'label.verify')}.</strong> {line.data.verifyBeforePublishing}
+          </p>
+        </div>
+      )}
+
+      <PrincipleRefs ids={line.data.governs} locale={locale} />
+    </section>
+  ))}
+
+  <h2 class="govuk-heading-m" id="if-you-are-already-doing-one">If you are already doing one of these</h2>
+
+  <p class="govuk-body">
+    Stop the use, not the program. Turn the feature off if the tool has a switch for it, ask the
+    vendor in writing to confirm it is off for your account, and record the date you did both. If
+    the feature cannot be turned off, the tool comes out. Then work through
+    <a class="govuk-link" href={localePath(locale, '/start')}>Start here</a> for the uses you are
+    keeping, so the rest of your tools have a tier and a written basis behind them.
+  </p>
+</BaseLayout>

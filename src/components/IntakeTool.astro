@@ -1,0 +1,639 @@
+---
+import { PROVIDER_TYPES, SCREENER, TIER_DEFINITIONS } from '../lib/intake.js';
+import { t, localePath, DEFAULT_LOCALE } from '../lib/i18n.js';
+
+/**
+ * The four-question intake.
+ *
+ * Renders every state into static HTML and switches between them with a small
+ * inline script. There is no framework here on purpose: the reader may be on a
+ * poor connection, and the whole tool is a few hundred lines of DOM work.
+ *
+ * Nothing the reader answers is transmitted. The result URL is a fragment,
+ * which browsers do not send to the server.
+ */
+const { locale = DEFAULT_LOCALE, compact = false } = Astro.props;
+const isEs = locale === 'es';
+
+const copy = {
+  en: {
+    screenerLegend: 'First: does the tool do any of these?',
+    screenerHint:
+      'These eight are the bright lines. If the answer to any of them is yes, the tiering questions do not apply — the answer is already no.',
+    screenerYes: 'Yes, it does at least one of these',
+    screenerNo: 'No, none of these',
+    screenerUnsure: "I don't know yet",
+    unsureResult:
+      "Then that is the first thing to find out, and it is a fair question to put to the vendor in writing. Ask questions 2, 3 and 8 on the vendor sheet before going further. A vendor who will not answer them in writing has told you something.",
+    sentenceLegend: 'Now complete this sentence.',
+    sentenceHint: 'Four answers. Every one is a fact about the tool, not a judgment about risk.',
+    lockedHeading: 'Your guidance is behind these four answers',
+    lockedBody: 'Finish the sentence above and the guidance for your tier appears here.',
+    resultHeading: 'What this means for you',
+    whyHeading: 'Why this tier',
+    scopeHeading: 'What sits in this tier',
+    returnsHeading: 'What you need to do',
+    artifactsHeading: 'The documents you need',
+    artifactsHint: 'Free, editable, no sign-up.',
+    generateHeading: 'Generate your documents',
+    generateHint:
+      'Assembled from your four answers: a policy for your program and a matching family notice. Everything happens in your browser — your answers are never sent anywhere.',
+    generateButton: 'Generate my policy and family notice',
+    regenerate: 'Regenerate',
+    policyTab: 'AI Use Policy',
+    noticeTab: 'Family Notice',
+    downloadWord: 'Download for Word (.docx)',
+    downloadMd: 'Download as Markdown (.md)',
+    copyText: 'Copy text',
+    copied: 'Copied',
+    preparing: 'Preparing…',
+    startOver: 'Start over',
+    shareHeading: 'Keep this result',
+    shareHint:
+      'This page address now carries your answers. Bookmark it, or send it to whoever has to approve the decision.',
+    copyLink: 'Copy link to this result',
+    tier0Heading: 'Do not adopt',
+    tier0Body:
+      'This tool does something on the bright-lines list. That is not a risk to be managed with paperwork — it is the short list of things not to do, whatever the tool promises.',
+    seeBrightLines: 'Read the bright lines and their legal basis',
+    notice: 'A notice is not a consent form. These are separate documents, deliberately.',
+  },
+  es: {
+    screenerLegend: 'Primero: ¿la herramienta hace alguna de estas cosas?',
+    screenerHint:
+      'Estos ocho son los límites infranqueables. Si la respuesta a cualquiera de ellos es sí, las preguntas de nivel no aplican: la respuesta ya es no.',
+    screenerYes: 'Sí, hace al menos una de estas',
+    screenerNo: 'No, ninguna de estas',
+    screenerUnsure: 'Todavía no lo sé',
+    unsureResult:
+      'Entonces eso es lo primero que hay que averiguar, y es una pregunta justa para hacerle al proveedor por escrito. Haga las preguntas 2, 3 y 8 de la hoja de proveedores antes de seguir. Un proveedor que no las responda por escrito ya le dijo algo.',
+    sentenceLegend: 'Ahora complete esta oración.',
+    sentenceHint:
+      'Cuatro respuestas. Cada una es un hecho sobre la herramienta, no un juicio sobre el riesgo.',
+    lockedHeading: 'Su guía está detrás de estas cuatro respuestas',
+    lockedBody: 'Termine la oración de arriba y aquí aparecerá la guía para su nivel.',
+    resultHeading: 'Qué significa esto para usted',
+    whyHeading: 'Por qué este nivel',
+    scopeHeading: 'Qué cae en este nivel',
+    returnsHeading: 'Qué tiene que hacer',
+    artifactsHeading: 'Los documentos que necesita',
+    artifactsHint: 'Gratis, editables, sin registrarse.',
+    generateHeading: 'Genere sus documentos',
+    generateHint:
+      'Armados a partir de sus cuatro respuestas: una política para su programa y un aviso para las familias que la acompaña. Todo ocurre en su navegador; sus respuestas nunca se envían a ninguna parte.',
+    generateButton: 'Generar mi política y mi aviso para las familias',
+    regenerate: 'Volver a generar',
+    policyTab: 'Política de uso de IA',
+    noticeTab: 'Aviso para las familias',
+    downloadWord: 'Descargar para Word (.docx)',
+    downloadMd: 'Descargar como Markdown (.md)',
+    copyText: 'Copiar texto',
+    copied: 'Copiado',
+    preparing: 'Preparando…',
+    startOver: 'Empezar de nuevo',
+    shareHeading: 'Guarde este resultado',
+    shareHint:
+      'La dirección de esta página ahora lleva sus respuestas. Guárdela en favoritos o envíesela a quien tenga que aprobar la decisión.',
+    copyLink: 'Copiar el enlace a este resultado',
+    tier0Heading: 'No adoptar',
+    tier0Body:
+      'Esta herramienta hace algo que está en la lista de límites infranqueables. Eso no es un riesgo que se maneje con papeleo: es la lista corta de cosas que no se hacen, prometa lo que prometa la herramienta.',
+    seeBrightLines: 'Lea los límites infranqueables y su fundamento legal',
+    notice: 'Un aviso no es un formulario de consentimiento. Son documentos separados, a propósito.',
+  },
+};
+
+const c = copy[locale] ?? copy.en;
+
+const clauses = isEs
+  ? [
+      { id: 'names', before: 'considerando una herramienta que', yes: 've o recibe información que identifica a un niño o a una familia', no: 'no ve ni recibe información que identifique a un niño o a una familia' },
+      { id: 'biometric', before: ',', yes: 'capta la cara, la voz o el cuerpo de un niño', no: 'no capta la cara, la voz ni el cuerpo de un niño' },
+      { id: 'decision', before: ',', yes: 'informará una decisión sobre un niño en particular', no: 'no informará ninguna decisión sobre un niño en particular' },
+      { id: 'children', before: ' y', yes: 'será usado directamente por niños', no: 'no será usado directamente por niños' },
+    ]
+  : [
+      { id: 'names', before: 'considering a tool that', yes: 'does', no: 'does not', after: 'see or receive information naming an individual child or family' },
+      { id: 'biometric', before: ',', yes: 'does', no: 'does not', after: "capture a child's face, voice, or body" },
+      { id: 'decision', before: ',', yes: 'will', no: 'will not', after: 'inform a decision about a specific child' },
+      { id: 'children', before: ', and', yes: 'will', no: 'will not', after: 'be used directly by children' },
+    ];
+---
+
+<div class="app-intake" data-locale={locale}>
+  {/* ---------------------------------------------------------------- Screener */}
+  <section class="app-intake__step" id="intake-screener">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <h2 class="govuk-fieldset__heading">{c.screenerLegend}</h2>
+      </legend>
+      <p class="govuk-hint">{c.screenerHint}</p>
+
+      <ol class="govuk-list govuk-list--number govuk-body-s app-intake__screener-list">
+        {SCREENER.map((item) => (
+          <li>{isEs ? item.es : item.en}</li>
+        ))}
+      </ol>
+
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="screen-no" name="screen" type="radio" value="no" />
+          <label class="govuk-label govuk-radios__label" for="screen-no">{c.screenerNo}</label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="screen-yes" name="screen" type="radio" value="yes" />
+          <label class="govuk-label govuk-radios__label" for="screen-yes">{c.screenerYes}</label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="screen-unsure" name="screen" type="radio" value="unsure" />
+          <label class="govuk-label govuk-radios__label" for="screen-unsure">{c.screenerUnsure}</label>
+        </div>
+      </div>
+    </fieldset>
+  </section>
+
+  {/* ------------------------------------------------------------ Tier 0 result */}
+  <section class="app-intake__step" id="intake-tier0" hidden>
+    <div class="govuk-notification-banner govuk-notification-banner--error" role="alert"
+         aria-labelledby="tier0-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="tier0-title">{t(locale, 'tier.0')}</h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">{c.tier0Heading}</p>
+        <p class="govuk-body">{c.tier0Body}</p>
+        <p class="govuk-body">
+          <a class="govuk-notification-banner__link" href={localePath(locale, '/bright-lines')}>
+            {c.seeBrightLines}
+          </a>
+        </p>
+      </div>
+    </div>
+    <ul class="govuk-list govuk-list--bullet">
+      {(TIER_DEFINITIONS[0][locale] ?? TIER_DEFINITIONS[0].en).returns.map((r) => <li>{r}</li>)}
+    </ul>
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-action="restart">
+      {c.startOver}
+    </button>
+  </section>
+
+  {/* ----------------------------------------------------------- Unsure result */}
+  <section class="app-intake__step" id="intake-unsure" hidden>
+    <div class="govuk-inset-text">
+      <p class="govuk-body">{c.unsureResult}</p>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a class="govuk-link" href={localePath(locale, '/vendors')}>{t(locale, 'nav.vendors')}</a>
+      </p>
+    </div>
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-action="restart">
+      {c.startOver}
+    </button>
+  </section>
+
+  {/* -------------------------------------------------------------- The sentence */}
+  <section class="app-intake__step" id="intake-sentence" hidden>
+    <h2 class="govuk-heading-m">{c.sentenceLegend}</h2>
+    <p class="govuk-hint">{c.sentenceHint}</p>
+
+    <p class="app-sentence">
+      <span>{isEs ? 'Somos un' : 'We are a'}</span>{' '}
+      <label class="govuk-visually-hidden" for="q-provider">
+        {isEs ? 'Tipo de programa' : 'Type of program'}
+      </label>
+      <select class="app-sentence__select" id="q-provider" data-q="provider" data-answered="false">
+        <option value="">{isEs ? '— elija —' : '— choose —'}</option>
+        {PROVIDER_TYPES.map((p) => <option value={p.id}>{p[locale] ?? p.en}</option>)}
+      </select>{' '}
+      {clauses.map((clause, i) => (
+        <>
+          <span>{i === 0 ? clause.before : clause.before}</span>{' '}
+          <label class="govuk-visually-hidden" for={`q-${clause.id}`}>
+            {clause.after ?? clause.yes}
+          </label>
+          <select class="app-sentence__select" id={`q-${clause.id}`} data-q={clause.id} data-answered="false">
+            <option value="">{isEs ? '— elija —' : '— choose —'}</option>
+            <option value="yes">{clause.yes}</option>
+            <option value="no">{clause.no}</option>
+          </select>{' '}
+          {clause.after && <span>{clause.after}</span>}
+        </>
+      ))}
+      <span>.</span>
+    </p>
+  </section>
+
+  {/* ------------------------------------------------------------------- Locked */}
+  <section class="app-intake__step" id="intake-locked" hidden>
+    <div class="app-locked">
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">{c.lockedHeading}</h2>
+      <p class="govuk-body-s govuk-!-margin-bottom-0">{c.lockedBody}</p>
+    </div>
+  </section>
+
+  {/* ------------------------------------------------------------------- Result */}
+  <section class="app-intake__step" id="intake-result" hidden aria-live="polite">
+    <h2 class="govuk-heading-m">{c.resultHeading}</h2>
+
+    <p class="govuk-body app-intake__sentence-echo" id="result-sentence"></p>
+
+    <p class="govuk-body">
+      <span id="result-tier-tag"></span>
+      <span class="govuk-!-margin-left-2" id="result-tier-name"></span>
+    </p>
+
+    <div class="app-annotation govuk-!-margin-bottom-4">
+      <span class="app-annotation__label">{c.whyHeading}</span>
+      <p class="govuk-body govuk-!-margin-bottom-0" id="result-why"></p>
+    </div>
+
+    <h3 class="govuk-heading-s">{c.scopeHeading}</h3>
+    <ul class="govuk-list govuk-list--bullet" id="result-examples"></ul>
+
+    <h3 class="govuk-heading-s">{c.returnsHeading}</h3>
+    <ul class="govuk-list govuk-list--bullet" id="result-returns"></ul>
+
+    <h3 class="govuk-heading-s">{c.artifactsHeading}</h3>
+    <p class="govuk-hint">{c.artifactsHint}</p>
+    <ul class="govuk-list" id="result-artifacts"></ul>
+
+    {/* ------------------------------------------------------------- Generation */}
+    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6" />
+
+    <h3 class="govuk-heading-m">{c.generateHeading}</h3>
+    <p class="govuk-body">{c.generateHint}</p>
+
+    <button class="govuk-button" data-module="govuk-button" type="button" id="generate-btn">
+      {c.generateButton}
+    </button>
+
+    <div id="generated" hidden>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h4 class="govuk-tabs__title">{c.generateHeading}</h4>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#gen-policy">{c.policyTab}</a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#gen-notice">{c.noticeTab}</a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="gen-policy">
+          <div class="app-document app-generated-preview" id="gen-policy-preview"></div>
+          <div class="govuk-button-group govuk-!-margin-top-4">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-download="docx" data-doc="policy">{c.downloadWord}</button>
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-download="md" data-doc="policy">{c.downloadMd}</button>
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-download="copy" data-doc="policy">{c.copyText}</button>
+          </div>
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="gen-notice">
+          <div class="govuk-inset-text govuk-!-margin-top-0">
+            <p class="govuk-body-s govuk-!-margin-bottom-0">{c.notice}</p>
+          </div>
+          <div class="app-document app-generated-preview" id="gen-notice-preview"></div>
+          <div class="govuk-button-group govuk-!-margin-top-4">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-download="docx" data-doc="notice">{c.downloadWord}</button>
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-download="md" data-doc="notice">{c.downloadMd}</button>
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-download="copy" data-doc="notice">{c.copyText}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* ------------------------------------------------------------------ Share */}
+    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-4" />
+    <h3 class="govuk-heading-s">{c.shareHeading}</h3>
+    <p class="govuk-body-s">{c.shareHint}</p>
+    <div class="govuk-button-group">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" id="copy-link">{c.copyLink}</button>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" data-action="restart">{c.startOver}</button>
+    </div>
+  </section>
+
+  {/* No-JS fallback: the tiers are static content, so the page still works. */}
+  <noscript>
+    <div class="govuk-inset-text">
+      <p class="govuk-body">
+        {isEs
+          ? 'Esta herramienta necesita JavaScript. Los cuatro niveles y lo que exige cada uno están descritos abajo en esta misma página, y todos los documentos se pueden descargar sin usar la herramienta.'
+          : 'This tool needs JavaScript. The four tiers and what each one requires are written out further down this page, and every document can be downloaded without using the tool.'}
+      </p>
+    </div>
+  </noscript>
+</div>
+
+<script>
+  import {
+    PROVIDER_TYPES,
+    TIER_DEFINITIONS,
+    tierFor,
+    tierReason,
+    artifactsFor,
+    sentenceFor,
+    isComplete,
+    encodeState,
+    decodeState,
+  } from '../lib/intake.js';
+  import { generateDocuments } from '../lib/generate-policy.js';
+
+  const root = document.querySelector('.app-intake');
+  if (root) {
+    const locale = root.dataset.locale === 'es' ? 'es' : 'en';
+    const isEs = locale === 'es';
+    const $ = (id) => document.getElementById(id);
+    const show = (id, on) => {
+      const el = $(id);
+      if (el) el.hidden = !on;
+    };
+
+    /** Artifact titles are needed for the result list. Kept here so the tool has
+     *  no build-time dependency on content that other passes are still writing. */
+    const ARTIFACT_TITLES = {
+      'one-page-ai-policy': { en: 'The One-Page AI Policy', es: 'La política de IA de una página' },
+      'program-ai-use-policy': { en: 'Program AI Use Policy', es: 'Política de uso de IA del programa' },
+      'part-1303-addendum': { en: 'Part 1303 Addendum', es: 'Anexo de la Parte 1303' },
+      'staff-acceptable-use-one-pager': { en: 'Staff Acceptable-Use One-Pager', es: 'Hoja de uso aceptable para el personal' },
+      'family-notice': { en: 'Family Notice', es: 'Aviso para las familias' },
+      'consent-images-voice-model-training': { en: 'Consent: Images, Voice & Model Training', es: 'Consentimiento: imágenes, voz y entrenamiento de modelos' },
+      'approved-tools-register': { en: 'Approved Tools Register', es: 'Registro de herramientas aprobadas' },
+      'vendor-question-sheet': { en: 'Vendor Question Sheet', es: 'Hoja de preguntas para proveedores' },
+      'board-talking-points': { en: 'Board Talking Points', es: 'Puntos para la junta directiva' },
+      'handbook-addendum-language': { en: 'Handbook Addendum Language', es: 'Texto de anexo para el manual' },
+      'incident-discontinuation-protocol': { en: 'Incident & Discontinuation Protocol', es: 'Protocolo de incidentes y descontinuación' },
+      'governance-charter': { en: 'Governance Charter & Authority Matrix', es: 'Carta de gobernanza y matriz de autoridad' },
+      'model-contract-rider': { en: 'Model Contract Rider', es: 'Cláusula contractual modelo' },
+      'pilot-protocol': { en: 'Pilot Protocol & Stop Condition', es: 'Protocolo de piloto y condición de parada' },
+      'shadow-ai-amnesty-kit': { en: 'Shadow-AI Amnesty Kit', es: 'Kit de amnistía para IA en la sombra' },
+      'intermediary-ai-practice-standard': { en: 'Intermediary AI Practice Standard', es: 'Estándar de práctica de IA para intermediarios' },
+    };
+
+    const TAGS = { 0: 'govuk-tag--red', 1: 'govuk-tag--green', 2: 'govuk-tag--yellow', 3: 'govuk-tag--orange' };
+    const TIER_LABEL = isEs
+      ? { 0: 'No adoptar', 1: 'Nivel 1', 2: 'Nivel 2', 3: 'Nivel 3' }
+      : { 0: 'Do not adopt', 1: 'Tier 1', 2: 'Tier 2', 3: 'Tier 3' };
+
+    const state = { provider: '', names: undefined, biometric: undefined, decision: undefined, children: undefined };
+    let docs = null;
+
+    function artifactHref(slug) {
+      return locale === 'en' ? `/artifacts/${slug}` : `/es/artifacts/${slug}`;
+    }
+
+    function fill(ul, items, render) {
+      ul.textContent = '';
+      for (const item of items) ul.appendChild(render(item));
+    }
+
+    function renderResult() {
+      const tier = tierFor(state);
+      const def = TIER_DEFINITIONS[tier][locale] ?? TIER_DEFINITIONS[tier].en;
+
+      $('result-sentence').textContent = sentenceFor(state, locale);
+
+      const tag = $('result-tier-tag');
+      tag.textContent = '';
+      const strong = document.createElement('strong');
+      strong.className = `govuk-tag ${TAGS[tier]}`;
+      strong.textContent = TIER_LABEL[tier];
+      tag.appendChild(strong);
+      $('result-tier-name').textContent = def.name;
+
+      $('result-why').textContent =
+        (isEs ? 'Nivel ' : 'Tier ') + tier + ' ' + tierReason(state, locale) + '.';
+
+      fill($('result-examples'), def.examples ?? [], (text) => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        return li;
+      });
+
+      fill($('result-returns'), def.returns ?? [], (text) => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        return li;
+      });
+
+      fill($('result-artifacts'), artifactsFor(state.provider, tier), (slug) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.className = 'govuk-link';
+        a.href = artifactHref(slug);
+        a.textContent = (ARTIFACT_TITLES[slug] || {})[locale] || slug;
+        li.appendChild(a);
+        return li;
+      });
+
+      docs = null;
+      show('generated', false);
+      $('generate-btn').hidden = false;
+
+      show('intake-locked', false);
+      show('intake-result', true);
+
+      const next = `${window.location.pathname}#${encodeState(state)}`;
+      history.replaceState(null, '', next);
+    }
+
+    function update() {
+      if (isComplete(state)) renderResult();
+      else {
+        show('intake-result', false);
+        show('intake-locked', true);
+      }
+    }
+
+    // --- Screener -----------------------------------------------------------
+    for (const input of document.querySelectorAll('input[name="screen"]')) {
+      input.addEventListener('change', (e) => {
+        const v = e.target.value;
+        show('intake-tier0', v === 'yes');
+        show('intake-unsure', v === 'unsure');
+        show('intake-sentence', v === 'no');
+        show('intake-locked', v === 'no' && !isComplete(state));
+        show('intake-result', v === 'no' && isComplete(state));
+        if (v === 'no') $('q-provider')?.focus();
+      });
+    }
+
+    // --- The sentence -------------------------------------------------------
+    for (const select of root.querySelectorAll('select[data-q]')) {
+      select.addEventListener('change', (e) => {
+        const key = e.target.dataset.q;
+        const value = e.target.value;
+        e.target.dataset.answered = value ? 'true' : 'false';
+        if (key === 'provider') state.provider = value;
+        else state[key] = value === '' ? undefined : value === 'yes';
+        update();
+      });
+    }
+
+    // --- Restart ------------------------------------------------------------
+    for (const btn of root.querySelectorAll('[data-action="restart"]')) {
+      btn.addEventListener('click', () => {
+        state.provider = '';
+        state.names = state.biometric = state.decision = state.children = undefined;
+        docs = null;
+        for (const s of root.querySelectorAll('select[data-q]')) {
+          s.value = '';
+          s.dataset.answered = 'false';
+        }
+        for (const i of document.querySelectorAll('input[name="screen"]')) i.checked = false;
+        for (const id of ['intake-tier0', 'intake-unsure', 'intake-sentence', 'intake-locked', 'intake-result', 'generated']) show(id, false);
+        history.replaceState(null, '', window.location.pathname);
+        $('intake-screener')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    // --- Generation ---------------------------------------------------------
+    /** Minimal Markdown → HTML for the on-page preview. The source of truth for
+     *  the downloads is the Markdown itself, not this rendering. */
+    function previewHtml(md) {
+      const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const inline = (s) =>
+        esc(s)
+          .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+          .replace(/\[([^\]]+)\]/g, '<mark class="app-fill-in">[$1]</mark>');
+      const out = [];
+      let inList = false;
+      for (const raw of md.split('\n')) {
+        const line = raw.trimEnd();
+        if (/^- /.test(line)) {
+          if (!inList) { out.push('<ul class="govuk-list govuk-list--bullet">'); inList = true; }
+          out.push(`<li>${inline(line.slice(2))}</li>`);
+          continue;
+        }
+        if (inList) { out.push('</ul>'); inList = false; }
+        if (/^# /.test(line)) out.push(`<h2 class="govuk-heading-m">${inline(line.slice(2))}</h2>`);
+        else if (/^## /.test(line)) out.push(`<h3 class="govuk-heading-s">${inline(line.slice(3))}</h3>`);
+        else if (/^> /.test(line)) out.push(`<p class="govuk-body-s app-generated-note">${inline(line.slice(2))}</p>`);
+        else if (/^---$/.test(line)) out.push('<hr class="govuk-section-break govuk-section-break--visible">');
+        else if (line) out.push(`<p class="govuk-body">${inline(line)}</p>`);
+      }
+      if (inList) out.push('</ul>');
+      return out.join('\n');
+    }
+
+    function today() {
+      const d = new Date();
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
+    $('generate-btn')?.addEventListener('click', () => {
+      docs = generateDocuments(state, locale, today());
+      $('gen-policy-preview').innerHTML = previewHtml(docs.policy);
+      $('gen-notice-preview').innerHTML = previewHtml(docs.notice);
+      show('generated', true);
+      $('generate-btn').hidden = true;
+      $('generated').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    function saveBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    /** Real .docx, built in the browser. The library is imported only when the
+     *  button is clicked, so a reader on a poor connection never pays for it. */
+    async function toDocx(markdown, title) {
+      const { Document, Packer, Paragraph, TextRun, HeadingLevel } = await import('docx');
+      const children = [];
+      for (const raw of markdown.split('\n')) {
+        const line = raw.trimEnd();
+        if (!line) continue;
+        const mk = (text, opts = {}) => {
+          const runs = [];
+          for (const part of text.split(/(\[[^\]]+\])|(\*\*[^*]+\*\*)/g).filter(Boolean)) {
+            if (/^\[[^\]]+\]$/.test(part)) runs.push(new TextRun({ text: part, bold: true, highlight: 'yellow', ...opts }));
+            else if (/^\*\*[^*]+\*\*$/.test(part)) runs.push(new TextRun({ text: part.slice(2, -2), bold: true, ...opts }));
+            else runs.push(new TextRun({ text: part, ...opts }));
+          }
+          return runs;
+        };
+        if (/^# /.test(line)) children.push(new Paragraph({ heading: HeadingLevel.TITLE, children: mk(line.slice(2)) }));
+        else if (/^## /.test(line)) children.push(new Paragraph({ heading: HeadingLevel.HEADING_2, spacing: { before: 240, after: 120 }, children: mk(line.slice(3)) }));
+        else if (/^- /.test(line)) children.push(new Paragraph({ bullet: { level: 0 }, spacing: { after: 80 }, children: mk(line.slice(2)) }));
+        else if (/^> /.test(line)) children.push(new Paragraph({ shading: { fill: 'FFF7BF' }, spacing: { after: 80 }, children: mk(line.slice(2), { size: 20 }) }));
+        else if (/^---$/.test(line)) children.push(new Paragraph({ text: '', spacing: { after: 200 } }));
+        else children.push(new Paragraph({ spacing: { after: 160 }, children: mk(line) }));
+      }
+      const doc = new Document({
+        title,
+        styles: { default: { document: { run: { font: 'Calibri', size: 22 } } } },
+        sections: [{ properties: { page: { margin: { top: 1080, bottom: 1080, left: 1080, right: 1080 } } }, children }],
+      });
+      return Packer.toBlob(doc);
+    }
+
+    for (const btn of root.querySelectorAll('[data-download]')) {
+      btn.addEventListener('click', async () => {
+        if (!docs) return;
+        const which = btn.dataset.doc;
+        const md = which === 'policy' ? docs.policy : docs.notice;
+        const base = which === 'policy' ? (isEs ? 'politica-de-uso-de-ia' : 'ai-use-policy') : (isEs ? 'aviso-para-las-familias' : 'family-notice');
+        const kind = btn.dataset.download;
+
+        if (kind === 'md') {
+          saveBlob(new Blob([md], { type: 'text/markdown;charset=utf-8' }), `${base}.md`);
+          return;
+        }
+        if (kind === 'copy') {
+          try {
+            await navigator.clipboard.writeText(md);
+            const original = btn.textContent;
+            btn.textContent = isEs ? 'Copiado' : 'Copied';
+            setTimeout(() => { btn.textContent = original; }, 2000);
+          } catch {
+            /* Clipboard blocked; the download buttons still work. */
+          }
+          return;
+        }
+        const original = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = isEs ? 'Preparando…' : 'Preparing…';
+        try {
+          const blob = await toDocx(md, base);
+          saveBlob(blob, `${base}.docx`);
+        } finally {
+          btn.disabled = false;
+          btn.textContent = original;
+        }
+      });
+    }
+
+    $('copy-link')?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        const btn = $('copy-link');
+        const original = btn.textContent;
+        btn.textContent = isEs ? 'Copiado' : 'Copied';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      } catch {
+        /* Clipboard blocked. The address bar already carries the result. */
+      }
+    });
+
+    // --- Restore a shared result -------------------------------------------
+    const restored = decodeState(window.location.hash);
+    if (restored) {
+      Object.assign(state, restored);
+      const noRadio = $('screen-no');
+      if (noRadio) noRadio.checked = true;
+      show('intake-sentence', true);
+      $('q-provider').value = state.provider;
+      $('q-provider').dataset.answered = 'true';
+      for (const key of ['names', 'biometric', 'decision', 'children']) {
+        const sel = $(`q-${key}`);
+        if (sel) {
+          sel.value = state[key] ? 'yes' : 'no';
+          sel.dataset.answered = 'true';
+        }
+      }
+      renderResult();
+    }
+  }
+</script>

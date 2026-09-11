@@ -11,7 +11,7 @@ text of the working-draft site plan. Section numbers below refer to it.
 ## 1. What this site is
 
 A neutral field resource for early childhood providers on the ethical and
-constructive use of AI. The reader is a director of a single child care centre
+constructive use of AI. The reader is a director of a single child care center
 or a family child care provider, reading this between nap time and pickup, with
 no lawyer, no IT department and about twenty minutes. A second, smaller reader
 is a multi-site operator or Head Start grantee who does have counsel and needs a
@@ -33,7 +33,7 @@ reason the site exists in this shape.
    draft it. Never write "have your counsel review this" as guidance to a
    single-site provider. (The multi-site track is the one exception, and even
    there give them the language first.)
-2. **Assume the reader is the whole organisation.** No RACI charts, no "convene
+2. **Assume the reader is the whole organization.** No RACI charts, no "convene
    your AI governance committee", no "work with your IT department". One person
    is reading this and she is all of those departments.
 3. **Assume twenty minutes, not twenty hours.** Short. A policy someone reads,
@@ -43,7 +43,7 @@ reason the site exists in this shape.
    first use in a given page.
 5. **Tier by provider capacity as well as by risk.** The same guidance becomes a
    one-page signed document for a family child care home, a six-page policy for
-   a centre, and a governance charter with contract riders for a multi-site
+   a center, and a governance charter with contract riders for a multi-site
    operator. The principles and the bright lines do not change across those
    three. Everything else does.
 
@@ -142,7 +142,7 @@ Import from `src/components/`. Do not re-implement these.
 | `BaseLayout.astro` | Every page. Props: `title`, `description`, `locale`, `showNav`, `fullWidth`. |
 | `PageHeader.astro` | Page title block with caption, lede, version and date stamp. |
 | `TierTag.astro` | Any mention of a tier. Props: `tier`, `locale`, `withName`, `link`. |
-| `Annotation.astro` | The labelled block used for Returns / Guardrail / At stake / What to do / The basis. Prop: `label`. |
+| `Annotation.astro` | The labeled block used for Returns / Guardrail / At stake / What to do / The basis. Prop: `label`. |
 | `PrincipleRefs.astro` | "Governs: Custody · Standing". Props: `ids`, `brightLines`, `locale`. |
 
 Get UI strings from `t(locale, key)` in `src/lib/i18n.js`. Build internal links
@@ -161,7 +161,7 @@ CSS. The common ones: `govuk-heading-l/m/s`, `govuk-body`, `govuk-body-l/s`,
 `govuk-grid-column-*`, and the `govuk-!-margin-*` / `govuk-!-padding-*` spacing
 overrides.
 
-Components with behaviour (`govuk-accordion`, `govuk-details`, `govuk-tabs`,
+Components with behavior (`govuk-accordion`, `govuk-details`, `govuk-tabs`,
 `govuk-button`) need their `data-module` attribute; `initAll()` already runs in
 the layout.
 
@@ -170,13 +170,13 @@ the layout.
 - Custom CSS goes in `src/styles/_app.scss` under an `app-` prefix, never inline
   `style=` attributes and never a new stylesheet.
 - The type scale has **no size 14** in v6. Valid: 16, 19, 24, 27, 36, 48, 80.
-- The colour names `light-grey` and `dark-grey` are deprecated. Use
-  `govuk-colour("black", $variant: "tint-95")` and `tint-25`.
-- Never signal meaning by colour alone. Every tier tag carries its number in
+- The color names `light-grey` and `dark-grey` are deprecated. Use
+  `govuk-color("black", $variant: "tint-95")` and `tint-25`.
+- Never signal meaning by color alone. Every tier tag carries its number in
   text so it survives greyscale printing.
 - One `<h1>` per page. Do not skip heading levels.
 
-### Licence constraint — read this one twice
+### License constraint — read this one twice
 
 `govuk-frontend` is MIT and may be used outside UK government. **The GOV.UK
 brand is not.** This site must never display:
@@ -186,7 +186,7 @@ brand is not.** This site must never display:
 - the GOV.UK wordmark or the `govuk-header` component's branding,
 - the GDS Transport typeface (we override `$govuk-font-family` with a system
   stack, which also drops the `@font-face` rules),
-- the Open Government Licence footer text, or anything implying UK government
+- the Open Government License footer text, or anything implying UK government
   affiliation.
 
 Do not copy `govuk-frontend`'s image assets into `public/`.
@@ -201,12 +201,12 @@ self-contradiction on day one.
 
 - Every English file gets a Spanish counterpart at the same slug.
 - Write real Spanish, not a gloss. Target US Spanish as spoken by families in
-  child care, at a middle-school reading level. Keep US legal and programme
-  terms recognisable: leave *Head Start*, *CACFP*, *IFSP*, *IEP*, *COPPA*,
+  child care, at a middle-school reading level. Keep US legal and program
+  terms recognizable: leave *Head Start*, *CACFP*, *IFSP*, *IEP*, *COPPA*,
   *FERPA* and *QRIS* untranslated, and gloss them in Spanish on first use.
 - Every Spanish file sets `translationPending: true`. The site renders a visible
   note saying the translation awaits review by a native speaker. This is a draft
-  translation and must be labelled as one — that honesty is the point.
+  translation and must be labeled as one — that honesty is the point.
 - Keep `[FILL IN]` markers in Spanish artifacts in Spanish
   (`[NOMBRE DEL PROGRAMA]`), and keep them in square brackets.
 

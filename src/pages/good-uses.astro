@@ -1,0 +1,152 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import TierTag from '../components/TierTag.astro';
+import Annotation from '../components/Annotation.astro';
+import PrincipleRefs from '../components/PrincipleRefs.astro';
+import { t, localePath } from '../lib/i18n.js';
+
+const locale = 'en';
+
+const all = await getCollection('goodUses', (entry) => entry.id.startsWith('en/'));
+
+const entries = await Promise.all(
+  all
+    .sort((a, b) => a.data.order - b.data.order)
+    .map(async (entry) => {
+      const { Content } = await render(entry);
+      return { slug: entry.id.split('/').slice(1).join('/'), data: entry.data, Content };
+    })
+);
+
+const providers = entries.filter((e) => e.data.audience === 'provider');
+const intermediaries = entries.filter((e) => e.data.audience === 'intermediary');
+
+const groups = [
+  {
+    id: 'for-providers',
+    heading: 'For providers',
+    intro:
+      'Eight places where the work is real, the risk is manageable and the time comes back to the floor.',
+    items: providers,
+  },
+  {
+    id: 'for-intermediaries',
+    heading: 'For the nonprofits and intermediaries that support them',
+    intro:
+      'Four places where a resource and referral agency, a coaching network or a lender can reach more providers with the staff it already has.',
+    items: intermediaries,
+  },
+];
+
+const description =
+  'Twelve constructive uses of AI in early childhood, each with its risk tier and its guardrail: the unglamorous, low-risk work that returns hours to a program running on thin margins.';
+---
+
+<BaseLayout title="Where AI helps" description={description} locale={locale}>
+  <PageHeader
+    caption="Where AI earns its place"
+    title="Where AI helps"
+    lede="Most of what AI can do in early childhood is unglamorous, low-risk and worth real money to a business running on 1–3% margins — and every hour it returns is an hour an adult spends with children."
+    locale={locale}
+  />
+
+  <p class="govuk-body">
+    A site that is only a list of prohibitions will be read once and never
+    returned to. This page is the <a class="govuk-link" href={`${localePath(locale, '/principles')}#relationship`}>Relationship
+    principle</a> made concrete, and it is also the page that makes the <a class="govuk-link" href={localePath(locale, '/bright-lines')}>bright
+    lines</a> credible. A framework that only says no reads as hostile to a
+    director who is drowning. A framework that says <em>here is where this
+    genuinely helps, and here is the short list where it doesn't</em> reads as
+    useful.
+  </p>
+
+  <p class="govuk-body">
+    Every entry below carries its risk tier and its guardrail, because the point
+    is not that these uses are unregulated — it is that they are worth doing
+    carefully.
+  </p>
+
+  <nav class="govuk-!-margin-bottom-8" aria-labelledby="contents-heading">
+    <h2 class="govuk-heading-s" id="contents-heading">{t(locale, 'label.onThisPage')}</h2>
+    {groups.map((group) => (
+      <>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">{group.heading}</h3>
+        <ol class="govuk-list govuk-list--number govuk-!-margin-bottom-4">
+          {group.items.map((item) => (
+            <li>
+              <a class="govuk-link" href={`#${item.slug}`}>{item.data.title}</a>{' '}
+              <TierTag tier={item.data.tier} locale={locale} link={false} />
+            </li>
+          ))}
+        </ol>
+      </>
+    ))}
+  </nav>
+
+  {groups.map((group) => (
+    <section id={group.id}>
+      <h2 class="govuk-heading-m">{group.heading}</h2>
+      <p class="govuk-body">{group.intro}</p>
+
+      {group.items.map((item) => {
+        const Body = item.Content;
+        return (
+        <article id={item.slug} class="govuk-!-margin-bottom-9">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{item.data.title}</h3>
+          <p class="govuk-body govuk-!-margin-bottom-4">
+            <TierTag tier={item.data.tier} locale={locale} withName={true} />
+          </p>
+
+          <p class="govuk-body-l">{item.data.scenario}</p>
+
+          <div class="govuk-body">
+            <Body />
+          </div>
+
+          <Annotation label={t(locale, 'label.returns')}>
+            <p class="govuk-body govuk-!-margin-bottom-0">{item.data.returns}</p>
+          </Annotation>
+
+          <Annotation label={t(locale, 'label.guardrail')}>
+            <p class="govuk-body govuk-!-margin-bottom-0">{item.data.guardrail}</p>
+          </Annotation>
+
+          <PrincipleRefs ids={item.data.governs} locale={locale} />
+        </article>
+        );
+      })}
+    </section>
+  ))}
+
+  <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6" />
+
+  <section id="the-rule-that-keeps-this-page-honest">
+    <h2 class="govuk-heading-m">The rule that keeps this page honest</h2>
+
+    <p class="govuk-body">
+      Every entry on this page is missing its last line. On the live page, each
+      one ends with what the program actually did with the time it got back —
+      hired a floater, gave a teacher a paid planning hour, opened an infant
+      slot, stopped working Sundays. Without that, this is an efficiency
+      brochure, and the field has plenty of those. With it, it is the
+      Relationship principle with receipts.
+    </p>
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        Those outcomes are not here yet. They have to be collected from real
+        pilots rather than borrowed from vendor case studies, and that
+        collection has not happened. This is a gap in the page, not a feature of
+        it — and until it is filled, every claim above about returned hours is
+        an argument rather than a result.
+      </p>
+    </div>
+
+    <p class="govuk-body">
+      Three things hold for every entry regardless: no product is named, the
+      tier is stated, and the guardrail travels with the use.
+    </p>
+  </section>
+</BaseLayout>

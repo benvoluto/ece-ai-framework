@@ -1,0 +1,750 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Annotation from '../components/Annotation.astro';
+import { t, localePath } from '../lib/i18n.js';
+
+const locale = 'en';
+
+const page = await getEntry('pages', `${locale}/recommendations`);
+const { Content } = await render(page);
+
+const INSTRUMENT = 'The instrument that would carry it';
+const GAP = 'What establishes the gap';
+
+const sections = [
+  { id: 'legislatures', title: 'State legislatures', count: 4 },
+  { id: 'head-start', title: 'The Office of Head Start', count: 5 },
+  { id: 'licensing', title: 'State licensing', count: 3 },
+  { id: 'qris', title: 'Quality rating and improvement systems', count: 3 },
+];
+---
+<BaseLayout
+  title={t(locale, 'nav.recommendations')}
+  description={page.data.description}
+  locale={locale}
+>
+  <PageHeader
+    caption="Asks, not guidance"
+    title={page.data.title}
+    lede={page.data.lede}
+    locale={locale}
+    lastUpdated={page.data.lastUpdated}
+  />
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      These are drafted asks in an unreviewed working draft. No legislature, agency,
+      licensing body or quality rating system has adopted any of them, none has been
+      reviewed by counsel, and none is attributed to any organization.
+    </strong>
+  </div>
+
+  <div class="govuk-body app-prose govuk-!-margin-bottom-8"><Content /></div>
+
+  <nav class="govuk-!-margin-bottom-8" aria-label={t(locale, 'label.onThisPage')}>
+    <h2 class="govuk-heading-s">{t(locale, 'label.onThisPage')}</h2>
+    <ol class="govuk-list govuk-list--number govuk-body-s">
+      {sections.map((s) => (
+        <li>
+          <a class="govuk-link" href={`#${s.id}`}>{s.title}</a> — {s.count} asks
+        </li>
+      ))}
+      <li><a class="govuk-link" href="#not-asking">What this page does not ask for</a></li>
+      <li><a class="govuk-link" href="#verification">What has to be re-checked first</a></li>
+    </ol>
+  </nav>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="legislatures">State legislatures</h2>
+
+  <p class="govuk-body">
+    Four statutory asks. These are the ones that genuinely need a vote, because each
+    either extends the reach of an existing statute or writes a prohibition that no
+    American authority currently contains. They are also the slowest route, which is why
+    this is the shortest of the four sections and not the longest.
+  </p>
+
+  <p class="govuk-body">
+    A drafter working in this lane has one structural advantage worth knowing about:
+    child safety is the one lane where state AI law is explicitly protected from federal
+    preemption efforts. An obligation framed around child safety and child privacy is
+    the most durable thing available here.
+  </p>
+
+  <section class="govuk-!-margin-bottom-8" id="legislatures-1">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 1 of 4</span>
+      Extend student-privacy law to reach pre-K and child care
+    </h3>
+    <p class="govuk-body-l">
+      Amend the state's student-data-privacy and educational-technology vendor statutes so
+      that the covered setting includes publicly funded pre-K and licensed child care,
+      rather than stopping at the school district door.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The state's existing student-privacy or ed-tech vendor act, amended at the
+        definitions section. Nothing new has to be invented: the obligations these statutes
+        already impose on a vendor serving a school district are the obligations being asked
+        for. What changes is which children they cover.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body">
+        <a class="govuk-link" href={localePath(locale, '/law')}>The regulatory crosswalk</a>
+        sets out the problem by setting. A private or community child care center is not
+        covered by the Family Educational Rights and Privacy Act (FERPA); a family child care
+        home is not either, and has effectively no institutional privacy floor at all. The
+        Children's Online Privacy Protection Act (COPPA) is the one federal law that reaches
+        every early childhood setting, but it binds the vendor, not the provider, so a
+        program's only leverage runs through its contract.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        California has already written a statute that does this: AB 2799 (2016) did not amend
+        SOPIPA, it added a separate Early Learning Personal Information Protection Act at
+        Business and Professions Code §22586, covering operators of services used and marketed
+        primarily for preschool and pre-K purposes, with biometric information expressly
+        included in "covered information". New York Education Law 2-d defines "school" to
+        include publicly funded pre-K, which on its face pulls community-based organizations
+        delivering publicly funded pre-K inside the statute — a reading this draft flags as
+        needing a lawyer before anyone relies on it.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="legislatures-2">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 2 of 4</span>
+      A biometric floor for children who cannot consent
+    </h3>
+    <p class="govuk-body-l">
+      Require express, separate, revocable parental consent before a face or voice biometric
+      identifier of a child is collected in a licensed child-serving setting — check-in and
+      check-out, photo auto-tagging, anything else — and write the coverage so that it does
+      not turn on whether the operator is public or private.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The state's biometric privacy statute, or a child-specific section added to it. The
+        second half of the ask is the part that needs drafting attention, because the
+        best-known model has the gap built into it.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body">
+        Illinois' Biometric Information Privacy Act applies to "private entities" and expressly
+        excludes state and local government agencies, which flips the risk map most people
+        assume: a private center or a nonprofit grantee carries more exposure than a public
+        school district does, with a private right of action and liquidated damages. Coverage
+        that tracks the operator's tax status rather than the child's age produces exactly the
+        wrong map for this sector, where most children are served outside public agencies.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The amended COPPA Rule expressly includes biometric identifiers, including voiceprints
+        and facial templates, in "personal information" — so the federal floor already treats
+        this as sensitive. What no authority resolves is that the consent has to come from a
+        parent on behalf of a child who cannot give it. That is a live legal question with no
+        clean answer, and it is the question a state statute would be settling. See
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-7`}>bright line 7</a>.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="legislatures-3">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 3 of 4</span>
+      An emotion-inference prohibition in child-serving settings
+    </h3>
+    <p class="govuk-body-l">
+      Prohibit the marketing, provision and use of systems that infer emotion, affect or
+      engagement from a child's face, voice or body in licensed early childhood settings.
+      This is the American analogue that does not exist.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        A standalone prohibition in statute, reaching the vendor as well as the provider. The
+        drafting model is already written: EU AI Act Article 5(1)(f) prohibits emotion inference
+        in education institutions outright, and it reaches placing on the market and putting
+        into service, not just end use, so it binds vendors too. Reaching only the provider
+        would leave the field buying the product and discovering the prohibition afterwards.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body">
+        There is no U.S. analogue to the EU prohibition — which is precisely why the field
+        should write one. The mechanism this prohibition is aimed at is documented: Halberstadt
+        et al. (2020) found prospective teachers 1.36 times more likely to show racialized anger
+        bias toward Black children's faces. Human raters carry that bias, training labels carry
+        it, and models learn it. See
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-1`}>bright line 1</a>.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        State honestly what this ask is not built on. There is no verified U.S.
+        emotion-recognition product in an early childhood setting; the category is arriving
+        through general school-security AI. This is a prospective prohibition, argued from the
+        mechanism and from the European precedent, not from a documented deployment in an
+        American classroom. A legislator should be told that before being asked to carry it.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="legislatures-4">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 4 of 4</span>
+      Settle the status of AI in mandated-reporter documentation
+    </h3>
+    <p class="govuk-body-l">
+      Say in the mandated-reporter statute what an AI tool may and may not do in the making
+      and the writing of a report — or, if the answer is to be worked out later, say at least
+      that an AI-generated narrative is not the reporter's own contemporaneous observation.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The state's mandated-reporter statute, since that is where the duty is created, with
+        the operational detail carried by the child welfare agency's reporter guidance. This
+        one is listed here rather than under licensing because the duty runs to the individual
+        reporter, not to the program, and licensing cannot reach it.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        No authority anywhere addresses this — no state child welfare agency guidance, no
+        guidance under the Child Abuse Prevention and Treatment Act, nothing from any early
+        childhood body. The unresolved questions are real: when does reasonable suspicion attach
+        if a tool flags first, and is an AI-smoothed narrative still the reporter's
+        contemporaneous observation? This site's own answer to providers is a flat prohibition,
+        which is simple, defensible and costs providers nothing — see
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-4`}>bright line 4</a>
+        — but a prohibition a program adopts voluntarily is not a rule about what counts as a
+        report. Only the statute can settle that.
+      </p>
+    </Annotation>
+  </section>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="head-start">The Office of Head Start</h2>
+
+  <p class="govuk-body">
+    Five guidance asks, and not one of them needs a rulemaking. Head Start is the only early
+    childhood setting with a real existing privacy regime, and that regime is already shaped
+    correctly for this problem: consent, disclosure exceptions, parent inspection and
+    amendment, the right to review written third-party agreements, disclosure logs, and
+    destruction, all in 45 CFR Part 1303 Subpart C. What is missing is any statement that
+    those duties apply when the third party is an AI feature.
+  </p>
+
+  <p class="govuk-body">
+    So every ask below asks the Office to say what its own regulation already implies, in the
+    instrument it already uses. That is a smaller request than it looks and a faster one than
+    a bill.
+  </p>
+
+  <section class="govuk-!-margin-bottom-8" id="head-start-1">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 1 of 5</span>
+      State that an AI tool processing child records is a third-party disclosure
+    </h3>
+    <p class="govuk-body-l">
+      Guidance saying plainly that sending child records to an AI tool is a disclosure to a
+      third party, that it needs the consent and the written agreement §1303.22 already
+      requires, and that it belongs in the §1303.24 disclosure log like any other disclosure.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        A program instruction or information memorandum applying 45 CFR §1303.22 and
+        §1303.24. No new obligation is created; the guidance names a category of disclosure
+        that grantees are not currently recognizing as one.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        Under §1303.22 a grantee that pastes child observations into a consumer tool has
+        arguably made an undisclosed third-party disclosure — no consent, no reviewable
+        agreement, and no entry in the §1303.24 disclosure log. The violation is complete
+        whether or not anything leaks, which is the point providers most often miss, and it is
+        the reason the ask is for a clear statement rather than a new rule. See
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-5`}>bright line 5</a>.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="head-start-2">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 2 of 5</span>
+      Make the parent's right to review a third-party agreement reach the AI terms
+    </h3>
+    <p class="govuk-body-l">
+      Guidance that the written third-party agreement a parent is entitled to review should
+      state what the vendor does with children's information: what it processes, whether it
+      trains models on it, how long it keeps it and when it is destroyed.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        45 CFR Part 1303 Subpart C, which already gives parents the right to review written
+        third-party agreements and already governs destruction. The ask is about what such an
+        agreement has to say to be worth reviewing.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The COPPA Final Rule effective June 2025, with full compliance April 2026, requires
+        separate verifiable parental consent for disclosing children's personal information to
+        third parties for AI development, and the Federal Trade Commission treats such
+        disclosures as not integral to the service and so outside general consent. That federal
+        floor binds the vendor. A parent looking at a grantee's agreement has no way to see
+        whether it was honoured unless the agreement says so — see
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-8`}>bright line 8</a>
+        and the
+        <a class="govuk-link" href={localePath(locale, '/vendors')}>ten questions to ask a vendor</a>,
+        which is the provider-side version of the same gap.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="head-start-3">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 3 of 5</span>
+      Constrain AI in screening and in referral
+    </h3>
+    <p class="govuk-body-l">
+      Guidance that an AI output may not stand as the basis for a special education or early
+      intervention referral without an independent human determination on the underlying
+      evidence, and that the existing prohibition on exclusion covers an AI-generated basis
+      for it as squarely as any other.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        45 CFR §1302.33 on screenings and §1302.17 on suspension and expulsion — both already
+        in force. Note also that §1303.21(b) displaces Subpart C with confidentiality under the
+        Individuals with Disabilities Education Act (IDEA) for any child referred to or found
+        eligible under IDEA, in any grantee, so a referral changes which privacy regime applies
+        as well as what happens to the child.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        Referral is a consequential decision about a child and the failure mode is documented in
+        adjacent child-serving systems: Oregon discontinued its child-welfare screening tool
+        after it flagged a disproportionate number of Black children, and the Allegheny Family
+        Screening Tool drew a Department of Justice civil-rights inquiry over disability bias.
+        Exclusion is already law for Head Start under §1302.17 and §1302.33 — so for this
+        audience the ask is only that the Office say the existing rule is not avoided by routing
+        the decision through a tool. See
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-3`}>bright line 3</a>.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="head-start-4">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 4 of 5</span>
+      Say that machine translation is not the interpreter §1302.33 requires
+    </h3>
+    <p class="govuk-body-l">
+      Guidance that a machine translation tool does not satisfy the requirement for qualified
+      bilingual staff or interpreters in the conversations §1302.33 already covers, while
+      leaving routine operational communication alone.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        45 CFR §1302.33, which already requires qualified bilingual staff or interpreters for
+        exactly these conversations. The guidance would be drawing a line inside a requirement
+        that exists, not adding one.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The line falls between routine and high-stakes. Newsletters, reminders and menus are
+        fine and genuinely useful. Individualized Family Service Plan and Individualized
+        Education Program meetings, screening-result conversations, child-protection
+        conversations and eligibility determinations are where machine translation fails, with
+        documented safety consequences in medicine and explicit cautions from the National
+        Center for State Courts. See
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-6`}>bright line 6</a>.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="head-start-5">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 5 of 5</span>
+      Ask about AI tools in monitoring, the way monitoring asks about everything else
+    </h3>
+    <p class="govuk-body-l">
+      Add to the monitoring protocol the questions a reviewer would ask about any other
+      third party: which tools process child or family records, whether a written agreement
+      is on file for each, and whether the disclosure log reflects them.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The existing monitoring protocol. This is the lowest-cost ask on the page and probably
+        the highest-yield: nothing in Part 1303 changes, and a grantee that is asked the
+        question annually will have an answer ready, which is most of what any of this is
+        trying to achieve.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        Head Start is the early childhood setting where vendor AI is arriving fastest and the
+        one with an existing privacy regime to arrive into. Nobody currently asks. There is
+        also no survey of AI use among Head Start grantees outside districts, private centers or
+        family child care homes — the available figures cover public-school pre-K only — so
+        monitoring would be the first systematic picture of what is actually running.
+      </p>
+    </Annotation>
+  </section>
+
+  <div class="govuk-inset-text">
+    <p class="govuk-body-s govuk-!-margin-bottom-0">
+      <span class="app-annotation__label" style="display:inline;">{t(locale, 'label.verify')}</span>{' '}
+      A notice of proposed rulemaking published in May 2026 proposes removing wage-comparability
+      and benefits requirements; records and confidentiality provisions were not proposed for
+      change. Whether a final rule has issued is unconfirmed. Check the current text of Parts
+      1302 and 1303 before putting any of these asks in front of the Office.
+    </p>
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="licensing">State licensing</h2>
+
+  <p class="govuk-body">
+    Three asks, and this is the section that matters most, for a reason that has nothing to do
+    with the content of the asks. Licensing and the provider agreement are the only instruments
+    in this sector that reach every provider — including the family child care home, which the
+    crosswalk shows has effectively no institutional privacy floor at all, no FERPA, no Head
+    Start subpart, and no realistic leverage over a vendor's contract.
+  </p>
+
+  <p class="govuk-body">
+    A state administrator can do all three of these without a bill, through the CCDF plan and
+    the provider agreement it authorises under 45 CFR Part 98.
+    That is the whole strategic point: the path from framework to requirement runs through CCDF
+    plans, provider agreements, licensing and quality rating systems, not through legislation.
+  </p>
+
+  <section class="govuk-!-margin-bottom-8" id="licensing-1">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 1 of 3</span>
+      A named-tools disclosure duty in the provider agreement
+    </h3>
+    <p class="govuk-body-l">
+      Require a licensed provider to be able to name the tools that process child or family
+      records, and to keep a current written notice to families saying so. One list, kept
+      current, produced on request.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The provider agreement, authorised through the state's CCDF plan under 45 CFR Part 98,
+        and verified at the licensing visit that already happens. No statutory change, no new
+        visit, no new inspector.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        COPPA binds the vendor rather than the provider, and the Federal Trade Commission
+        explicitly declined to codify the ed-tech "school authorization" exception in the 2025
+        rule, to avoid conflicting with anticipated FERPA amendments. So the widely relied-upon
+        practice of a program consenting on parents' behalf remains policy-statement guidance
+        built for schools, which most early childhood providers are not. A disclosure duty in the
+        provider agreement does not resolve that uncertainty, but it makes the underlying fact —
+        which tools hold which children's records — visible to the family and to the state, which
+        is currently visible to neither.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="licensing-2">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 2 of 3</span>
+      Minimum terms that reach the family child care home
+    </h3>
+    <p class="govuk-body-l">
+      Write three minimum terms into the licensing rule: no biometric identification of a
+      child without express, separate, revocable parental consent; no child or family personal
+      information into a tool with no written agreement; and a stated retention and destruction
+      practice for what the tools hold.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The licensing rule itself, which applies to home-based and center-based providers alike.
+        These are the same three terms this site gives providers as
+        <a class="govuk-link" href={localePath(locale, '/policies')}>policies to adopt</a>
+        voluntarily; the ask is that the state make the floor a floor rather than a
+        recommendation.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The crosswalk row for the family child care home reads: no FERPA, and otherwise the same
+        as a private center — COPPA on the vendor, state biometric law, state consumer privacy
+        law, licensing regulations and the program's own privacy policy — with effectively no
+        institutional privacy floor at all. Every other instrument on this page misses her.
+        Licensing does not.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="licensing-3">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 3 of 3</span>
+      Generalize the exclusion rule beyond Head Start
+    </h3>
+    <p class="govuk-body-l">
+      State in licensing that AI may not be the basis for expelling, suspending, disenrolling
+      or denying enrollment to a child. The rule already exists for one part of the sector and
+      costs nothing to extend to the rest.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The licensing rule, or the provider agreement where a state prefers to put conduct terms
+        there. The model language is 45 CFR §1302.17 and §1302.33, which are already law for
+        Head Start; generalizing them costs nothing and matters enormously.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body">
+        Exclusion in this sector is not a rare event, and it is concentrated in exactly the
+        settings Head Start's rule does not reach. Three- and four-year-olds are expelled from
+        state-funded preschool at roughly three times the K-12 rate, and from private and
+        community programs at more than thirteen times. Black children account for nearly half
+        of public preschool suspensions while representing under a fifth of enrollment. See
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-2`}>bright line 2</a>.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <span class="app-annotation__label" style="display:inline;">{t(locale, 'label.verify')}</span>{' '}
+        Those multipliers trace to Gilliam's 2005 work and the suspension disparity to the
+        2013–14 Civil Rights Data Collection. Pull the most recent cycle before citing either
+        figure to a state administrator.
+      </p>
+    </Annotation>
+  </section>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="qris">Quality rating and improvement systems</h2>
+
+  <p class="govuk-body">
+    Three asks, all of them indicators. A QRIS has a capability none of the other bodies on
+    this page has: it can make something a measurable
+    quality indicator, with a point value and a document to verify, without any new statutory
+    authority whatsoever. It can also do it in one standards revision cycle.
+  </p>
+
+  <p class="govuk-body">
+    The asks below are written as indicators rather than as prohibitions on purpose. A QRIS
+    that tries to referee whether a particular tool is acceptable will be revising its rating
+    scale every quarter. A QRIS that asks whether the program knows what it is running, and
+    whether it has told families, is asking something stable.
+  </p>
+
+  <section class="govuk-!-margin-bottom-8" id="qris-1">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 1 of 3</span>
+      An approved-tools register as a quality indicator
+    </h3>
+    <p class="govuk-body-l">
+      Award the indicator when the program keeps a current written register of the AI tools
+      it has approved for use, what each one is used for, and what child or family information
+      each one touches.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The QRIS standards document and its verification protocol. This is a document-review
+        item, checkable at the same visit that verifies everything else, by the same assessor,
+        with no technical judgment required of them.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        Nothing currently asks a provider to know. State education-department AI guidance is now
+        widespread and entirely K-12-framed, and neither of the two national trackers of
+        AI-in-education legislation contains a single pre-K, preschool, child care or Head Start
+        provision. The register is the smallest artefact that turns "we probably use some" into a
+        fact the program, the family and the assessor can all see.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="qris-2">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 2 of 3</span>
+      A family notice, in the languages families actually read
+    </h3>
+    <p class="govuk-body-l">
+      Award the indicator when families have been told in writing which tools process their
+      child's information, in the languages the program's families speak, and when the
+      notice is current.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The QRIS family-engagement standard, where a family notice requirement already has a
+        natural home, verified the same way other family communication is verified. The
+        <a class="govuk-link" href={localePath(locale, '/policies')}>family notice template</a>
+        on this site exists so that the indicator does not require a program to draft anything.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The disclosure duties that would produce such a notice elsewhere in the sector run
+        through Head Start's Part 1303 or through a school district's student-privacy
+        obligations. A licensed center or home outside both has no notice duty of any kind about
+        this. The language half of the ask matters as much as the notice half: a notice a family
+        cannot read has disclosed nothing.
+      </p>
+    </Annotation>
+  </section>
+
+  <section class="govuk-!-margin-bottom-8" id="qris-3">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <span class="govuk-caption-m">Ask 3 of 3</span>
+      Count the staff policy, not the technology
+    </h3>
+    <p class="govuk-body-l">
+      Award the indicator when the program has a dated, signed staff policy on AI use that
+      names what staff may not put into a tool — and do not award or withhold points on the
+      basis of whether a program uses AI at all.
+    </p>
+    <Annotation label={INSTRUMENT}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The QRIS administration or staff-qualifications standard, as a dated-document check. The
+        second half of the ask is a drafting instruction to the rating system, not a burden on
+        the provider.
+      </p>
+    </Annotation>
+    <Annotation label={GAP}>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        An indicator that rewards adoption pushes programs toward tools they have no capacity
+        to evaluate; an indicator that rewards abstention pushes the use underground, where no
+        policy reaches it. Either way the rating measures the wrong thing. What a rating system
+        can measure honestly is whether the adults have written down what they will not do, and
+        whether they signed it. That is the same document this site gives providers as a
+        <a class="govuk-link" href={localePath(locale, '/policies')}>one-page staff policy</a>.
+      </p>
+    </Annotation>
+  </section>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="not-asking">What this page does not ask for</h2>
+
+  <p class="govuk-body">
+    Three things, named so that nobody has to guess at the position from the silence.
+  </p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <strong>No approved-vendor list run by a state.</strong> The register asked of a QRIS is a
+      list the program keeps of what it has approved for itself. Asking a state to certify
+      products is asking it to maintain a judgment that changes faster than any standards
+      revision cycle, on a market where feature descriptions frequently come from vendor
+      marketing rather than from anything verified.
+    </li>
+    <li>
+      <strong>No ban on AI in early childhood.</strong> Nothing on this page prohibits a category
+      of software because of what it is. Each ask is aimed at a decision about a child, a
+      disclosure of a child's information, or a duty that already exists in the statute being
+      amended.
+    </li>
+    <li>
+      <strong>No obligation a provider on this site's other pages is not already being told to
+      meet voluntarily.</strong> Every ask here has a counterpart in the guidance, which means no
+      provider is asked to wait for any of this to pass. If none of it is ever adopted, the
+      guidance still stands on its own.
+    </li>
+  </ul>
+
+  <p class="govuk-body">
+    And to be explicit about the separation this page is built on: none of the guidance
+    elsewhere on this site depends on any of these asks being adopted, and none of these asks
+    is a summary of the guidance. If you arrived looking for what your program should do,
+    <a class="govuk-link" href={localePath(locale, '/start')}>start here</a> instead — that
+    material is written for you and this page is not.
+  </p>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="verification">What has to be re-checked first</h2>
+
+  <p class="govuk-body">
+    Publishing what is not yet settled is the point of this section, not an apology for it.
+    Anyone taking an ask from this page into a bill draft, a comment letter or a standards
+    revision should re-verify the following against primary sources first, because each one
+    either has a short shelf life or an unresolved reading.
+  </p>
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">The COPPA AI-consent boundary</dt>
+      <dd class="govuk-summary-list__value">
+        The separate-consent requirement carries an express carve-out for disclosures integral
+        to the nature of the service, and the Federal Trade Commission's AI statement addresses
+        disclosures to third parties. Do not write that AI training always requires separate
+        consent — the internal-training gap is real, and a vendor's counsel will catch it.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Expulsion data vintage</dt>
+      <dd class="govuk-summary-list__value">
+        The multipliers rest on Gilliam's 2005 work and the suspension disparity on the 2013–14
+        Civil Rights Data Collection. Pull the newest cycle before either number goes in front of
+        a legislature.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Head Start rulemaking status</dt>
+      <dd class="govuk-summary-list__value">
+        A notice of proposed rulemaking published May 2026 proposes removing wage-comparability
+        and benefits requirements; records and confidentiality provisions were not proposed for
+        change. Whether a final rule has issued is unconfirmed.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Two state readings</dt>
+      <dd class="govuk-summary-list__value">
+        New York Education Law 2-d defines "school" to include publicly funded pre-K, which on its
+        face pulls community-based organizations delivering publicly funded pre-K inside the
+        statute. Whether Illinois' student privacy act reaches preschool at all could not be
+        confirmed. Both need a lawyer before publication.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Colorado</dt>
+      <dd class="govuk-summary-list__value">
+        SB 24-205 was delayed to June 2026, then enforcement was blocked in federal court in
+        April 2026, then replaced by SB 26-189 in May 2026 with a notice-based regime effective
+        January 2027. The source is a single law-firm alert. Check the enrolled bill and the
+        docket before citing the sequence.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">What is not known at all</dt>
+      <dd class="govuk-summary-list__value">
+        There is no verified U.S. emotion-recognition product in an early childhood setting; no
+        national data on broadband, devices or IT support among providers, especially home-based
+        ones; and no survey of AI use among Head Start grantees outside districts, private centers
+        or family child care homes. These are gaps to state, not to fill.
+      </dd>
+    </div>
+  </dl>
+
+  <div class="govuk-inset-text">
+    <p class="govuk-body">
+      Two last things, in the interest of being held to the same standard these asks would
+      impose. This is a working draft: it has not been reviewed by counsel, no body has adopted
+      it, and it is deliberately published with its open questions visible rather than after
+      they are resolved.
+    </p>
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      And a body that asks programs to disclose their AI use should disclose its own.
+      <a class="govuk-link" href={localePath(locale, '/about')}>About and changelog</a> carries
+      that disclosure and the record of what changed between versions.
+    </p>
+  </div>
+</BaseLayout>

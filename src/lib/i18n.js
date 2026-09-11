@@ -38,6 +38,8 @@ export const ui = {
     'label.returns': 'What it returns',
     'label.guardrail': 'Guardrail',
     'label.basis': 'The basis',
+    'label.authority': 'Authority',
+    'label.verify': 'Verify before publishing',
     'label.lastUpdated': 'Last updated',
     'label.version': 'Version',
     'label.download': 'Download',
@@ -52,7 +54,7 @@ export const ui = {
     'label.readingTime': 'minutes to read',
     'label.translationPending': 'Draft translation, pending review by a native speaker.',
     'artifact.sampleNote':
-      'Text in [SQUARE BRACKETS] is for you to replace with your own programme details.',
+      'Text in [SQUARE BRACKETS] is for you to replace with your own program details.',
   },
   es: {
     'nav.skip': 'Ir al contenido principal',
@@ -90,6 +92,8 @@ export const ui = {
     'label.returns': 'Qué devuelve',
     'label.guardrail': 'Límite de protección',
     'label.basis': 'El fundamento',
+    'label.authority': 'Base legal o evidencia',
+    'label.verify': 'Verificar antes de publicar',
     'label.lastUpdated': 'Última actualización',
     'label.version': 'Versión',
     'label.download': 'Descargar',

@@ -4,6 +4,7 @@ locale: en
 audience: Family child care · Single site
 summary: Printable, plain language, sign and date. What we use AI for, what we never use it for, what happens to your child's information, and who to ask.
 lastUpdated: '2026-09-10'
+order: 1
 length: one-page
 onShelf: true
 shelfOrder: 1

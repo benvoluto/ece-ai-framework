@@ -252,3 +252,189 @@
   mask-image: none !important;
   padding-top: 0 !important;
 }
+
+// --- Rendered Markdown bodies -------------------------------------------------
+// Content collection bodies render as unclassed <p>, <ul> and <ol>, and
+// $govuk-global-styles is off, so give them the design system's body styles
+// without asking content authors to write class attributes into Markdown.
+.app-prose {
+  p,
+  ul,
+  ol {
+    @include govuk.govuk-font($size: 19);
+    margin-top: 0;
+    margin-bottom: govuk.govuk-spacing(4);
+  }
+
+  ul,
+  ol {
+    padding-left: govuk.govuk-spacing(5);
+  }
+
+  li {
+    margin-bottom: govuk.govuk-spacing(1);
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// --- Horizontally scrollable tables -------------------------------------------
+// The /law crosswalk has three columns and a lot of text in the third, so it
+// cannot reflow below about 40em. Wrapping it in .app-table-scroll lets the
+// table itself scroll sideways on a phone rather than forcing the whole page
+// to. tabindex and role are set in the markup so keyboard users can reach the
+// scroll container. In print it reverts: paper has no scrollbars.
+.app-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  > .govuk-table {
+    min-width: 40em;
+    margin-bottom: govuk.govuk-spacing(2);
+  }
+
+  @media print {
+    overflow-x: visible;
+
+    > .govuk-table {
+      min-width: 0;
+    }
+  }
+}
+
+// --- Rendered Markdown bodies -------------------------------------------------
+// Content collection bodies render as bare <p>, <ul>, <h3> with no design system
+// classes on them, because the Design System does not style bare elements. These
+// rules give rendered prose the same measure and rhythm as govuk-body.
+.app-prose,
+.app-artifact-body,
+.app-principle-body {
+  p,
+  li {
+    @include govuk.govuk-font($size: 19);
+    color: govuk.$govuk-text-colour;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: govuk.govuk-spacing(4);
+    max-width: 38em;
+  }
+
+  h2 {
+    @include govuk.govuk-font($size: 24, $weight: bold);
+    margin-top: govuk.govuk-spacing(7);
+    margin-bottom: govuk.govuk-spacing(3);
+  }
+
+  h3 {
+    @include govuk.govuk-font($size: 19, $weight: bold);
+    margin-top: govuk.govuk-spacing(6);
+    margin-bottom: govuk.govuk-spacing(2);
+  }
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: govuk.govuk-spacing(4);
+    max-width: 38em;
+    padding-left: govuk.govuk-spacing(5);
+  }
+
+  ul { list-style-type: disc; }
+  ol { list-style-type: decimal; }
+
+  li {
+    margin-bottom: govuk.govuk-spacing(1);
+  }
+
+  strong {
+    font-weight: govuk.$govuk-font-weight-bold;
+  }
+
+  a {
+    @include govuk.govuk-link-common;
+    @include govuk.govuk-link-style-default;
+  }
+
+  // Tables inside artifact bodies — the fillable registers and matrices.
+  table {
+    @include govuk.govuk-font($size: 16);
+    border-collapse: collapse;
+    margin-bottom: govuk.govuk-spacing(6);
+    width: 100%;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid govuk.$govuk-border-colour;
+    padding: govuk.govuk-spacing(2) govuk.govuk-spacing(3) govuk.govuk-spacing(2) 0;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: govuk.$govuk-font-weight-bold;
+  }
+
+  blockquote {
+    border-left: govuk.govuk-spacing(1) solid govuk.$govuk-border-colour;
+    margin-left: 0;
+    padding-left: govuk.govuk-spacing(3);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid govuk.$govuk-border-colour;
+    margin: govuk.govuk-spacing(6) 0;
+  }
+}
+
+// --- Wide tables --------------------------------------------------------------
+// The regulatory crosswalk is genuinely wide. It scrolls in its own container
+// rather than making the whole page scroll sideways on a phone.
+.app-table-scroll {
+  margin-bottom: govuk.govuk-spacing(6);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  table {
+    margin-bottom: 0;
+    min-width: 40em;
+  }
+}
+
+// --- Intake tool --------------------------------------------------------------
+.app-intake {
+  margin-bottom: govuk.govuk-spacing(6);
+}
+
+.app-intake__step {
+  margin-bottom: govuk.govuk-spacing(6);
+}
+
+.app-intake__screener-list {
+  background-color: govuk.govuk-colour("black", $variant: "tint-95");
+  padding: govuk.govuk-spacing(4) govuk.govuk-spacing(4) govuk.govuk-spacing(4) govuk.govuk-spacing(7);
+  margin-bottom: govuk.govuk-spacing(4);
+}
+
+.app-intake__sentence-echo {
+  @include govuk.govuk-font($size: 19, $weight: bold);
+}
+
+// --- Generated document preview -----------------------------------------------
+.app-generated-preview {
+  background-color: govuk.govuk-colour("white");
+  border: 1px solid govuk.$govuk-border-colour;
+  max-height: 32em;
+  overflow-y: auto;
+  padding: govuk.govuk-spacing(4);
+}
+
+.app-generated-note {
+  background-color: govuk.govuk-colour("black", $variant: "tint-95");
+  padding: govuk.govuk-spacing(2);
+}

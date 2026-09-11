@@ -1,0 +1,94 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { t, localePath } from '../lib/i18n.js';
+
+const locale = 'en';
+
+const entries = (await getCollection('faq', (e) => e.id.startsWith(`${locale}/`))).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const items = await Promise.all(
+  entries.map(async (entry, i) => {
+    const { Content } = await render(entry);
+    return { entry, Content, n: i + 1 };
+  }),
+);
+
+const lastUpdated = entries
+  .map((e) => e.data.lastUpdated)
+  .sort()
+  .at(-1);
+
+const description =
+  'The objections people raise in the first meeting, answered: what states have and have not legislated, why K-12 guidance does not transfer, and what this site is not.';
+---
+
+<BaseLayout title={t(locale, 'nav.faq')} description={description} locale={locale}>
+  <PageHeader
+    caption="Questions and objections"
+    title={t(locale, 'nav.faq')}
+    lede="Thirteen questions, each one a real objection. If you are being asked to justify spending twenty minutes on this, the answer is probably here."
+    locale={locale}
+    lastUpdated={lastUpdated}
+  />
+
+  <nav class="govuk-!-margin-bottom-6 app-no-print" aria-label={t(locale, 'label.onThisPage')}>
+    <h2 class="govuk-heading-s">{t(locale, 'label.onThisPage')}</h2>
+    <ol class="govuk-list govuk-list--number govuk-body-s">
+      {items.map(({ entry, n }) => (
+        <li><a class="govuk-link govuk-link--no-visited-state" href={`#faq-${n}`}>{entry.data.question}</a></li>
+      ))}
+    </ol>
+  </nav>
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-faq">
+    {items.map(({ entry, Content, n }) => (
+      <div class="govuk-accordion__section" id={`faq-${n}`}>
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id={`accordion-faq-heading-${n}`}>
+              {entry.data.question}
+            </span>
+          </h2>
+        </div>
+        <div
+          id={`accordion-faq-content-${n}`}
+          class="govuk-accordion__section-content"
+        >
+          <Content />
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">Still deciding where to start</h2>
+  <p class="govuk-body">
+    If the answer you needed is not here, the three pages that do the most work are
+    <a class="govuk-link" href={localePath(locale, '/start')}>Start here</a>, which tiers a tool
+    from four questions;
+    <a class="govuk-link" href={localePath(locale, '/bright-lines')}>the bright lines</a>, which is
+    the short list of things not to do at all; and
+    <a class="govuk-link" href={localePath(locale, '/law')}>What the law says</a>, which answers
+    which law actually governs the data in your program.
+  </p>
+
+  <script is:inline>
+    // A link to #faq-7 should open section 7, not scroll to a closed heading.
+    (function () {
+      function openTarget() {
+        var hash = window.location.hash;
+        if (!/^#faq-\d+$/.test(hash)) return;
+        var section = document.querySelector(hash);
+        if (!section) return;
+        var button = section.querySelector('.govuk-accordion__section-button');
+        if (button && button.getAttribute('aria-expanded') === 'false') button.click();
+        section.scrollIntoView();
+      }
+      window.addEventListener('load', openTarget);
+      window.addEventListener('hashchange', openTarget);
+    })();
+  </script>
+</BaseLayout>

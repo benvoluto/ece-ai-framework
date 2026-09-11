@@ -1,0 +1,200 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Annotation from '../components/Annotation.astro';
+import PrincipleRefs from '../components/PrincipleRefs.astro';
+import { localePath, t } from '../lib/i18n.js';
+
+const locale = 'en';
+
+const entries = (await getCollection('vendorQuestions', (e) => e.id.startsWith('en/'))).sort(
+  (a, b) => a.data.number - b.data.number,
+);
+
+const questions = await Promise.all(
+  entries.map(async (entry) => {
+    const { Content } = await render(entry);
+    return { data: entry.data, Content };
+  }),
+);
+
+const description =
+  'Ten questions to ask any vendor whose product touches children, with the legal basis for each and a place to record the answer and the date.';
+---
+
+<BaseLayout title="Vendors" description={description} locale={locale}>
+  <PageHeader
+    caption="Vendors"
+    title="Ten questions to ask any vendor"
+    lede="A single-site program has essentially no negotiating leverage with a major vendor. What it can do is ask, record the answer with a date, and choose."
+    locale={locale}
+  />
+
+  <p class="govuk-body">
+    Nobody is going to redesign a product because one center asked. That is the honest
+    starting point, and it is why this page is a list of questions rather than a list of
+    criteria to score vendors against. Scoring assumes you can act on the score. Asking
+    assumes only that you can write down what you were told, by whom, and on what date.
+  </p>
+
+  <p class="govuk-body">
+    Three things follow from asking. You learn what the product actually does, which is
+    often not what the sales page says. You create a dated record that protects you later,
+    because "we asked in March and were told no" is a defensible position and "we assumed"
+    is not. And when two products are in front of you, the answers are the comparison.
+  </p>
+
+  <div class="govuk-inset-text">
+    <p class="govuk-body">
+      The fourth thing follows from scale rather than from any one program. A field in
+      which five thousand directors ask the same ten questions creates leverage that no
+      individual director has. The questions below are deliberately identical for everyone,
+      for that reason.
+    </p>
+  </div>
+
+  <nav class="govuk-!-margin-bottom-8" aria-labelledby="contents-heading">
+    <h2 class="govuk-heading-s" id="contents-heading">{t(locale, 'label.onThisPage')}</h2>
+    <ol class="govuk-list govuk-list--number">
+      {questions.map((q) => (
+        <li><a class="govuk-link" href={`#q${q.data.number}`}>{q.data.title}</a></li>
+      ))}
+      <li><a class="govuk-link" href="#recording">Recording the answers</a></li>
+      <li><a class="govuk-link" href="#disclosure-card">The disclosure card, and eventually the register</a></li>
+      <li><a class="govuk-link" href="#positive-pattern">A positive pattern worth naming</a></li>
+    </ol>
+  </nav>
+
+  <h2 class="govuk-heading-m" id="the-ten">The ten questions</h2>
+
+  <ol class="govuk-list">
+    {questions.map((q) => (
+      <li class="govuk-!-margin-bottom-8" id={`q${q.data.number}`}>
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-4">
+          <span class="govuk-caption-m">Question {q.data.number} &middot; {q.data.title}</span>
+          {q.data.question}
+        </h3>
+
+        <Annotation label="Why it matters">
+          <p class="govuk-body govuk-!-margin-bottom-0">{q.data.whyItMatters}</p>
+        </Annotation>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">What a real answer looks like</span>
+          </summary>
+          <div class="govuk-details__text">
+            <q.Content />
+          </div>
+        </details>
+
+        {q.data.authorities.length > 0 && (
+          <Annotation label={t(locale, 'label.basis')}>
+            <ul class="govuk-list govuk-list--bullet govuk-body-s govuk-!-margin-bottom-0">
+              {q.data.authorities.map((a) => <li>{a}</li>)}
+            </ul>
+          </Annotation>
+        )}
+
+        <PrincipleRefs ids={q.data.governs} locale={locale} />
+      </li>
+    ))}
+  </ol>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="recording">Recording the answers</h2>
+
+  <p class="govuk-body">
+    The record is the whole point, and it is worth almost nothing in your memory a year
+    from now. The Vendor Question Sheet sets out the ten questions with a place to write
+    the answer, the name and role of the person who gave it, and the date it was given.
+    Fill one in per product, keep it with your Approved Tools Register, and put the answer
+    you were given next to the answer the other vendor gave.
+  </p>
+
+  <p class="govuk-body">
+    <a class="govuk-link" href={localePath(locale, '/policies')}>Vendor Question Sheet and the rest of the policies to adopt</a>
+  </p>
+
+  <p class="govuk-body">
+    Three habits make the sheet worth keeping. Date every answer, because an answer about
+    model training or deletion describes an architecture that can change. Record who said
+    it, because "their implementation lead" and "a chat agent" are different kinds of
+    evidence. And keep the answer you did not like — a vendor that told you plainly that
+    it trains on customer content has given you a more useful sheet than one that never
+    replied.
+  </p>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="disclosure-card">The disclosure card, and eventually the register</h2>
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      This does not exist yet. It is phase three of the build sequence, and it requires
+      adoption of the framework rather than agreement with it.
+    </strong>
+  </div>
+
+  <p class="govuk-body">
+    The proposal is small and specific: a standardized one-page vendor disclosure that
+    answers these ten questions in a fixed format, published by the vendor rather than
+    collected by you, plus a public register of the tools that have filed one. The model
+    exists in healthcare and nowhere else. Directors in early childhood currently evaluate
+    vendors with nothing.
+  </p>
+
+  <p class="govuk-body">
+    It is achievable at a small scale. Twenty vendors covers most of the market in this
+    sector, which is an unusually short list for an infrastructure project. Filing would be
+    voluntary, and that is the only real incentive structure available here: a director
+    comparing two products will notice which one did not file.
+  </p>
+
+  <p class="govuk-body">
+    One unresolved question sits underneath it, and it is stated here rather than settled.
+    A register implies that this site eventually takes a position on specific products, at
+    least by omission. That is a meaningfully different institution — and a different legal
+    posture — from one that publishes questions and lets directors ask them. Until that is
+    decided, this page does the second thing.
+  </p>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="positive-pattern">A positive pattern worth naming</h2>
+
+  <p class="govuk-body">
+    Not every finding is a warning. Cognoa's Canvas Dx, the FDA-authorized autism
+    diagnostic aid for ages 18 to 72 months, returns an indeterminate result in about 37%
+    of cases by design, rather than forcing an answer it does not have. A tool that refuses
+    to answer when it is uncertain is a pattern this site should hold up explicitly, and it
+    is the only place on this site where a product is named.
+  </p>
+
+  <p class="govuk-body">
+    An indeterminate result is not a failure of the tool. It is the tool declining to
+    manufacture certainty about a child, and handing the question back to the people who
+    can actually answer it. That is the behavior to ask about: what does this product do
+    when it does not know, and can it say so?
+  </p>
+
+  <p class="govuk-body">
+    The caveat belongs with the example. The authors of the same study could not analyze
+    performance by race or socioeconomic status, because those data were not routinely
+    collected. That is exactly the gap question 8 exists to close, in the one product held
+    up here as a pattern worth copying.
+  </p>
+
+  <div class="govuk-inset-text">
+    <p class="govuk-body-s govuk-!-margin-bottom-0">
+      Before publication: the authorization status, the age range and the indeterminate
+      rate above should be confirmed against the real-world performance study and the
+      regulatory record rather than product materials, and the vendor should be contacted
+      directly before being named on a public page.
+    </p>
+  </div>
+</BaseLayout>

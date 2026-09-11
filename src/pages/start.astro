@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import IntakeTool from '../components/IntakeTool.astro';
+import TierTag from '../components/TierTag.astro';
+import { TIER_DEFINITIONS } from '../lib/intake.js';
+import { localePath } from '../lib/i18n.js';
+
+const locale = 'en';
+const tiers = [1, 2, 3];
+---
+
+<BaseLayout
+  title="Start here: four questions"
+  description="Answer four questions about the tool in front of you. Get the risk tier, the guidance for that tier, and the right policy template for your program."
+  locale={locale}
+>
+  <PageHeader
+    caption="Start here"
+    title="Four questions"
+    lede="Complete one sentence. Four answers do the entire job, and every one is answerable without knowing anything about AI."
+    locale={locale}
+  />
+
+  <p class="govuk-body">
+    This is a tool, not a form. Nothing you answer is sent anywhere — the whole thing runs in
+    your browser, and no part of it reaches us or anyone else. There is no sign-up and nothing
+    to submit.
+  </p>
+
+  <IntakeTool locale={locale} />
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  <h2 class="govuk-heading-m" id="the-tiers">The four tiers, written out</h2>
+  <p class="govuk-body">
+    The tool above routes you to one of these. They are written out here as well, so the page
+    works without JavaScript and so you can read the whole map before answering anything.
+  </p>
+
+  <div class="govuk-inset-text" id="tier-0">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+      <TierTag tier={0} locale={locale} link={false} />
+      <span class="govuk-!-margin-left-2">Do not adopt</span>
+    </h3>
+    <p class="govuk-body govuk-!-margin-bottom-2">
+      The eight bright lines. This runs as a screener <em>before</em> the tiering questions, so a
+      program that lands here never sees implementation guidance at all. There is no tier of
+      paperwork that makes a bright line acceptable.
+    </p>
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      <a class="govuk-link" href={localePath(locale, '/bright-lines')}>
+        Read the eight bright lines and the basis for each
+      </a>
+    </p>
+  </div>
+
+  {tiers.map((tier) => {
+    const def = TIER_DEFINITIONS[tier].en;
+    return (
+      <section id={`tier-${tier}`} class="govuk-!-margin-bottom-7">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+          <TierTag tier={tier} locale={locale} link={false} />
+          <span class="govuk-!-margin-left-2">{def.name}</span>
+        </h3>
+        <p class="govuk-body">{def.scope}</p>
+        <ul class="govuk-list govuk-list--bullet govuk-body-s">
+          {def.examples.map((example) => <li>{example}</li>)}
+        </ul>
+        <div class="app-annotation">
+          <span class="app-annotation__label">What it returns</span>
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+            {def.returns.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </section>
+    );
+  })}
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      “Back office is safe” is the one shortcut this framework does not take. In early childhood
+      the back office is where the child data lives: subsidy billing contains family income,
+      immigration-adjacent documentation and custody information, and grant narratives routinely
+      contain child vignettes. Tier 1 is defined by the <em>absence</em> of child and family data,
+      not by the word “administrative”.
+    </strong>
+  </div>
+
+  <h2 class="govuk-heading-m">Why the first question is about your program, not your tool</h2>
+  <p class="govuk-body">
+    The first dropdown tiers by provider capacity as well as by risk. The same four answers return
+    a one-page signed document for a family child care home, a six-page policy for a center, and a
+    governance charter with contract riders for a multi-site operator or a Head Start grantee. The
+    principles and the bright lines do not change across those three. Everything else does.
+  </p>
+  <p class="govuk-body">
+    <a class="govuk-link" href={localePath(locale, '/policies')}>See every document, without answering anything</a>
+  </p>
+</BaseLayout>

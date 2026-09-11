@@ -1,6 +1,15 @@
 import { defineCollection, reference, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+/**
+ * NOTE ON THE GLOB PATTERN.
+ * Every collection below uses the single pattern '**\/*.md'. Do not change it to
+ * '**\/*.{md,mdx}' or to an array of patterns: Astro's glob loader runs once per
+ * expanded pattern and adds every file to the store each time, which produces
+ * "Duplicate id" warnings for every entry. Content here is Markdown by
+ * convention (see CONVENTIONS.md section 8), so one pattern is sufficient.
+ */
+
 const LOCALE = z.enum(['en', 'es']);
 const TIER = z.union([z.literal(0), z.literal(1), z.literal(2), z.literal(3)]);
 const PRINCIPLE = z.enum([
@@ -26,7 +35,7 @@ const base = {
 
 /** Seven named principles: one word plus a claim in the imperative. */
 const principles = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/principles' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/principles' }),
   schema: z.object({
     ...base,
     /** The one-word name, e.g. "Relationship". */
@@ -41,7 +50,7 @@ const principles = defineCollection({
 
 /** Eight prohibited uses. Each pairs a rule with its legal or evidentiary basis. */
 const brightLines = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/bright-lines' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/bright-lines' }),
   schema: z.object({
     ...base,
     number: z.number().int().min(1).max(8),
@@ -59,7 +68,7 @@ const brightLines = defineCollection({
 
 /** Twelve constructive uses, with the tier and the guardrail on every one. */
 const goodUses = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/good-uses' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/good-uses' }),
   schema: z.object({
     ...base,
     tier: TIER,
@@ -85,7 +94,7 @@ const goodUses = defineCollection({
 
 /** Worked vignettes: the situation, what is at stake, what to do, what governs. */
 const cases = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/cases' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/cases' }),
   schema: z.object({
     ...base,
     /** The situation, as a director would encounter it. */
@@ -101,7 +110,7 @@ const cases = defineCollection({
 });
 
 const faq = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/faq' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/faq' }),
   schema: z.object({
     ...base,
     question: z.string(),
@@ -112,7 +121,7 @@ const faq = defineCollection({
 });
 
 const vendorQuestions = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/vendor-questions' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/vendor-questions' }),
   schema: z.object({
     ...base,
     number: z.number().int().min(1).max(10),
@@ -127,7 +136,7 @@ const vendorQuestions = defineCollection({
 
 /** The sixteen artifacts. Each renders as a page, a .docx and a .md. */
 const artifacts = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/artifacts' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/artifacts' }),
   schema: z.object({
     ...base,
     /** Audience label, e.g. "Family child care · Single site". */
@@ -152,7 +161,7 @@ const artifacts = defineCollection({
 
 /** The regulatory crosswalk: setting by setting, then the state layer. */
 const law = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/law' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/law' }),
   schema: z.object({
     ...base,
     kind: z.enum(['setting', 'finding', 'state', 'open-question']),
@@ -169,7 +178,7 @@ const law = defineCollection({
 
 /** The nine additions that only make sense above a certain size. */
 const multiSite = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/multi-site' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/multi-site' }),
   schema: z.object({
     ...base,
     number: z.number().int().optional(),
@@ -181,7 +190,7 @@ const multiSite = defineCollection({
 
 /** Long-form prose pages: home intro, about, recommendations, intermediaries, etc. */
 const pages = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/pages' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
   schema: z.object({
     ...base,
     /** Locale-less route this page's prose belongs to, e.g. "/intermediaries". */

@@ -29,10 +29,10 @@ export const DEFAULT_LOCALE = 'en';
 
 /** Tier vocabulary shared by the intake tool, the artifacts and every page. */
 export const TIERS = {
-  0: { id: 0, key: 'tier-0', colour: 'red' },
-  1: { id: 1, key: 'tier-1', colour: 'green' },
-  2: { id: 2, key: 'tier-2', colour: 'yellow' },
-  3: { id: 3, key: 'tier-3', colour: 'orange' },
+  0: { id: 0, key: 'tier-0', color: 'red' },
+  1: { id: 1, key: 'tier-1', color: 'green' },
+  2: { id: 2, key: 'tier-2', color: 'yellow' },
+  3: { id: 3, key: 'tier-3', color: 'orange' },
 };
 
 /** The seven principles, referenced by name across the whole site. */

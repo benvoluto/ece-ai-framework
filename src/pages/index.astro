@@ -1,8 +1,256 @@
 ---
+import { getCollection } from 'astro:content';
+import { render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import IntakeTool from '../components/IntakeTool.astro';
+import TierTag from '../components/TierTag.astro';
 import { SITE } from '../lib/site.js';
+import { localePath } from '../lib/i18n.js';
+
+const locale = 'en';
+const en = (entry) => entry.id.startsWith('en/');
+const slugOf = (entry) => entry.id.replace(/^en\//, '');
+
+/**
+ * Six modules in the spec, minus STANDING, which is held back until the
+ * convening question in Section 16 is resolved. Five here, in this order.
+ */
+const featured = (await getCollection('goodUses'))
+  .filter((e) => en(e) && e.data.featuredOnHome)
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99))
+  .slice(0, 3);
+
+const brightLines = (await getCollection('brightLines'))
+  .filter(en)
+  .sort((a, b) => a.data.number - b.data.number);
+
+/** Three of the eight. Fixed rather than rotated, so a screenshot is stable. */
+const homeLines = brightLines.filter((e) => [1, 2, 4].includes(e.data.number));
+
+const shelf = (await getCollection('artifacts'))
+  .filter((e) => en(e) && e.data.onShelf)
+  .sort((a, b) => (a.data.shelfOrder ?? 99) - (b.data.shelfOrder ?? 99));
+
+const faqEntries = (await getCollection('faq'))
+  .filter((e) => en(e) && e.data.onHome)
+  .sort((a, b) => (a.data.homeOrder ?? 99) - (b.data.homeOrder ?? 99));
+
+const faqRendered = await Promise.all(
+  faqEntries.map(async (entry) => ({ entry, Content: (await render(entry)).Content })),
+);
 ---
-<BaseLayout title="Home" locale="en">
-  <h1 class="govuk-heading-l">{SITE.title}</h1>
-  <p class="govuk-body-l">Scaffold verified. Home page modules land in the content build.</p>
+
+<BaseLayout
+  title={null}
+  description="A field resource for early childhood providers on the ethical and constructive use of AI. Answer four questions about the tool in front of you and get the guidance, the tier, and the right policy template."
+  locale={locale}
+  fullWidth
+>
+  {/* ------------------------------------------------------ 1 · ROUTE */}
+  <section class="govuk-grid-row govuk-!-margin-bottom-8" id="route">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+        Thinking about an AI tool? Answer four questions.
+      </h1>
+      <p class="govuk-body-l">
+        You complete one sentence. It returns the risk tier, what that tier requires of you, and
+        the right document for a program your size — a one-page policy for a family child care
+        home, a full policy for a center, a governance charter for a grantee.
+      </p>
+      <p class="govuk-body">
+        Nothing you answer is sent anywhere. There is no sign-up, and every document on this site
+        is free to download without one.
+      </p>
+
+      <IntakeTool locale={locale} />
+    </div>
+  </section>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  {/* ---------------------------------------------- 2 · WHERE IT HELPS */}
+  {featured.length > 0 && (
+    <section class="govuk-!-margin-bottom-8" id="where-it-helps">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <h2 class="govuk-heading-l">Three places this is already saving programs real money.</h2>
+          <p class="govuk-body">
+            Most of what AI can do in early childhood is unglamorous, low-risk, and worth real
+            money to a business running on one to three percent margins. Every hour it returns is
+            an hour an adult spends with children.
+          </p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        {featured.map((entry) => (
+          <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+            <div class="app-card">
+              <span class="app-card__meta"><TierTag tier={entry.data.tier} locale={locale} link={false} /></span>
+              <h3 class="app-card__title">
+                <a class="govuk-link" href={`${localePath(locale, '/good-uses')}#${slugOf(entry)}`}>
+                  {entry.data.title}
+                </a>
+              </h3>
+              <p class="govuk-body-s">{entry.data.homeSummary ?? entry.data.scenario}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <p class="govuk-body">
+            <a class="govuk-link" href={localePath(locale, '/good-uses')}>
+              All twelve, each with its tier and its guardrail
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  {/* ----------------------------------------------- 3 · BRIGHT LINES */}
+  {homeLines.length > 0 && (
+    <section class="govuk-!-margin-bottom-8" id="bright-lines">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <h2 class="govuk-heading-l">Three things not to do, whatever the tool promises.</h2>
+          <ol class="govuk-list govuk-list--number govuk-!-margin-top-5">
+            {homeLines.map((entry) => (
+              <li class="govuk-!-margin-bottom-4">
+                <span class="govuk-body-l">{entry.data.shortRule}</span>
+                <br />
+                <a class="govuk-link govuk-body-s" href={`${localePath(locale, '/bright-lines')}#line-${entry.data.number}`}>
+                  The basis for this
+                </a>
+              </li>
+            ))}
+          </ol>
+          <p class="govuk-body">
+            <a class="govuk-link" href={localePath(locale, '/bright-lines')}>
+              All eight, each with the law or the evidence behind it
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  {/* ------------------------------------------------- 4 · THE SHELF */}
+  {shelf.length > 0 && (
+    <section class="govuk-!-margin-bottom-8" id="shelf">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <h2 class="govuk-heading-l">Take what you need.</h2>
+          <p class="govuk-body">
+            No form, no email capture. Editable, with blanks where your own details go, and a
+            Spanish version beside each.
+          </p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        {shelf.map((entry) => (
+          <div class="govuk-grid-column-one-half govuk-!-margin-bottom-5">
+            <div class="app-card">
+              <span class="app-card__meta">{entry.data.audience}</span>
+              <h3 class="app-card__title">
+                <a class="govuk-link" href={localePath(locale, `/artifacts/${slugOf(entry)}`)}>
+                  {entry.data.title}
+                </a>
+              </h3>
+              <p class="govuk-body-s">{entry.data.summary}</p>
+              <p class="govuk-body-s govuk-!-margin-bottom-0">
+                <a class="govuk-link" href={`/artifacts/en/${slugOf(entry)}.docx`} download>
+                  Word<span class="govuk-visually-hidden"> version of {entry.data.title}</span>
+                </a>
+                <span aria-hidden="true"> · </span>
+                <a class="govuk-link" href={`/artifacts/en/${slugOf(entry)}.md`} download>
+                  Markdown<span class="govuk-visually-hidden"> version of {entry.data.title}</span>
+                </a>
+                <span aria-hidden="true"> · </span>
+                <a class="govuk-link" href={localePath('es', `/artifacts/${slugOf(entry)}`)} lang="es" hreflang="es">
+                  Español
+                </a>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <p class="govuk-body">
+            <a class="govuk-link" href={localePath(locale, '/policies')}>All sixteen documents</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
+
+  {/* ---------------------------------------------- 5 · FAQ PREVIEW */}
+  {faqRendered.length > 0 && (
+    <section class="govuk-!-margin-bottom-8" id="why">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+          <h2 class="govuk-heading-l">Why does this exist?</h2>
+
+          <div class="govuk-accordion" data-module="govuk-accordion" id="home-faq">
+            {faqRendered.map(({ entry, Content }, i) => (
+              <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                  <h3 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id={`home-faq-heading-${i + 1}`}>
+                      {entry.data.question}
+                    </span>
+                  </h3>
+                </div>
+                <div id={`home-faq-content-${i + 1}`} class="govuk-accordion__section-content">
+                  <Content />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p class="govuk-body govuk-!-margin-top-6">
+            <a class="govuk-link" href={localePath(locale, '/faq')}>
+              The rest of the questions, including whether this is legal advice
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/*
+    6 · STANDING is deliberately absent. The spec puts member names, funders, a
+    version and a last-reviewed date on the home page, on the argument that in
+    this posture legitimacy is the product. No body has been convened, so there
+    is nothing truthful to put there yet. The version and date stamp stay in the
+    masthead and the footer; the rest waits.
+  */}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <div class="govuk-inset-text">
+        <p class="govuk-body">
+          <strong>Who wrote this, and when.</strong> {SITE.version}, last reviewed{' '}
+          <time datetime={SITE.lastReviewed}>{SITE.lastReviewed}</time>. No standards body has
+          been convened and no part of this has been reviewed by counsel. Until that changes,
+          this site is a draft in public rather than a field standard.
+        </p>
+        <p class="govuk-body govuk-!-margin-bottom-0">
+          <a class="govuk-link" href={localePath(locale, '/about')}>
+            What is settled, what is open, and how this site's own AI use worked
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
