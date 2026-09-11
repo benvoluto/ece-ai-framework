@@ -1,0 +1,34 @@
+---
+import { localePath, t, DEFAULT_LOCALE } from '../lib/i18n.js';
+
+/** Renders "Governs: Custody · Standing" with links back to /principles. */
+const { ids = [], brightLines = [], locale = DEFAULT_LOCALE, label } = Astro.props;
+
+const names = {
+  relationship: { en: 'Relationship', es: 'Relación' },
+  development: { en: 'Development', es: 'Desarrollo' },
+  standing: { en: 'Standing', es: 'Representación' },
+  custody: { en: 'Custody', es: 'Custodia' },
+  consequence: { en: 'Consequence', es: 'Consecuencia' },
+  language: { en: 'Language', es: 'Idioma' },
+  currency: { en: 'Currency', es: 'Vigencia' },
+};
+const blLabel = locale === 'es' ? 'Límite' : 'Bright line';
+---
+{(ids.length > 0 || brightLines.length > 0) && (
+  <p class="govuk-body-s">
+    <span class="app-annotation__label" style="display:inline;">{label ?? t(locale, 'label.governs')}</span>{' '}
+    {ids.map((id, i) => (
+      <>
+        {i > 0 && <span aria-hidden="true"> &middot; </span>}
+        <a class="govuk-link" href={`${localePath(locale, '/principles')}#${id}`}>{names[id]?.[locale] ?? id}</a>
+      </>
+    ))}
+    {brightLines.map((n, i) => (
+      <>
+        {(ids.length > 0 || i > 0) && <span aria-hidden="true"> &middot; </span>}
+        <a class="govuk-link" href={`${localePath(locale, '/bright-lines')}#line-${n}`}>{blLabel} {n}</a>
+      </>
+    ))}
+  </p>
+)}

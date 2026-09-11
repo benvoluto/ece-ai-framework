@@ -1,0 +1,91 @@
+---
+import '../styles/main.scss';
+import { SITE } from '../lib/site.js';
+import { t, localePath, stripLocale, DEFAULT_LOCALE } from '../lib/i18n.js';
+import Masthead from '../components/Masthead.astro';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+const {
+  title,
+  description = '',
+  locale = DEFAULT_LOCALE,
+  /** Set false on artifact pages, which print as standalone documents. */
+  showNav = true,
+  /** Wide pages (the crosswalk) opt out of the reading-width column. */
+  fullWidth = false,
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+const barePath = stripLocale(pathname.replace(/\/+$/, '') || '/');
+const pageTitle = title ? `${title} — ${SITE.title}` : SITE.title;
+const canonical = new URL(localePath(locale, barePath), SITE.url).href;
+const altEn = new URL(localePath('en', barePath), SITE.url).href;
+const altEs = new URL(localePath('es', barePath), SITE.url).href;
+---
+<!doctype html>
+<html lang={locale} class="govuk-template">
+  <head>
+    <meta charset="utf-8" />
+    <title>{pageTitle}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1d70b8" />
+    {description && <meta name="description" content={description} />}
+    {!SITE.indexable && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="es" href={altEs} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={title || SITE.title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale === 'es' ? 'es_US' : 'en_US'} />
+  </head>
+  <body class="govuk-template__body">
+    <script is:inline>
+      document.body.className = document.body.className
+        ? document.body.className + ' js-enabled'
+        : 'js-enabled';
+      if ('noModule' in HTMLScriptElement.prototype) {
+        document.body.className += ' govuk-frontend-supported';
+      }
+    </script>
+
+    <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">
+      {t(locale, 'nav.skip')}
+    </a>
+
+    <Masthead locale={locale} pathname={pathname} />
+    {showNav && <SiteNav locale={locale} pathname={pathname} />}
+
+    <div class="govuk-width-container">
+      <div class="govuk-phase-banner app-no-print">
+        <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag">
+            {t(locale, 'banner.phase')}
+          </strong>
+          <span class="govuk-phase-banner__text">{t(locale, 'banner.text')}</span>
+        </p>
+      </div>
+
+      <main class="govuk-main-wrapper" id="main-content">
+        {fullWidth ? (
+          <slot />
+        ) : (
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+              <slot />
+            </div>
+          </div>
+        )}
+      </main>
+    </div>
+
+    <SiteFooter locale={locale} />
+
+    <script>
+      import { initAll } from 'govuk-frontend';
+      initAll();
+    </script>
+  </body>
+</html>

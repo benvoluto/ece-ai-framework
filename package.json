@@ -1,0 +1,26 @@
+{
+  "name": "ece-ai-framework",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/build-artifacts.mjs && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "artifacts": "node scripts/build-artifacts.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.14.1",
+    "@astrojs/mdx": "^4.3.6",
+    "@astrojs/sitemap": "^3.6.0",
+    "govuk-frontend": "^6.5.0",
+    "sass": "^1.93.2"
+  },
+  "devDependencies": {
+    "docx": "^9.5.1",
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.12"
+  }
+}

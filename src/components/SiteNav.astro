@@ -1,0 +1,22 @@
+---
+import { HEADER_NAV } from '../lib/nav.js';
+import { t, localePath, stripLocale, DEFAULT_LOCALE } from '../lib/i18n.js';
+
+const { locale = DEFAULT_LOCALE, pathname = '/' } = Astro.props;
+const current = stripLocale(pathname.replace(/\/+$/, '') || '/');
+---
+<nav class="app-navigation" aria-label={t(locale, 'nav.menu')}>
+  <div class="govuk-width-container">
+    <ul class="app-navigation__list">
+      {HEADER_NAV.map((item) => (
+        <li class={`app-navigation__item${current === item.path ? ' app-navigation__item--current' : ''}`}>
+          <a
+            class="govuk-link app-navigation__link"
+            href={localePath(locale, item.path)}
+            aria-current={current === item.path ? 'page' : undefined}
+          >{t(locale, item.key)}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>

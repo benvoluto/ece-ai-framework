@@ -1,0 +1,2026 @@
+SITE PLAN & CONTENT SPECIFICATION · WORKING DRAFT V2
+A Framework for Ethical and
+Constructive use of AI in
+Early Childhood Education
+The build spec for a field-standards website: what each page contains, what
+ships in what order, and the draft substance for the pages that carry the
+argument.
+Prepared for Ben ClemensDate 10 September 2026Posture Neutral field resource
+Readers Providers · Intermediaries
+01Design constraints
+The field spans a wider capacity range than almost
+any other sector this framework could be written
+for, and the two ends fail di!erently. A single rule
+set will fail one of them.
+The small end, which is most of the field
+The modal early childhood provider is a single site
+where one person is the director, the compliance
+officer, the HR department, and the IT department
+— or a home-based provider who is the entire
+CONTENTS
+THE SITE
+
+organization. Median hourly wage for an early
+educator is $13.07. Roughly 30% of center-based
+staff and 20% of home-based providers hold a
+bachelor's degree. Only about 37% of even public-
+school pre-K teachers have had any training in
+evaluating an ed-tech product's quality.
+1. Assume no legal review. Anything that says
+"have counsel review your vendor agreement"
+fails for most of the field. Ship completed
+language, not instructions to draft it.
+2. Assume the reader is the whole organization.
+No RACI charts, no "convene your AI
+governance committee." One person is reading
+this between nap time and pickup.
+3. Assume twenty minutes, not twenty hours. A
+one-page policy a provider can read, sign, and
+date gets adopted. A forty-page framework
+gets downloaded once.
+4. Spanish at launch, not later. A third of children
+ages 0–5 are dual language learners. A
+framework with a principle about language
+access that ships English-only undercuts itself
+on day one.
+The large end, which nobody is writing for
+A twelve-site chain, a large single facility, or a
+Head Start grantee with delegate agencies has an
+HR director, a compliance officer, and access to
+counsel. Those four rules are wrong for them —
+and being left out is why they default to one of two
+bad answers: a blanket ban that pushes AI onto
+01Design constraints
+02Sitemap
+03Home page
+04Start here: four questions
+05Principles
+06Where AI earns its place
+07Bright lines
+08What the law says
+09Policies to adopt
+10The multi-site track
+11Cases
+12Vendors
+13FAQ
+THE BUILD
+
+personal devices where nobody can see it, or an
+unmanaged accumulation of tools no two sites
+agree on. Section 10 is their track, and it needs its
+own rules:
+5. Give them a governance structure, not a longer
+policy. They do not need a template; they need
+delegated approval authority, a pilot protocol,
+and a defensible answer for a board.
+6. Treat the reflexive no as a failure, and say so. A
+ban that staff quietly work around leaves the
+same exposure with less visibility. This has to
+be named directly, because the organizations
+that need to hear it believe they have already
+solved the problem.
+7. Use their leverage on behalf of everyone else.
+Large buyers can require contract terms a
+single center can only ask about. Model rider
+language published here, adopted by enough
+large operators, changes vendor defaults for
+the whole field.
+Both ends produce the same structural rule, which
+shows up throughout this spec: tier by provider
+capacity as well as by risk. The same underlying
+guidance becomes a one-page signed document
+for a family child care home, a six-page policy for a
+center, and a governance charter with contract
+riders for a multi-site operator. The principles and
+the bright lines do not change across those three.
+Everything else does.
+NAMINGThe working title is descriptive, which is
+
+right for a document and wrong for a domain. The
+site needs a short name before launch — Birth to
+Five AI Standards is the strongest candidate: it uses
+the field's own age framing rather than "early
+childhood," which readers outside ECE hear as
+kindergarten. Avoid anything built on "First Five,"
+which collides with California's First 5 commissions.
+02Sitemap
+Eleven destinations. The order is deliberate: the
+front door is a tool, not a manifesto, because a
+director arrives with a specific product in front of
+her and a decision to make this week.
+SECTION WHAT LIVES THERE
+Home
+/
+The intake tool as the main action,
+three bright lines, an FAQ preview, and
+the artifact shelf. Spec in Section 03.
+Start here
+/start
+The four-question intake. Returns a
+risk tier, the guidance for that tier, and
+the right policy template for that
+provider type.
+Principles
+/principles
+Seven named principles, short and
+quotable, dated and versioned. Every
+other page cites them by name.
+Where AI helps
+/good-uses
+Twelve constructive uses with
+vignettes, tiers, and guardrails — the
+operations, revenue, and funding work
+
+that returns hours to children. Section
+06.
+Bright lines
+/bright-lines
+Eight prohibited uses, each with the
+legal or evidentiary basis. Deliberately
+short. The page most likely to be
+screenshotted.
+What the law says
+/law
+The ECE regulatory crosswalk —
+setting by setting, then a state layer.
+Does not exist anywhere else.
+Policies to adopt
+/policies
+Sixteen artifacts in editable formats,
+with fill-in markers, last-updated
+stamps, English and Spanish.
+For larger
+operators
+/multi-site
+Governance charter, delegated
+authority, model contract riders, pilot
+protocol, multi-state mapping,
+shadow-AI discovery. Section 10.
+Cases
+/cases
+Worked vignettes — a real situation,
+what's at stake, what to do, which
+principle governs.
+Vendors
+/vendors
+Ten questions, an answer-recording
+sheet, the disclosure card format, and
+eventually the register.
+For intermediaries
+/intermediaries
+Separate track: how a CDFI, R&R, or
+T&TA provider assesses AI in its own
+lending, underwriting, and coaching
+— plus co-branding guidance.
+Policy
+recommendations
+/recommendations
+Asks aimed at state legislatures, the
+Office of Head Start, state licensing,
+and QRIS. Kept distinct from provider
+
+NOTEKeep /recommendations genuinely separate.
+A site that mixes "here is what your program should
+do" with "here is what the legislature should pass"
+reads as advocacy to the provider and as vague to
+the legislator.
+03Home page
+Six modules, in this order. No large hero image, no
+mission statement above the fold — a director
+who has landed here has a question, and the
+page's job is to route her in one click.
+HOME · MODULE STACK (6)
+1 · ROUTE
+Thinking about an AI tool? Answer four
+questions.
+One sentence of framing, then the intake. Not a
+carousel, not a video. The four questions can render
+guidance.
+FAQ
+/faq
+Why this exists and why the obvious
+alternatives don't cover it. Carries the
+argument so no other page has to.
+Section 13.
+About &
+changelog
+/about
+Members, advisers, funders, method,
+what we don't know yet, how the site's
+own AI use worked, and a dated
+changelog.
+
+inline on the home page itself rather than behind a
+click — they are short enough, and every extra step
+loses the reader whose next task is lunch.
+Start
+2 · WHERE IT HELPS
+Three places this is already saving programs
+real money.
+Three of the twelve constructive uses, each a one-line
+scenario with the hours or dollars it returns. This
+module comes before the bright lines deliberately: a
+site that opens with prohibitions gets read as hostile
+by the director who is drowning, and she is the reader.
+3 · BRIGHT LINES
+Three things not to do, whatever the tool
+promises.
+Three of the eight, rotated or fixed, each one line with
+a link to the basis. This is the module most likely to be
+screenshotted and forwarded, which makes it the
+site's cheapest distribution.
+4 · THE SHELF
+Take what you need.
+Direct download links to the four artifacts that do the
+most work — the one-page policy, the staff one-
+pager, the family notice, and the vendor question
+sheet — with the Spanish version beside each. No
+form, no email capture. Anything that gates a policy
+template behind a signup will lose the providers who
+need it most.
+5 · FAQ PREVIEW
+Why does this exist?
+Four questions surfaced as collapsed rows,
+
+expanding in place, with a link to the full FAQ. These
+four are chosen to answer the objections a director or
+a funder forms in the first ten seconds — and they
+are where the case for the site lives, so no other page
+has to carry it.
+Aren't states already legislating on AI in early
+childhood?
++
+Doesn't NAEYC already cover this? +
+Can't we just use the K-12 AI guidance? +
+We're one classroom. Isn't this for big
+organizations?
++
+6 · STANDING
+Who wrote this, and when.
+Member names, funders, a version number, and a last-
+reviewed date — visible on the home page, not buried
+in About. In this posture legitimacy is the product, and
+a date stamp is the cheapest possible proof that the
+guidance is maintained.
+ONE RULE FOR THE WHOLE PAGE
+Nothing above the fold explains what AI is.
+The reader already knows; what she doesn't
+know is whether she is allowed to use the
+thing her vendor just switched on.
+04Start here: four questions
+
+A mad-lib rather than a questionnaire. The user
+completes one sentence from dropdowns; the
+guidance behind it stays locked until the sentence
+is done. Four toggles do the entire tiering job, and
+every one is answerable without knowing anything
+about AI.
+THE SENTENCE
+We are a [family child care home / center /
+multi-site or Head Start grantee /
+intermediary] considering a tool that [does /
+does not] see or receive information naming
+an individual child or family, [does / does
+not] capture a child's face, voice, or body,
+[will / will not] inform a decision about a
+specific child, and [will / will not] be used
+directly by children.
+The first dropdown is the one that matters most
+for adoption: it tiers by provider type as well as by
+risk, so the same answer set returns a one-page
+document for a home-based provider and a six-
+page one for a grantee.
+What it returns
+TIER 1 Back office, no child or family
+data
+Marketing copy, menus,
+newsletters naming no child,
+professional development, general
+
+grant boilerplate, staff scheduling
+against ratio requirements.
+Returns: acceptable-use one-
+pager, disclosure when AI drafted
+family-facing text, human review
+before anything is sent.
+TIER 2 Operations touching child or
+family data
+Subsidy billing, enrollment
+records, licensing documentation,
+CACFP reconciliation, grant
+narratives containing child
+vignettes, family communication
+and translation. Returns: written
+agreement required, register
+entry, no consumer chatbots,
+retention and deletion terms,
+disclosure log where Head Start
+applies.
+TIER 3 About an individual child, or used
+by a child
+Screening and assessment
+support, observation narratives,
+photo and video portfolios,
+behavior tracking, referral routing,
+classroom cameras, anything a
+child interacts with. Returns: full
+vendor due diligence, separate
+parental consent, DLL-
+disaggregated evidence,
+documented human
+determination, and an exit plan
+before adoption.
+
+TIER 0 Do not adopt
+The eight bright lines. Run as a
+screener before the tiering
+questions, so a program that lands
+here never sees implementation
+guidance at all.
+WATCH"Back office is safe" is the one shortcut this
+framework must not take. In early childhood the
+back office is where the child data lives — subsidy
+billing contains family income, immigration-adjacent
+documentation, and custody information; grant
+narratives routinely contain child vignettes. Tier 1
+has to be defined by the absence of child and family
+data, not by the word "administrative."
+05Principles
+Seven, named as one word plus a claim in the
+imperative so they survive being quoted in a board
+meeting. Two of these exist in no other AI
+framework anywhere, and those two are why this
+site is not a link to the K-12 guidance.
+RELATIONSHIP Use AI to return adult
+attention to children.
+Development from birth to five is
+built through serve-and-return
+interaction with a consistent,
+attuned adult. Anything that
+
+occupies the adult's attention or
+substitutes for the interaction hits
+the mechanism of development
+directly. This inverts the usual
+efficiency argument into a
+pedagogical one: the strongest
+case for AI on paperwork is that
+paperwork is time stolen from
+children. Zero to Three's
+appropriate-use recommendation
+for educators is exactly this —
+administrative tasks and planning,
+supporting adults' time rather than
+replacing human caregivers.
+DEVELOPMENT Judge every tool against what
+a child this age actually needs.
+No other AI framework has a
+developmental-appropriateness
+test, because every one of them
+was written for K-12 or for generic
+nonprofits. RAND found the
+dominant hesitation among pre-K
+teachers is developmental
+appropriateness and screen time
+— not privacy. Meeting the field
+where its actual concern lives is
+both honest and strategically
+smart. Drafting note: the AAP
+replaced its prescriptive time limits
+with the "5 C's" framework in
+January 2026 — do not restate the
+2016 hour limits, which most ECE
+materials still cite.
+
+STANDING Decide for children who
+cannot decide for themselves.
+A four-year-old cannot notice an AI
+system, object to it, recognize it as
+non-human, or report harm from it,
+and leaves no record of dissent.
+This is qualitatively different from
+K-12, where student voice is at
+least available in principle.
+Parental consent is the only
+consent available and it is
+structurally compromised: signed
+at enrollment as a condition of
+care, often by families with no
+alternative provider, sometimes
+under subsidy conditions,
+frequently in a second language.
+The National Center for Youth
+Law's digital legacy framing
+belongs here — data created
+about a three-year-old in 2026
+may follow them for sixty years.
+CUSTODY Know where a child's record
+goes, and be able to get it back.
+Head Start's 45 CFR 1303.24
+already requires disclosure logs.
+§1303.23(e) gives parents an
+unqualified right to review any
+written agreement the program
+has with a third party — the text is
+not limited to agreements naming
+their child, which makes it the
+strongest existing hook for a
+parent asking to see an AI vendor
+
+parent asking to see an AI vendor
+contract. IDEA gives parents a
+right to have records destroyed
+once no longer needed — a right
+FERPA alone does not confer, and
+one an AI vendor that has ingested
+IFSP text into a retained
+embedding store cannot honor.
+And the amended COPPA Rule
+requires separate verifiable
+parental consent for disclosing
+children's personal information to a
+third party for AI development,
+which the FTC has said is not
+"integral" to a service and so
+cannot ride on general consent.
+Note the gap: the Rule is quieter
+about an operator training its own
+models on data it already holds.
+That is a contract term to write, not
+a law to cite.
+CONSEQUENCE No AI output decides
+anything about a child.
+This generalizes rules Head Start
+programs already live under.
+§1302.33 prohibits using
+screening or assessment to
+exclude children from enrollment,
+or to rank, compare, or evaluate
+individual children for rewards or
+sanctions. §1302.17 prohibits
+expulsion for behavior.
+Generalized: no AI output may be
+the basis for excluding,
+disenrolling, suspending, or
+
+disenrolling, suspending, or
+expelling a child, or for a special
+education referral, without an
+independent human determination
+on the underlying evidence.
+Anchoring the guardrail in existing
+compliance obligations rather than
+novel ethics is what makes it
+adoptable.
+LANGUAGE Serve the third of children who
+are learning two languages.
+There are 7 .1 million dual language
+learners ages 0–5 — a third of all
+young children, and more than
+20% of the young-child population
+in over half of all states. They are
+not a special case; they are the
+population. Every AI failure mode
+compounds for them: speech
+recognition performs worse on
+accented and child speech,
+screening instruments require
+cultural and linguistic adaptation,
+translated consent forms are
+where informed consent quietly
+fails. §1302.102(c)(2) already
+requires DLL-disaggregated
+analysis, so the framework can
+require DLL-disaggregated
+performance evidence from
+vendors as an extension of an
+existing duty rather than a new
+ask.
+
+CURRENCY Say when this was written
+and what has changed since.
+The field's flagship technology
+position statement is fourteen
+years old and predates the
+smartphone-saturated classroom.
+Meanwhile Colorado's AI Act was
+delayed, blocked in federal court,
+and replaced by a different statute
+inside eighteen months. Every
+artifact carries a date, a version,
+and a changelog entry. Guidance
+that cannot say when it was last
+reviewed should not be trusted,
+and saying so in your own
+principles is what earns the right to
+say it about the 2012 statement.
+CUT CANDIDATEIf seven feels long, Currency is the
+one to demote — it governs the framework rather
+than the use of AI, and could live as a masthead
+commitment instead. Six is probably the sweet spot.
+06Where AI earns its place
+A site that is only a list of prohibitions will be read
+once and never returned to. Most of what AI can
+do in early childhood is unglamorous, low-risk, and
+worth real money to a business running on 1–3%
+margins — and every hour it returns is an hour an
+
+adult spends with children.
+This is the Relationship principle made concrete,
+and it is also the page that makes the bright lines
+credible. A framework that only says no reads as
+hostile to a director who is drowning; a framework
+that says here is where this genuinely helps, and
+here is the short list where it doesn't reads as
+useful. Each entry below carries its risk tier and its
+guardrail, because the point is not that these uses
+are unregulated — it is that they are worth doing
+carefully.
+FOR PROVIDERS
+The corrective action planTIER 2
+A licensing visit turns up three findings — a gap in the
+medication log, an expired CPR certification, and
+playground surfacing depth. The corrective action plan
+is due in ten business days. The director has done this
+before. The fixing was the easy part; writing it up took
+most of a weekend.
+RETURNS The remedies still take what they take.
+The document describing them drops
+from a weekend to an evening. Across a
+year — licensing renewal, two
+monitoring visits, a policy manual refresh
+— this is the difference between a
+director who does paperwork on
+Sundays and one who doesn't.
+GUARDRAIL The findings and the remedies are hers;
+only the drafting is the tool's. Corrective
+action plans often reference specific
+
+incidents, so use an approved tool with
+an agreement on file and strip child
+identifiers first.
+Subsidy billing that actually reconcilesTIER 2
+A center serves 34 subsidized children across two
+counties. Attendance sheets, authorization certificates,
+and payment remittances never quite line up. Every
+month a handful of days go unbilled or get paid at the
+wrong rate, and chasing each one costs more staff time
+than it recovers — so nobody chases them.
+RETURNS This is not efficiency; it is revenue. On
+margins this thin, recovering a few
+hundred dollars a month of correctly
+billed care is the difference between a
+raise for a teacher and no raise. The
+reconciliation produces a discrepancy
+list with the underlying evidence
+attached, in minutes.
+GUARDRAIL The most sensitive data in the building —
+family income, immigration-adjacent
+documentation, custody arrangements.
+Written agreement, register entry, no
+consumer tools. The tool flags; a person
+decides what gets submitted.
+Finding the money you were always eligible for
+TIER 1
+A family child care provider has been in business eleven
+years. In that time she has learned about exactly two
+funding sources: CACFP, because a peer mentioned it,
+and a state stabilization grant, because it arrived in the
+mail. She has never heard of the facility improvement
+
+fund her county runs, and she has never completed an
+application with a narrative section.
+RETURNS A profile-matched list of what she is
+actually eligible for — QRIS quality
+incentives, CACFP, county and First 5
+funds, SBA microloans, USDA rural
+facility programs — with deadlines and
+required documents. Then a first draft of
+the narrative in her own words, from a
+ten-minute conversation instead of a
+blank page. The application she would
+never have started gets submitted.
+GUARDRAIL Verify every opportunity, amount, and
+deadline against the source before
+applying — a hallucinated deadline costs
+a provider real money. And the moment a
+narrative describes an individual child,
+the work moves to Tier 2.
+The empty slotTIER 2
+A center runs at 87% enrollment. Two infant spots have
+been open five weeks. Nine families sit on the waitlist,
+but nobody has called them, because the person who
+would make the calls is covering ratio in the toddler
+room at three o'clock.
+RETURNS Unfilled slots are the largest single
+revenue leak in the sector, and how fast
+an inquiry gets answered largely
+determines whether it becomes a tour.
+An assistant that responds within
+minutes, works the waitlist, and books
+tours converts a structural leak into filled
+seats — two infant slots at typical rates
+is meaningful annual revenue against a
+razor-thin margin.
+GUARDRAIL Families must know they are talking to
+
+GUARDRAIL Families must know they are talking to
+an AI, and a person takes over the
+moment the conversation touches a
+child's needs, a disability, or a subsidy
+question. California SB 243-style chatbot
+duties may attach. It never makes an
+enrollment decision — that is a
+Consequence-principle line.
+Every family gets the notice in their own
+language
+TIER 2
+A program serves families speaking Spanish,
+Vietnamese, Mam, and Arabic. Routine communication
+— the closure notice, the menu, the reminder about
+water bottles — goes out in English, because there is no
+realistic alternative. Families who don't read English
+hear about the snow closure from a neighbor, or don't.
+RETURNS Routine operational communication in
+every home language, instantly, at no
+marginal cost. This is probably the single
+most equity-positive low-risk use of AI in
+the sector: it fixes a daily failure that
+nobody counts as a failure, for a
+population that is a third of all children
+ages 0–5.
+GUARDRAIL Routine only. Screening results, IFSP and
+IEP conversations, behavior
+conversations, eligibility determinations,
+and anything touching suspected
+maltreatment go to a qualified
+interpreter — bright line 6, and
+§1302.33 already requires it. Where a
+bilingual staff member or family can
+review the routine translations, have
+them do it; Indigenous languages like
+
+Mam are exactly where machine
+translation is weakest.
+Knowing what a child actually costs youTIER 1
+A provider sets her rates by looking at what the center
+down the street charges. She has never calculated true
+cost per child by age group, so she does not know that
+her infant room loses money on every enrollment and
+her preschool room quietly subsidizes it. When she
+considers expanding, she is guessing.
+RETURNS A working cost model built from her own
+numbers through a conversation, rather
+than a spreadsheet she would never
+finish. Break-even by classroom, the real
+cost of a staffing change, what a rate
+increase does to enrollment risk. This is a
+business-health intervention — and it is
+precisely what an intermediary's
+business coaching is trying to
+accomplish, arriving between coaching
+visits instead of once a year.
+GUARDRAIL No child or family data, so Tier 1 — but it
+is her own financials, which means a tool
+with a real agreement rather than a free
+consumer account. Treat the output as a
+draft for her coach to check, not an
+answer.
+Sta!ng to ratio without oversta!ngTIER 1
+Ratios are legally binding and shift by age group, by
+hour, and by who called in sick. The director builds next
+week's schedule on paper on Sunday night, over-staffs
+to be safe, and absorbs the labor cost.
+RETURNS A schedule that holds ratio through the
+
+day's actual arrival and departure curve.
+Overstaffing is a margin killer;
+understaffing is a citation. The gap
+between them is where the money is —
+and, incidentally, where the Sunday
+nights are.
+GUARDRAIL Staff schedules are employment data.
+The tool proposes; the director decides.
+Do not let scheduling optimization drift
+into performance monitoring of a low-
+wage workforce that did not agree to be
+measured this way.
+The CDA portfolio that stalled two years ago
+TIER 1
+A teacher earning fourteen dollars an hour is working
+toward her Child Development Associate credential. The
+competency statements and the professional portfolio
+are the part that stalls people — not the knowledge, the
+writing.
+RETURNS A study partner that quizzes her, helps
+her turn what she already does every day
+into the reflective statements the
+portfolio asks for, and is available at nine
+at night after her shift. Credential
+attainment raises wages and reduces
+turnover, which is the sector's most
+expensive unsolved problem.
+GUARDRAIL The reflections have to be hers — a
+portfolio assesses her practice, and
+submitting generated text is both
+dishonest and useless to her. The tool
+asks the questions; she answers them.
+No child names in the examples.
+
+FOR THE NONPROFITS AND INTERMEDIARIES THAT
+SUPPORT THEM
+What the coaching notes have been saying all
+along
+TIER 2
+A resource and referral agency holds six years of
+technical assistance notes across 400 providers —
+thousands of pages of free text that nobody has ever
+read as a set. Everyone in the building has a theory
+about where providers get stuck. Nobody has evidence.
+RETURNS Qualitative coding at a scale that was
+never affordable: which topics recur,
+which cluster with later closure, where
+the coaching model is repeating itself,
+and what providers keep asking for that
+the organization does not offer. An
+archive becomes a program design input
+— and the kind of finding a funder will
+pay to act on.
+GUARDRAIL Notes carry provider and sometimes
+family identities. De-identify before
+analysis, or work in an approved
+environment with an agreement in place.
+Findings describe patterns across a
+portfolio; they never quietly become a
+score attached to an individual provider.
+The assessment write-upTIER 2
+A business coach spends half a day on site conducting
+a Business Administration Scale assessment, then two
+more days writing the report. The assessment is the
+expertise. The report is transcription.
+RETURNS Write-up time falls by roughly two-thirds,
+
+RETURNS Write-up time falls by roughly two-thirds,
+which converts directly into more
+assessments per coach per year — the
+same staff reaching more providers. The
+coach's scores and judgments are the
+input; the tool assembles the document
+around them.
+GUARDRAIL Every score and every recommendation
+is the assessor's. The tool never
+generates a rating, and a person reads
+the finished report before it reaches the
+provider. Reports name real businesses
+and real financials, so this is approved-
+tool, agreement-on-file work.
+A funding radar for the whole portfolioTIER 1
+A CDFI knows about opportunities its 300 portfolio
+providers don't. It has never had a way to match them
+one to one, so it sends a monthly newsletter that most
+providers do not open.
+RETURNS Matched alerts — this provider, this
+opportunity, this deadline, these
+documents — instead of a broadcast.
+The intermediary's information
+advantage finally reaches the individual
+provider it would help, and application
+rates rise because the ask is specific
+rather than general.
+GUARDRAIL Match on business characteristics the
+provider has actually shared, never on
+inferred ones. Verify every opportunity
+before it goes out: a wrong deadline
+costs a provider money and costs the
+intermediary the trust that makes it
+useful.
+
+Where to send the coach nextTIER 3
+A network supports 400 providers with eight coaches.
+Triage today is whoever called, whoever a coach
+happened to visit, and whoever a funder asked about.
+RETURNS A ranked view of where technical
+assistance would do the most good, built
+from signals the organization already
+holds — enrollment trends, subsidy
+billing patterns, licensing history, time
+since last contact. Eight coaches
+deployed against need rather than
+against the phone.
+GUARDRAIL This is the closest thing on the page to a
+bright line and it needs the strongest
+one. It may route support — never
+sanctions, funding denials, or portfolio
+exits. Every provider can see what the
+system says about them and contest it.
+And the model must be tested for
+whether it systematically ranks home-
+based providers, newer providers, or
+providers in child care deserts as less
+worth helping. The thin-file problem is
+real here, and it points the wrong way.
+THE RULE THAT KEEPS THIS PAGE HONEST
+Every entry on the live page ends with what
+the program actually did with the time —
+hired a floater, gave a teacher a paid
+planning hour, opened an infant slot,
+stopped working Sundays. Without that, this
+is an efficiency brochure, and the field has
+plenty of those. With it, it is the Relationship
+
+principle with receipts. Collect those
+outcomes from real pilots rather than
+borrowing vendor case studies, name no
+products, and carry the tier and the
+guardrail on every single one.
+07Bright lines
+A short prohibited-use list is usable; a five-by-five
+impact-likelihood grid is not. Each line pairs a rule
+with the legal or evidentiary basis that makes it
+defensible, because a director will have to justify it
+to an owner or a board.
+Emotion, affect, or engagement recognition on
+children.
+EU AI Act Art. 5(1)(f) prohibits emotion inference in
+education institutions outright — and it reaches placing
+on the market and putting into service, not just end use,
+so it binds vendors too. The mechanism is documented:
+Halberstadt et al. (2020) found prospective teachers
+1.36 times more likely to show racialized anger bias
+toward Black children's faces. Human raters carry that
+bias, training labels carry it, models learn it. There is no
+U.S. analogue to the EU prohibition — which is precisely
+why the field should write one.
+AI as the basis for expelling, suspending,
+disenrolling, or denying enrollment to a child.
+Already law for Head Start under §1302.17 and
+§1302.33. Generalizing it costs nothing and matters
+
+enormously: three-  and four-year-olds are expelled from
+state-funded preschool at roughly three times the K-12
+rate, and from private and community programs at more
+than thirteen times. Black children account for nearly
+half of public preschool suspensions while representing
+under a fifth of enrollment. Vintage caution: the
+multipliers trace to Gilliam's 2005 work and the
+suspension disparity to the 2013–14 Civil Rights Data
+Collection. Pull the most recent CRDC cycle before
+publishing.
+AI as the basis for a special education or early
+intervention referral, without an independent
+human determination on the underlying evidence.
+The failure mode is fully documented in adjacent child-
+serving systems. Oregon discontinued its child-welfare
+screening tool after it flagged a disproportionate
+number of Black children; the Allegheny Family
+Screening Tool drew a DOJ civil-rights inquiry over
+disability bias. Referral is a consequential decision about
+a child and carries the strongest human-decision
+requirement in the framework.
+AI anywhere in mandated-reporter
+documentation.
+No authority anywhere addresses this — no state child
+welfare agency guidance, no CAPTA guidance, nothing
+from any ECE body. The unresolved questions are real:
+when does reasonable suspicion attach if a tool flags
+first? Is an AI-smoothed narrative still the reporter's
+contemporaneous observation? A flat prohibition is
+simple, defensible, and costs providers nothing. This is a
+place the site can be first.
+Child or family personal information into a
+consumer chatbot with no written agreement.
+
+Under §1303.22 a Head Start grantee that pastes child
+observations into a consumer tool has arguably made an
+undisclosed third-party disclosure — no consent, no
+reviewable agreement, and no entry in the §1303.24
+disclosure log. The violation is complete whether or not
+anything leaks, which is the point providers most often
+miss.
+Machine translation in IFSP or IEP meetings,
+screening-result conversations, child-protection
+conversations, or eligibility determinations.
+Routine operational communication — newsletters,
+reminders, menus — is fine and genuinely useful. High-
+stakes content is where machine translation fails, with
+documented safety consequences in medicine and
+explicit cautions from the National Center for State
+Courts. §1302.33 already requires qualified bilingual
+staff or interpreters for exactly these conversations.
+Face or voice biometric identification of children
+— check-in/out, photo auto-tagging — without
+express, separate, revocable parental consent.
+Illinois BIPA applies to "private entities" and expressly
+excludes state and local government agencies, which
+flips the risk map most people assume: a private center
+or a nonprofit grantee carries more exposure here than a
+public school district does, with a private right of action
+and liquidated damages. The amended COPPA Rule
+expressly includes biometric identifiers, including
+voiceprints and facial templates, in "personal
+information." Consent must come from a parent on
+behalf of a child who cannot give it — a live legal
+question with no clean answer.
+Vendor training of models on children's images,
+voices, work, or records without separate
+
+verifiable parental consent.
+Not aspiration — current federal law, with one boundary
+to state precisely. The COPPA Final Rule effective June
+2025, full compliance April 2026, requires separate
+verifiable parental consent for disclosing children's
+personal information to third parties for AI development;
+the FTC treats such disclosures as not "integral" to a
+service and so outside general consent. It says less
+about an operator training its own models on data it
+already holds — so this line is enforced by contract as
+well as by statute. Photo and video portfolio apps are the
+highest-volume collectors of children's images, video,
+and voice in the sector.
+08What the law says
+This is the single most valuable page on the site,
+and no one has written it. Every vendor contract
+template in circulation cites the wrong statutes for
+early childhood.
+The page answers one question — which law
+actually governs the data in my program? — by
+setting, because the answer changes completely
+depending on who operates the program.
+SETTING FERPA WHAT GOVERNS INSTEAD
+State pre-K
+run by a
+school
+district
+Yes FERPA, plus state student-privacy and ed-tech
+vendor law (e.g. CA Educ. Code §49073.1; NY Ed Law
+2-d)
+
+The three findings that change practice
+Head Start
+that is itself
+a FERPA-
+covered
+educational
+agency
+Typically
+district-
+operated, but
+the test is the
+funding, not
+the org chart
+Yes 45 CFR 1303.21(a) directs a program receiving
+funds under a Department of Education program,
+and therefore subject to FERPA, to comply with
+FERPA instead of the Head Start subpart
+Head Start
+run by a
+CAA,
+nonprofit,
+tribe, or
+private
+entity
+No 45 CFR 1303 Subpart C by default — consent,
+disclosure exceptions, parent inspection and
+amendment, right to review written third-party
+agreements, disclosure logs, destruction. But
+§1303.21(b) displaces Subpart C with IDEA Part
+B/C confidentiality for any child referred to or found
+eligible under IDEA, in any grantee.
+Private or
+community
+child care
+center
+No COPPA (on the vendor), state biometric law, state
+consumer privacy law, licensing regs, the program's
+own privacy policy and family contracts
+Family child
+care home
+No Same as above, with effectively no institutional
+privacy floor at all
+Community-
+based Part
+C early
+intervention
+Not
+directly
+IDEA Part C confidentiality standing alone —
+broader "participating agency" definition, indirect
+identifiers covered, parental right to destruction
+
+COPPA is the law that actually reaches every
+ECE setting, because it regulates operators of
+services directed to children under 13 and does
+not care whether the program is a school —
+though note it binds the vendor, not the
+provider, so a program's leverage runs through
+its contract. And the FTC explicitly declined to
+codify the ed-tech "school authorization"
+exception in the 2025 rule, to avoid conflicting
+with anticipated FERPA amendments. So the
+widely-relied-upon practice of a program
+consenting on parents' behalf remains policy-
+statement guidance built for schools, which
+most ECE providers are not. That is a genuine,
+citable legal uncertainty the site can be the
+first to name.
+California's early-learning privacy law is not
+SOPIPA. AB 2799 (2016) did not amend
+SOPIPA; it added a separate statute at B&P
+§22586 — the Early Learning Personal
+Information Protection Act — covering
+operators of services used and marketed
+primarily for preschool and pre-K purposes,
+with biometric information expressly included
+in "covered information." An ECE vendor in
+California may be regulated by ELPIPA and not
+SOPIPA, and templates citing SOPIPA/AB 1584
+are citing the wrong law.
+HIPAA usually does not apply, and people get
+this backwards. A program that does not bill
+electronically for health services is not a
+covered entity; immunization records and
+
+screening results in a child's file are not PHI in
+that provider's hands. The constraint runs on
+the inbound side — what the program may re-
+disclose is governed by the authorization it
+signed plus Head Start or IDEA. Edge cases
+worth flagging: Early Head Start embedded in
+an FQHC, programs billing Medicaid for
+screening.
+The state layer
+Built as a lookup rather than prose, and honest
+about churn. Priority states by DLL and provider
+concentration: California, Texas, New York, Florida,
+New Jersey, Illinois. Each entry answers four
+things — does the state's student-privacy law
+reach pre-K or child care; is there a biometric
+statute with a private right of action; what do the
+state's CCDF plan and provider agreement require;
+and what has the state AI office or education
+department published that a provider might be
+handed.
+OPEN QUESTIONTwo state readings need a lawyer
+before publication. New York Ed Law 2-d defines
+"school" to include publicly funded pre-K, which on
+its face pulls community-based organizations
+delivering publicly funded pre-K inside the statute
+— a big deal for New York City providers. And
+whether Illinois SOPPA reaches preschool at all
+could not be confirmed. Both should be owned by a
+pro bono legal partner.
+
+09Policies to adopt
+Sixteen artifacts, not one policy. Every one ships
+editable, with [SAMPLE] markers where local text
+goes, a last-updated stamp, and a Spanish version.
+Publish two variants of the core policy rather than
+one canonical version — it lowers the stakes of
+choosing.
+FAMILY CHILD CARE ·
+SINGLE SITE
+The One-Page AI
+Policy
+Printable, plain
+language, sign-and-
+date. What we use AI
+for, what we never use
+it for, what happens to
+your child's information,
+who to ask. One side of
+one sheet. If only one
+artifact gets built well,
+it is this one.
+CENTER · MULTI-SITE
+Program AI Use
+Policy
+Four to six pages.
+Governance and
+approval, data handling
+by tier, approved tools,
+staff obligations, family
+notice, incident
+response, annual review
+commitment.
+Structured so a director
+can delete sections that
+don't apply.
+HEAD START GRANTEE
+Part 1303 Addendum
+Maps AI use onto
+existing obligations:
+third-party disclosure
+under §1303.22, the
+disclosure log under
+§1303.24, parent
+review of written
+agreements under
+§1303.23, and
+screening constraints
+under §1302.33. A
+ALL STAFF
+Staff Acceptable-Use
+One-Pager
+Posted in the staff
+room. Green list, red
+list, and one sentence
+on what to do when
+unsure. Assumes the
+reader has thirty
+seconds and no
+context.
+
+compliance document,
+not an ethics document.
+FAMILIES
+Family Notice
+What AI the program
+uses, in what part of the
+work, and what
+information it touches.
+Plain language at a
+middle-school reading
+level. Kept strictly
+separate from the
+consent form — notice
+is not consent, and
+conflating them is how
+programs get into
+trouble.
+FAMILIES
+Consent: Images,
+Voice & Model
+Training
+The COPPA-driven
+instrument. Separate,
+specific, revocable
+consent for biometric
+capture and for any
+vendor use of a child's
+images, voice, work, or
+records in model
+development. Includes
+a plain-language
+explanation of what
+"training" means,
+because most families
+will not know.
+DIRECTOR
+Approved Tools
+Register
+Fillable. Tool, purpose,
+tier, who approved it,
+date, agreement on file,
+data it touches, review
+date. The artifact most
+likely to be requested in
+a licensing visit or a
+monitoring review.
+DIRECTOR ·
+INTERMEDIARY
+Vendor Question
+Sheet
+Ten questions with a
+place to record the
+answer and the date.
+Providers have roughly
+zero negotiating
+leverage with a major
+vendor — what they
+can do is ask,
+document, and choose.
+Section 12.
+BOARD · OWNER
+Board Talking Points
+One page a director can
+ANY PROGRAM WITH A
+HANDBOOK
+Handbook Addendum
+
+hand to a board or
+owner to get a policy
+approved without
+having to teach AI first.
+Language
+Amend what exists
+rather than write
+something new. Drop-in
+paragraphs for an
+existing family
+handbook, staff
+handbook, and photo-
+release form. The
+lowest-friction path to
+adoption by far.
+DIRECTOR
+Incident &
+Discontinuation
+Protocol
+What to do when a tool
+fails, leaks, or turns out
+to do something it
+didn't disclose: who to
+notify, what to tell
+families, how to stop
+using it, and what to
+document. Nobody has
+written the provider-
+side version of this.
+MULTI-SITE · CHAIN ·
+GRANTEE
+Governance Charter
+& Authority Matrix
+Who approves what, at
+which tier, without
+asking whom. The
+artifact that prevents
+both failure modes in
+Section 10 — the queue
+that staff route around,
+and the accumulation
+nobody inventoried.
+MULTI-SITE · CHAIN ·
+GRANTEE
+Model Contract Rider
+Drop-in vendor terms
+for buyers with actual
+leverage: no training on
+our data including
+internally, no biometric
+processing without
+written instruction,
+deletion reaching
+derived artifacts,
+subprocessor notice,
+DLL-disaggregated
+MULTI-SITE · CHAIN ·
+GRANTEE
+Pilot Protocol & Stop
+Condition
+One site, a named
+owner, a fixed window,
+success criteria
+declared in advance,
+staff and family notice,
+and a written condition
+under which the pilot
+ends. Most enterprise
+pilots lack the last one,
+which is why they never
+
+DLL-disaggregated
+validation on request,
+notification with a
+clock. The highest-
+leverage document on
+the site.
+which is why they never
+end.
+MULTI-SITE · CHAIN ·
+GRANTEE
+Shadow-AI Amnesty
+Kit
+A two-week, no-
+consequence window
+for staff to register
+what they are already
+using, with the
+announcement
+language and the
+intake form. Run before
+writing policy —
+otherwise the policy
+governs a fiction.
+CDFI · R&R · T&TA
+Intermediary AI
+Practice Standard
+The other track. How an
+intermediary handles AI
+in its own lending,
+underwriting, portfolio
+monitoring, and
+coaching — plus co-
+branding guidance for
+delivering the provider
+artifacts under its own
+name.
+THE MECHANIC THAT COMPOUNDS
+Ask programs to send back the policy they
+actually adopted. Within two years that
+makes this body the only one that knows
+what the field's AI policies really say — a
+research asset, a revision input, and a
+legitimacy claim at once.
+10The multi-site track
+
+The design constraint that governs the rest of this
+site — no lawyer, no IT department, twenty
+minutes — is right for the modal provider and
+wrong for a fourteen-site organization with an HR
+director and outside counsel. Larger operators are
+not a smaller problem. They are a di!erent one,
+and the field has no guidance for them at all.
+A large center, a chain, or a Head Start grantee
+with delegate agencies has something the single
+site does not: capacity to actually govern this.
+What it does not have is anyone telling it how. Left
+alone, these organizations fail in two opposite
+directions, and both are worse than they look.
+Failure mode one: the reflexive no
+Risk-averse counsel or a cautious board issues a
+blanket prohibition. It feels like the safe choice
+and it is documented as a policy, so everyone
+moves on.
+What actually happens is that staff use AI anyway
+— on personal phones, in free consumer accounts,
+with child names in the prompt, outside any
+register, any agreement, and any disclosure log.
+The organization now has the same exposure it
+had before, minus the ability to see it, plus a
+written policy proving it knew better. A blanket
+ban is not a safety posture. It is an unmonitored
+one. This should be said plainly on the page,
+because the people who need to hear it are exactly
+the ones who believe they have solved the
+
+problem.
+The corollary matters too: a program that forbids
+AI outright is choosing to leave the Section 06
+savings on the table — the billing recovery, the
+translated closure notices, the grant it never
+applied for — while its staff take the risks anyway.
+Failure mode two: the unmanaged yes
+Scale cuts the other way just as easily. One site
+pilots a camera vendor. Another turns on an
+observation app's AI feature because it was on by
+default. Procurement buys an enterprise chatbot
+for the central office. Nobody has an inventory, no
+two sites are operating to the same standard, and
+governance debt compounds faster than at a
+single site because there are more people able to
+say yes.
+What the multi-site track adds
+Nine things, on top of everything in Section 09.
+Each exists because it does not make sense below
+a certain size.
+1. A governance charter with real delegated
+authority. Site directors approve Tier 1 without
+asking. A named role approves Tier 2. A small
+group approves Tier 3 in writing, with the
+crosswalk in front of them. Without delegation
+everything queues behind one person, and staff
+route around the queue — which is how the
+unmanaged yes starts.
+
+2. One tool register, many sites. The single-site
+register does not scale. One source of truth,
+per-site adoption status, and a standing rule
+that no site adopts a Tier 2 or Tier 3 tool that is
+not on it.
+3. Contract riders — because you actually have
+leverage. This is the biggest asymmetry in the
+sector and the most valuable thing large
+operators can do. A single center can only ask
+the ten questions. A fourteen-site organization,
+or a grantee with delegates, can require terms:
+no training on our data including internally, no
+biometric processing without our written
+instruction, deletion that reaches derived
+artifacts, subprocessor notice, DLL-
+disaggregated validation evidence on request,
+and a notification commitment with a clock on
+it. Publish model rider language. If the field's
+larger buyers converge on the same terms,
+vendor defaults shift for everyone — including
+for the family child care provider with no
+leverage at all. Frame it that way: this is a public
+good only the big operators can supply.
+4. A pilot protocol with a stop condition. Large
+organizations should pilot, not roll out. One site,
+a named owner, a fixed window, success criteria
+declared in advance, staff and family notice,
+and a real condition under which it ends. Most
+enterprise AI pilots have no stop condition,
+which is precisely why they never stop.
+5. Multi-state compliance mapping. A chain
+operating in Illinois, California, and New York
+
+faces BIPA, ELPIPA, and Ed Law 2-d
+simultaneously. Running different practices per
+state is possible and almost always more
+expensive than it looks; for most operators the
+cheapest defensible path is a single standard
+set at the strictest state's level. The crosswalk's
+state layer matters more to this reader than to
+any other.
+6. Shadow-AI discovery, without punishing
+anyone. Before writing policy, find out what is
+already in use — a two-week amnesty window
+where anyone can add a tool to the register
+with no consequence. Skip this and the policy
+governs a fiction.
+7. Board and owner reporting on a cadence. A
+standing quarterly item: tools in use by tier,
+incidents, what changed, what is pending
+approval. For Head Start this maps onto
+existing Policy Council and governing body
+reporting rather than adding a new obligation.
+8. Role-differentiated training. A teacher, a family
+services worker, and a billing clerk face
+completely different risks from the same tool.
+Large organizations can afford to train them
+differently; small ones cannot. This is one of the
+few places where scale is a genuine advantage
+rather than a complication.
+9. A named escalation path. Who does a teacher
+call at four in the afternoon when a tool did
+something strange? At a single site it is the
+director. At fourteen sites it has to be a named
+role, or it defaults to nobody.
+
+HEAD START GRANTEES WITH DELEGATE AGENCIES
+A specific sub-case worth its own page
+module. The grantee is accountable for
+delegate compliance under Part 1303, but
+delegates make their own operating
+decisions and may adopt tools the grantee
+never reviewed. The register, the rider, and
+the escalation path all have to reach across
+that boundary — and the grantee's
+monitoring instrument should ask about AI
+tools the way it asks about anything else it is
+answerable for.
+DESIGN NOTEDo not build this as a longer version of
+the small-provider material. The multi-site reader is
+not looking for a policy template; she is looking for a
+governance structure, model contract language, and
+a defensible answer for her board. Different
+artifacts, different page, same principles and the
+same bright lines.
+11Cases
+Almost every comparable framework is
+governance — who approves, what's disclosed,
+how data is stored. Very little addresses the actual
+moment of use. Short worked vignettes fill that
+hole, are cheap to produce, and are the content
+
+most likely to get forwarded between directors.
+Consistent structure throughout: the situation,
+what's at stake, what to do, which principle governs.
+Y our observation and documentation app adds an AI
+feature that drafts learning stories from classroom
+photos. It's on by default.
+AT STAKE Whether the vendor is using children's
+images to train a model — and whether
+auto-tagging computes face geometry,
+which triggers biometric statutes in
+several states. Also whether the drafted
+narrative is still the teacher's observation.
+DO Turn it off until you've asked questions 3,
+4, and 7 on the vendor sheet. Re-consent
+families before turning it on, using the
+separate images-and-training form rather
+than the existing photo release.
+GOVERNS Custody · Standing
+A teacher pastes an incident description — with the
+child's name — into a consumer chatbot to write it up
+more professionally before it goes in the file.
+AT STAKE In a Head Start program this is arguably
+an undisclosed third-party disclosure with
+no consent, no reviewable agreement, and
+no log entry — complete whether or not
+anything leaks. In any program it likely
+violates the family contract and the
+program's own privacy policy.
+DO De-identify before drafting, or use an
+approved tool with an agreement on file.
+Add it to the register. If the incident
+touches suspected maltreatment, no AI at
+
+all.
+GOVERNS Custody · Bright lines 4 and 5
+A vendor o!ers your center AI camera analytics that
+"detects policy violations" and "understands the
+whole room." The pitch is about licensing compliance
+and liability.
+AT STAKE Continuous video of children who cannot
+consent, simultaneous surveillance of a
+low-wage workforce that is 40–56%
+women of color, and outputs that can feed
+licensing complaints, employment action,
+or expulsion decisions. If any component
+infers affect or engagement, it is a bright
+line.
+DO Separate the security question from the
+analytics question — they are usually sold
+together and are not the same purchase.
+Run full Tier 3 due diligence, and require
+in writing that no affect, emotion, or
+engagement inference runs on children.
+GOVERNS Bright line 1 · Standing · Consequence
+A family child care provider uses her phone's
+translation app to explain a developmental screening
+result to a family that speaks Mixteco.
+AT STAKE The most sympathetic scenario in the
+library, and the guidance still has to hold.
+Machine translation fails on high-stakes
+content, and it fails worst on languages
+with the least training data — which is
+exactly the family least likely to have any
+alternative.
+DO Use the state's interpreter line or the
+
+R&R's language access resources for the
+conversation itself. Machine translation is
+appropriate for the reminder that
+schedules it. The site should name the
+actual resources by state, because "use an
+interpreter" without a phone number is not
+guidance.
+GOVERNS Language · Bright line 6
+Y our Head Start data system ships an agentic feature
+that drafts family engagement notes and flags
+children for follow-up.
+AT STAKE Flagging children for follow-up is a
+decision about a specific child, arriving
+through a compliance system nobody
+thinks of as an AI tool. This is the most
+likely real-world path by which AI enters
+Head Start programs, and it will arrive as a
+product update rather than a purchase
+decision.
+DO Treat a vendor feature release as an
+adoption event: register it, tier it, and
+require the human determination before
+any flag informs a referral or a service
+decision. Ask what the flagging model was
+validated on and whether performance
+was analyzed by home language and
+disability status.
+GOVERNS Consequence · Language · Currency
+A CDFI is o!ered an AI underwriting model to speed
+up child care facility lending.
+AT STAKE The intermediary track's own case. Credit
+decisions about providers who are
+disproportionately women of color running
+
+micro-businesses, using data that encodes
+the sector's existing inequities — home-
+based providers, newer providers, and
+providers in child care deserts are exactly
+the thin-file borrowers a model will treat
+worst.
+DO Fair lending review before pilot, adverse-
+action explainability, disparate-impact
+testing on the actual portfolio, and a
+human decision on every denial. Publish
+the practice standard so the providers
+being underwritten can see it.
+GOVERNS Consequence · Intermediary standard
+Three more to draft for launch: a parent asks
+whether her child's photos train AI (the script a
+director needs, and the honest answer is often "I
+don't know, and here's how I'll find out"); a grant
+writer runs a narrative containing child vignettes
+through an AI tool; and an AI toy arrives in a
+child's backpack — for which PIRG's Trouble in
+Toyland 2025 findings are the most vivid citable
+evidence available.
+12Vendors
+Write the questions as questions, not as criteria. A
+single-site center has essentially no leverage with
+a major vendor. What it can do is ask, record the
+answer with a date, and choose between vendors
+— and a field where five thousand directors ask
+
+the same ten questions creates leverage no
+individual director has.
+1. Is any information we enter, or that your
+product collects about children, used to train
+or improve your models — or anyone else's? If
+yes, under what consent?
+2. Does your product compute face geometry,
+voiceprints, or any other biometric identifier
+from children? Including for photo tagging,
+check-in, or search.
+3. Does your product infer emotion, affect,
+engagement, or behavioral risk about a child?
+Ask directly; it is often buried under "insights."
+4. If a family asks us to delete their child's
+records, what exactly gets deleted — and does
+that include anything derived from those
+records? IDEA gives parents a destruction right
+that most model architectures cannot honor.
+5. Who are your subprocessors, and where is
+children's data stored and processed?
+6. Will you sign an agreement naming us as the
+data controller, with your role limited to
+processing on our instructions?
+7. What is your written retention policy for
+children's personal information, and where is it
+published? Now a COPPA requirement.
+8. For anything producing a judgment about a
+child: what was it validated on, and was
+performance analyzed separately for dual
+language learners and children with
+
+disabilities?
+9. What happens to our data if we leave, and can
+we export it in a usable format?
+10. Who do we call when it produces something
+wrong about a child, and what is your
+notification commitment if something goes
+wrong on your end?
+The disclosure card, and eventually the register
+A standardized one-page vendor disclosure
+answering those ten questions in a fixed format,
+published by the vendor, plus a public register of
+tools that have filed one. The model exists in
+healthcare and nowhere else; ECE directors
+currently evaluate vendors with nothing.
+This is achievable at small scale — twenty vendors
+covers most of the market — and it would
+immediately become the site's most-linked asset.
+It also creates the only real incentive structure
+available: filing is voluntary, but a director
+comparing two products will notice which one
+didn't.
+POSITIVE PATTERN WORTH NAMING
+Not every finding is a warning. Cognoa's
+Canvas Dx — the FDA-authorized autism
+diagnostic aid for ages 18– 72 months —
+returns indeterminate in about 37% of cases
+by design rather than forcing an answer. A
+tool that refuses to answer when uncertain
+
+is a pattern the site should hold up explicitly.
+The same study's authors could not analyze
+performance by race or socioeconomic
+status because those data weren't routinely
+collected — which is exactly the gap
+question 8 exists to close.
+13FAQ
+This page carries the argument for the site's
+existence so no other page has to. Every answer is
+a real objection someone will raise in the first
+meeting. Four of these — marked below —
+surface as the home page preview module.
+No. Not one has. FutureEd tracks 77 AI-in-education
+bills across 27 states this session; MultiState counts
+134 across 31. Neither tracker contains a single pre-K,
+preschool, child care, or Head Start provision. State
+education-department AI guidance is now widespread
+and it is entirely K-12-framed.
+What is moving fast is state law on chatbots, biometrics,
+and minors' data — 14 chatbot laws enacted in the
+2026 term alone — and all of it is written for
+adolescents. Child safety is also the one lane where
+state AI law is explicitly protected from federal
+preemption efforts, which makes a framework built on
+child-safety and child-privacy obligations the most
+Aren't states already legislating on AI in early
+childhood?HOME
+–
+
+durable ground available.
+Doesn't NAEYC already cover this?HOME +
+Can't we just use the K-12 AI guidance?HOME +
+We're one classroom. Isn't this for big
+organizations?HOME
++
+Is anyone in early childhood actually using AI
+yet?
++
+Our vendor says they're FERPA compliant and
+SOPIPA compliant. Isn't that enough?
++
+Isn't back-office AI safe? We're not putting it in
+classrooms.
++
+Why bright lines instead of a risk assessment
+framework?
++
+Our legal team said no AI. Isn't that the safest
+choice?
++
+We run fourteen sites and have a compliance
+team. Isn't this written for someone smaller?
++
+Are you against AI in early childhood? +
+Who wrote this, and why should we trust it? +
+Is this legal advice? +
+
+14Governance
+In a neutral-field-resource posture, legitimacy is
+the product. The pattern that works: a named chair
+with standing outside the technology
+conversation, a cross-constituency body, a
+research partner, open funders, and a published
+sequence — consensus principles, then
+operationalized standards, then research.
+Who has to be at the table
+CONSTITUENCY WHY THEY'RE INDISPENSABLE
+Family child
+care providers
+& center
+directors
+Seat the people the technology is applied through, as
+members. Without them the artifacts will be written at the
+wrong length and reading level, and the field will know.
+Head Start
+grantee
+leadership
+The only ECE setting with a real existing privacy regime, and
+the one where vendor AI is arriving fastest.
+CCR&R / R&R
+network
+The delivery channel. They already run business and
+compliance TA and touch thousands of providers.
+State child
+care
+administrators
+The path from framework to requirement runs through CCDF
+plans, provider agreements, licensing, and QRIS — not
+through legislation.
+NAEYC, Zero
+to Three,
+Institute for
+Child Success
+The field's existing authority. NAEYC especially: its 2012
+statement is the gap, and a framework it endorses becomes
+the field's answer overnight.
+
+Two credibility moves that cost almost nothing
+Publish what you don't know. A visible "open
+questions" page reads as rigor, not weakness
+— and it is the difference between an
+unfinished site and a process.
+Disclose the site's own AI use. For a body
+telling programs to disclose, doing it first is
+nearly free credibility, and refusing to would be
+noticed.
+15Build sequence
+Ordered so the first release requires no convening
+at all. The convening is what makes phase two
+citable; it should not be what blocks phase one
+A privacy and
+civil rights
+lawyer
+The crosswalk cannot ship without one. Section 08 flags two
+state readings that need an opinion, not an inference.
+Parents and
+family voice
+Children 0–5 cannot participate, which is exactly why the
+family-facing artifacts need families to have written them.
+Vendors The hard call. Vendors at the table give reach and make the
+disclosure card viable; they also give critics the easiest
+available attack. Whatever you choose, disclose it
+prominently.
+Researchers The evidence base has real holes. A research partner turns
+"we don't know" from a weakness into an agenda.
+
+from existing.
+1NO CONVENING REQUIRED
+The operational layer
+Research plus drafting plus
+one legal review. Also the
+part nobody else has built
+— so it stands alone even if
+nothing follows.
+The regulatory
+crosswalk, federal layer,
+with a lawyer's sign-off
+Bright lines, published
+as a working draft with
+bases cited
+The one-page policy and
+the staff one-pager,
+English and Spanish
+The vendor question
+sheet and answer-
+recording form
+Six of the twelve
+constructive uses, with
+guardrails — this is
+what keeps a launch
+from reading as anti-AI,
+and it costs nothing but
+writing
+The model contract
+rider, which large
+operators can start
+
+using before anything
+else on the site exists
+The FAQ — it is cheap, it
+is mostly written, and it
+is what turns a thin site
+into an argument
+An honest "what we
+don't know" page
+2REQUIRES A NAMED BODY
+Standing and practice
+Principles ratified and
+signed, with members
+and funders named
+The four-question
+intake, returning tier
+plus the right template
+The full policy family,
+including the Head Start
+addendum and
+handbook language
+The multi-site track —
+governance charter, pilot
+protocol, shadow-AI kit,
+delegate-agency
+module
+The remaining
+constructive uses, with
+outcomes collected
+from real pilots rather
+than vendor case
+
+studies
+The case library —
+launch with eight or nine
+vignettes, add monthly
+State layer for the six
+priority states
+The policy-
+recommendations track
+aimed at states, OHS,
+licensing, and QRIS
+3REQUIRES ADOPTION
+Infrastructure
+The vendor disclosure
+card and public register
+Generation: intake
+produces an editable,
+program-specific policy
+plus a matching family
+notice
+The intermediary
+curriculum, co-
+brandable and coach-
+deliverable
+The returned-policy
+corpus, and the first
+analysis of what the
+field's policies actually
+say
+Changelog discipline
+and an annual review
+
+and an annual review
+commitment, honored
+visibly
+SEQUENCING JUDGMENT
+If you can only build one thing to take into
+partner conversations, build the crosswalk
+plus bright lines plus the FAQ. They
+demonstrate the field-specific expertise
+nobody else has, they are what a NAEYC or
+an Office of Head Start would react to, and
+together they make the case for the
+convening better than a deck about the
+convening would.
+16Decisions for you
+Q1Who convenes?
+LIIF has the ECE portfolio and provider relationships
+but is a CDFI, not a standards body — a strength for
+delivery and a question mark for neutrality. Is LIIF the
+convener, a founding member, or the delivery
+partner?
+Q2Do vendors sit on the body?
+It determines whether the disclosure card is viable
+and whether the framework reaches providers
+
+through the products they already use. It also
+determines the first line of every critique. There is no
+neutral answer, only a disclosed one.
+Q3Bright lines as prohibitions, or as "requires
+board-level approval"?
+Prohibitions are usable and quotable. Some partners
+will want softer language, especially on cameras,
+where programs have liability reasons for wanting
+them. My read: hold the prohibitions and lose the
+partners who need them softened — a framework
+that permits everything with paperwork is what the
+field already has.
+Q4Does the site take a position on specific
+products?
+The register implies it eventually will, at least by
+omission. That is a meaningfully different institution
+— and a different legal posture — than one that
+publishes questions and lets directors ask them.
+Q5What is the Spanish-language commitment,
+exactly?
+Simultaneous release, or translated later? Given the
+Language principle, "later" undercuts the whole
+thing. A resourcing question disguised as a
+production question.
+Q6Who owns legal review, and can it be pro bono?
+The crosswalk is the site's crown jewel and cannot
+ship on inference. A law school clinic or a firm's pro
+bono practice is the natural fit, and having one
+
+named on the page is itself a legitimacy asset.
+17Sources & verification
+Everything asserted here traces to a source. Two
+categories matter differently: the durable evidence
+base, and the items with a short shelf life that
+must be re-checked immediately before anything
+goes public.
+Verify before publishing
+The COPPA AI-consent boundary. The
+separate-consent requirement carries an
+express carve-out for disclosures "integral to
+the nature of the service," and the FTC's AI
+statement addresses disclosures to third
+parties. Do not write that AI training "always"
+requires separate consent — a vendor's
+counsel will catch it, and the internal-training
+gap is real.
+Colorado. SB 24-205 was delayed to June
+2026, then enforcement was blocked in federal
+court in April 2026, then replaced by SB 26-189
+in May 2026 with a notice-based regime
+effective January 2027 . Source is a single law-
+firm alert. Check the enrolled bill and the
+docket.
+AAP screen-time guidance. The 2026 "5 C's"
+framework replaced the prescriptive hour
+
+limits, but this rests on secondary coverage.
+Confirm specifically what replaced the under-
+24-month recommendation before writing
+anything about infants.
+Head Start rulemaking. An NPRM published
+May 2026 proposes removing wage-
+comparability and benefits requirements;
+records and confidentiality provisions were not
+proposed for change. Whether a final rule has
+issued is unconfirmed.
+Expulsion data vintage. The multipliers rest on
+Gilliam's 2005 work and the suspension
+disparity on the 2013–14 CRDC. Pull the newest
+CRDC cycle.
+Product claims. Several AI feature descriptions
+come from vendor marketing. Notably,
+brightwheel's public learning page described
+no AI features as of this research. Confirm
+directly with any vendor before naming them on
+a public page.
+The 2016 Yale eye-tracking study is routinely
+mischaracterized. It found teachers gazed
+more at Black children, especially boys — but
+on the vignette task there was no racial
+disparity in suspension or expulsion
+recommendations. Cite CRDC and Gilliam's
+2005 and 2014 work for disparities; cite the
+2016 study only for the attention finding.
+Overclaiming here is the easiest way to be
+discredited in front of an audience that knows
+this literature.
+
+Evidence gaps to state rather than fill
+No national data on broadband, devices, or IT
+support among ECE providers, especially home-
+based. No current verified national turnover figure.
+No meta-analysis quantifying differential
+screening-instrument accuracy by race or
+language. No verified U.S. emotion-recognition
+product in an ECE setting — the category is
+arriving through general school-security AI. No
+survey of AI use among Head Start grantees
+outside districts, private centers, or family child
+care homes; the RAND figures cover public-school
+pre-K only.
+Core sources
+FEDERAL LAW
+45 CFR Part 1303 (Head Start privacy) · §1302.33 screenings ·
+§1302.17 suspension/expulsion · COPPA Final Rule 2025 · IDEA
+confidentiality FAQ · 45 CFR Part 98 (CCDF)
+STATE LAW
+CA AB 2799 / ELPIPA · NY Ed Law 2-d · Illinois BIPA · FPF state
+tracker · State AI legislation, mid-2026 · EU AI Act Art. 5
+ECE & AI
+Brookings, Generation AI Starts Early · NCYL child-centered AI ·
+Zero to Three, Screen Sense AI · Institute for Child Success ·
+NAEYC position statements
+MODELS TO BORROW
+Council on Criminal Justice · TeachAI toolkit · Project Evident
+equitable AI framework · McGovern Learning Hub · Fast
+Forward policy builder · NTEN AI hub · CHAI applied model
+card · CDT K-12 policy priorities
+EVIDENCE BASE
+RAND pre-K teachers and AI · CSCCE Workforce Index 2024 ·
+Preschool expulsion data · MPI dual language learners · PIRG,
+Trouble in Toyland 2025 · Canvas Dx real-world performance ·
+Halberstadt et al., anger perception bias · Correction on the
+2016 Yale study
+
+Working draft v2, 10 September 2026. A build spec, not a public document — nothing here
+has been reviewed by counsel, and the items flagged in Section 17 should be re-verified
+against primary sources before any of this appears on a live site.

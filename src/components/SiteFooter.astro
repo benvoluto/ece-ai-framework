@@ -1,0 +1,40 @@
+---
+import { SITE } from '../lib/site.js';
+import { NAV } from '../lib/nav.js';
+import { t, localePath, DEFAULT_LOCALE } from '../lib/i18n.js';
+
+const { locale = DEFAULT_LOCALE } = Astro.props;
+const links = NAV.filter((item) => item.path !== '/');
+---
+<footer class="govuk-footer">
+  <div class="govuk-width-container">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          {links.map((item) => (
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href={localePath(locale, item.path)}>
+                {t(locale, item.key)}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <p class="govuk-footer__licence-description">
+          {SITE.disclaimer}
+        </p>
+        <p class="govuk-footer__licence-description">
+          {t(locale, 'label.version')}: {SITE.version} &middot;
+          {t(locale, 'label.lastUpdated')}: <time datetime={SITE.lastReviewed}>{SITE.lastReviewed}</time>
+        </p>
+        <p class="govuk-footer__licence-description govuk-!-font-size-16">
+          Built with the
+          <a class="govuk-footer__link" href="https://design-system.service.gov.uk/" rel="external">GOV.UK&nbsp;Design&nbsp;System</a>,
+          used under the MIT licence. This site is not affiliated with, endorsed by, or connected to
+          the United Kingdom government, and uses none of its brand assets.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

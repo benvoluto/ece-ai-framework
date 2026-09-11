@@ -1,0 +1,11 @@
+---
+/**
+ * The repeating labelled block used by good-uses (Returns / Guardrail),
+ * cases (At stake / What to do) and bright lines (The basis).
+ */
+const { label } = Astro.props;
+---
+<div class="app-annotation govuk-!-margin-bottom-4">
+  <span class="app-annotation__label">{label}</span>
+  <div class="govuk-body"><slot /></div>
+</div>

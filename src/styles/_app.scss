@@ -1,0 +1,254 @@
+// -----------------------------------------------------------------------------
+// Site-specific extensions on top of the design system.
+// Only patterns the Design System does not supply belong here.
+// -----------------------------------------------------------------------------
+@use "govuk-frontend/dist/govuk/base" as govuk;
+
+// --- Masthead -----------------------------------------------------------------
+// Stands in for the GOV.UK header, which we must not reproduce.
+.app-masthead {
+  background-color: govuk.$govuk-brand-colour;
+  border-bottom: govuk.govuk-spacing(2) solid govuk.govuk-colour("white");
+  color: govuk.govuk-colour("white");
+  padding-top: govuk.govuk-spacing(4);
+  padding-bottom: govuk.govuk-spacing(4);
+}
+
+.app-masthead__title {
+  @include govuk.govuk-font($size: 24, $weight: bold);
+  color: govuk.govuk-colour("white");
+  display: block;
+  margin: 0;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: govuk.govuk-colour("white");
+  }
+
+  &:hover {
+    color: govuk.govuk-colour("white");
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.1em;
+  }
+
+  &:focus {
+    background-color: govuk.$govuk-focus-colour;
+    color: govuk.$govuk-focus-text-colour;
+    box-shadow:
+      0 -2px govuk.$govuk-focus-colour,
+      0 4px govuk.$govuk-focus-text-colour;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.app-masthead__strapline {
+  @include govuk.govuk-font($size: 16);
+  color: govuk.govuk-colour("white");
+  display: block;
+  margin: 0;
+  max-width: 40em;
+}
+
+.app-masthead__meta {
+  @include govuk.govuk-font($size: 16);
+  color: govuk.govuk-colour("white");
+  margin: 0;
+}
+
+// --- Site navigation ----------------------------------------------------------
+.app-navigation {
+  background-color: govuk.govuk-colour("black", $variant: "tint-95");
+  border-bottom: 1px solid govuk.$govuk-border-colour;
+}
+
+.app-navigation__list {
+  @include govuk.govuk-font($size: 16);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.app-navigation__item {
+  margin: 0;
+  padding: 0;
+}
+
+.app-navigation__link {
+  display: inline-block;
+  padding: govuk.govuk-spacing(2) govuk.govuk-spacing(3);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.1em;
+  }
+}
+
+.app-navigation__item--current .app-navigation__link {
+  box-shadow: inset 0 -4px 0 0 govuk.$govuk-link-colour;
+  font-weight: govuk.$govuk-font-weight-bold;
+}
+
+// --- Tier tags ----------------------------------------------------------------
+// Deliberately not colour-only: every tier tag carries its number in text.
+.app-tier-tag {
+  @include govuk.govuk-font($size: 16, $weight: bold);
+  white-space: nowrap;
+}
+
+// --- The mad-lib sentence on /start ------------------------------------------
+.app-sentence {
+  @include govuk.govuk-font($size: 24);
+  line-height: 2.1;
+}
+
+.app-sentence__select {
+  @include govuk.govuk-font($size: 19, $weight: bold);
+  background-color: govuk.govuk-colour("white");
+  border: 2px solid govuk.govuk-colour("black");
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: govuk.govuk-spacing(1);
+
+  &:focus {
+    outline: 3px solid govuk.$govuk-focus-colour;
+    outline-offset: 0;
+  }
+}
+
+.app-sentence__select[data-answered="false"] {
+  background-color: govuk.govuk-colour("yellow");
+}
+
+// --- Locked result panel ------------------------------------------------------
+.app-locked {
+  background-color: govuk.govuk-colour("black", $variant: "tint-95");
+  border-left: govuk.govuk-spacing(2) solid govuk.$govuk-border-colour;
+  padding: govuk.govuk-spacing(4);
+}
+
+// --- Card grid ----------------------------------------------------------------
+.app-card {
+  border-top: govuk.govuk-spacing(1) solid govuk.$govuk-brand-colour;
+  height: 100%;
+  padding-top: govuk.govuk-spacing(3);
+}
+
+.app-card__title {
+  @include govuk.govuk-font($size: 19, $weight: bold);
+  margin-top: 0;
+  margin-bottom: govuk.govuk-spacing(2);
+}
+
+.app-card__meta {
+  @include govuk.govuk-font($size: 16);
+  color: govuk.govuk-colour("black", $variant: "tint-25");
+  display: block;
+  margin-bottom: govuk.govuk-spacing(1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// --- Artifact document rendering ---------------------------------------------
+.app-document {
+  background-color: govuk.govuk-colour("white");
+
+  // [SAMPLE] fill-in markers, visible on screen and in print.
+  mark.app-fill-in {
+    background-color: govuk.govuk-colour("yellow");
+    color: govuk.govuk-colour("black");
+    font-weight: govuk.$govuk-font-weight-bold;
+    padding: 0 2px;
+  }
+}
+
+.app-signature-line {
+  border-bottom: 1px solid govuk.govuk-colour("black");
+  display: inline-block;
+  min-width: 16em;
+}
+
+// --- Definition-style rows (returns / guardrail / at stake) -------------------
+.app-annotation {
+  border-left: govuk.govuk-spacing(1) solid govuk.$govuk-border-colour;
+  padding-left: govuk.govuk-spacing(3);
+}
+
+.app-annotation__label {
+  @include govuk.govuk-font($size: 16, $weight: bold);
+  color: govuk.govuk-colour("black", $variant: "tint-25");
+  display: block;
+  letter-spacing: 0.05em;
+  margin-bottom: govuk.govuk-spacing(1);
+  text-transform: uppercase;
+}
+
+// --- Print --------------------------------------------------------------------
+// Artifacts must save-as-PDF cleanly: one sheet means one sheet.
+@media print {
+  .app-masthead,
+  .app-navigation,
+  .govuk-phase-banner,
+  .app-no-print,
+  .govuk-back-link,
+  .govuk-footer__navigation {
+    display: none !important;
+  }
+
+  .app-document {
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+
+  .app-document h1 {
+    font-size: 18pt;
+  }
+
+  .app-document h2 {
+    font-size: 13pt;
+  }
+
+  .app-print-only {
+    display: block !important;
+  }
+
+  .govuk-width-container {
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    word-break: break-all;
+  }
+
+  .app-page-break {
+    break-before: page;
+  }
+}
+
+.app-print-only {
+  display: none;
+}
+
+// --- Licence guard: never render the Royal Arms crest --------------------------
+// govuk-frontend's footer styles reference govuk-crest.svg, a UK government
+// brand asset we have no right to display. Our footer markup does not use
+// .govuk-footer__copyright-logo, and this neutralises the rule so the crest
+// cannot appear even if the class is added by mistake. The asset is never
+// copied into /public, so the reference resolves to nothing regardless.
+.govuk-footer__copyright-logo::before {
+  content: none !important;
+  display: none !important;
+  background-image: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  padding-top: 0 !important;
+}

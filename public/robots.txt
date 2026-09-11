@@ -1,0 +1,4 @@
+# Working draft. Nothing here has been reviewed by counsel.
+# Flip SITE.indexable in src/lib/site.js and replace this file when ready.
+User-agent: *
+Disallow: /

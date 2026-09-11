@@ -1,0 +1,24 @@
+---
+import { t, DEFAULT_LOCALE, localePath } from '../lib/i18n.js';
+
+/**
+ * Tier tag. Never colour-only: the tier number is always in the text,
+ * so it survives greyscale printing and colour-blind readers.
+ */
+const { tier, locale = DEFAULT_LOCALE, withName = false, link = true } = Astro.props;
+
+const colours = { 0: 'govuk-tag--red', 1: 'govuk-tag--green', 2: 'govuk-tag--yellow', 3: 'govuk-tag--orange' };
+const label = t(locale, `tier.${tier}`);
+const name = t(locale, `tier.${tier}.name`);
+const href = tier === 0 ? localePath(locale, '/bright-lines') : `${localePath(locale, '/start')}#tier-${tier}`;
+---
+<span class="app-tier-tag">
+  {link ? (
+    <a class="govuk-link govuk-link--no-visited-state" href={href}>
+      <strong class={`govuk-tag ${colours[tier]}`}>{label}</strong>
+    </a>
+  ) : (
+    <strong class={`govuk-tag ${colours[tier]}`}>{label}</strong>
+  )}
+  {withName && <span class="govuk-!-margin-left-1 govuk-body-s">{name}</span>}
+</span>

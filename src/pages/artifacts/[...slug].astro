@@ -1,0 +1,82 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../lib/site.js';
+import { t, localePath } from '../../lib/i18n.js';
+import TierTag from '../../components/TierTag.astro';
+
+export async function getStaticPaths() {
+  const all = await getCollection('artifacts', (e) => !e.id.includes('_smoke-test'));
+  return all.map((entry) => {
+    const [locale, ...rest] = entry.id.split('/');
+    const slug = rest.join('/');
+    return {
+      params: { slug: locale === 'en' ? slug : `${locale}/${slug}` },
+      props: { entry, locale, slug },
+    };
+  });
+}
+
+const { entry, locale, slug } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+<BaseLayout title={d.title} description={d.summary} locale={locale} showNav={false}>
+  <a href={localePath(locale, '/policies')} class="govuk-back-link app-no-print">
+    {t(locale, 'nav.policies')}
+  </a>
+
+  <article class="app-document">
+    <span class="govuk-caption-l">{d.audience}</span>
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-3">{d.title}</h1>
+    <p class="govuk-body-l">{d.summary}</p>
+
+    {d.tiers.length > 0 && (
+      <p class="govuk-body">
+        {d.tiers.map((tier) => (
+          <span class="govuk-!-margin-right-2"><TierTag tier={tier} locale={locale} /></span>
+        ))}
+      </p>
+    )}
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        {SITE.disclaimer}
+      </strong>
+    </div>
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body-s govuk-!-margin-bottom-0">{t(locale, 'artifact.sampleNote')}</p>
+    </div>
+
+    <div class="govuk-button-group app-no-print govuk-!-margin-bottom-6">
+      <a class="govuk-button" data-module="govuk-button" href={`/artifacts/${locale}/${slug}.docx`} download>
+        {t(locale, 'label.downloadWord')}
+      </a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href={`/artifacts/${locale}/${slug}.md`} download>
+        {t(locale, 'label.downloadMd')}
+      </a>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="button" id="print-artifact">
+        {t(locale, 'label.print')}
+      </button>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6" />
+
+    <div class="govuk-body app-artifact-body">
+      <Content />
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-4" />
+    <p class="govuk-body-s">
+      {SITE.title} &middot; {t(locale, 'label.version')}: {d.version} &middot;
+      {t(locale, 'label.lastUpdated')}: <time datetime={d.lastUpdated}>{d.lastUpdated}</time>
+    </p>
+  </article>
+
+  <script is:inline>
+    document.getElementById('print-artifact')?.addEventListener('click', () => window.print());
+  </script>
+</BaseLayout>
